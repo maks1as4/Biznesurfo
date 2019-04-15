@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="ru-RU">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title><?php echo $title; ?></title>
+<meta name="description" content="<?php echo $descr; ?>" />
+<meta name="keywords" content="<?php echo $keyws; ?>" />
+<?php if ($Client[10] != ''): ?>
+<meta name="yandex-verification" content="<?php echo $Client[10]; ?>" />
+<?php endif; ?>
+<link rel="icon" href="http://<?php echo $baseHref; ?>/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="http://<?php echo $baseHref; ?>/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="http://<?php echo $baseHref; ?>/css/bootstrap/bootstrap.min.css?24042013" />
+<link rel="stylesheet" href="http://<?php echo $baseHref; ?>/css/bootstrap/bootstrap-notify.css?24042013" />
+<link rel="stylesheet" href="http://<?php echo $baseHref; ?>/css/bootstrap/alert-notification-animations.css?24042013" />
+<link rel="stylesheet" href="http://<?php echo $baseHref; ?>/css/company/default.css?290520132" />
+<?php if ($translit_company == 'klingspor'): ?>
+<link rel="stylesheet" href="http://<?php echo $baseHref; ?>/css/company/exception/klingspor.css?24052013" />
+<?php endif; ?>
+<!--[if IE]>
+<link rel="stylesheet" href="http://<?php echo $baseHref; ?>/css/company/default-ie.css?27042013" />
+<![endif]-->
+<?php if ($Client[2] != ''): ?>
+<style type="text/css">
+#header table.head td.logo {width:<?php echo $logo_width; ?>px;}
+#header table.head td.logo div.inner {width:<?php echo $logo_width; ?>px;}
+#header table.head td.logo img {width:<?php echo $logo_width; ?>px; height:<?php echo $logo_height; ?>px;}
+</style>
+<?php endif; ?>
+
+<?php if($isShowES) ShowCounterGoogle(); ?>
+
+</head>
+<body>
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<div class="pull-left">
+					<div id="mini-logo"><a href="http://<?php echo $baseHref; ?>/">Индустрия бизнеса - <?php echo $sity_name; ?></a></div>
+				</div>
+				<div class="nav-collapse collapse">
+					<a class="btn btn-navbar pull-right" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+<?php if (isset($user_id)): ?>
+					<ul class="nav pull-right nav-set-border">
+						<li class="dropdown">
+							<a href="javascript://" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> <?php echo $user_email; ?> <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+<?php if (($user_role == 'com') || ($user_role == 'user')): ?>
+								<li><a href="http://<?php echo $baseHref; ?>/kabinet">Личный кабинет</a></li>
+<?php else: ?>
+								<li><a href="http://<?php echo $baseHref; ?>/<?php echo ($user_role == 'adm') ? 'management/adm' : 'management/mdr' ;?>">Панель управления</a></li>
+<?php endif; ?>
+								<!--li class="divider"></li-->
+								<li><a href="http://<?php echo $baseHref; ?>/exit">Выход</a></li>
+							</ul>
+						</li>
+					</ul>
+<?php else: ?>
+					<ul class="nav pull-right set-color-blue nav-set-border">
+						<li><a href="http://<?php echo $baseHref; ?>/enter" id="enter"><i class="icon-share-alt"></i> Войти в кабинет</a></li>
+						<li><a href="http://<?php echo $baseHref; ?>/add-company"><i class="icon-plus"></i> Зарегистрироваться</a></li>
+					</ul>
+<?php endif; ?>
+				</div><!-- /nav-collapse -->
+			</div>
+		</div>
+	</div><!-- /navbar -->
+
+	<div id="streak-top">&nbsp;</div>
+
+	<div id="bone" class="container">
+
+		<div class="row">
+<?php if ($translit_company != 'klingspor'): ?>
+			<div id="header" class="span12">
+				<table class="head"><tr>
+<?php if ($Client[2] != ''): ?>
+					<td class="logo">
+						<div class="inner">
+							<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/"><img src="http://<?php echo $baseHref; ?>/logo/<?php echo $Client[2]; ?>" alt='<?php echo $name; ?>' /></a>
+						</div>
+					</td>
+<?php endif; ?>
+					<td class="name">
+						<div class="inner">
+							<div class="company"><?php echo $name; ?></div>
+							<span class="sity"><?php echo $sity_name; ?></span>
+						</div>
+					</td>
+					<td class="phones">
+						<div class="inner">
+							<i class="icon-phone-20"></i> <span><?php echo ($Client[11]!='') ? $Client[11].'&nbsp;' : ''; ?><?php echo getDataFromDB($Client[5]); ?></span>
+<?php if (!empty($Client_phones)): ?>
+							<ul class="unstyled">
+<?php foreach ($Client_phones as $phones): ?>
+								<li>т. <?php echo ($phones[1]) ? $phones[1].'&nbsp;' : ''; ?><?php echo $phones[0]; ?></li>
+<?php endforeach; ?>
+							</ul>
+<?php endif; ?>
+						</div>
+					</td>
+				</tr></table>
+			</div><!-- /header -->
+<?php else: ?>
+			<div id="header-klingspor" class="span12">
+				<div class="logo-klingspor pull-left">
+					<a href="http://<?php echo $baseHref; ?>/goto/<?php echo $id_company; ?>?url=<?php echo getDataFromDB($Client[7]); ?>" rel="nofollow" target="_blank"><img src="http://<?php echo $baseHref; ?>/css/company/exception/img/klingspor-logo.jpg" /></a>
+				</div>
+				<div class="phone-klingspor pull-right">
+					<i class="icon-phone-20"></i> <span><?php echo ($Client[11]!='') ? $Client[11].'&nbsp;' : ''; ?><?php echo getDataFromDB($Client[5]); ?></span>
+<?php if (!empty($Client_phones)): ?>
+					<ul class="unstyled">
+<?php foreach ($Client_phones as $phones): ?>
+						<li>т. <?php echo ($phones[1]) ? $phones[1].'&nbsp;' : ''; ?><?php echo $phones[0]; ?></li>
+<?php endforeach; ?>
+					</ul>
+<?php endif; ?>
+				</div>
+				<div class="clearfix"></div>
+			</div><!-- /header-klingspor -->
+<?php endif; ?>
+		</div>
+		<div class="row">
+			<div id="horizontally" class="span12">
+				<div class="horizontally-wrap">
+					<ul class="nav nav-pills nav-bold">
+						<li<?php echo ($action == 'index') ? ' class="active"' : '';?>>
+							<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/"><i class="icon-home"></i> Главная</a>
+						</li>
+						<li<?php echo ($action == 'catalog') ? ' class="active"' : '';?>>
+							<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/products"><i class="icon-th-list"></i> Товары</a>
+						</li>
+						<li<?php echo ($action == 'news') ? ' class="active"' : '';?>>
+							<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/news"><i class="icon-comment"></i> Новости</a>
+						</li>
+						<li<?php echo ($action == 'contacts') ? ' class="active"' : '';?>>
+							<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/contacts"><i class="icon-map-marker"></i> Контакты</a>
+						</li>
+						<li<?php echo ($action == 'about') ? ' class="active"' : '';?>>
+							<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/about"><i class="icon-flag"></i> О компании</a>
+						</li>
+<?php if ($translit_company == 'klingspor'): ?>
+						<li<?php echo ($action == 'video') ? ' class="active"' : '';?>>
+							<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/video"><i class="icon-film"></i> Видео</a>
+						</li>
+<?php endif; ?>
+					</ul>
+				</div>
+			</div><!-- /horizontally -->
+		</div>

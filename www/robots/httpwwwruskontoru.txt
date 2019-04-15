@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: httpwwwruskontoru.biznesurfo.ru
+Sitemap: http://httpwwwruskontoru.biznesurfo.ru/sitemap.xml

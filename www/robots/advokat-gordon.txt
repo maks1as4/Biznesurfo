@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: advokat-gordon.biznesurfo.ru
+Sitemap: http://advokat-gordon.biznesurfo.ru/sitemap.xml

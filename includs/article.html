@@ -1,0 +1,127 @@
+<?php require_once "../includs/head.html"; ?>
+
+<?php if ($Product[7] == 0): ?>
+
+<!-- Если товар не активен -->
+	<div class="aHead">
+		Вы искали <h1><?php echo $tagH1;?></h1><br />
+		К сожалению, данный товар снят с публикации.
+	</div><!-- /aHead -->
+	<div class="aBody">
+		<div class="you">Вы можете:</div>
+		<div class="left">
+			<div class="way bottom10">Выбрать похожий товар:</div>
+<?php if ($goodsQty > 0): ?>
+			<ul>
+<?php for ($i=0; $i<$goodsQty; $i++): ?>
+				<li><a href="product/<?php echo($Goods[$i][2]);?>.html"><?php echo($Goods[$i][1]);?></a></li>
+<?php endfor; ?>
+			</ul>
+<?php else: ?>
+			<span class="gray">Похожих товаров на сайте не найдено.</span>
+<?php endif; ?>
+		</div><!-- /left -->
+		<div class="right">
+			<div class="way">Обратиться к поставщику:</div>
+			(ранее публиковавшего этот товар)
+			<div class="bottom10"></div>
+			<div class="bottom5"><a href="company/<?php echo($Client[0]);?>.html" class="name" target="_blank" title="Подробнее о компании"><?php echo($Client[1]);?></a></div>
+			<div class="info">
+				<i>Адрес:</i> <?php echo($Client[2]);?><br />
+				<i>Тел.:</i> <?php echo($Client[3]);?><br />
+				Просмотреть <a href="price_<?php echo($Client[0]);?>" title="Прайс-лист компании">прайс-лист</a>.
+			</div><!-- /info -->
+<?php if ($Client[4]!=''): ?>
+			<br /><a href="mailto/<?php echo($Client[0]);?>" title="Связаться с поставщиком" class="iButton">Связаться с поставщиком</a>
+<?php endif; ?>
+		</div><!-- /right -->
+		<div class="clear-white"></div>
+		<div class="gotoin">или перейти на <a href="/">главную страницу</a>.</div>
+	</div><!-- /aBody -->
+<!-- / -->
+
+<?php else: ?>
+				<div class="path">
+<?php for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+				</div><!-- /path -->
+				<div class="article_nav clear">
+					<div class="itn_l">
+<?php if ($backLink!=''){?>			<span class="pages_nav"><a class="edge" href="<?php echo($backLink);?>">&larr;&nbsp;</a><a href="<?php echo($backLink);?>">предыдущий</a></span>
+<?php } ?>
+					</div>
+					<div class="itn_r">
+<?php if ($forwLink!=''){?>			<span class="pages_nav"><a href="<?php echo($forwLink);?>">следующий</a><a class="edge" href="<?php echo($forwLink);?>">&nbsp;&rarr;</a></span>
+<?php } ?>
+					</div>
+				</div><!-- /article_nav -->
+				<div class="article_h1 clear">
+					<div class="price">Цена <?php echo($price);?></div><!-- /price -->
+					<h1><?php echo $tagH1; ?></h1>
+<?php if ($Product[10] != null && $Product[11] != null): ?>
+					<img src="i/products/<?php echo $Product[10]; ?>_medium.<?php echo $Product[11]; ?>" style="width:200px; height:200px; margin-top:10px; padding:3px; border:1px solid #d8d9db;" alt='<?php echo mb_strtolower($tagH1, 'cp1251'); ?>' />
+<?php endif; ?>
+<?php if ($Product[9] != ''): ?>
+					<div class="article_about" style="margin-top:20px; clear:both;">
+						<span style="font-size:15px; font-weight:bold;">Описание товара:</span><br /><br />
+						<?php echo $Product[9]; ?>
+					</div>
+<?php endif; ?>
+				</div><!-- /article_h1 -->
+				<div class="article">
+					<div class="client">
+						<div class="name">
+							Поставщик: <a href="company/<?php echo($Client[0]);?>.html" target="_blank"><?php echo($Client[1]);?></a>
+						</div><!-- /name -->
+						<div class="address">
+<?php if ($Client[4]!=''): ?>
+							<div class="call"><a href="mailto/<?php echo($Client[0]);?>">Связаться с поставщиком</a></div>
+<?php endif; ?>
+							Адрес: <?php echo($Client[2]);?><br />
+							Тел.: <?php echo($Client[3]);?><br />
+							Просмотреть <a href="price_<?php echo($Client[0]);?>">прайс-лист</a>
+						</div><!-- /about -->
+					</div><!-- /client -->
+					<div class="clear" style="text-align:right">
+						<a href="<?php echo($Crumbs[$crumbsQty-2][0]);?>"><?php echo($fromPrice?'перейти':'вернуться');?> в рубрику</a> или <a href="<?php echo($Crumbs[1][0]);?>"><?php echo($fromPrice?'':'перейти');?> в раздел</a>
+					</div><br />
+<?php if($isShowES) {include "../includs/hor_b2b_context.html"; echo('<br /><br />');} ?>
+
+					<div class="wrap">
+						<div class="add">
+							<h2>Похожие товары:</h2>
+							<ul>
+<?php for ($i=0;$i<$goodsQty;$i++):?>
+								<li><a href="product/<?php echo($Goods[$i][2]);?>.html"><?php echo($Goods[$i][1]);?></a></li>
+<?endfor?>
+							</ul>
+						</div><!-- /article_add -->
+					</div><!-- /wrap -->
+<?php if ($rubsQty>0):?>
+					<div class="wrap prr">
+						<div class="add">
+							<h2>Рекомендуем рубрики:</h2>
+							<ul>
+<?php for ($i=0;$i<$rubsQty;$i++):?>
+								<li><a href="prices/<?php echo($Rubs[$i][1]);?>"><?php echo($Rubs[$i][0]);?></a></li>
+<?endfor?>
+							</ul>
+						</div><!-- /article_add -->
+					</div><!-- /wrap -->
+<?endif?>
+				</div><!-- /article -->
+<?endif?>
+			<br />
+			</div><!-- /inner -->
+		</div><!-- /content -->
+		
+<?php require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

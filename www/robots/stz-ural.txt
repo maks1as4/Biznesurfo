@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: stz-ural.biznesurfo.ru
+Sitemap: http://stz-ural.biznesurfo.ru/sitemap.xml

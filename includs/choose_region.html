@@ -1,0 +1,56 @@
+<?php require_once "../includs/head_forms.html"; ?>
+
+<style type="text/css">
+div.choose_region ul li {
+	background:none;
+	margin-bottom:5px;
+}
+div.choose_region ul li a.reg {
+	font-size:15px;
+}
+div.choose_region ul ul {
+	margin:0 0 15px 20px;
+}
+div.choose_region a.all {
+	margin-left:15px;
+	font-weight:bold;
+	color:#aa1111;
+	font-size:15px;
+}
+</style>
+
+	<div class="body clear">
+	<div class="content">
+	<div class="inner inner-type-forms">
+		
+		<a href="/"><img src="/i/logo.png" class="logo" alt="ООО &laquo;Индустрия бизнеса&raquo;" /></a>
+		<div class="go-home"><a href="/">Вернуться на главную</a></div>
+		
+		<h1>Выберите город или регион:</h1>
+		<div class="choose_region">
+			<p><a href="<?php echo $url; ?>" class="all">Все города</a></p>
+			<ul>
+<?php foreach ($Location as $reg): ?>
+				<li><a href="<?php echo $url; ?>?rcid=r<?php echo $reg[0]; ?>" class="reg"><?php echo $reg[1]; ?></a></li>
+<?php if (!empty($reg[2])): ?>
+				<ul>
+<?php foreach ($reg[2] as $city): ?>
+					<li><a href="<?php echo $url; ?>?rcid=c<?php echo $city[0]; ?>"><?php echo $city[1]; ?></a></li>
+<?php endforeach; ?>
+				</ul>
+<?php else: ?>
+				<li></li>
+<?php endif; ?>
+<?php endforeach; ?>
+			</ul>
+		</div><!-- /choose_region -->
+		
+	</div><!-- /inner -->
+	</div><!-- /content -->
+	</div><!-- /body -->
+
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+</body>
+</html>

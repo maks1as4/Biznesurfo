@@ -1,0 +1,69 @@
+<?php require_once "../../includs/control/head.html"; ?>
+
+<div class="box-header">
+	<div class="pull-left box-header-home"><a href="/kabinet"><i class="icon-home"></i></a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point">Настройки</div>
+	<div class="pull-left box-header-separator"></div>
+</div>
+<div class="box-content">
+	<div class="box-inner-main">
+		<div class="title-page">
+			<h2>Настройки</h2>
+		</div>
+		<div class="options">
+<?php if ($show_address_success){ ?>
+			<div class="alert alert-success">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				Адрес вашего сайта успешно сохранен.
+			</div>
+<?php } ?>
+<?php if ($show_notice_succes){ ?>
+			<div class="alert alert-success">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				Настройки для уведомлений были сохранены.
+			</div>
+<?php } ?>
+<?php if ($err != ''){ ?>
+			<div class="alert alert-error">
+				<p><strong>Исправьте, пожалуйста, следующие ошибки:</strong></p>
+				<?php echo $err; ?>
+			</div>
+<?php } ?>
+			<div class="well">
+				<h5>Адрес вашего сайта</h5>
+<?php if (!$url3_exists){ ?>
+				<p>
+					Вы можете создать адрес вашего сайта, например: &lt;<strong>company</strong>&gt;.biznesurfo.ru<br />
+					Адрес может состоять только из строчных букв английского алфавита, цифр и знака тире (-). Не менее 2 и не более 20 символов.
+				</p>
+				<form id="address" class="form-inline" method="post" action="/kabinet/options">
+					<input type="text" id="url3" class="input-medium" name="url3" value='<?php echo $val_url3; ?>' maxlength="20" /> .biznesurfo.ru
+					<span id="err-url3" class="error"></span>
+					<p class="muted muted-top5">будьте внимательны, адрес вводится 1 раз без возможности изменения</p>
+					<input type="hidden" name="action" value='address' />
+					<button type="submit" class="btn btn-primary" name="btmes"><i class="icon-ok-sign icon-white icon-tab-left"></i>Сохранить</button>
+				</form>
+<?php }else{ ?>
+				<p>
+					Адрес вашей компании на сайте: <strong><?php echo $url3; ?>.biznesurfo.ru</strong>
+				</p>
+<?php } ?>
+			</div>
+			<div class="well">
+				<h5>Уведомления</h5>
+				<form id="notice" class="form-inline" method="post" action="/kabinet/options">
+					<label class="checkbox">
+						<input type="checkbox" name="unotice" value='c'<?php echo ($notice == '1') ? ' checked' : ''; ?> />&nbsp;
+						я хочу получать уведомления об изменениях на сайте <u>www.biznesurfo.ru</u> на мою электронную почту
+					</label>
+					<p class="muted muted-top5">письма будут приходить на ваш электронный адрес: <?php echo $user_email; ?></p>
+					<input type="hidden" name="action" value='notice' />
+					<button type="submit" class="btn btn-primary" name="btmes"><i class="icon-ok-sign icon-white icon-tab-left"></i>Сохранить</button>
+				</form>
+			</div>
+		</div><!-- /options -->
+	</div><!-- /box-inner-main -->
+</div><!-- /box-content -->
+
+<?php require_once "../../includs/control/foot.html"; ?>

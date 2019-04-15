@@ -1,0 +1,160 @@
+<?php require_once "../../includs/company/default/head.html"; ?>
+
+<div class="row">
+	<div id="main" class="span12">
+
+		<div class="row">
+
+<?php require_once "../../includs/company/default/sidebar.html"; ?>
+
+			<div id="content" class="span9">
+				<div class="content-wrap">
+					<ul class="breadcrumb">
+						<li><a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/">√лавна€</a> <span class="divider">/</span></li>
+						<li class="active">“овары</li>
+					</ul>
+					<div class="page-name">
+						<h1>“овары и услуги</h1>
+					</div>
+<?php if ($count_products > 0): ?>
+					<div class="filters">
+						<!--form class="search">
+							<div class="input-append">
+								<input type="text" id="search" class="span2" placeholder="начать поиск" />
+								<button class="btn" type="button">Ќайти</button>
+							</div>
+						</form-->
+						<div class="pull-left">
+							—ортировать по: 
+<?php if (!empty($arr_rubric)): ?>
+							<span class="label label-sort"><a href="<?php echo $link_rubric; ?>" class="underlined white">рубрикам</a><?php echo ($arr_rubric == 'asc') ? ' <i class="icon-chevron-down icon-white"></i>' : ' <i class="icon-chevron-up icon-white"></i>'; ?></span>
+<?php else: ?>
+							<a href="<?php echo $link_rubric; ?>" class="underlined">рубрикам</a>
+<?php endif; ?>
+&nbsp;
+<?php if (!empty($arr_name)): ?>
+							<span class="label label-sort"><a href="<?php echo $link_name; ?>" class="underlined white">названию</a><?php echo ($arr_name == 'asc') ? ' <i class="icon-chevron-down icon-white"></i>' : ' <i class="icon-chevron-up icon-white"></i>'; ?></span>
+<?php else: ?>
+							<a href="<?php echo $link_name; ?>" class="underlined">названию</a>
+<?php endif; ?>
+&nbsp;
+<?php if (!empty($arr_price)): ?>
+							<span class="label label-sort"><a href="<?php echo $link_price; ?>" class="underlined white">цене</a><?php echo ($arr_price == 'asc') ? ' <i class="icon-chevron-down icon-white"></i>' : ' <i class="icon-chevron-up icon-white"></i>'; ?></span>
+<?php else: ?>
+							<a href="<?php echo $link_price; ?>" class="underlined">цене</a>
+<?php endif; ?>
+						</div>
+<?php if ($translit_company != 'klingspor'): ?>
+						<!--noindex-->
+						<div class="pull-right">
+							<i class="icon-excel"></i> <a href="http://<?php echo $baseHref; ?>/getprice/<?php echo $id_company; ?>" rel="nofollow">скачать прайс-лист (Excel)</a>
+						</div>
+						<!--/noindex-->
+<?php endif; ?>
+						<div class="clearfix"></div>
+					</div><!-- /filters -->
+					<div id="catalog">
+<?php if ($split): ?>
+<?php for ($i=0; $i<$count_products; $i++): ?>
+<?php if ($rubric_id != $Products[$i][0]): ?>
+<?php $rubric_id =  $Products[$i][0]; ?>
+						<div class="rubrics">
+							<h2><?php echo getDataFromDB($Products[$i][1]); ?></h2>
+<?php endif; ?>
+							<table class="line">
+								<tr>
+									<td class="picture">
+										<div class="box">
+											<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/product/<?php echo getDataFromDB($Products[$i][3]); ?>.html">
+<?php if ($Products[$i][7] !== null): ?>
+												<img src="../i/products/<?php echo $Products[$i][7]; ?>_small.<?php echo $Products[$i][8]; ?>" class="img-polaroid" alt='<?php echo getDataFromDB($Products[$i][2]); ?>' />
+<?php else: ?>
+												<img src="../i/company/default/no-image.png" class="img-polaroid" />
+<?php endif; ?>
+											</a>
+										</div>
+									</td>
+									<td>
+										<div class="box">
+											<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/product/<?php echo getDataFromDB($Products[$i][3]); ?>.html" class="product"><?php echo getDataFromDB($Products[$i][2]); ?></a>
+<?php if ($isOwner && $Products[$i][10]!=0): ?>
+											<div class="status1"><span class="label-verification" title="“овар находитс€ на проверке и виден только вам."><i class="icon-time"></i>&nbsp;товар на проверке</span></div>
+<?php endif; ?>
+										</div>
+									</td>
+									<td class="price">
+										<div class="box text-center">
+											<div class="box-price">
+<?php if ($Products[$i][6] == '0'): ?>
+												<span class="label label-price"><?php echo ($Products[$i][4] == '1') ? 'от ' : ''; ?><?php echo priceParser($Products[$i][5]); ?> руб.</span>
+<?php else: ?>
+												<span class="label">цена договорна€</span>
+<?php endif; ?>
+											</div>
+											<a href="javascript://" class="btn btn-gray btn-small order" product="id<?php echo $Products[$i][9]; ?>" supplier="id<?php echo $id_company; ?>" code="h<?php echo md5($Products[$i][9].md5($id_company).$secret_salt); ?>"><i class="icon-shopping-cart"></i> заказать</a>
+										</div>
+									</td>
+								</tr>
+							</table>
+<?php if (!isset($Products[$i+1][0]) || $rubric_id!=$Products[$i+1][0]): ?>
+						</div>
+<?php endif; ?>
+<?php endfor; ?>
+<?php else: ?>
+<?php foreach ($Products as $product): ?>
+						<table class="line">
+								<tr>
+									<td class="picture">
+										<div class="box">
+											<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/product/<?php echo getDataFromDB($product[3]); ?>.html">
+<?php if ($product[7] !== null): ?>
+												<img src="../i/products/<?php echo $product[7]; ?>_small.<?php echo $product[8]; ?>" class="img-polaroid" alt='<?php echo getDataFromDB($product[2]); ?>' />
+<?php else: ?>
+												<img src="../i/company/default/no-image.png" class="img-polaroid" />
+<?php endif; ?>
+											</a>
+										</div>
+									</td>
+									<td>
+										<div class="box">
+											<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/product/<?php echo getDataFromDB($product[3]); ?>.html" class="product"><?php echo getDataFromDB($product[2]); ?></a>
+<?php if ($isOwner && $product[10]!=0): ?>
+											<div class="status1"><span class="label-verification" title="“овар находитс€ на проверке и виден только вам."><i class="icon-time"></i>&nbsp;товар на проверке</span></div>
+<?php endif; ?>
+										</div>
+									</td>
+									<td class="price">
+										<div class="box text-center">
+											<div class="box-price">
+<?php if ($product[6] == '0'): ?>
+												<span class="label label-price"><?php echo ($product[4] == '1') ? 'от ' : ''; ?><?php echo priceParser($product[5]); ?> руб.</span>
+<?php else: ?>
+												<span class="label">цена договорна€</span>
+<?php endif; ?>
+											</div>
+											<a href="javascript://" class="btn btn-gray btn-small order" product="id<?php echo $product[9]; ?>" supplier="id<?php echo $id_company; ?>" code="h<?php echo md5($product[9].md5($id_company).$secret_salt); ?>"><i class="icon-shopping-cart"></i> заказать</a>
+										</div>
+									</td>
+								</tr>
+							</table>
+<?php endforeach; ?>
+<?php endif; ?>
+<?php if ($pageNavQty>0):?>
+						<div class="pagination pagination-centered">
+							<ul>
+<?php for($i=0;$i<$pageNavQty;$i++)	echo ($PageNav[$i]."\n"); ?>
+							</ul>
+						</div>
+<?php endif; ?>
+					</div><!-- /catalog -->
+<?php else: ?>
+					<p class="muted">нет товаров</p>
+<?php endif; ?>
+				</div>
+			</div><!-- /content -->
+		</div>
+		
+	</div><!-- /main -->
+</div>
+
+<?php require_once "../../includs/company/default/foot.html"; ?>

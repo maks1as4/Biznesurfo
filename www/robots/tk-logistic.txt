@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: tk-logistic.biznesurfo.ru
+Sitemap: http://tk-logistic.biznesurfo.ru/sitemap.xml

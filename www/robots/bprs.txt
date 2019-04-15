@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: bprs.biznesurfo.ru
+Sitemap: http://bprs.biznesurfo.ru/sitemap.xml

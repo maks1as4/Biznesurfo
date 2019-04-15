@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: ekbtruck.biznesurfo.ru
+Sitemap: http://ekbtruck.biznesurfo.ru/sitemap.xml

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: realtex2004.biznesurfo.ru
+Sitemap: http://realtex2004.biznesurfo.ru/sitemap.xml

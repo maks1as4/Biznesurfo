@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: gr-adm.biznesurfo.ru
+Sitemap: http://gr-adm.biznesurfo.ru/sitemap.xml

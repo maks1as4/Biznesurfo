@@ -1,0 +1,101 @@
+<?php require_once "../includs/head_forms.html"; ?>
+
+	<div class="body clear">
+	<div class="content">
+	<div class="inner inner-type-forms">
+
+		<a href="/"><img src="/i/logo.png" class="logo" alt="ООО &laquo;Индустрия бизнеса&raquo;" /></a>
+		<div class="go-home"><a href="/">Вернуться на главную</a></div>
+
+		<!-- форма регистрации -->
+		<div class="reg">
+			<form id="forms" method="post" action="/add-company">
+				<h1>Регистрация компании</h1>
+				<div class="line">
+<?php if ($err != ''): ?>
+					<div id="error-box">
+						<p>Исправьте, пожалуйста, следующие ошибки:</p>
+						<div><?php echo $err; ?></div>
+					</div>
+<?php endif; ?>
+				</div>
+				<div class="line">
+					<div class="opf">
+						<div class="label"><label for="uopf">ОПФ:</label></div>
+						<input type="text" id="uopf" class="edit" name="uopf" value='<?php echo $val_opf; ?>' placeholder="ООО, ЗАО..." maxlength="20" autocomplete="off" />
+						<span id="err-uopf" class="error"></span>
+					</div>
+					<div class="organisation">
+						<div class="label"><label for="uorganisation">Название организации:<span class="req">*</span></label></div>
+						<input type="text" id="uorganisation" class="edit" name="uorganisation" value='<?php echo $val_organisation; ?>' placeholder="например: Уралпромтехцентр" maxlength="220" autocomplete="off" />
+						<span id="err-uorganisation" class="error"></span>
+					</div>
+					<div class="clear-white"></div>
+				</div>
+				<div class="line">
+					<div class="label"><label>Телефон организации:<span class="req">*</span></label><div class="hint" title="Введите номер телефона вашей организации.<br />Номер может быть:<br />- городским: /343/ 27xxx00;<br />- сотовым: /963/ 77xxx81;<br />- бесплатный номер: /8800/ 10xxx70."></div></div>
+					<span class="phone-prefix">+7</span>
+					/ <input type="text" id="ucode" class="edit code" name="ucode" value='<?php echo $val_code; ?>' placeholder="код" maxlength="5" autocomplete="off" /> /
+					<input type="text" id="uphone" class="edit phone" name="uphone" value='<?php echo $val_phone; ?>' placeholder="номер телефона" maxlength="7" autocomplete="off" />
+					<span id="err-ucode" class="error"></span>
+					<span id="err-uphone" class="error"></span>
+				</div>
+				<div class="line">
+					<div class="label"><label for="ufio">Ваше ФИО:<span class="req">*</span></label><div class="hint" title="Введите ваше ФИО.<br />Необходимо для связи с нами или для переписки с вашими клиентами.<br />Так же эти данные будут отображаться на вашем мини сайте в разделе «Контакты»"></div></div>
+					<input type="text" id="ufio" class="edit" name="ufio" value='<?php echo $val_fio; ?>' maxlength="120" autocomplete="off" />
+					<span id="err-ufio" class="error"></span>
+				</div>
+				<div class="line">
+					<div class="label"><label for="umail">E-mail:<span class="req">*</span></label><div class="hint" title="Электронная почта необходима для:<br /> - Входа на сайт.<br /> - Переписки с вашими клиентами.<br /> - Получения уведомлений от портала «Индустрия бизнеса».<br /><br /><strong>Внимание:</strong> для подтверждения регистрации на портале на указанный адрес в течении 10 мин. придет письмо с инструкцией как подтвердить регистрацию."></div></div>
+					<input type="text" id="umail" class="edit" name="umail" value='<?php echo $val_mail; ?>' maxlength="100" autocomplete="off" />
+					<span id="err-umail" class="error"></span>
+				</div>
+				<div class="line">
+					<div class="label"><label for="upass">Пароль:<span class="req">*</span></label><div class="hint" title="Пароль должен:<br /> - Состоять только из букв английского алфавита верхнего и нижнего регистра, цифр, знаков – и _<br /> - Быть не менее 3х символов и не более 10ти.<br /><br /><strong>Примечание:</strong> старайтесь, придумать пароль был более сложным, комбинируйте буквы разного регистра и цифры."></div></div>
+					<input type="password" id="upass" class="edit" name="upass" value='' placeholder="от 3х до 10ти символов" maxlength="10" autocomplete="off" />
+					<span id="err-upass" class="error"></span>
+				</div>
+				<div class="line">
+					<input type="checkbox" id="uagree" name="uagree" value="yes" checked="checked" /> Я согласен с <a href="/agreement" rel="nofollow" target="_blank">пользовательским соглашением</a> портала «Индустрия бизнеса».<br />
+					<p style="margin-top:8px;">А также: после регистрации на сайте все обновления личной информации происходят<br />со стороны пользователя. Администрация Biznesurfo.ru за обновления данных вашей<br />компании ответственности не несет.</p>
+					<span id="err-uagree" class="error"></span>
+				</div>
+				<div class="line">
+					<input type="submit" id="submit" class="button orange" value="Добавить компанию" style="font-weight:bold;" name="btmes" />
+				</div>
+				<div id="loading" style="display:none;">
+					<span class="indicator">Заявка отправляется, пожалуйста, подождите несколько секунд…</span>
+				</div>
+				<!-- indicator preload -->
+				<div style="display:none;"><img src="/i/indicator.gif" /></div>
+				<!-- /indicator preload -->
+			</form>
+		</div><!-- /reg -->
+		<!-- /форма регистрации -->
+
+		<div class="why">
+			<h2>Зачем регистрироваться?</h2>
+			<p>После регистрации вашей компании на сайте www.biznesurfo.ru вы получаете:</p>
+			<ol>
+				<li>Сайт вашей компании абсолютно бесплатно.</li>
+				<li>Возможность управлять сайтом:</li>
+				<ul>
+					<li>разместить товары вашей компании на сайте;</li>
+					<li>добавлять информацию о компании;</li>
+					<li>публиковать новости, спецпредложения, контактную информацию.</li>
+				</ul>
+				<!--li>Возможность бесплатно продвигать свой сайт в поисковых системах Yandex, Google, Mail, Rambler.</li-->
+				<li>Новых клиентов с сайта<br />Индустрии бизнеса и поисковых систем.</li>
+			</ol>
+		</div><!-- /why -->
+		<div class="clear-white"></div>
+		
+	</div><!-- /inner -->
+	</div><!-- /content -->
+	</div><!-- /body -->
+
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+</body>
+</html>

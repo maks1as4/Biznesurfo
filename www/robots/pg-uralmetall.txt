@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: pg-uralmetall.biznesurfo.ru
+Sitemap: http://pg-uralmetall.biznesurfo.ru/sitemap.xml

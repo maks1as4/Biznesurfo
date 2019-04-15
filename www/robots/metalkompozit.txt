@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: metalkompozit.biznesurfo.ru
+Sitemap: http://metalkompozit.biznesurfo.ru/sitemap.xml

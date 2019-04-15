@@ -1,0 +1,25 @@
+<div style="width:800px; margin:50px; font-size:16px; font-family:arial, sans-serif;">
+	<a href="/management/adm">&larr; вернутьс€</a>
+<?php if (count($Uncheck_clients) > 0): ?>
+<?php foreach($Uncheck_clients as $u_client): ?>
+	<div style="border-bottom:1px solid #ababab; padding-bottom:15px; margin-top:15px;">
+		<span style="color:#bcbcbc; font-size:14px;">#<?php echo $u_client[0]; ?></span>
+		<strong><?php echo $u_client[1]; ?></strong>
+		<?php $cart_url = ($u_client[7]!=''?'http://'.$u_client[7].'.'.$url3Href:'http://www.'.$url3Href.'/company/'.$u_client[0]); ?>
+		&nbsp;&nbsp;
+		<a href="<?php echo $cart_url ?>" target="_blank" style="color:#bcbcbc;"><?php echo $cart_url ?></a>
+		<div style="margin:5px 0;">
+			<?php echo $u_client[5]; ?> <span style="color:#bcbcbc; font-size:14px;">( <?php echo $u_client[2]; ?> | <?php echo $u_client[3]; ?> | <?php echo ($u_client[4] != '') ? $u_client[4] : '\'\''; ?> )</span>
+		</div>
+<?php if ($u_client[6] != ''): ?>
+		<div style="margin:10px 0 5px;">
+			<?php echo $u_client[6]; ?>
+		</div>
+<?php endif; ?>
+		<a href="/management/adm/client-checked/<?php echo $u_client[0]; ?>" style="color:#3333aa;">проверенно</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/management/adm/client-edit/<?php echo $u_client[0]; ?>" style="color:#3333aa;">изменить</a>
+	</div>
+<?php endforeach; ?>
+<?php else: ?>
+	<p>Ќет непроверенной информации о клиентах.</p>
+<?php endif; ?>
+</div>

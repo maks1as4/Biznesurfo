@@ -1,0 +1,325 @@
+<div class="b2b84109_non_wrapper">
+    <div class="b2b84109_content b2b84109_ph-16">
+        <!--[if IE 6]><table class="b2b84109_fix b2b84109_c-100"><tr><td class="b2b84109_fix"><![endif]-->
+        <div class="b2b84109_h3 b2b84109_white b2b84109_bg-red" style="padding:6px;"><?php echo $header;?></div>
+    
+                            
+            <form name="<?php echo $prefix;?>b2b5_form" id="b2b5_form" class="b2b84109_gr-fd3" method="post" action="<?php echo $script_name;?>">
+                <input type="hidden" name="<?php echo $prefix;?>b2b5_act" value="find" />
+                <table class="b2b84109_spec b2b84109_c-100 b2b84109_mb-3">
+                    <tr>
+                        <td class="b2b84109_w-120 b2b84109_f-13">
+                            <label for="b2b5_search">Поисковый запрос:</label>
+                        </td>
+                        <td>
+                            <input name="<?php echo $prefix;?>b2b5_search" class="b2b84109_c-99" id="b2b5_search" type="text" value="<?php echo $search;?>" class="b2b84109_c-99" />
+                        </td>
+                        <td><button type="submit">Найти</button></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>Пример: <a href="javascript:void(0);" onClick="var str = this.innerHTML;document.getElementById('b2b5_search').value = str; document.b2b5_form.submit(); return false; "><?php echo $example;?></a></td>
+                        <td><a onclick="var more = document.getElementById('b2b5more'); if(more.className=='b2b84109_hide'){more.className=''; this.className='b2b84109_fl-lt b2b84109_f-11 b2b84109_gray_open'; document.b2b5_form.b2b5_extended_search.value=1;}else{more.className='b2b84109_hide'; this.className='b2b84109_fl-lt b2b84109_f-11 b2b84109_gray'; document.b2b5_form.b2b5_extended_search.value=0;} return false;" class="b2b84109_fl-lt b2b84109_f-11 b2b84109_gray" href="#">расширенный поиск</a></td>
+                    </tr>                                    
+                </table>
+
+                <input type="hidden" name="<?php echo $prefix;?>b2b5_extended_search" value="<?php echo $extended_search;?>">
+
+                <div class="<?php echo $extended_search?'':'b2b84109_hide';?>" id="b2b5more">     
+                                
+                    <table class="" cellpadding="5">
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>
+                               Все слова <input type="radio" name="<?php echo $prefix;?>b2b5_or_and" value="and"  <?php echo ($or_and != 'or')?'checked':'';?>>&nbsp;&nbsp;
+                                Любое из слов <input type="radio" name="<?php echo $prefix;?>b2b5_or_and" value="or"  <?php echo ($or_and == 'or')?'checked':'';?> >
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td style="vertical-align: top !important;">Отрасли</td>
+                            <td>
+                            
+                                <div id="otr_root">
+                                    <a style="text-decoration: none; color: black;" href="javascript: otr_on_off('otr_root','otr_root_content');">
+                                        <img src="<?php echo $path;?>images/tree_plus.gif" border="0">
+                                    </a>
+                                    <input type="checkbox" id="otr_root_checkbox" onClick="otr_selected('otr_root_checkbox','otr_root_content');">&nbsp;<a class="view_all" href="javascript: show_selected_otr('otr_root_content','otr_root_checkbox','otr_root');">(показать выделенные)</a>
+                                </div>
+                                <div id="otr_root_content" style="display: none;">
+        
+                                    <?php foreach($otrs as $otr):?>
+                                    <div id="otr_<?php echo $otr['id'];?>">&nbsp;&nbsp;
+                                        <a href="javascript: otr_on_off('otr_<?php echo $otr['id'];?>','subotrs_<?php echo $otr['id'];?>');"><img src="<?php echo $path;?>images/tree_plus.gif" border="0"></a>
+                                        <input type="checkbox" id="otr_checkbox_<?php echo $otr['id'];?>" onClick="otr_selected('otr_checkbox_<?php echo $otr['id'];?>','subotrs_<?php echo $otr['id'];?>');">&nbsp;<?php echo $otr['header'];?>
+                                    </div>
+                                    <div id="subotrs_<?php echo $otr['id'];?>" style="display: none;">
+            
+                                         <?php foreach($otr['subotr'] as $sub):?>
+                                        <div id="subotr_<?php echo $sub['id'];?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="<?php echo $path;?>images/tree_left.gif" border="0">
+                                            <input type="checkbox" id="subotr_checkbox_<?php echo $sub['id'];?>" name="<?php echo $prefix;?>b2b5_subotr[]" value="<?php echo $sub['id'];?>" <?php echo (in_array($sub['id'], $subotr))?'checked':'';?>>&nbsp;<?php echo $sub['header'];?>
+                                        </div>
+                                        <?php endforeach;?>
+                                        
+                                    </div>
+                                    <?php endforeach;?>
+                                    
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top !important;">География</td>
+                            <td>
+                            
+                                <div id="country_root">
+                                    <a style="text-decoration: none; color: black;" href="javascript: country_on_off('country_root','country_root_content');">
+                                        <img src="<?php echo $path;?>images/tree_plus.gif" border="0">
+                                    </a>
+                                    <input type="checkbox" id="country_root_checkbox" onClick="country_selected('country_root_checkbox','country_root_content');">&nbsp;<a class="view_all" href="javascript: show_selected_country('country_root','country_root_content');">(показать выделенное)</a>
+
+                                </div>
+                                <div id="country_root_content" style="display: none;">
+
+                                    <?php foreach($countries as $country):?>
+                                    <?php if(isset($country['district']) && is_array($country['district'])):?>
+                                    <div id="country_<?php echo $country['id'];?>">&nbsp;&nbsp;
+                                        <a href="javascript: country_on_off('country_<?php echo $country['id'];?>','districts_<?php echo $country['id'];?>');">
+                                        <img src="<?php echo $path;?>images/tree_plus.gif" border="0"></a>
+                                        <input type="checkbox" id="country_checkbox_<?php echo $country['id'];?>" onClick="country_selected('country_checkbox_<?php echo $country['id'];?>','districts_<?php echo $country['id'];?>');">&nbsp;<?php echo $country['header'];?>
+                                    </div>
+                                    <div id="districts_<?php echo $country['id'];?>" style="display: none;">
+
+                                        <?php foreach($country['district'] as $district):?>
+                                        <div id="district_<?php echo $district['id'];?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a href="javascript: country_on_off('district_<?php echo $district['id'];?>','regions_district_<?php echo $district['id'];?>');">
+                                            <img src="<?php echo $path;?>images/tree_plus.gif" border="0"></a>
+                                            <input type="checkbox" id="district_checkbox_<?php echo $district['id'];?>" onClick="country_selected('district_checkbox_<?php echo $district['id'];?>','regions_district_<?php echo $district['id'];?>');">&nbsp;<?php echo $district['header'];?>
+                                        </div>
+                                        <div id="regions_district_<?php echo $district['id'];?>" style="display: none;">
+
+                                            <?php foreach($district['region'] as $reg):?>
+                                            <div id="region_<?php echo $reg['id'];?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                <img src="<?php echo $path;?>images/tree_left.gif" border="0">
+                                                <input type="checkbox" id="region_checkbox_<?php echo $reg['id'];?>" name="<?php echo $prefix;?>b2b5_region[]" value="<?php echo $reg['id'];?>" <?php echo (in_array($reg['id'], $region))?'checked':'';?> >&nbsp;<?php echo $reg['header'];?>
+                                            </div>
+                                            <?php endforeach;?>
+                                        </div>
+                                        <?php endforeach;?>
+
+                                    </div>
+                                    <?php else:?>
+                                    <div id="country_<?php echo $country['id'];?>">&nbsp;&nbsp;
+                                        <a href="javascript: country_on_off('country_<?php echo $country['id'];?>','regions_country_<?php echo $country['id'];?>');">
+                                        <img src="<?php echo $path;?>images/tree_plus.gif" border="0"></a>
+                                        <input type="checkbox" id="country_checkbox_<?php echo $country['id'];?>" onClick="country_selected('country_checkbox_<?php echo $country['id'];?>','regions_country_<?php echo $country['id'];?>');">&nbsp;<?php echo $country['header'];?>
+                                    </div>
+                                    <div id="regions_country_<?php echo $country['id'];?>" style="display: none;">
+
+                                         <?php foreach($country['region'] as $reg):?>
+                                        <div id="region_<?php echo $reg['id'];?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <img src="<?php echo $path;?>images/tree_left.gif" border="0">
+                                            <input type="checkbox" id="region_checkbox_<?php echo $reg['id'];?>" name="<?php echo $prefix;?>b2b5_region[]" value="<?php echo $reg['id'];?>" <?php echo (in_array($reg['id'], $region))?'checked':'';?>>&nbsp;<?php echo $reg['header'];?>
+                                        </div>
+                                        <?php endforeach;?>
+
+                                    </div>
+                                    <?php endif;?>
+                                    <?php endforeach;?>
+
+                                </div>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Поиск по номеру: 
+                            </td>
+                            <td>
+                                <input name="<?php echo $prefix;?>b2b5_number" size="30" maxlength="100" value="<?php echo $number;?>" style="width: 100px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Поиск по типу тендера: 
+                            </td>
+                            <td>
+                                 <select name="<?php echo $prefix;?>b2b5_is_state">
+                                    <?php foreach($is_states as $el):?>
+                                    <option value="<?php echo $el['id'];?>" <?php echo ($el['id'] == $is_state)?'selected':'';?>><?php echo $el['header'];?></option>
+                                    <?php endforeach;?>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="vertical-align: top !important;">
+                                Окончание действия: 
+                            </td>
+                            <td>
+                                C:&nbsp;
+                                <input type="text" value="<?php echo $day_from;?>" id="b2b5_day_from" name="<?php echo $prefix;?>b2b5_day_from" size="2"
+                                    onClick="m_from=b2b5_form.b2b5_month_from.selectedIndex; y_from=b2b5_form.b2b5_year_from.value; popUpCalendar(this, b2b5_form.b2b5_day_from, m_from, y_from);">
+                                <select id="b2b5_month_from" name="<?php echo $prefix;?>b2b5_month_from" style="width: 100px;">
+                                    <?php foreach($monthes as $num=>$month):?>
+                                    <option value="<?php echo $num;?>" <?php echo ($num == $month_from)?'selected':'';?>><?php echo $month;?></option>
+                                    <?php endforeach;?>                                                    
+                                </select>
+                                <select id="b2b5_year_from" name="<?php echo $prefix;?>b2b5_year_from" style="width: 60px;">
+                                    <?php foreach($years as $year):?>
+                                    <option value="<?php echo $year['header'];?>" <?php echo ($year['header'] == $year_from)?'selected':'';?>><?php echo $year['header'];?></option>
+                                    <?php endforeach;?>
+                                </select>
+                                &nbsp;
+                                По:&nbsp;
+                                <input type="text" value="<?php echo $day_to;?>" id="b2b5_day_to" name="<?php echo $prefix;?>b2b5_day_to" size="2"
+                                    onClick="m_to=b2b5_form.b2b5_month_to.selectedIndex; y_to=b2b5_form.b2b5_year_to.value; popUpCalendar(this, b2b5_form.b2b5_day_to, m_to, y_to);">
+                                <select id="b2b5_month_to" name="<?php echo $prefix;?>b2b5_month_to" style="width: 100px;">
+                                    <?php foreach($monthes as $num=>$month):?>
+                                    <option value="<?php echo $num;?>" <?php echo ($num == $month_to)?'selected':'';?>><?php echo $month;?></option>
+                                    <?php endforeach;?> 
+                                </select>
+                                <select id="b2b5_year_to" name="<?php echo $prefix;?>b2b5_year_to" style="width: 60px;">
+                                     <?php foreach($years as $year):?>
+                                     <option value="<?php echo $year['header'];?>" <?php echo ($year['header'] == $year_to)?'selected':'';?>><?php echo $year['header'];?></option>
+                                     <?php endforeach;?>
+                                </select>
+                                
+                                <br>
+                                <input type="checkbox" name="<?php echo $prefix;?>b2b5_take_date" value="1" <?php echo !empty($take_date)?'checked':'';?>>&nbsp;Учитывать период дат при поиске
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Цена контракта
+                            </td>
+                            <td>
+                                <input name="<?php echo $prefix;?>b2b5_price_from" size="5" value="<?php echo $price_from;?>" style="width: 100px;">
+                                -
+                                <input name="<?php echo $prefix;?>b2b5_price_to" size="5" value="<?php echo $price_to;?>" style="width: 100px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Записей на странице
+                            </td>
+                            <td>
+                                <select name="<?php echo $prefix;?>b2b5_per_page">
+                                    <?php foreach($rec_per_pages as $rec_per_page):?>
+                                    <option value="<?php echo $rec_per_page['header'];?>" <?php echo ($rec_per_page['header'] == $per_page)?'selected':'';?>><?php echo $rec_per_page['header'];?></option> 
+                                    <?php endforeach;?>
+                                </select>                                   
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><span style="color: red !important;">Внимание! Поиск заявок, срок действия которых на настоящий момент истёк, не ведётся.</span></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>
+                                <input type="submit" value="Искать"/>
+                            </td>
+                        </tr>
+                    </table>
+                
+                </div>
+                                
+            </form>
+                
+        <!--[if IE 6]></td></tr></table><![endif]-->
+    </div>
+    <!--// end content //-->
+</div>
+<!--// non_wrapper //-->
+
+<script type="text/javascript">
+var b2b5_dayName = new Array("Пн","Вт","Ср","Чт","Пт","Сб","Вс")
+</script>
+
+<?php  if($act == 'find'):?>
+<script type="text/javascript">
+function b2b_sort(name)
+{
+    var sort_pointer = 'desc';
+    if(name == '<?php echo $sort_field;?>')
+    {
+        if('<?php echo $sort_pointer;?>' == 'desc') sort_pointer = 'asc';
+    }
+    
+    location.href = '<?php echo $page_sort_href;?>&b2b5_extended_search='+document.b2b5_form.b2b5_extended_search.value+'&sort_field='+name+'&sort_pointer='+sort_pointer;
+}
+</script>
+<div class="b2b84109_non_wrapper">
+    <div class="b2b84109_content b2b84109_ph-16">
+        <!--[if IE 6]><table class="b2b84109_fix b2b84109_c-100"><tr><td class="b2b84109_fix"><![endif]-->
+        <div class="b2b84109_h3 b2b84109_white b2b84109_bg-red" style="padding:6px;"><a href="<?php echo $script_name;?>" style="color: #FFF;">Рубрикатор</a> :: Результаты поиска</div>
+        <p class=" b2b84109_f-13">Всего найдено тендеров:<span class="b2b84109_lt-gray"> <?php echo $full_count;?></span></p>
+
+        <?php if(count($tenders)):?>
+
+        <?php  if($pages_present):?>
+        <div class="b2b84109_pages">
+            <?php foreach($pages as $page):?>
+            <?php if(!empty($page['page_href'])):?>
+                <a href ="<?php echo $page['page_href'];?>" class="b2b84109_<?php echo ($page['cur_page'] == 1)?'cur_page':'other_page';?>" ><?php echo $page['page_title'];?></a>&nbsp;
+            <?php else:?>
+                <span class="b2b84109_no_href"><?php echo $page['page_title'];?></span>&nbsp;
+            <?php endif;?>
+            <?php endforeach;?>
+        </div>      
+        <?php endif;?>
+
+        <!-- Формирует таблицу с иследованиями -->
+        <table class="b2b84109_spec b2b84109_rs-table b2b84109_f-12" id="b2b_st1_sort_fr">
+        <tr>
+            <th style="cursor:pointer; width: 80%;" 
+                onclick="b2b_sort('header');">Наименование тендера
+                <span><?php echo ($sort_field == 'header')?$sort_pointer_symb:'';?></span></th>
+            <th style="cursor:pointer; width: 10%;" 
+                onclick="b2b_sort('startdate');">Время<br>действия
+                <span><?php echo ($sort_field == 'startdate')?$sort_pointer_symb:'';?></span></th>
+            <th style="cursor:pointer; width: 10%;" 
+                onclick="b2b_sort('cena_contrakta');">Цена контракта,<br> руб.
+                <span><?php echo ($sort_field == 'cena_contrakta')?$sort_pointer_symb:'';?></span></th>
+        </tr>
+
+        <!-- Выводит тендерами на страницу -->
+        <?php foreach($tenders as $tender):?>
+        <tr>
+                <td class="b2b84109_n-u b2b84109_f-14">
+                    <div style="padding-top:5px!important;padding-bottom:5px!important;">
+                    <b><a class="b2b84109_tender_header" href="<?php echo $tender['href'];?>"><?php echo $tender['header'];?></a></b></div><br>
+                    <span class="b2b84109_price"><?php echo $tender['anons'];?></span>                
+                </td>
+                <td class="b2b84109_price"><?php echo $tender['startdate'];?> - <?php echo $tender['stopdate'];?></td>
+                <td><b class="b2b84109_price"><?php echo $tender['cena_contrakta'];?></b></td>
+        </tr>        
+        <?php endforeach;?>
+
+        </table>
+
+        <?php if($pages_present):?>
+        <div class="b2b84109_pages">
+            <?php foreach( $pages as $page):?>
+            <?php if(!empty($page['page_href'])):?>
+								<a href ="<?php echo $page['page_href'];?>" class="b2b84109_<?echo ($page['cur_page']==1)?'cur_page':'other_page';?>" ><?php echo $page['page_title'];?></a>&nbsp;               
+            <?php else:?>
+                <span class="b2b84109_no_href"><?php echo $page.page_title;?></span>&nbsp;
+            <?php endif;?>
+            <?php endforeach;?>
+        </div>      
+        <?php endif;?>
+        
+				<?php else:?>
+        
+        <br>
+        По Вашему запросу ничего не найдено. Введенные Вами поисковые слова не содержатся ни в одном документе в базе либо поисковые слова слишком короткие. Задайте поисковое слово не менее чем из 3х символов. <br>              
+        
+        <?php endif;?>  
+        
+        <br>
+        Не нашли подходящего тендера? Бесплатно <a href="<?php echo $registerform_link;?>">зарегистрируйтесь</a> в крупнейшей системе по тендерам и закупкам и получите помощь персонального менеджера        
+
+    </div>
+</div>
+<?php endif;?> 

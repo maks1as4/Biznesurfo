@@ -1,0 +1,31 @@
+<?php require_once "../includs/head_forms.html"; ?>
+
+	<div class="body clear">
+	<div class="content">
+	<div class="inner inner-type-forms">
+
+		<a href="/"><img src="/i/logo.png" class="logo" alt="ООО &laquo;Индустрия бизнеса&raquo;" /></a>
+		<div class="go-home"><a href="/">Вернуться на главную</a></div>
+		
+		<div class="message">
+			<h1>Письмо успешно отправлено.</h1>
+			<p>
+				Теперь вам <strong>необходимо подтвердить регистрацию</strong>, для этого на указанный вами Email: <strong><?php echo $email; ?></strong> в течение 10 минут будет отправлено письмо, в котором вы можете подтвердить регистрацию.<br /><br />
+				Спасибо, что зарегистрировались на портале «Индустрия бизнеса»!<br />
+				Надеемся на взаимовыгодное, долгосрочное сотрудничество.
+			</p>
+			<p>
+				<strong>Вы можете:</strong> <a href="/add-company">зарегистрировать новую компанию</a> или вернуться на <a href="/">главную страницу</a>.
+			</p>
+			<div id="timer" style="display:none;">До автоматического перехода на главную страницу <span style="font-weight:bold;"></span></div>
+		</div><!-- /message -->
+
+	</div><!-- /inner -->
+	</div><!-- /content -->
+	</div><!-- /body -->
+
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+</body>
+</html>

@@ -1,0 +1,113 @@
+<div class="b2b84109_non_wrapper">
+    <div class="b2b84109_content b2b84109_ph-16">
+        <!--[if IE 6]><table class="b2b84109_fix b2b84109_c-100"><tr><td class="b2b84109_fix"><![endif]-->
+        <div class="b2b84109_h3 b2b84109_white b2b84109_bg-red" style="padding:6px;"><?php echo $header;?></div>
+        <p class="b2b84109_f-14"><?php echo $text;?></p>
+        <div class=" b2b84109_gr-rn2">
+            <div class="b2b84109_tl">
+                <div class="b2b84109_tr">
+                    <div class="b2b84109_br">
+                        <div class="b2b84109_bl">
+                        
+                            <ul class="b2b84109_spec b2b84109_drop-list4 b2b84109_fl-lt b2b84109_c-49">
+															<?php foreach($otrs_left as $otr):?>
+															<li <?php echo ($show_subotrs)?'"class="b2b84109_act"':'';?>><a class="b2b84109_drop <?php echo ($show_subotrs)?'b2b84109_drop-up':'';?>" href="#"><?php echo $otr['header'];?> (<?php echo $otr['tender_count'];?>)</a>
+                                <ul class="">
+                                
+                                 <?php foreach($otr['subotrs'] as $subotr):?>
+                                <li><a class="b2b84109_drop" href="<?php echo $subotr['href'];?>"><?php echo $subotr['header'];?> (<?php echo $subotr['tender_count'];?>)</a>
+                                    <ul>
+                                        <?php foreach($subotr['tenders'] as $tender):?>
+                                        <li class="b2b84109_mb-5">
+                                        <a href="<?php echo $tender['href'];?>"><?php echo $tender['header'];?></a>
+                                        </li>                                
+                                        <?php endforeach;?>
+                                        <li class="b2b84109_mb-5">
+                                            <a href="<?php echo $subotr['href'];?>">Все тендеры</a>
+                                        </li>    
+                                    </ul>   
+                                </li>                               
+                                <?php endforeach;?>
+                                
+                                </li>
+                            </ul>
+                            <?php endforeach;?>
+                            </ul>                           
+
+                            <ul class="b2b84109_spec b2b84109_drop-list4 b2b84109_fl-lt b2b84109_c-49">
+                            <?php foreach($otrs_right as $otr):?>
+                            <li <?php echo ($show_subotrs)?'"class="b2b84109_act"':'';?>><a class="b2b84109_drop <?php echo ($show_subotrs)?'b2b84109_drop-up':'';?>" href="#"><?php echo $otr['header'];?> (<?php echo $otr['tender_count'];?>)</a>
+                                <ul class="">
+                                
+                                <?php foreach($otr['subotrs'] as $subotr):?>
+                                <li><a class="b2b84109_drop" href="<?php echo $subotr['href'];?>"><?php echo $subotr['header'];?> (<?php echo $subotr['tender_count'];?>)</a>
+                                    <ul>
+                                        <?php foreach($subotr['tenders'] as $tender):?>
+                                        <li class="b2b84109_mb-5">
+                                        <a href="<?php echo $tender['href'];?>"><?php echo $tender['header'];?></a>
+                                        </li>                                
+                                        <?php endforeach;?>
+                                        <li class="b2b84109_mb-5">
+                                            <a href="<?php echo $subotr['href'];?>">Все тендеры</a>
+                                        </li>    
+                                    </ul>                       
+                                </li>                               
+                                <?php endforeach;?>
+                                
+                                </li>
+                            </ul>
+                            <?php endforeach;?>
+                            </ul>   
+                            
+                            <script type="text/javascript">
+                            //<![CDATA[
+                                function drop(){
+                                    
+                                    var ul = document.getElementsByTagName('UL');
+                                    for (var i = 0, l = ul.length; i<l; i++){
+                                        if(ul[i].className.indexOf('drop-list4')>-1){
+                                            var a = ul[i].getElementsByTagName('A');
+                                            for(var j=0, lj=a.length; j<lj; j++ ){
+                                                if(a[j].className.indexOf('b2b84109_drop')>-1){                                                  
+                                                    a[j].onclick = function(event){                                                     
+                                                        var x = parseInt(getX(this));
+                                                        var e = event||window.event;
+                                                        var clX = parseInt(e.clientX);
+                                                        var obj = this;
+                                                        var pp = obj.parentNode.parentNode
+                                                        if((clX-x)<24||pp.className.indexOf('drop-list4')>-1){
+                                                            
+                                                            var p = obj.parentNode;
+                                                            (obj.className.indexOf('b2b84109_drop-up')>-1)?obj.className=obj.className.replace('b2b84109_drop-up',''):obj.className+=' b2b84109_drop-up';
+                                                            (p.className.indexOf('b2b84109_act')>-1)?p.className=p.className.replace('b2b84109_act',''):p.className+=' b2b84109_act';
+                                                            return false;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            
+                           drop();
+                                
+                                function getX(e) {
+                                    var x = 0; 
+                                    while(e) { 
+                                    x += e.offsetLeft; 
+                                    e = e.offsetParent; 
+                                    }
+                                    return x; 
+                                }
+                                //]]>
+                            </script> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--[if IE 6]></td></tr></table><![endif]-->
+    </div>
+    <!--// end content //-->
+</div>
+<!--// non_wrapper //-->

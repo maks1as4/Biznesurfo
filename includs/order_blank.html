@@ -1,0 +1,131 @@
+<?php require_once "../includs/head.html"; ?>
+
+				<div class="path">
+<?php for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+				</div><!-- /path -->
+				
+
+				<h1>Купон для оформления бесплатной подписки</h1>
+				Ваш бизнес связан с закупкой товаров? Вы представляете интересы заводов, водоканалов, МУПов, Союзов ЖКХ, строителей и металлургов? Оформите бесплатную подписку на справочник &laquo;Индустрия бизнеса &raquo;, являющийся каталогом компаний, товаров и услуг. Издание распространяется в журнальном варианте или CD версии по предприятиям Свердловской, Тюменской, Челябинской, Курганской областей, Пермского края, ХМАО, ЯНАО.<br> 
+Чтобы получать наш справочник, Вам необходимо заполнить купон, представленный ниже.<br> 
+
+<?php if ($err!=''):?>
+				<div class="error"><br /><?php echo $err;?></div>
+<?php endif;?>
+				
+				<div class="form">
+					<form method="post" action="/subscribe" id="podpiska" name="frmmes">
+					<fieldset >
+
+<div class="input">
+	<label for="uname">Название организации:<span class="req">*</span></label>
+	<input type="text" value="<?php echo(htmlspecialchars($cl_name));?>" id="uname" name="uname" maxlength="224" size="20" />
+	<label for="uwork">Сфера деятельности:<span class="req">*</span></label>
+	<SELECT name="uwork" id="uwork">
+		<option <?php if ($cl_work==0) echo ('selected');?> value="0">Металлопрокат, метизы, металлы</option>
+		<option <?php if ($cl_work==1) echo ('selected');?> value="1">Общепромышленное оборудование</option>
+		<option <?php if ($cl_work==2) echo ('selected');?> value="2">Электрооборудование, промышленная электроника</option>
+		<option <?php if ($cl_work==3) echo ('selected');?> value="3">Оборудование специализированных отраслей</option>
+		<option <?php if ($cl_work==4) echo ('selected');?> value="4">Промышленные материалы</option>
+		<option <?php if ($cl_work==5) echo ('selected');?> value="5">Строительные и отделочные материалы</option>
+		<option <?php if ($cl_work==6) echo ('selected');?> value="6">Оборудование для строительства и ЖКХ</option>
+		<option <?php if ($cl_work==7) echo ('selected');?> value="7">Инструмент</option>
+		<option <?php if ($cl_work==8) echo ('selected');?> value="8">Услуги, сопутствующие материалы</option>
+		<option <?php if ($cl_work==9) echo ('selected');?> value="9">Автомобили, транспорт</option>
+		<option <?php if ($cl_work==10) echo ('selected');?> value="10">Торговое и складское оборудование</option>
+		<option <?php if ($cl_work==11) echo ('selected');?> value="11">Офисное оборудование</option>
+		<option <?php if ($cl_work==12) echo ('selected');?> value="12">Рекламное агенство</option>
+	</SELECT>
+</div>
+	<div class="region">
+		<label for="uregion">Регион (республика, область):<span class="req">*</span></label>
+		<input type="text" value="<?php echo(htmlspecialchars($cl_region));?>" id="uregion" name="uregion" maxlength="254" size="20" />
+	</div>
+	<div class="raion">
+		<label for="uraion">Район<span class="req">*</span></label>
+		<input type="text" value="<?php echo(htmlspecialchars($cl_raion));?>" id="uraion" name="uraion" maxlength="254" size="20" />
+	</div>
+	<div class="index">
+		<label for="uindex">Почтовый индекс:<span class="req">*</span></label>
+		<input type="text" value="<?php echo(htmlspecialchars($cl_index));?>" id="uindex" name="uindex" maxlength="10" size="20" />
+	</div>
+	<div class="gorod">
+		<label for="ucity">Город, населенный пункт:<span class="req">*</span></label>
+		<input type="text" value="<?php echo(htmlspecialchars($cl_city));?>" id="ucity" name="ucity" maxlength="126" size="20" />
+	</div>
+	<div class="ulica">
+		<label for="ustreet">Улица:</label>
+		<input type="text" value="<?php echo(htmlspecialchars($cl_street));?>" id="ustreet" name="ustreet" maxlength="126" size="20" />
+	</div>
+	<div class="dom">
+		<label for="uhouse">Дом:</label>
+		<input type="text" value="<?php echo(htmlspecialchars($cl_house));?>" id="uhouse" name="uhouse" maxlength="15" size="20" />
+	</div>
+	<div class="ofis">
+		<label for="uoff">Офис:</label>
+		<input type="text" value="<?php echo(htmlspecialchars($cl_office));?>" id="uoff" name="uoff" maxlength="15" size="20" />
+	</div>
+	<div class="aya">
+		<label for="uaya">А/я:</label>
+		<input type="text" value="<?php echo(htmlspecialchars($cl_aya));?>" id="uaya" name="uaya" maxlength="15" size="20" />
+	</div>
+	<div class="input">
+		<label for="uphone">Телефон / факс (с кодом города):<span class="req">*</span></label>
+		<input type="text" value="<?php echo(htmlspecialchars($cl_phone));?>" id="uphone" name="uphone" maxlength="126" size="20" />
+		<label for="umail">Электронная почта:</label>
+		<input type="text" value="<?php echo(htmlspecialchars($cl_mail));?>" id="umail" name="umail" maxlength="126" size="20" />
+		<label for="usite">Сайт:</label>
+		<input type="text" value="<?php echo(htmlspecialchars($cl_site));?>" id="usite" name="usite" maxlength="63" size="20" />
+		<label for="ufio">Получатель (ФИО полностью):<span class="req">*</span></label>
+		<input type="text" value="<?php echo(htmlspecialchars($cl_fio));?>" id="ufio" name="ufio" maxlength="220" size="20" />
+		<label for="upost">Должность:</label>
+		<input type="text" value="<?php echo(htmlspecialchars($cl_post));?>" id="upost" name="upost" maxlength="220" size="20" />
+		<label for="w1">Получать:<span class="req">*</span></label>
+		<div class="radio">
+			<input id="w1" name="what" type="radio" value="jrn" <?php echo ($cl_what?'':'checked');?> /><label for="w1" class="title">Журнал</label>
+		</div>
+		<div class="radio">
+			<input id="w2" name="what" type="radio" value="dsk" <?php echo ($cl_what?'checked':'');?> /><label for="w2" class="title">Диск</label>
+		</div>
+	
+		<div class="clear"></div>
+	
+		<br />
+		<label for="usrc">Из какого источника Вы узнали о справочнике «Индустрия Бизнеса»?:</label>
+		<input type="text" value="<?php echo(htmlspecialchars($cl_src));?>" id="usrc" name="usrc" maxlength="512" size="20" />
+	</div>
+						
+						
+						
+						
+						<label for="ucode">Введите код безопасности<span class="req">*</span>:</label>
+						<img src="/cimlib/cim.php" alt="captcha" class="captchaimg" width="89" height="48" />
+<!--						<a href="#" class="captcharefresh">обновить код</a> -->
+						<div class="captcha">
+						<input type="text" name="ucode" size="20" />
+						</div>
+						
+						<input type="submit" class="button" value="Отправить" name="btmes" />
+						<div class="notes">
+							Поля отмеченые <span class="req">*</span>, обязательны к заполнению!<br />
+						</div>
+					</fieldset>
+					</form>
+				</div><!-- /form -->
+				
+				<br /><br /><br />
+				
+			</div><!-- /inner -->
+		</div><!-- /content -->
+	
+<?php require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

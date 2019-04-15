@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: gidro22.biznesurfo.ru
+Sitemap: http://gidro22.biznesurfo.ru/sitemap.xml

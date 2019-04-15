@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: ecolite16.biznesurfo.ru
+Sitemap: http://ecolite16.biznesurfo.ru/sitemap.xml

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: avtohelp174.biznesurfo.ru
+Sitemap: http://avtohelp174.biznesurfo.ru/sitemap.xml

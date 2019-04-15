@@ -1,0 +1,54 @@
+<?php require_once "../includs/head_forms.html"; ?>
+
+	<div class="body clear">
+	<div class="content">
+	<div class="inner inner-type-forms">
+		
+		<a href="/"><img src="/i/logo.png" class="logo" alt="ООО &laquo;Индустрия бизнеса&raquo;" /></a>
+		<div class="go-home"><a href="/">Вернуться на главную</a></div>
+
+		<!-- форма авторизации -->
+		<div class="form-box">
+			<form id="forms" method="post" action="/enter?link=<?php echo $goto; ?>">
+				<h1>Вход в кабинет</h1>
+				<div class="line">
+				<?php if ($err != ''): ?>
+					<div id="error-box">
+						<p>Исправьте, пожалуйста, следующие ошибки:</p>
+						<div><?php echo $err; ?></div>
+					</div>
+				<?php endif; ?>
+				</div>
+				<div class="line">
+					<div class="label"><label for="umail">Email:<span class="req">*</span></label></div>
+					<input type="text" id="umail" class="edit" name="umail" value="<?php echo $val_mail; ?>" maxlength="100" autocomplete="off" />
+					<span id="err-umail" class="error"></span>
+				</div>
+				<div class="line">
+					<div class="label"><label for="upass">Пароль:<span class="req">*</span></label></div>
+					<input type="password" id="upass" class="edit" name="upass" value="" maxlength="10" autocomplete="off" />
+					<span id="err-upass" class="error"></span>
+				</div>
+				<div class="line">
+					<div class="f-left"><input type="checkbox" id="uremembeme" name="uremembeme" value="yes" checked="checked" /> Запомнить меня.</div>
+					<div class="f-right"><a href="/forgot-password">Забыли пароль?</a></div>
+					<div class="clear-white"></div>
+				</div>
+				<div class="line">
+					<input type="submit" id="submit" class="button orange" value="Войти" name="btmes" />
+				</div>
+			</form>
+		</div><!-- /form-box -->
+		<!-- /форма авторизации -->
+
+		<div class="clear-white"></div>
+
+	</div><!-- /inner -->
+	</div><!-- /content -->
+	</div><!-- /body -->
+
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+</body>
+</html>

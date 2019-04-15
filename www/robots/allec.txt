@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: allec.biznesurfo.ru
+Sitemap: http://allec.biznesurfo.ru/sitemap.xml

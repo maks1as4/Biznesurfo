@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: hydraulics-uraltreyd.biznesurfo.ru
+Sitemap: http://hydraulics-uraltreyd.biznesurfo.ru/sitemap.xml

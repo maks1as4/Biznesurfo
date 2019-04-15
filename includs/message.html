@@ -1,0 +1,56 @@
+<?php require_once "../includs/head.html"; ?>
+
+				<div class="path">
+<?php for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+				</div><!-- /path -->
+				<h1>Нам интересно Ваше мнение</h1>
+					<ul>
+						<li>Вы нашли ошибку на сайте?</li>
+						<li>Вас что-то не устраивает в его работе?</li>
+						<li>Есть замечания и предложения?</li>
+					</ul>
+<?php if ($err!=''):?>
+				<div class="error"><br /><?php echo $err;?></div>
+<?php endif;?>
+				
+				<div class="form">
+					<form method="post" action="<?php echo $pagNam;?>" id="podpiska" name="frmmes">
+					<fieldset >
+
+						<div class="input">
+						<label for="umail">Ваш e-mail:<span class="req">*</span></label>
+						<input type="text" value="<?php echo(htmlspecialchars($cl_mail));?>" name="umail" maxlength="126" size="20" />
+						<label for="utext">Текст письма:<span class="req">*</span></label>
+						<textarea cols="40" rows="10" name="utext"><?php echo(htmlspecialchars($cl_text));?></textarea>
+						</div>
+						<label for="ucode">Введите код безопасности<span class="req">*</span>:</label>
+						<img src="/cimlib/cim.php" alt="captcha" class="captchaimg" width="89" height="48" />
+<!--						<a href="#" class="captcharefresh">обновить код</a> -->
+						<div class="captcha">
+						<input type="text" name="ucode" size="20" />
+						</div>
+						
+						<input type="submit" class="button" value="Отправить" name="btmes" />
+						<div class="notes">
+							Поля отмеченые <span class="req">*</span>, обязательны к заполнению!<br />
+						</div>
+					</fieldset>
+					</form>
+				</div><!-- /form -->
+				
+				<br /><br /><br />
+				
+			</div><!-- /inner -->
+		</div><!-- /content -->
+	
+<?php require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

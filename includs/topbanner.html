@@ -1,0 +1,40 @@
+<?php
+$tb = '';
+
+if ((!isset($_SESSION['tbn']))||(!CheckIntegerUnsign($_SESSION['tbn'])))
+	$_SESSION['tbn'] = 0;
+
+$sql =	'(select B.name, B.id from BANNERS B where B.kind=0 and B.visible=1 and B.id>'.$_SESSION['tbn'].' order by id limit 1) '.
+		'union '.
+		'(select B.name, B.id from BANNERS B where B.kind=0 and B.visible=1 and B.id<='.$_SESSION['tbn'].' order by id limit 1)';
+$qRes = SqlQuery($sql);
+if (($qRes)&&($Rows = mysql_fetch_row($qRes))) {
+	$tb = $Rows[0];
+	$id_banner = $Rows[1];
+	$_SESSION['tbn'] = $id_banner;
+	if ((!$isRobot)&&($isLogStat)) {
+		$sql =	'insert into COUNTERS_BT values ('.
+				$id_banner.','.
+				'1,'.		// is_banner
+				'curdate(),'.
+				'1'.		// cnt
+				') '.
+				'on duplicate key update cnt=cnt+1';
+		SqlQuery ($sql);
+	}
+}
+@mysql_free_result($qRes);
+
+if ($tb != ''):
+?>
+	<div style="position:relative; margin:0; padding:0; text-align:center;">
+		<object type="application/x-shockwave-flash" data="fswf/<?php echo($tb); ?>" width="100%" height="60" style="border:none;">
+			<param name="movie" value="fswf/<?php echo($tb);?>" />
+			<param name="play" value="true" />
+			<param name="loop" value="true" />
+			<param name="quality" value="high" />
+			<param name="wmode" value="opaque" />
+			<param name="flashvars" value="id_banner=<?php echo $id_banner; ?>&" />
+		</object>
+	</div><!-- /top_banner -->
+<?php endif; ?>

@@ -1,0 +1,22 @@
+<?php require_once "../../includs/company/public/head.html"; ?>
+
+<div id="conteiner-simple">
+	<div id="path" class="clear">
+<?php
+for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+	</div><!-- /path -->
+
+	<div id="news">
+		<h1><?php echo $News[2]; ?></h1>
+		<p class="date"><?php echo DataParser($News[6]); ?>. <span>новость компании - <?php echo $tagH1; ?></span></p>
+<?php if ($News[4]!='' && $News[5]!=''): ?>
+		<img src="/i/news/<?php echo $News[4]; ?>.<?php echo $News[5]; ?>" alt='<?php echo mb_strtolower($News[2], 'cp1251'); ?>' />
+<?php endif; ?>
+		<div class="text"><?php echo getDataFromDB($News[3]); ?></div>
+	</div><!-- /news -->
+
+</div><!-- /conteiner-simple -->
+
+<?php require_once "../../includs/company/public/foot.html"; ?>

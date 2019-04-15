@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: sp-mozaika.biznesurfo.ru
+Sitemap: http://sp-mozaika.biznesurfo.ru/sitemap.xml

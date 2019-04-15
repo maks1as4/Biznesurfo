@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: nislight.biznesurfo.ru
+Sitemap: http://nislight.biznesurfo.ru/sitemap.xml

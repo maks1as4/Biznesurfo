@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: transtech.biznesurfo.ru
+Sitemap: http://transtech.biznesurfo.ru/sitemap.xml

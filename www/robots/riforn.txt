@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: riforn.biznesurfo.ru
+Sitemap: http://riforn.biznesurfo.ru/sitemap.xml

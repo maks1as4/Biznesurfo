@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: 7767591.biznesurfo.ru
+Sitemap: http://7767591.biznesurfo.ru/sitemap.xml

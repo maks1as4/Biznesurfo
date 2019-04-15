@@ -1,0 +1,82 @@
+<?php require_once "../includs/head.html"; ?>
+
+				<div class="path">
+<?php for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+				</div><!-- /path -->
+	
+				<h1><?php echo $tagH1;?></h1>
+	
+				<div class="items_table_nav clear">
+					<div class="itn_l">
+						<br />
+						Выбранные:
+						<a href="#" class="excel">в Excel</a>
+						<a href="#" class="print">Печать</a>
+					</div><!-- /itn_l -->
+
+					<div class="itn_r">
+						<?php echo $qtyRow;?><br />
+						<span class="pages_count">Страница <?php echo $curPageNo;?> из <?php echo $maxPageNo;?></span>
+
+<?php if ($pageNavQty>0):?>
+						<span class="pages_nav">
+<?php for($i=0;$i<$pageNavQty;$i++)	echo ($PageNav[$i]."\n"); ?>
+						</span>
+<?php endif; ?>
+					</div><!-- /itn_r -->
+				</div><!-- /items_table_nav -->
+				
+				<form id="items_table_form" method="post" action="">
+				<table class="items_table">
+					<thead>
+					<tr>
+						<td class="td_check"><input type="checkbox" name="cball" id="cball" /></td>
+<?php for ($i=0;$i<$HeadersQty;$i++) echo ($Headers[$i]); ?>
+					</tr>
+					</thead>
+<?php for ($i=0;$i<count($Lins);$i++): ?>
+					<tr>
+						<td class="td_check"><input type="checkbox" name="cb<?php echo($Lins[$i][0])?>" id="cb<?php echo($Lins[$i][0])?>" /></td>
+						<td><label for="cb<?php echo($Lins[$i][0])?>"><?php echo($Lins[$i][1])?></label></td>
+						<td><?php echo($Lins[$i][2])?></td>
+						<td><a href="company/<?php echo($Lins[$i][3])?>.html" title="Карточка предприятия <?php echo($Lins[$i][4])?>"><?php echo($Lins[$i][4])?></a><br /><?php echo($Lins[$i][7])?>
+						</td>
+						<td><strong><?php echo($Lins[$i][5])?></strong></td>
+					</tr>
+<?php endfor; ?>
+				</table>
+				</form>
+				
+				<div class="items_table_nav">
+					<div class="itn_l">
+						Выбранные:
+						<a href="#" class="excel">в Excel</a>
+						<a href="#" class="print">Печать</a>
+					</div><!-- /itn_l -->
+					
+					<div class="itn_r">
+						<span class="pages_count">Страница <?php echo $curPageNo;?> из <?php echo $maxPageNo;?></span>
+<?php if ($pageNavQty>0):?>
+						<span class="pages_nav">
+<?php for($i=0;$i<$pageNavQty;$i++)	echo ($PageNav[$i]."\n"); ?>
+						</span>
+<?php endif; ?>
+					</div><!-- /itn_r -->
+				</div><!-- /items_table_nav -->
+				
+				<br /><br /><br />
+				
+			</div><!-- /inner -->
+		</div><!-- /content -->
+	
+<?php require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

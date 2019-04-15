@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: ecosvar-irk.biznesurfo.ru
+Sitemap: http://ecosvar-irk.biznesurfo.ru/sitemap.xml

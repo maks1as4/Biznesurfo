@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: tddar.biznesurfo.ru
+Sitemap: http://tddar.biznesurfo.ru/sitemap.xml

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: kreativ66.biznesurfo.ru
+Sitemap: http://kreativ66.biznesurfo.ru/sitemap.xml

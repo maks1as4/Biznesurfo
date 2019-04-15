@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: elkab-ural.biznesurfo.ru
+Sitemap: http://elkab-ural.biznesurfo.ru/sitemap.xml

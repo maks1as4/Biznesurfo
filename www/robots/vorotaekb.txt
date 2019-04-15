@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: vorotaekb.biznesurfo.ru
+Sitemap: http://vorotaekb.biznesurfo.ru/sitemap.xml

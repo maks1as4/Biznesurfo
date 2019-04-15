@@ -1,0 +1,141 @@
+<?php require_once "../../includs/control/head.html"; ?>
+
+<div class="box-header">
+	<div class="pull-left box-header-home"><a href="/kabinet"><i class="icon-home"></i></a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point"><a href="/kabinet">Товары</a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point">Загрузить прайс-лист</div>
+	<div class="pull-left box-header-separator"></div>
+</div>
+<div class="box-content">
+	<div class="box-inner-main">
+		<div class="title-page">
+			<h2 class="inline">Загрузить прайс-лист</h2>
+			<p class="pull-right"><a href="/kabinet" class="btn btn-link">&larr; вернуться назад</a></p>
+		</div>
+<?php if ($show_price_download_error){ ?>
+		<div class="alert alert-error">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			Прайс-лист пустой, сохранение невозможно. Добавьте товары и повторите попытку.
+		</div>
+<?php } ?>
+<?php if ($show_price_upload_error){ ?>
+		<div class="alert alert-error">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			Ошибка в загрузке файла. Повторите попытку еще раз.
+		</div>
+<?php } ?>
+<?php if ($show_price_empty_error){ ?>
+		<div class="alert alert-error">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			Выберите файл прайс-листа в формате Excel (.xls)
+		</div>
+<?php } ?>
+<?php if ($show_price_format_error){ ?>
+		<div class="alert alert-error">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<strong>Прайс-лист должен быть только в формате MS Excel (.xls)</strong><br />
+			Скачайте предложенный нами бланк, отредактируйте его и повторите загрузку отредактированного файла.
+		</div>
+<?php } ?>
+<?php if ($show_price_upload_none){ ?>
+		<div class="alert">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<p><strong>Все строчки загруженного прайс-листа были проигнорированы, пожалуйста, следуйте инструкции и повторите попытку</strong></p>
+			<p>Проигнорировано строк: <?php echo $not_updated_rows; ?></p>
+		</div>
+<?php } ?>
+<?php if ($show_price_uploaded){ ?>
+		<div class="alert alert-success">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<p><strong>Загрузка прошла успешно</strong></p>
+			<?php if ($added_rows > 0){ ?><p>Новых товаров добавлено: <?php echo $added_rows; ?></p><?php } ?>
+			<?php if ($updated_rows > 0){ ?><p>Товаров обновлено: <?php echo $updated_rows; ?></p><?php } ?>
+		</div>
+<?php } ?>
+<?php if ($show_price_upload_ignor){ ?>
+		<div class="alert">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<p>Проигнорировано строк: <?php echo $not_updated_rows; ?></p>
+		</div>
+<?php } ?>
+		<div class="excel-description clearfix">
+			<div class="span1">
+				<img src="/i/kabinet/excel-file-big.png" />
+			</div>
+			<div class="span7">
+<?php if ($client_info['t_product_add']){ ?>
+				<p>Вы можете добавить не более <?php echo $client_info['t_product_left']; ?> товаров, остальные товары будут проигнорированы.</p>
+<?php }else{ ?>
+				<p class="text-error">Вы не можете добавлять новые товары.</p>
+<?php } ?>
+				<p>
+					Вы можете быстро разместить или обновить большое количество<br />
+					товаров и загрузить их с помощью специально подготовленных бланков в формате Excel.<br />
+					Выберите необходимое действие и следуйте инструкции:
+				</p>
+			</div>
+		</div>
+		<ul class="thumbnails">
+			<li class="span4">
+				<div class="thumbnail excel-thumbnail">
+					<div class="caption">
+						<h3>1. Вы добовляете новый прайс-лист</h3>
+						<p>
+							<ul>
+								<li>cкачайте заранее подготовленный<br /><a href="/price/price-list.xls"><i class="icon-excel icon-tab-left"></i>бланк в формате Excel</a>;</li>
+								<li>заполните его в соответствии с требованиями, представленными в файле-бланке;</li>
+								<li>загрузите его на сайт с помощью формы представленной ниже.</li>
+							</ul>
+						</p>
+						<p class="text-error">Важно! Обязательно указывайте рубрику для каждой позиции в бланке, товары без рубрик не будут добавлены.</p>
+					</div>
+				</div>
+			</li>
+			<li class="span4">
+				<div class="thumbnail excel-thumbnail">
+					<div class="caption">
+						<h3>2. Вы обновляете текущий прайс-лист</h3>
+						<p>
+							<ul>
+								<li>скачайте&nbsp;&nbsp;<a href="/kabinet/price-download" class="get-my-price"><i class="icon-excel icon-tab-left"></i>текущий прайс-лист</a>&nbsp;&nbsp;вашей компании <span class="gray">(может занять длительное время, в зависимости от количества позиций в прайс-листе)</span>;</li>
+								<li>отредактируйте ваши товары;</li>
+								<li>загрузите отредактированный прайс-лист на сайт с помощью формы представленной ниже.</li>
+							</ul>
+						</p>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="excel-upload">
+			<p>Загрузить прайс-лист (.xls)</p>
+			<form id="forms" class="send-my-price form-inline" method="post" action="/kabinet/price-upload" enctype="multipart/form-data">
+				<input type="file" id="excel" class="field" name="excel" value="" />
+				<button type="submit" class="btn btn-primary" name="btmes"><i class="icon-download-alt icon-white icon-tab-left"></i>Загрузить</button>
+			</form>
+			<p>
+				Более подробная информация по заполнению находится в файле бланка. Вы можете&nbsp;&nbsp;<a href="/price/example.xls"><i class="icon-excel icon-tab-left"></i>скачать пример заполненного бланка</a>.
+			</p>
+		</div>
+	</div><!-- /box-inner-main -->
+</div><!-- /box-content -->
+
+<!-- progres modal -->
+<div id="progres-modal" class="modal-wrapper">
+	<div class="modal-head">
+		<a href="javascript://" class="modal-close close-x" title="закрыть"></a>
+	</div>
+	<div class="text"></div>
+	<div class="indicator"><img src="/i/kabinet/indicator.gif" /></div>
+</div>
+<!-- /progres modal -->
+
+<!-- preload imgs -->
+<div class="preload">
+	<img src="/i/kabinet/modal-close.png" />
+	<img src="/i/kabinet/indicator.gif" />
+</div>
+<!-- /preload imgs -->
+
+<?php require_once "../../includs/control/foot.html"; ?>

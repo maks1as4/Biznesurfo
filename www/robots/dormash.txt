@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: dormash.biznesurfo.ru
+Sitemap: http://dormash.biznesurfo.ru/sitemap.xml

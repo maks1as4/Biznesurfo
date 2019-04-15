@@ -1,0 +1,24 @@
+<?php require_once "../includs/head.html"; ?>
+
+				<div class="path">
+<?php for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+				</div><!-- /path -->
+	
+<a href="foto" title="Фотографии">Фотографии</a>&nbsp;&nbsp;&nbsp;<a href="diploms" title="Дипломы">Дипломы</a>&nbsp;&nbsp;&nbsp;<a href="locat" title="Размещение рекламы">Размещение рекламы</a><br /><br />
+
+<img src="/i/info.jpg" />
+
+</div><!-- /inner -->
+		</div><!-- /content -->
+	
+<?php require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

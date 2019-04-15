@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base href="http://<?php echo $baseHref; ?>" /> 
+<title><?php echo $b2b->b2bcontext_title; ?></title>
+<?php echo $b2b->b2bcontext_head; ?>
+
+<meta name="description" content="<?php echo $b2b->b2bcontext_description; ?>">
+<meta name="keywords" content="<?php echo $b2b->b2bcontext_keywords; ?>">
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" rel="stylesheet" href="/css/style.css" />
+<link type="text/css" rel="stylesheet" href="/css/dropmenu.css" />
+<!--[if lt IE 8]>
+<link type="text/css" rel="stylesheet" href="/css/ie.css" />
+<![endif]-->
+<!--[if IE 6]>
+<script src="/js/DD_belatedPNG.js"></script>
+<link type="text/css" rel="stylesheet" href="/css/ie6.css" />
+<![endif]-->
+<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.simplemodal.js"></script>
+<script type="text/javascript" src="/js/bootstrap-dropdown.js"></script>
+<script type="text/javascript" src="/js/jquery.md5.js"></script>
+<script type="text/javascript" src="/js/windows.js"></script>
+<script type="text/javascript" src="/js/jqtransform/jquery.jqtransform.js"></script>
+<link type="text/css" rel="stylesheet" href="/js/jqtransform/jqtransform.css" media="all" />
+<script language="javascript" type="text/javascript">
+$(document).ready(function() {
+<?php echo $jqAdd;?>
+	
+	$('#regionform').jqTransform({imgPath:'js/jqtransform/img/'});
+	$('.dropdown-toggle').dropdown();
+	
+});
+</script>
+<script type="text/javascript" src="/js/cufon-yui.js"></script>
+<script type="text/javascript">
+<?php echo $cufonRepl;?>
+</script>
+<?php echo $addScripts; ?>
+<script type="text/javascript">
+<?php echo $jsFuncs;?>
+
+	function check_query (s) {
+		if ((s=='<?php echo ($fPrompt);?>') || (s=='')) {
+			alert ('Введите поисковый запрос');
+			return false;
+		}
+		return true;
+	}
+	
+</script>
+</head>
+<body>
+
+<div class="page">
+
+<?php require_once "../../includs/windows.html"; ?>
+
+<?php require_once "../../includs/topmenu.html"; ?>
+
+<?php require_once "../../includs/topbanner.html"; ?>
+
+	<div class="header">
+	
+		<div class="navigation clear">
+			<div class="buttons">
+				<ul>
+					<li<?php echo ($isNewsPage?' class="active"':'');?>><a href="newstype">Новости</a></li>
+					<li<?php echo ($isExpoPage?' class="active"':'');?>><a href="exhibitions">Календарь выставок</a></li>
+					<li<?php echo ($isTendersPage?' class="active"':'');?>><a href="tenders/main">Тендеры</a></li>
+					<li<?php echo ($isPartnPage?' class="active"':'');?>><a href="partners">Партнеры</a></li>
+					<li<?php echo ($isInfoPage?' class="active"':'');?>><a href="info">О проекте</a></li>
+					<li<?php echo ($isContPage?' class="active"':'');?>><a href="contacts">Контакты</a></li>
+				</ul>
+			</div><!-- /buttons -->
+		</div><!-- /navigation -->
+
+		<div class="search">
+			<div class="search_l">
+				<div class="logo">
+					<a href="/<?php echo $findParStr; ?>"><img src="/i/logo.png" class="png noborder" width="292" height="75" alt="ООО &laquo;Индустрия бизнеса&raquo;" /></a>
+				</div><!-- /logo -->
+				<div class="search_l_in">
+					<div class="search_head">
+						<a href="<?php echo($toFirmSwitch.$findParStr);?>" class="section<?php echo ($forPred)?' active':'';?>"><i><b>Предприятия</b></i></a>
+						<a href="<?php echo($toMatSwitch.$findParStr);?>" class="section<?php echo ($forPred)?'':' active';?>"><i><b>Товары и цены</b></i></a>
+						<span class="region_out">
+							регион и город:&nbsp;&nbsp;&nbsp;<a href="/choose-region" id="rc" class="rc"><span><?php echo $nameReg;?></span></a>
+						</span>
+					</div><!-- /search_head -->
+					<form name="formfind" method="get" action="<?php echo (($forPred?'find_firms':'find').$findParStr);?>">
+						<div class="search_input">
+							<div class="search_input_in">
+								<input name="rcid" type="hidden" value="<?php echo ($flCity);?>" />
+								<input name="fnd" type="text" x-webkit-speech size="50" value="<?php echo htmlspecialchars ($fText);?>" onFocus="if(this.value=='<?php echo ($fPrompt);?>') this.value=''" onBlur="if(this.value=='') this.value='<?php echo ($fPrompt);?>'" />
+							</div><!-- /search_input_in -->
+						</div><!-- /search_input -->
+						<input type="submit" class="search_button png" value="найти" onClick="return check_query(this.form.fnd.value);" />
+					</form>
+					<span class="search_example">
+						например: <a onClick="document.formfind.fnd.value='<?php echo ($exampl);?>'; return false;" href="javascript:void(0);"><?php echo ($exampl);?></a>
+					</span>
+				</div><!-- /search_l_in -->
+			</div><!-- /search_l -->
+			<div class="search_r">
+				<a class="add" href="/add-company">Добавить фирму или товар</a>
+			</div><!-- /search_r -->
+		</div><!-- /search -->
+
+		<div class="lenta">
+			<div class="lenta_l">
+				<!--a href="http://mpr.midural.ru/"--><img src="/i/logo_partner.png" class="noborder" width="330" height="50" alt="Официальный партнер министерства промышленности и науки Свердловской области" /><!--/a-->
+			</div>
+			<div class="lenta_r">
+				<div style="margin-left:462px; height:50px;"></div>
+			</div>
+		</div><!-- /lenta -->
+		
+	</div><!-- /header -->
+	
+	<div class="body clear">
+		<div class="content">
+			<div class="inner">
+				<hr class="body-top" />

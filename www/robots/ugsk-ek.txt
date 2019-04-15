@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: ugsk-ek.biznesurfo.ru
+Sitemap: http://ugsk-ek.biznesurfo.ru/sitemap.xml

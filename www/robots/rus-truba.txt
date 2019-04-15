@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: rus-truba.biznesurfo.ru
+Sitemap: http://rus-truba.biznesurfo.ru/sitemap.xml

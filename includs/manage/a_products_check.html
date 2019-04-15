@@ -1,0 +1,28 @@
+<div style="width:800px; margin:50px; font-size:16px; font-family:arial, sans-serif;">
+	<a href="/management/adm">&larr; вернутьс€</a>
+<?php if (count($Uncheck_products) > 0): ?>
+<?php foreach($Uncheck_products as $u_product): ?>
+	<div style="border-bottom:1px solid #ababab; padding-bottom:15px; margin-top:15px;">
+		<span style="color:#bcbcbc; font-size:14px;">#<?php echo $u_product[0]; ?></span>
+		<strong><?php echo $u_product[1]; ?></strong>
+		<?php $cart_product = ($u_product[8]!=''?'http://'.$u_product[8].'.'.$url3Href:'http://www.'.$url3Href).'/product/'.$u_product[9].'.html'; ?>
+		<br />
+		<a href="<?php echo $cart_product ?>" target="_blank" style="color:#bcbcbc; font-size:14px;"><?php echo $cart_product ?></a>		
+<?php if ($u_product[6] != '' && $u_product[7] != ''): ?>
+		<div style="margin:5px 0;">
+			<img src="/i/products/<?php echo $u_product[6]; ?>_medium.<?php echo $u_product[7]; ?>" style="width:200px; height:200px;" />
+		</div>
+<?php endif; ?>
+<?php if ($u_product[4] != ''): ?>
+		<div>
+			<?php echo $u_product[4]; ?>
+		</div>
+<?php endif; ?>
+		<div style="margin:5px 0; color:#bcbcbc; font-size:14px;">компани€ - <?php echo $u_product[5]; ?>; цена - <?php echo $u_product[3]; ?>;</div>
+		<a href="/management/adm/product-checked/<?php echo $u_product[0]; ?>" style="color:#3333aa;">проверенно</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/management/adm/product-edit/<?php echo $u_product[0]; ?>" style="color:#3333aa;">изменить</a>
+	</div>
+<?php endforeach; ?>
+<?php else: ?>
+	<p>Ќет непроверенных товаров.</p>
+<?php endif; ?>
+</div>

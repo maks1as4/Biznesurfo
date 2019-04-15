@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: sporteg.biznesurfo.ru
+Sitemap: http://sporteg.biznesurfo.ru/sitemap.xml

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: beton1.biznesurfo.ru
+Sitemap: http://beton1.biznesurfo.ru/sitemap.xml

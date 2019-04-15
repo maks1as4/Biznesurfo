@@ -1,0 +1,136 @@
+<?php require_once "../../includs/control/head.html"; ?>
+
+<div class="box-header">
+	<div class="pull-left box-header-home"><a href="/kabinet"><i class="icon-home"></i></a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point">О компании</div>
+	<div class="pull-left box-header-separator"></div>
+</div>
+<div class="box-content">
+	<div class="box-inner-main">
+		<div class="title-page">
+			<h2>О компании</h2>
+		</div>
+		<div class="about">
+			<table class="structure">
+				<tr><td><div class="td">
+					<div class="pull-left address">
+						<p class="title">Адрес компании</p>
+						<div><i class="icon-home icon-tab-left"></i><?php echo $client_address; ?></div>
+						<a href="/kabinet/address-change" class="btn"><i class="icon-repeat icon-tab-right"></i>изменить адрес</a>
+					</div>
+					<div class="pull-right map">
+<?php if (($client_coords!='') && ($client_zoom!=0)){ ?>
+						<img xmlns="http://www.w3.org/1999/xhtml" xmlns:lego="https://lego.yandex-team.ru" xmlns:dev="http://dev.yandex.ru/xmlns" alt="" src="http://static-maps.yandex.ru/1.x/?l=map&ll=<?php echo $client_coords; ?>&pt=<?php echo $client_coords; ?>,pmors&z=<?php echo $client_zoom; ?>&size=310,145&key=AHMIo0wBAAAAn59yYQIAfwI7P0idkeS5iTRj8YTC2uvyZVwAAAAAAAAAAAB1ff41D4XQDcqY8nr4sVJdF7IjIw==" />
+<?php }else{ ?>
+						<div style="width:310px; height:145px; border:1px solid #ccc; text-align:center;"><p style="margin-top:60px;">карта обрабатывается</p></div>
+<?php } ?>
+					</div>
+					<div class="clearfix"></div>
+				</div></td></tr>
+				<tr><td><div class="td">
+					<p class="title">Контакты</p>
+					<div class="clearfix">
+						<div class="pull-left contacts">
+							<i class="icon-phone icon-tab-left"></i><strong><?php echo ($count_phones > 1) ? 'Телефоны' : 'Телефон' ;?>:</strong>
+<?php if (!empty($Client_phones)){ ?>
+							<div>
+<?php foreach ($Client_phones as $phone){ ?>
+								<p><?php echo $phone[0]; ?></p>
+<?php } ?>
+							</div>
+<?php }else{ ?>
+							<p class="muted">телефон не указан</p>
+<?php } ?>
+						</div>
+						<div class="pull-left contacts">
+							<i class="icon-envelope icon-tab-left"></i><strong>Электронная почта:</strong>
+<?php if (!empty($Client_emails)){ ?>
+							<div>
+<?php foreach ($Client_emails as $email){ ?>
+								<p><?php echo $email[0]; ?></p>
+<?php } ?>
+							</div>
+<?php }else{ ?>
+							<p class="muted">email не указан</p>
+<?php } ?>
+						</div>
+						<div class="pull-left contacts">
+							<i class="icon-globe icon-tab-left"></i><strong>Сайты:</strong>
+<?php if (!empty($Client_sites)){ ?>
+							<div>
+<?php foreach ($Client_sites as $site){ ?>
+								<p><?php echo $site[0]; ?></p>
+<?php } ?>
+							</div>
+<?php }else{ ?>
+							<p class="muted">сайт не указан</p>
+<?php } ?>
+						</div>
+					</div>
+					<div class="btn-mt20"><a href="/kabinet/contacts-change" class="btn"><i class="icon-repeat icon-tab-right"></i>изменить контакты</a></div>
+				</div></td></tr>
+				<tr><td><div class="td">
+					<div class="pull-left">
+						<p class="title">Виды деятельности</p>
+<?php if (!empty($Activities)){ ?>
+						<ul class="activities">
+<?php foreach ($Activities as $activities){ ?>
+							<li><?php echo $activities[0]; ?></li>
+<?php } ?>
+						</ul>
+<?php }else{ ?>
+						<p class="muted">не указанно</p>
+<?php } ?>
+						<a href="/kabinet/activities-change" class="btn"><i class="icon-repeat icon-tab-right"></i><?php echo (!empty($Activities)) ? 'изменить' : 'добавить' ;?> деятельность</a>
+					</div>
+					<div class="pull-left load-logo">
+						<p class="title">Логотип компании</p>
+<?php if ($client_logo != ''){ ?>
+						<div class="load-logo-inner"><img src="../logo/<?php echo $client_logo; ?>" width="<?php echo $logo_width; ?>" height="<?php echo $logo_height; ?>" /></div>
+<?php }else{ ?>
+						<p class="muted">логотип компании не загружен</p>
+<?php } ?>
+						<a href="/kabinet/logo-change" class="btn"><i class="icon-repeat icon-tab-right"></i><?php echo ($client_logo == '') ? 'загрузить' : 'изменить'; ?> логотип</a>
+<?php if ($client_logo != ''){ ?>
+						&nbsp;&nbsp;&nbsp;<a href="/kabinet/logo-delete" class="dashed delete-logo">удалить логотип</a>
+<?php } ?>
+					</div>
+					<div class="clearfix"></div>
+				</div></td></tr>
+				<tr><td><div class="td-lust">
+					<p class="title">Описание компании</p>
+<?php if ($client_about != ''){ ?>
+					<div class="about-text">
+						<p><?php echo $client_about; ?></p>
+					</div>
+<?php }else{ ?>
+					<p class="muted">не заполнено</p>
+<?php } ?>
+					<a href="/kabinet/about-company-change" class="btn"><i class="icon-repeat icon-tab-right"></i><?php echo ($client_about == '') ? 'добавить' : 'изменить' ; ?> описание</a>
+				</div></td></tr>
+			</table>
+		</div><!-- /about -->
+	</div><!-- /box-inner-main -->
+</div><!-- /box-content -->
+
+<!-- delete modal -->
+<div id="delete-modal" class="modal-wrapper">
+	<div class="modal-head">
+		<a href="javascript://" class="modal-close close-x" title="закрыть"></a>
+	</div>
+	<div class="question"></div>
+	<div class="modal-foot">
+		<a href="javascript://" class="yes btn btn-primary"><i class="icon-trash icon-white icon-tab-left"></i>удалить</a>&nbsp;&nbsp;&nbsp;
+		<a href="javascript://" class="modal-close btn"><i class="icon-refresh icon-tab-left"></i>отмена</a>
+	</div>
+</div>
+<!-- /delete modal -->
+
+<!-- preload imgs -->
+<div class="preload">
+	<img src="/i/kabinet/modal-close.png" />
+</div>
+<!-- /preload imgs -->
+
+<?php require_once "../../includs/control/foot.html"; ?>

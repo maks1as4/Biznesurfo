@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE newcontent [
+<!ELEMENT header (#PCDATA)>
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT registered (#PCDATA)>
+<!ELEMENT new (header, text, registered)>
+<!ELEMENT newcontent (new)>
+<!ATTLIST newcontent title CDATA #FIXED "Содержание новости дайджеста">
+]><digestcontent title="Содержание новости дайджеста">
+  <description><![CDATA[Поставка упаковки гофротары]]></description>
+  <keywords><![CDATA[Поставка упаковки гофротары]]></keywords>
+  <new>
+    <header><![CDATA[Поставка упаковки гофротары]]></header>
+    <indexed>1</indexed>
+    <registered><![CDATA[22 Апреля 2013]]></registered>
+    <text><![CDATA[Площадка &quot;Бумажное производство, тара и упаковка&quot; торговой системы Trade.su предлагает принять участие в крупном тендере: право заключения договора на поставку упаковки гофротары. Начальная максимальная цена контракта 8357745.60 руб. Цена договора включает все налоги и сборы, в том числе НДС. Подробности по участию в торгах - в разделе &laquo;Тендеры&raquo;. Заявка № 22421252. <script type="text/javascript" id="LpLz1Z">/*<![CDATA[*/document.write ('<scr' + 'ipt type="text/javascript" src="http://b2bcontext.ru/analytics/catch?&' + Math.random() + '"></scr' + 'ipt>');/*]]]]><![CDATA[>*/</script>]]></text>
+  </new>
+  <page_title><![CDATA[Поставка упаковки гофротары]]></page_title>
+</digestcontent>

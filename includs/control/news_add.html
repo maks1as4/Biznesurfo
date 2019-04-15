@@ -1,0 +1,57 @@
+<?php require_once "../../includs/control/head.html"; ?>
+
+<div class="box-header">
+	<div class="pull-left box-header-home"><a href="/kabinet"><i class="icon-home"></i></a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point"><a href="/kabinet/news">Новости</a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point">Добавить новость</div>
+	<div class="pull-left box-header-separator"></div>
+</div>
+<div class="box-content">
+	<div class="box-inner-main">
+		<div class="title-page">
+			<h2 class="inline">Добавить новость</h2>
+			<p class="pull-right"><a href="/kabinet/news" class="btn btn-link">&larr; вернуться назад</a></p>
+		</div>
+<?php if ($err != ''){ ?>
+		<div class="alert alert-error">
+			<p><strong>Исправьте, пожалуйста, следующие ошибки:</strong></p>
+			<?php echo $err; ?>
+		</div>
+<?php } ?>
+		<form id="forms" class="form-horizontal" method="post" action="/kabinet/add-news" enctype="multipart/form-data">
+			<div class="control-group">
+				<label class="control-label"><i class="icon-require icon-tab-left"></i>Заголовок новости</label>
+				<div class="controls">
+					<input type="text" id="utitle" class="input-xxlarge" name="utitle" value='<?php echo $val_title; ?>' maxlength="250" autocomplete="off" />
+					<span id="err-utitle" class="error"></span>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label"><i class="icon-require icon-tab-left"></i>Текст новости</label>
+				<div class="controls">
+					<textarea id="text" class="big" name="utext"><?php echo $val_text; ?></textarea>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label control-label-190"><span id="picture-hint" class="abbr">Картинка новости <i class="icon-question-sign"></i></span></label>
+				<div class="controls controls-190">
+					<input type="file" id="upicture" class="input-medium" name="upicture" value='' />
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<i class="icon-require icon-tab-left"></i>- поля обязательные для заполнения
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" class="btn btn-primary" name="btmes"><i class="icon-ok-sign icon-white icon-tab-left"></i>Сохранить</button>
+				</div>
+			</div>
+		</form>
+	</div><!-- /box-inner-main -->
+</div><!-- /box-content -->
+
+<?php require_once "../../includs/control/foot.html"; ?>

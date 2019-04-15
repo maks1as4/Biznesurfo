@@ -1,0 +1,107 @@
+<?php require_once "../../includs/control/head.html"; ?>
+
+<div class="box-header">
+	<div class="pull-left box-header-home"><a href="/kabinet"><i class="icon-home"></i></a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point"><a href="/kabinet/about">О компании</a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point">Изменить контакты компании</div>
+	<div class="pull-left box-header-separator"></div>
+</div>
+<div class="box-content">
+	<div class="box-inner-main">
+		<div class="title-page">
+			<h2 class="inline">Изменить контакты компании</h2>
+			<p class="pull-right"><a href="/kabinet/about" class="btn btn-link">&larr; вернуться назад</a></p>
+		</div>
+		<div class="well well-large">
+			<h4>Телефоны</h4>
+			<p class="muted">Не более 10ти телефонов.</p>
+<?php if (!empty($Phones)){ ?>
+			<table class="table contacts">
+<?php if ($count_phones > 1){ ?>
+<?php foreach ($Phones as $phone){ ?>
+				<tr>
+					<td><i class="icon-phone icon-tab-left"></i><?php echo $phone[1]; ?></td>
+					<td class="w120"><a href="kabinet/phone-edit/<?php echo $phone[0]; ?>" class="btn btn-small"><i class="icon-edit icon-tab-left"></i>изменить</a></td>
+					<td class="w120"><a href="kabinet/phone-delete/<?php echo $phone[0]; ?>" id="id<?php echo $phone[0]; ?>" class="btn btn-small delete-phone"><i class="icon-remove-sign icon-tab-left"></i>удалить</a></td>
+				</tr>
+<?php } ?>
+<?php }else{ ?>
+				<tr>
+					<td><i class="icon-phone icon-tab-left"></i><?php echo $Phones[0][1]; ?></td>
+					<td class="w120"><a href="kabinet/phone-edit/<?php echo $Phones[0][0]; ?>" class="btn btn-small"><i class="icon-edit icon-tab-left"></i>изменить</a></td>
+					<td class="w120"><a href="javascript://" class="btn btn-small disabled"><i class="icon-remove-sign icon-tab-left"></i>удалить</a></td>
+				</tr>
+<?php } ?>
+			</table>
+<?php } ?>
+<?php if ($count_phones < 10){ ?>
+			<a href="kabinet/phone-add" class="btn"><i class="icon-plus-sign icon-tab-left"></i>добавить телефон</a>
+<?php }else{ ?>
+			<a href="javascript://" class="btn disabled"><i class="icon-plus-sign icon-tab-left"></i>добавить телефон</a>
+<?php } ?>
+		</div>
+		<div class="well well-large">
+			<h4>Электронная почта</h4>
+			<p class="muted">Не более 5ти электронных адресов.</p>
+<?php if (!empty($Emails)){ ?>
+			<table class="table contacts">
+<?php foreach ($Emails as $email){ ?>
+				<tr>
+					<td><i class="icon-envelope icon-tab-left"></i><?php echo $email[1]; ?></td>
+					<td class="w120"><a href="kabinet/email-edit/<?php echo $email[0]; ?>" class="btn btn-small"><i class="icon-edit icon-tab-left"></i>изменить</a></td>
+					<td class="w120"><a href="kabinet/email-delete/<?php echo $email[0]; ?>" id="id<?php echo $email[0]; ?>" class="btn btn-small delete-email"><i class="icon-remove-sign icon-tab-left"></i>удалить</a></td>
+				</tr>
+<?php } ?>
+			</table>
+<?php } ?>
+<?php if ($count_emails < 5){ ?>
+			<a href="kabinet/email-add" class="btn"><i class="icon-plus-sign icon-tab-left"></i>добавить почтовый адрес</a>
+<?php }else{ ?>
+			<a href="javascript://" class="btn disabled"><i class="icon-plus-sign icon-tab-left"></i>добавить почтовый адрес</a>
+<?php } ?>
+		</div>
+		<div class="well well-large">
+			<h4>Сайты</h4>
+			<p class="muted">Не более 5ти сайтов.</p>
+<?php if (!empty($Sites)){ ?>
+			<table class="table contacts">
+<?php foreach ($Sites as $site){ ?>
+				<tr>
+					<td><i class="icon-globe icon-tab-left"></i><?php echo $site[1]; ?></td>
+					<td class="w120"><a href="kabinet/site-edit/<?php echo $site[0]; ?>" class="btn btn-small"><i class="icon-edit icon-tab-left"></i>изменить</a></td>
+					<td class="w120"><a href="kabinet/site-delete/<?php echo $site[0]; ?>" id="id<?php echo $site[0]; ?>" class="btn btn-small delete-site"><i class="icon-remove-sign icon-tab-left"></i>удалить</a></td>
+				</tr>
+<?php } ?>
+			</table>
+<?php } ?>
+<?php if ($count_sites < 5){ ?>
+			<a href="kabinet/site-add" class="btn"><i class="icon-plus-sign icon-tab-left"></i>добавить сайт</a>
+<?php }else{ ?>
+			<a href="javascript://" class="btn disabled"><i class="icon-plus-sign icon-tab-left"></i>добавить сайт</a>
+<?php } ?>
+		</div>
+	</div><!-- /box-inner-main -->
+</div><!-- /box-content -->
+
+<!-- delete modal -->
+<div id="delete-modal" class="modal-wrapper">
+	<div class="modal-head">
+		<a href="javascript://" class="modal-close close-x" title="закрыть"></a>
+	</div>
+	<div class="question"></div>
+	<div class="modal-foot">
+		<a href="javascript://" class="yes btn btn-primary"><i class="icon-trash icon-white icon-tab-left"></i>удалить</a>&nbsp;&nbsp;&nbsp;
+		<a href="javascript://" class="modal-close btn"><i class="icon-refresh icon-tab-left"></i>отмена</a>
+	</div>
+</div>
+<!-- /delete modal -->
+
+<!-- preload imgs -->
+<div class="preload">
+	<img src="/i/kabinet/modal-close.png" />
+</div>
+<!-- /preload imgs -->
+
+<?php require_once "../../includs/control/foot.html"; ?>

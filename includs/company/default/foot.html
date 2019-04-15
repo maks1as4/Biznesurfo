@@ -1,0 +1,152 @@
+
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="span12 footer-wrap">
+						<div class="pull-left copyright">
+							<address>
+								<small>
+									© <?php echo $full_name; ?> - <?php echo date('Y'); ?> г.<br />
+									<?php echo getDataFromDB($Client[1]); ?><br />
+									<em><?php echo getDataFromDB($Client[5]); ?></em>
+								</small>
+							</address>
+						</div>
+						<div class="pull-right creator">
+							Сайт создан на платформе <a href="javascript://" id="create" class="active">Biznesurfo.ru</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- /footer -->
+
+	</div><!-- /bone -->
+
+	<div id="streak-bottom">&nbsp;</div>
+
+<!--noindex-->
+<div id="window-enter">
+	<div class="header">
+		<div class="title">Вход в кабинет</div>
+		<a href="javascript://" class="simplemodal-close close-modal-x" title="закрыть"></a>
+	</div>
+	<div class="body">
+		<div class="row">
+			<span class="title">E-mail:</span><span class="error">неверный email</span>
+			<input type="text" id="w-email" class="edit" name="w-email" maxlength="100" />
+		</div>
+		<div class="row">
+			<span class="title">Пароль:</span><span class="error">неверный пароль</span>
+			<input type="password" id="w-password" class="edit" name="w-password" maxlength="10" />
+		</div>
+		<div class="row-agree">
+			<div class="pull-left">
+				<label class="checkbox" >
+					<input type="checkbox" id="w-agree" name="w-agree" value="yes" checked="checked" /> Запомнить меня
+				</label>
+			</div>
+			<div class="pull-right"><a href="http://<?php echo $baseHref; ?>/forgot-password" id="forget" class="underlined">Забыли пароль?</a></div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="pull-left"><a href="javascript://" id="ok-enter" class="btn btn-orange">Войти в кабинет</a></div>
+		<div class="pull-left" style="margin-top:24px;"><a href="javascript://" class="simplemodal-close active active-white">отмена</a></div>
+	</div>
+</div><!-- /window-enter -->
+<div id="window-contact">
+	<div class="header">
+		<div class="title">Написать нам</div>
+		<a href="javascript://" class="simplemodal-close close-modal-x" title="закрыть"></a>
+	</div>
+	<div class="body">
+		<div class="row">
+			<span class="title">Ваш е-mail:</span> <span class="text-error">*</span><span class="error m-empty">заполните e-mail для связи с вами</span><span class="error m-incorrect">e-mail имеет некорректный формат</span><br />
+			<input type="text" id="contact-email" class="edit" maxlength="100" />
+		</div>
+		<div class="row">
+			<span class="title">Ваше имя:</span><br />
+			<input type="text" id="contact-name" class="edit" maxlength="100" placeholder="не обязательное поле" />
+		</div>
+		<div class="row">
+			<span class="title">Сообщение:</span> <span class="text-error">*</span><span class="error">сообщение не должно быть пустым</span><br />
+			<textarea id="contact-message"></textarea>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="pull-left"><a href="javascript://" id="ok-contact" class="btn btn-orange">Отправить сообщение</a></div>
+		<div class="pull-left" style="margin-top:24px;"><a href="javascript://" class="simplemodal-close active active-white">отмена</a></div>
+	</div>
+</div><!-- /window-contact -->
+<?php if (isset($order_box) && $order_box): ?>
+<div id="window-order">
+	<div class="header">
+		<div class="title">Заказать товар</div>
+		<a href="javascript://" class="simplemodal-close close-modal-x" title="закрыть"></a>
+	</div>
+	<div class="body">
+		<div class="product">
+			<span id="product-title"></span>
+			<span id="product-price"></span>
+		</div>
+		<div class="row">
+			<span class="title">Ваше имя:</span> <span class="text-error">*</span><span class="error">заполните ваше имя</span><br />
+			<input type="text" id="buy-name" class="edit" maxlength="100" />
+		</div>
+		<div class="row">
+			<span class="title">Ваш е-mail:</span> <span class="text-error">*</span><span class="error m-empty">заполните e-mail для связи с вами</span><span class="error m-incorrect">e-mail имеет некорректный формат</span><br />
+			<input type="text" id="buy-email" class="edit" maxlength="100" />
+		</div>
+		<div class="row">
+			<span class="title">Контактный телефон:</span><br />
+			<input type="text" id="buy-phone" class="edit" maxlength="100" placeholder="не обязательное поле" />
+		</div>
+		<div class="row">
+			<span class="title">Комментарий к заказу:</span><br />
+			<textarea id="buy-comment"></textarea>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="pull-left"><a href="javascript://" id="ok-order" class="btn btn-orange">Отправить заявку</a></div>
+		<div class="pull-left" style="margin-top:24px;"><a href="javascript://" class="simplemodal-close active active-white">отмена</a></div>
+	</div>
+</div><!-- /window-order -->
+<?php endif; ?>
+<div class="notifications notification-center"></div>
+<!--/noindex-->
+
+<script src="http://<?php echo $baseHref; ?>/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="http://<?php echo $baseHref; ?>/js/bootstrap/bootstrap.min.js?24042013" type="text/javascript"></script>
+<script src="http://<?php echo $baseHref; ?>/js/bootstrap/bootstrap-notify.js?24042013" type="text/javascript"></script>
+<script src="http://<?php echo $baseHref; ?>/js/jquery.simplemodal.js?24042013" type="text/javascript"></script>
+<script src="http://<?php echo $baseHref; ?>/js/jquery.md5.js" type="text/javascript"></script>
+<script src="http://<?php echo $baseHref; ?>/js/company/default.js?30042013" type="text/javascript"></script>
+<?php if (isset($jLoad) && !empty($jLoad)) echo $jLoad; ?>
+<script type="text/javascript">
+$(document).ready(function() {
+<?php if (isset($jq) && !empty($jq)) echo $jq; ?>
+
+<?php if ($isDeveloper && isset($hasError)): ?>
+	$('body').css({'background-color':'#fa8072'});
+<?php endif; ?>
+});
+<?php if ($isDeveloper): ?>
+$(document).keyup(function(event) {
+	if (event.keyCode == 192) {
+		$('#ib_console').slideToggle(100);
+	}
+});
+<?php endif; ?>
+</script>
+<?php if (isset($java) && !empty($java)): ?>
+<script type="text/javascript">
+<?php echo $java; ?>
+</script>
+<?php endif; ?>
+
+<?php if ($isDeveloper) GetConsole(); ?>
+
+<?php if($isShowES) ShowCounterYandex(); ?>
+
+</body>
+</html>

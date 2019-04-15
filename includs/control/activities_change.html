@@ -1,0 +1,65 @@
+<?php require_once "../../includs/control/head.html"; ?>
+
+<div class="box-header">
+	<div class="pull-left box-header-home"><a href="/kabinet"><i class="icon-home"></i></a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point"><a href="/kabinet/about">О компании</a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point">Выбор вида деятельности</div>
+	<div class="pull-left box-header-separator"></div>
+</div>
+<div class="box-content">
+	<div class="box-inner-main">
+		<div class="title-page">
+			<h2 class="inline">Укажите виды деятельности компании</h2>
+			<p class="pull-right"><a href="/kabinet/about" class="btn btn-link">&larr; вернуться назад</a></p>
+		</div>
+<?php if ($err != ''){ ?>
+		<div class="alert alert-error">
+			<p><strong>Исправьте, пожалуйста, следующие ошибки:</strong></p>
+			<?php echo $err; ?>
+		</div>
+<?php } ?>
+		<p class="muted">можно выбрать не более 10 видов деятельности</p>
+		<div class="btn-group">
+			<button id="sections_show" class="btn"><i class="icon-eye-open icon-tab-left"></i>показать все разделы</button>
+			<button id="sections_hide" class="btn"><i class="icon-eye-close icon-tab-left"></i>скрыть все разделы</button>
+		</div>
+		<br /><br />
+<?php if (count($All_categoryes) > 0){ ?>
+		<form method="post" action="/kabinet/activities-change">
+			<div class="activities-list">
+<?php foreach ($All_categoryes as $key=>$cat){ ?>
+<?php $category_status = (in_array($cat[0], $Current_rub)) ? ' checked' : ''; ?>
+				<div class="activities-list-inner">
+					<label class="checkbox">
+						<input type="checkbox" name="rub[]" value='<?php echo $cat[0]; ?>'<?php echo $category_status; ?> />
+						<span><?php echo $cat[1]; ?></span>
+					</label>
+<?php if (isset($Subcategoryes[$key])){ ?>
+					<ul>
+<?php foreach ($Subcategoryes[$key] as $subcat){ ?>
+<?php $subcat_status = (in_array($subcat[0], $Current_rub)) ? ' checked' : ''; ?>
+						<li<?php echo ($subcat_status == ' checked') ? ' class="unclosed"' : ''; ?>>
+							<label class="checkbox">
+								<input type="checkbox" name="rub[]" value='<?php echo $subcat[0]; ?>'<?php echo $subcat_status; ?> />
+								<span><?php echo $subcat[1]; ?></span>
+							</label>
+						</li>
+<?php } ?>
+					</ul>
+					<a href="javascript://" class="dashed play">подробнее</a>
+<?php } ?>
+				</div>
+<?php } ?>
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" class="btn btn-primary" name="btmes"><i class="icon-ok-sign icon-white icon-tab-left"></i>Сохранить</button>
+				</div>
+			</div>
+		</form>
+<?php } ?>
+	</div><!-- /box-inner-main -->
+</div><!-- /box-content -->
+
+<?php require_once "../../includs/control/foot.html"; ?>

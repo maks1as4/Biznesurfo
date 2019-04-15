@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: kaindl.biznesurfo.ru
+Sitemap: http://kaindl.biznesurfo.ru/sitemap.xml

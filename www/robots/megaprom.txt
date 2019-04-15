@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: megaprom.biznesurfo.ru
+Sitemap: http://megaprom.biznesurfo.ru/sitemap.xml

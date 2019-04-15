@@ -1,0 +1,336 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Добавить компанию, организацию</title>
+<base href="http://www.biznesurfo.ru" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" rel="stylesheet" href="/css/style.css?07022013" />
+<link type="text/css" rel="stylesheet" href="/css/dropmenu.css?31012013" />
+<!--[if lt IE 8]>
+<link type="text/css" rel="stylesheet" href="/css/ie.css?31012013" />
+<![endif]-->
+<!--[if IE 6]>
+<link type="text/css" rel="stylesheet" href="/css/ie6.css?31012013" />
+<![endif]-->
+<script type="text/javascript" src="/js/jquery-1.7.1.min.js?31012013"></script>
+<script type="text/javascript" src="/js/jquery.simplemodal.js?31012013"></script>
+<script type="text/javascript" src="/js/bootstrap-dropdown.js?31012013"></script>
+<script type="text/javascript" src="/js/jquery.md5.js?31012013"></script>
+<script type="text/javascript" src="/js/windows.js?31012013"></script>
+<script type="text/javascript" src="/js/validate/jquery.validate.min.js?31012013"></script>
+<script type="text/javascript" src="/js/validate/additional-methods.min.js?31012013"></script>
+<!--[if IE]>
+<script type="text/javascript" src="/js/beauty_tips/excanvas.compiled.js?31012013"></script>
+<![endif]-->
+<script type="text/javascript" src="/js/beauty_tips/jquery.bt.min.js?31012013"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+	$('#forms').each(function() {
+		$(this).validate({
+			focusInvalid: false,
+			rules: {
+				uopf: {
+					pattern: /^[a-zа-яё \-]+$/i
+				},
+				uorganisation: {
+					required: true,
+					pattern: /^[a-zа-яё0-9 \-()«»\"]+$/i
+				},
+				ucode: {
+					required: true,
+					integer: true,
+					rangelength: [3, 5]
+				},
+				uphone: {
+					required: true,
+					integer: true,
+					rangelength: [5, 7]
+				},
+				ufio: {
+					required: true,
+					pattern: /^[a-zа-яё0-9 ()\-«»]+$/i
+				},
+				umail: {
+					required: true,
+					email2: true,
+					remote: {
+						url: '/ajax/check_email_reg.php'
+					}
+				},
+				upass: {
+					required: true,
+					rangelength: [3, 10],
+					pattern: /^[a-z0-9_\-]+$/i
+				},
+				uagree: 'required'
+			},
+			messages: {
+				uopf: {
+					pattern: 'только буквы'
+				},
+				uorganisation: {
+					required: 'введите название организации',
+					pattern: 'только буквы, цифры, пробел, тире, кавычки'
+				},
+				ucode: {
+					required: 'код города или сотового оператора не должен быть пустым',
+					integer: 'код города или сотового оператора может состоять только из цифр',
+					rangelength: 'код города или сотового оператора должен быть в диапазоне от 3 до 5 цифр'
+				},
+				uphone: {
+					required: 'номер телефона не должен быть пустым',
+					integer: 'номер телефона может состоять только из цифр (без знаков разделения)',
+					rangelength: 'номер телефона должен быть в диапазоне от 5 до 7 цифр'
+				},
+				ufio: {
+					required: 'введите Ф.И.О контактного лица',
+					pattern: 'только буквы, цифры, пробел, тире'
+				},
+				umail: {
+					required: 'введите email',
+					email2: 'email имеет некорректный формат',
+					remote: 'такой email уже занят, пожалуйста, введите другой'
+				},
+				upass: {
+					required: 'введите пароль',
+					rangelength: 'пароль должен быть от 3 до 10 символов',
+					pattern: 'только буквы английского алфавита, цифры, знак подчеркивания, тире'
+				},
+				uagree: 'необходимо подтвердить согласие'
+			},
+			errorPlacement: function(error, element) {
+				var element_id = element.attr('id');
+				error.appendTo($('#err-'+element_id));
+			},
+			submitHandler: function() {
+				$('#submit').attr('disabled', 'disabled').removeClass('orange').addClass('disable');
+				$('#loading').show();
+				form.submit();
+			}
+		});
+	});
+
+	$('div.hint').bt({
+		width: '250px',
+		trigger: 'click',
+		positions: 'right',
+		padding: '15px',
+		clickAnywhereToClose: true,
+		closeWhenOthersOpen: true,
+		fill: '#fdf5e6',
+		cornerRadius: 3,
+		strokeStyle: '#aeaeae',
+		cssStyles: {fontFamily: 'Arial, Helvetica, sans-serif', fontSize: '13px', lineHeight: '17px'},
+		showTip: function(box) {
+			$(box).fadeIn(150);
+		},
+		hideTip: function(box, callback) {
+			$(box).animate({opacity: 0}, 150, callback);
+		},
+		hoverIntentOpts: {
+			interval: 0,
+			timeout: 0
+		}
+	});
+
+
+	$('.dropdown-toggle').dropdown();
+
+});
+$(document).keyup(function(event) {
+	if (event.keyCode == 192) {
+		$('#ib_console').slideToggle(100);
+	}
+});
+</script>
+
+<!--noindex-->
+<!-- Google Analytics -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22729203-1']);
+  _gaq.push(['_setSiteSpeedSampleRate', 10]); 
+  _gaq.push(['_setDomainName', 'biznesurfo.ru']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- /Google Analytics -->
+<!--/noindex-->
+
+</head>
+<body>
+<div class="page page-type-forms">
+
+<!--noindex-->
+	<div id="window-enter">
+		<div class="header-enter">
+			<div class="title-enter">Вход в кабинет</div>
+			<a href="javascript://" class="close close-enter-x" title="закрыть"></a>
+		</div>
+		<div class="body-enter">
+			<div class="row">
+				<label for="w-email">E-mail:</label><span class="error">неверный email</span><br />
+				<input type="text" id="w-email" class="edit" name="w-email" maxlength="100" />
+			</div>
+			<div class="row">
+				<label for="w-password">Пароль:</label><span class="error">неверный пароль</span><br />
+				<input type="password" id="w-password" class="edit" name="w-password" maxlength="10" />
+			</div>
+			<div class="row-agree">
+				<div class="f-left"><input type="checkbox" id="w-agree" name="w-agree" value="yes" checked="checked" /> Запомнить меня</div>
+				<div class="f-right"><a href="/forgot-password" id="forget">Забыли пароль?</a></div>
+				<div class="clear-white"></div>
+			</div>
+		</div>
+		<div class="footer-enter">
+			<div class="ok-enter"><button id="ok" class="button orange">Войти</button></div>
+			<div class="close-enter"><a href="javascript://" class="close close-enter"><span>отмена</span></a></div>
+		</div>
+	</div><!-- /window-enter -->
+
+	<div id="toolbar">
+		<div class="no-auth-enter">
+			<a href="/enter" class="enter"><span>Войти в кабинет</span></a>
+		</div>
+		<div class="no-auth-sing-up">
+			<a href="/add-company" class="registration"><span>Зарегистрироваться</span></a>
+		</div>
+		<div class="links">
+			<a href="/info">о проекте</a>&nbsp;&nbsp;&nbsp;<a href="/locat">размещение рекламы</a>
+		</div>
+	</div><!-- /toolbar -->
+	<div class="body clear">
+	<div class="content">
+	<div class="inner inner-type-forms">
+
+		<a href="/"><img src="/i/logo.png" class="logo" alt="ООО &laquo;Индустрия бизнеса&raquo;" /></a>
+		<div class="go-home"><a href="/">Вернуться на главную</a></div>
+
+		<!-- форма регистрации -->
+		<div class="reg">
+			<form id="forms" method="post" action="/add-company">
+				<h1>Добавить компанию</h1>
+				<div class="line">
+				</div>
+				<div class="line">
+					<div class="opf">
+						<div class="label"><label for="uopf">ОПФ:</label></div>
+						<input type="text" id="uopf" class="edit" name="uopf" value='' placeholder="ООО, ЗАО..." maxlength="20" autocomplete="off" />
+						<span id="err-uopf" class="error"></span>
+					</div>
+					<div class="organisation">
+						<div class="label"><label for="uorganisation">Название организации:<span class="req">*</span></label></div>
+						<input type="text" id="uorganisation" class="edit" name="uorganisation" value='' placeholder="например: Уралпромтехцентр" maxlength="220" autocomplete="off" />
+						<span id="err-uorganisation" class="error"></span>
+					</div>
+					<div class="clear-white"></div>
+				</div>
+				<div class="line">
+					<div class="label"><label>Телефон организации:<span class="req">*</span></label><div class="hint" title="Введите номер телефона вашей организации.<br />Номер может быть:<br />- городским: /343/ 27xxx00;<br />- сотовым: /963/ 77xxx81;<br />- бесплатный номер: /8800/ 10xxx70."></div></div>
+					<span class="phone-prefix">+7</span>
+					/ <input type="text" id="ucode" class="edit code" name="ucode" value='' placeholder="код" maxlength="5" autocomplete="off" /> /
+					<input type="text" id="uphone" class="edit phone" name="uphone" value='' placeholder="номер телефона" maxlength="7" autocomplete="off" />
+					<span id="err-ucode" class="error"></span>
+					<span id="err-uphone" class="error"></span>
+				</div>
+				<div class="line">
+					<div class="label"><label for="ufio">Ваше ФИО:<span class="req">*</span></label><div class="hint" title="Введите ваше ФИО.<br />Необходимо для связи с нами или для переписки с вашими клиентами.<br />Так же эти данные будут отображаться на вашем мини сайте в разделе «Контакты»"></div></div>
+					<input type="text" id="ufio" class="edit" name="ufio" value='' maxlength="120" autocomplete="off" />
+					<span id="err-ufio" class="error"></span>
+				</div>
+				<div class="line">
+					<div class="label"><label for="umail">E-mail:<span class="req">*</span></label><div class="hint" title="Электронная почта необходима для:<br /> - Входа на сайт.<br /> - Переписки с вашими клиентами.<br /> - Получения уведомлений от портала «Индустрия бизнеса».<br /><br /><strong>Внимание:</strong> для подтверждения регистрации на портале на указанный адрес в течении 10 мин. придет письмо с инструкцией как подтвердить регистрацию."></div></div>
+					<input type="text" id="umail" class="edit" name="umail" value='' maxlength="100" autocomplete="off" />
+					<span id="err-umail" class="error"></span>
+				</div>
+				<div class="line">
+					<div class="label"><label for="upass">Пароль:<span class="req">*</span></label><div class="hint" title="Пароль должен:<br /> - Состоять только из букв английского алфавита верхнего и нижнего регистра, цифр, знаков – и _<br /> - Быть не менее 3х символов и не более 10ти.<br /><br /><strong>Примечание:</strong> старайтесь, придумать пароль был более сложным, комбинируйте буквы разного регистра и цифры."></div></div>
+					<input type="password" id="upass" class="edit" name="upass" value='' placeholder="от 3х до 10ти символов" maxlength="10" autocomplete="off" />
+					<span id="err-upass" class="error"></span>
+				</div>
+				<div class="line">
+					<input type="checkbox" id="uagree" name="uagree" value="yes" checked="checked" /> Я согласен с <a href="/agreement" rel="nofollow" target="_blank">пользовательским соглашением</a> портала «Индустрия бизнеса».<br />
+					<p style="margin-top:8px;">А так же: после регистрации на сайте все обновления личной информации происходят<br />со стороны пользователя. Администрация Biznesurfo.ru за обновления данных вашей<br />компании ответственности не несет.</p>
+					<span id="err-uagree" class="error"></span>
+				</div>
+				<div class="line">
+					<input type="submit" id="submit" class="button orange" value="Добавить компанию" style="font-weight:bold;" name="btmes" />
+				</div>
+				<div id="loading" style="display:none;">
+					<span class="indicator">Заявка отправляется, пожалуйста, подождите несколько секунд…</span>
+				</div>
+				<!-- indicator preload -->
+				<div style="display:none;"><img src="/i/indicator.gif" /></div>
+				<!-- /indicator preload -->
+			</form>
+		</div><!-- /reg -->
+		<!-- /форма регистрации -->
+
+		<div class="why">
+			<h2>Зачем регистрироваться?</h2>
+			<p>После регистрации вашей компании на сайте www.biznesurfo.ru вы получаете:</p>
+			<ol>
+				<li>Сайт вашей компании абсолютно бесплатно.</li>
+				<li>Возможность управлять сайтом:</li>
+				<ul>
+					<li>разместить товары вашей компании на сайте;</li>
+					<li>добавлять информацию о компании;</li>
+					<li>публиковать новости, спецпредложения, контактную информацию.</li>
+				</ul>
+				<!--li>Возможность бесплатно продвигать свой сайт в поисковых системах Yandex, Google, Mail, Rambler.</li-->
+				<li>Новых клиентов с сайта<br />Индустрии бизнеса и поисковых систем.</li>
+			</ol>
+		</div><!-- /why -->
+		<div class="clear-white"></div>
+		
+	</div><!-- /inner -->
+	</div><!-- /content -->
+	</div><!-- /body -->
+
+	<div class="footer">
+		<div class="inner clear">
+			<div class="about_company">Индустрия Бизнеса - каталог компаний Уральского федерального округа. Цены на металлопрокат, оборудование, строительные и отделочные материалы. Тендеры и производители.</div>
+			<div class="stat">На 02.04.2013 в каталоге: 429 предприятий, 27720 позиций</div>
+			<div class="footmenu">
+				<div class="footmenu_in">
+					<ul class="footmenu1">
+						<li><a href="/info">О проекте</a></li>
+						<li><a href="/partners">Партнеры</a></li>
+						<li><a href="/exhibitions">Выставки</a></li>
+						<li><a href="/tenders/main">Тендеры</a></li>
+					</ul>
+					<ul class="footmenu2">
+						<li><a href="/add-company">Добавить предприятие</a></li>
+						<li><a href="/subscribe">Оформить подписку</a></li>
+					</ul>
+					<ul class="footmenu3">
+						<li><a href="/diploms">Дипломы, сертификаты</a></li>
+						<li><a href="/locat">Размещение рекламы</a></li>
+						<li><a href="/message">Сообщить об ошибке</a></li>
+						<li><a href="/expo_reports">Отчеты о выставках</a></li>
+					</ul>
+				</div><!-- /footmenu_in -->
+			</div><!-- /footmenu -->
+
+			<div class="contacts">
+				&copy; Справочник “Индустрия Бизнеса”<br />
+				620075, г. Екатеринбург, ул. Бажова 51, оф.49<br />
+				тел./факс: +7 (343) 270-01-27, e-mail: info@biznesurfo.ru<br />
+				
+				<div class="counters">
+				</div><!-- /counters -->				
+
+			</div><!-- /contacts -->
+		</div><!-- /inner -->
+	</div><!-- /footer -->
+	</div><!-- /page -->
+</body>
+</html>

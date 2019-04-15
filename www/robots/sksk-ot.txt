@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: sksk-ot.biznesurfo.ru
+Sitemap: http://sksk-ot.biznesurfo.ru/sitemap.xml

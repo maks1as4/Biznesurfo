@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
+	<title>Статистика по текстовому модулю.</title>
+	<link href="manags.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="main-top"><h1>Просмотр статистики по текстовому модулю</h1></div>
+<?php @require_once "htm/ssmenu.html"; ?>
+<div class="main-center">
+	<div class="order">за <?php echo($Periods[$perSel]['name']); ?></div>
+	<div class="mcont">
+		<div class="ssitem"><div id="footer"><a href="/manags/ssclient.php<?php echo ($Periods[$perSel]['param'].'&id='.$clId);?>">Статистика по клиенту</a></div>Принадлежность -<span><?php echo ($client);?></span>		
+		</div>
+		<div class="ssitem">Рубрика размещения -<span><?php echo ($rubric);?></span>
+		</div>
+		<div class="ssitem">Заголовок:<p><?php echo ($head);?></p>
+		</div>
+		<div class="ssitem">Тело модуля:<p><?php echo ($body);?></p>
+		</div>
+		<div class="ssitem">Телефон:<p><?php echo ($phon);?></p>
+		</div>
+		<div class="ssitem">Ссылка:<p><?php echo ($link);?></p>
+		</div>
+		<div class="ssitem">Число показов -<span><?php echo ($showRubr);?></span><p><?php echo (round(100/$showRubrT*$showRubr, 2));?>% от общего количества показов текстовых модулей (<?php echo ($showRubrT);?>)</p>		
+		</div>
+		<div class="ssitem">Число показов на странице поиска -<span><?php echo ($showFind);?></span><p><?php echo (round(100/$showFindT*$showFind, 2));?>% от общего количества показов текстовых модулей в "поиске" (<?php echo ($showFindT);?>)</p>		
+		</div>
+		<div class="ssitem"><?php if ($tmId>0):?><div id="footer"><a href="/click/tmodule/<?php echo ($tmId);?>/?url=http://<?php echo ($_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'].'?tid='.$ModId);?>">Кликнуть по текстовому модулю</a></div><?php endif;?>Количество кликов -<span><?php echo ($clikRubr);?></span><p><?php echo (round(100/$clikRubrT*$clikRubr, 2));?>% от общего количества кликов по текстовым модулям (<?php echo ($clikRubrT);?>)</p><?php if ($showRubr>0):?><p>Отношение кликов к показам (CTR) -<span><?php echo (round($clikRubr*100/$showRubr, 2));?>%</span></p><?php endif; ?>
+		</div>
+		<div class="ssitem">Количество кликов со страницы поиска -<span><?php echo ($clikFind);?></span><p><?php echo (round(100/$clikFindT*$clikFind, 2));?>% от общего количества кликов по текстовым модулям в "поиске" (<?php echo ($clikFindT);?>)</p><?php if ($showFind>0):?><p>Отношение кликов к показам (CTR) -<span><?php echo (round($clikFind*100/$showFind, 2));?>%</span></p><?php endif; ?>		
+		</div>
+		<div id="footer"><a href="/manags/sstmoduls.php<?php echo($Periods[$perSel]['param']);?>">На страницу выбора текстовых модулей</a></div>
+	</div>
+</div>
+</body>
+</html>

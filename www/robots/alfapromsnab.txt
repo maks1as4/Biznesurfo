@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: alfapromsnab.biznesurfo.ru
+Sitemap: http://alfapromsnab.biznesurfo.ru/sitemap.xml

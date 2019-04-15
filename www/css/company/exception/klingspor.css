@@ -1,0 +1,6 @@
+body {background:#567589 url('img/klingspor-body-bg.jpg') 50% 0 no-repeat !important;}
+#header-klingspor {height:150px; background:#ffee02 !important;}
+#header-klingspor div.logo-klingspor {width:529px; height:120px; margin:15px 0 0 20px;}
+#header-klingspor div.phone-klingspor {width:220px; margin:30px 30px; padding:10px 0 10px 10px; background-color:#bfd0e4; font-family:Verdana, Geneva, sans-serif; box-shadow:0px 0px 15px 0px #505050; -webkit-box-shadow:0px 0px 15px 0px #505050; -moz-box-shadow:0px 0px 15px 0px #505050; -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:10px;}
+#header-klingspor div.phone-klingspor span {font-size:18px;}
+#header-klingspor div.phone-klingspor ul {margin:6px 0 0 13px;}

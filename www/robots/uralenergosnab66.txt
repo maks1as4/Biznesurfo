@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: uralenergosnab66.biznesurfo.ru
+Sitemap: http://uralenergosnab66.biznesurfo.ru/sitemap.xml

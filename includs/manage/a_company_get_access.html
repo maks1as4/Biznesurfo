@@ -1,0 +1,33 @@
+<div style="width:800px; margin:50px; font-size:16px; font-family:arial, sans-serif;">
+	<a href="/management/adm">&larr; вернуться</a>
+<?php if (count($Uncheck_get_access) > 0): ?>
+<?php foreach($Uncheck_get_access as $u_get_access): ?>
+<?php
+$color_phone = ($u_get_access[5] !== null) ? '#9aff9a' : '#ffa07a';
+$color_active = ($u_get_access[6] !== null) ? '#9aff9a' : '#ffa07a';
+$color_products = ($u_get_access[8] !== null) ? '#9aff9a' : '#ffa07a';
+$color_products_qty = ($u_get_access[9] >= $u_get_access[10]) ? '#9aff9a' : '#ffa07a';
+$color_about = ($u_get_access[7] !== null) ? '#9aff9a' : '#ffa07a';
+?>
+	<div style="border-bottom:1px solid #ababab; padding-bottom:15px; margin-top:15px;">
+		<span style="color:#bcbcbc; font-size:14px;">#<?php echo $u_get_access[0]; ?></span> <strong><?php echo $u_get_access[1]; ?></strong>
+		<div style="margin:5px 0;">
+			ФИО: <?php echo $u_get_access[3]; ?><br />
+			phone: <?php echo $u_get_access[2]; ?><br />
+			email: <?php echo $u_get_access[4]; ?>
+		</div>
+		<br />
+		<div style="float:left; padding:5px 10px; margin-right:20px; border:1px solid #cdcdcd; background-color:<?php echo $color_phone; ?>;">Телефон</div>
+		<div style="float:left; padding:5px 10px; margin-right:20px; border:1px solid #cdcdcd; background-color:<?php echo $color_active; ?>;">Виды деятельности</div>
+		<div style="float:left; padding:5px 10px; margin-right:20px; border:1px solid #cdcdcd; background-color:<?php echo $color_products; ?>;">Товары</div>
+		<div style="float:left; padding:5px 10px; margin-right:20px; border:1px solid #cdcdcd; background-color:<?php echo $color_products_qty; ?>;">limit=<?php echo $u_get_access[9]; ?>; real=<?php echo $u_get_access[10]; ?>;</div>
+		<div style="float:left; padding:5px 10px; margin-right:20px; border:1px solid #cdcdcd; background-color:<?php echo $color_about; ?>;">О компании</div>
+		<div style="clear:both;"></div>
+		<br />
+		<a href="/management/adm/company-set-access/<?php echo $u_get_access[0]; ?>" style="color:#3333aa;">активировать</a>
+	</div>
+<?php endforeach; ?>
+<?php else: ?>
+	<p>Нет компаний для получения доступа.</p>
+<?php endif; ?>
+</div>

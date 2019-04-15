@@ -1,0 +1,43 @@
+<table cellpadding="0" cellspacing="0" width="700" style="border-collapse:collapse;">
+	<tr>
+		<td style="width:100%;">
+
+<!-- shapka -->
+<table cellpadding="0" cellspacing="0" width="700" style="border-collapse:collapse;">
+	<tr>
+		<td style="width:292px; height:63px;"><img src="cid:logo_id" width="292" height="63" border="0" style="display:block;"></td>
+		<td style="width:20px;"><img src="cid:blank_id" width="20" style="display:block;"></td>
+		<td align="left" style="width:388px; height:63px;">
+			<span style="font-family:Arial; font-size:12px; color:#404040;">© Справочник “Индустрия Бизнеса”</span><br />
+			<span style="font-family:Arial; font-size:12px; color:#404040;">620075, г. Екатеринбург, ул. Бажова 51, оф.49</span><br />
+			<span style="font-family:Arial; font-size:12px; color:#404040;">тел./факс: +7 (343) 27-00-127, e-mail: info@biznesurfo.ru</span>
+		</td>
+	</tr>
+</table>
+<!-- /shapka -->
+
+		</td>
+	</tr>
+	<tr><td valign="top" style="height:30px;"><img src="cid:blank_id" height="30" style="display:block;"></td></tr>
+	<tr>
+		<td style="width:100%;">
+
+<!-- body -->
+<table cellpadding="0" cellspacing="0" width="700" style="border-collapse:collapse;">
+	<tr>
+		<td style="width:20px;"><img src="cid:blank_id" width="20" border="0" style="display:block;"></td>
+		<td align="left" style="width:760px;">
+			<span style="font-family:Arial; font-size:12px; color:#404040; font-weight:bold;">[=FIO],</span><br /><br />
+			<span style="font-family:Arial; font-size:12px; color:#404040;">вы зарегистрировались на сайте www.biznesurfo.ru, чтобы подтвердить регистрацию, нужно перейти по следующей ссылке:</span><br />
+			<span style="font-family:Arial; font-size:12px; color:#0077c0;"><a href="http://[=BASE]/confirm/[=HASH]" target="_blank" style="font-family:Arial; font-size:12px; color:#0077c0;">http://[=BASE]/confirm/[=HASH]</a></span><br /><br />
+			<span style="font-family:Arial; font-size:12px; color:#404040;">Если вы не регистрировались на сайте www.biznesurfo.ru или не желаете подтверждать регистрацию, то просто проигнорируйте это письмо.</span><br /><br />
+			<span style="font-family:Arial; font-size:12px; color:#404040;">Телефон для справок: +7 (343) 27-00-127</span>
+		</td>
+		<td style="width:20px;"><img src="cid:blank_id" width="20" border="0" style="display:block;"></td>
+	</tr>
+</table>
+<!-- /body -->
+
+		</td>
+	</tr>
+</table>

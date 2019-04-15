@@ -1,0 +1,1382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE otrs [
+<!ELEMENT subotr EMPTY>
+<!ATTLIST subotr href CDATA #REQUIRED  header CDATA #REQUIRED tender_count NMTOKEN #REQUIRED>
+<!ELEMENT subotrs (subotr*)>
+<!ELEMENT column (subotrs)>
+<!ATTLIST column num NMTOKEN #REQUIRED>
+<!ELEMENT columns (column*)>
+<!ELEMENT otr (columns)>
+<!ATTLIST otr href CDATA #REQUIRED  header CDATA #REQUIRED>
+<!ELEMENT otrs (otr*)>
+]><otrs>
+  <description>Рубрикатор тендеров</description>
+  <header>Рубрикатор тендеров</header>
+  <keywords>Рубрикатор тендеров</keywords>
+  <otr header="Бумажное производство, тара и упаковка" href="http://b2bcontext.ru/partner/rubricator.pl?otr=4&amp;h=biznesurfo.ru&amp;per_page=10&amp;rubricator_columns=1" otr_id="4">
+    <columns>
+      <column num="1">
+        <subotrs>
+          <subotr header="А3, А4, конверты" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=53&amp;per_page=10" tender_count="51">
+            <tenders>
+              <tender id="35823522" header="Закупка бумаги" href="registerform?h=biznesurfo.ru&amp;id=35823522" />
+              <tender id="35761460" header="Поставка бумаги" href="registerform?h=biznesurfo.ru&amp;id=35761460" />
+              <tender id="35807547" header="Бумага для офисной техники" href="registerform?h=biznesurfo.ru&amp;id=35807547" />
+            </tenders>
+          </subotr>
+          <subotr header="Банки/ бочки и другие емкости" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=568&amp;per_page=10" tender_count="12">
+            <tenders>
+              <tender id="35807818" header="Поставка контейнеров для ТБО в соответствии со спецификацией для нужд административно-хозяйственного подразделения" href="registerform?h=biznesurfo.ru&amp;id=35807818" />
+              <tender id="34480892" header="Организация закупает Емкости, резервуары, цистерны б у" href="registerform?h=biznesurfo.ru&amp;id=34480892" />
+              <tender id="35828061" header="Закупка емкости КО-10" href="registerform?h=biznesurfo.ru&amp;id=35828061" />
+            </tenders>
+          </subotr>
+          <subotr header="Бланочная продукция" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=531&amp;per_page=10" tender_count="16">
+            <tenders>
+              <tender id="35803506" header="Поставка бумажной продукции на II полугодие 2015 года" href="registerform?h=biznesurfo.ru&amp;id=35803506" />
+              <tender id="35840798" header="Поставка бланков" href="registerform?h=biznesurfo.ru&amp;id=35840798" />
+              <tender id="35727318" header="Изготовление и поставка бланков Специальное разрешение на движение по автомобильным дорогам регионального и межмуниципального значения Ханты-Мансийского автономного округа - Югры транспортного средства, осуществляющего перевозки тяжеловесных и или крупног" href="registerform?h=biznesurfo.ru&amp;id=35727318" />
+            </tenders>
+          </subotr>
+          <subotr header="Гофрокартон/ гофроящики" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=572&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35632726" header="Поставка картона коробочного в ассортименте." href="registerform?h=biznesurfo.ru&amp;id=35632726" />
+            </tenders>
+          </subotr>
+          <subotr header="Другое" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=58&amp;per_page=10" tender_count="12">
+            <tenders>
+              <tender id="35690631" header="Поставка бумаги оберточной марки Е, Ж ." href="registerform?h=biznesurfo.ru&amp;id=35690631" />
+              <tender id="35773740" header="Бумага для печати для МБОУ СОШ № 24" href="registerform?h=biznesurfo.ru&amp;id=35773740" />
+              <tender id="35873536" header="БУМАГА ДИАГРАММНАЯ" href="registerform?h=biznesurfo.ru&amp;id=35873536" />
+            </tenders>
+          </subotr>
+          <subotr header="Евро - поддоны" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=331&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35655109" header="Организация закупает поддоны,европоддоны.." href="registerform?h=biznesurfo.ru&amp;id=35655109" />
+              <tender id="35541497" header="Оказание услуг по изготовлению поддонов деревянных" href="registerform?h=biznesurfo.ru&amp;id=35541497" />
+            </tenders>
+          </subotr>
+          <subotr header="Коробки/ ящики" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=519&amp;per_page=10" tender_count="6">
+            <tenders>
+              <tender id="35893995" header="Приобретение архивных коробок" href="registerform?h=biznesurfo.ru&amp;id=35893995" />
+              <tender id="35851899" header="Закупка ящиков" href="registerform?h=biznesurfo.ru&amp;id=35851899" />
+              <tender id="35828756" header="На поставку товаров короб архивный, конверт немаркированный бумажный" href="registerform?h=biznesurfo.ru&amp;id=35828756" />
+            </tenders>
+          </subotr>
+          <subotr header="Мешки, Пакеты" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=330&amp;per_page=10" tender_count="11">
+            <tenders>
+              <tender id="35836811" header="Организация проводит открытый запрос цен на поставку мешков полиэтиленовых для мусора" href="registerform?h=biznesurfo.ru&amp;id=35836811" />
+              <tender id="35863113" header="На поставку контейнеров и пакетов для утилизации отходов класса А , Б , В , Г" href="registerform?h=biznesurfo.ru&amp;id=35863113" />
+              <tender id="35897156" header="Поставка пакетов и контейнеров для утилизации отходов" href="registerform?h=biznesurfo.ru&amp;id=35897156" />
+            </tenders>
+          </subotr>
+          <subotr header="Одноразовая посуда" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=335&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35834444" header="Закупка сопутствующих товаров одноразовая посуда для бистро и вендинговых кофе-аппаратов Saeco, Unicum Rosso для нужд ПАО Калуганефтепродукт , ООО Курскоблнефтепродукт , ПАО Рязаньнефтепродукт , АО РН-Ярославль и ПАО Туланефтепродукт ." href="registerform?h=biznesurfo.ru&amp;id=35834444" />
+            </tenders>
+          </subotr>
+          <subotr header="Офсетная бумага" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=45&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35818296" header="Бумага" href="registerform?h=biznesurfo.ru&amp;id=35818296" />
+            </tenders>
+          </subotr>
+          <subotr header="Специальные сорта бумаги" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=54&amp;per_page=10" tender_count="4">
+            <tenders>
+              <tender id="35867319" header="Поставка бумаги в рулоне и термопленки для факсимильных аппаратов" href="registerform?h=biznesurfo.ru&amp;id=35867319" />
+              <tender id="35797421" header="Поставка бумаги для анализаторов для КДЛ" href="registerform?h=biznesurfo.ru&amp;id=35797421" />
+              <tender id="35722447" header="Открытый аукцион в электронной форме на право заключения договора на поставку чековой ленты для кассовых аппаратов термочувствительной и офсетной для нужд ОАО Курганфармация" href="registerform?h=biznesurfo.ru&amp;id=35722447" />
+            </tenders>
+          </subotr>
+          <subotr header="Упаковка – сырье/ материалы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=329&amp;per_page=10" tender_count="8">
+            <tenders>
+              <tender id="32308011" header="Организация проводит открытый запрос цен на поставку приобретение полипропиленовой продукции. УП ПОЛОГ ПОЛИПРОПИЛЕНОВЫЙ С ИНГИБИТОРОМ КОРРОЗИИ CORTEC 3,1Х3,6М. УП ЛЕНТА ПОЛИПРОПИЛЕНОВАЯ 250ММ. №1021922" href="registerform?h=biznesurfo.ru&amp;id=32308011" />
+              <tender id="35885703" header="Организация проводит открытый запрос цен на поставку полог ламинированный . МАТЕРИАЛ УПАКОВОЧНЫЙ ПОЛОГ 2850Х3000 ПОЛИПРОПИЛЕН ЛАМИНИРОВАННЫЙ. №1107312" href="registerform?h=biznesurfo.ru&amp;id=35885703" />
+              <tender id="35797163" header="Закупка вкладышей П Э 2800х1600х0,12 ! Вкладыш используется в качестве укрытия шамотной продукции Колпак" href="registerform?h=biznesurfo.ru&amp;id=35797163" />
+            </tenders>
+          </subotr>
+          <subotr header="Упаковочный картон" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=49&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35695488" header="Упаковочный картонный уголок" href="registerform?h=biznesurfo.ru&amp;id=35695488" />
+            </tenders>
+          </subotr>
+          <subotr header="Этикеточная бумага" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=47&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="32345818" header="Объявляется открытый тендер. Предмет тендера БИРКА, ЭТИКЕТКА" href="registerform?h=biznesurfo.ru&amp;id=32345818" />
+              <tender id="35882864" header="Объявляется открытый тендер. Предмет тендера ЭТИКЕТКА ВЫСОТА 239" href="registerform?h=biznesurfo.ru&amp;id=35882864" />
+            </tenders>
+          </subotr>
+        </subotrs>
+      </column>
+    </columns>
+  </otr>
+  <otr header="Деревообработка/ лес" href="http://b2bcontext.ru/partner/rubricator.pl?otr=9&amp;h=biznesurfo.ru&amp;per_page=10&amp;rubricator_columns=1" otr_id="9">
+    <columns>
+      <column num="1">
+        <subotrs>
+          <subotr header="Другое" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=133&amp;per_page=10" tender_count="16">
+            <tenders>
+              <tender id="35612845" header="Выполнение комплекса работ по отводу земельных лесных участков под объекты программы ТПР 2016г." href="registerform?h=biznesurfo.ru&amp;id=35612845" />
+              <tender id="35849528" header="Выполнение работ по рубкам ухода за лесом" href="registerform?h=biznesurfo.ru&amp;id=35849528" />
+              <tender id="35901425" header="На право выполнения работ по лесопатологическому обследованию" href="registerform?h=biznesurfo.ru&amp;id=35901425" />
+            </tenders>
+          </subotr>
+          <subotr header="Лес круглый" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=112&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35840338" header="Круглый лесоматериал хвойных пород общего назначения третьего сорта, дрова хвойных пород общего назначения." href="registerform?h=biznesurfo.ru&amp;id=35840338" />
+            </tenders>
+          </subotr>
+          <subotr header="Лесопиломатериалы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=117&amp;per_page=10" tender_count="12">
+            <tenders>
+              <tender id="35738313" header="Поставка пиломатериала РЭН - сырье 2015, 2016." href="registerform?h=biznesurfo.ru&amp;id=35738313" />
+              <tender id="35676166" header="Извещение о проведении открытого аукциона № 6261 ОАЭ-РЖДС 15 на право заключения договора поставки лесопиломатериалов в 2015 г." href="registerform?h=biznesurfo.ru&amp;id=35676166" />
+              <tender id="35683462" header="Право заключения договора на поставку пиломатериала хвойных пород" href="registerform?h=biznesurfo.ru&amp;id=35683462" />
+            </tenders>
+          </subotr>
+          <subotr header="Столярные изделия" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=121&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35785511" header="Поставка похоронных принадлежностей гробы, покрывала" href="registerform?h=biznesurfo.ru&amp;id=35785511" />
+              <tender id="35880528" header="Поставка нар двухъярусных деревянных выпуск 1" href="registerform?h=biznesurfo.ru&amp;id=35880528" />
+            </tenders>
+          </subotr>
+          <subotr header="Фанера" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=127&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35782483" header="Поставка материалов для изготовления тары" href="registerform?h=biznesurfo.ru&amp;id=35782483" />
+            </tenders>
+          </subotr>
+          <subotr header="Шпалы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=600&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35875162" header="№575 Поставка шпал деревянных, новых, пропитанных ." href="registerform?h=biznesurfo.ru&amp;id=35875162" />
+            </tenders>
+          </subotr>
+        </subotrs>
+      </column>
+    </columns>
+  </otr>
+  <otr header="Машиностроение" href="http://b2bcontext.ru/partner/rubricator.pl?otr=11&amp;h=biznesurfo.ru&amp;per_page=10&amp;rubricator_columns=1" otr_id="11">
+    <columns>
+      <column num="1">
+        <subotrs>
+          <subotr header="Авиастроение" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=160&amp;per_page=10" tender_count="5">
+            <tenders>
+              <tender id="35779082" header="Поставка авиационного двигателя АИ-24 ВТ" href="registerform?h=biznesurfo.ru&amp;id=35779082" />
+              <tender id="35779094" header="Поставка авиационных двигателей Д-36" href="registerform?h=biznesurfo.ru&amp;id=35779094" />
+              <tender id="35902961" header="Поставка бортовой стрелы без ЛПГ-150М 8АТ.9650.300" href="registerform?h=biznesurfo.ru&amp;id=35902961" />
+            </tenders>
+          </subotr>
+          <subotr header="Автомобилестроение" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=158&amp;per_page=10" tender_count="6">
+            <tenders>
+              <tender id="35884750" header="Организация закупает Кабина автомобиля Хюндай НД65" href="registerform?h=biznesurfo.ru&amp;id=35884750" />
+              <tender id="35773557" header="АЭ-2929 15 на поставку автомобилей" href="registerform?h=biznesurfo.ru&amp;id=35773557" />
+              <tender id="35768585" header="Радиатор охлаждения ДВС MTU" href="registerform?h=biznesurfo.ru&amp;id=35768585" />
+            </tenders>
+          </subotr>
+          <subotr header="Горное машиностроение" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=150&amp;per_page=10" tender_count="4">
+            <tenders>
+              <tender id="35886788" header="Лот № НФ-15-1568 Оказание услуг по прокату винтовых забойных двигателей в комплекте с породоразрушающим инструментом" href="registerform?h=biznesurfo.ru&amp;id=35886788" />
+              <tender id="35908497" header="Оборудование буровое" href="registerform?h=biznesurfo.ru&amp;id=35908497" />
+              <tender id="35681254" header="Объявляется открытый тендер. Предмет тендера по услуге 10307. Предоставление оборудования и инженерное сопровождение при спуске и креплении скважин хвостовиками на 2016-2018 гг" href="registerform?h=biznesurfo.ru&amp;id=35681254" />
+            </tenders>
+          </subotr>
+          <subotr header="Двигателестроение" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=157&amp;per_page=10" tender_count="5">
+            <tenders>
+              <tender id="35846072" header="Аукцион № 7605 МОТОР-РЕДУКТОР DEMAG" href="registerform?h=biznesurfo.ru&amp;id=35846072" />
+              <tender id="35849419" header="Двигатель к легковому автомобилю первой комплектации УМЗ-4218" href="registerform?h=biznesurfo.ru&amp;id=35849419" />
+              <tender id="35607105" header="Поставка Двигателя КАМАЗ в г. Салехард" href="registerform?h=biznesurfo.ru&amp;id=35607105" />
+            </tenders>
+          </subotr>
+          <subotr header="Детали и узлы машин,  комплектация" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=171&amp;per_page=10" tender_count="314">
+            <tenders>
+              <tender id="35826054" header="Подшипник 307" href="registerform?h=biznesurfo.ru&amp;id=35826054" />
+              <tender id="35837790" header="Объявляется открытый тендер. Предмет тендера поставка запасных частей к электродвигателям" href="registerform?h=biznesurfo.ru&amp;id=35837790" />
+              <tender id="35901749" header="Закупка рем.лент для АО" href="registerform?h=biznesurfo.ru&amp;id=35901749" />
+            </tenders>
+          </subotr>
+          <subotr header="Дорожное и строительное машиностроение" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=163&amp;per_page=10" tender_count="3">
+            <tenders>
+              <tender id="35885108" header="Организация закупает мелотерку СО-124А" href="registerform?h=biznesurfo.ru&amp;id=35885108" />
+              <tender id="35857028" header="Запрос котировок цен в электронной форме на поставку Экскаватора с оборудованием , в количестве 1 ед." href="registerform?h=biznesurfo.ru&amp;id=35857028" />
+              <tender id="35902957" header="Поставка экскаватора-погрузчика" href="registerform?h=biznesurfo.ru&amp;id=35902957" />
+            </tenders>
+          </subotr>
+          <subotr header="Другое" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=182&amp;per_page=10" tender_count="40">
+            <tenders>
+              <tender id="35831281" header="Механообработка заготовки ОАО" href="registerform?h=biznesurfo.ru&amp;id=35831281" />
+              <tender id="35857782" header="Оказание услуг по обслуживанию буровых растворов при бурении скважин" href="registerform?h=biznesurfo.ru&amp;id=35857782" />
+              <tender id="35908938" header="Поставка подставки монтажной" href="registerform?h=biznesurfo.ru&amp;id=35908938" />
+            </tenders>
+          </subotr>
+          <subotr header="Инструментальное производство" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=149&amp;per_page=10" tender_count="69">
+            <tenders>
+              <tender id="35780820" header="Поставка режущего и зажимного инструмента Sandvik, Rego-Fix" href="registerform?h=biznesurfo.ru&amp;id=35780820" />
+              <tender id="35584306" header="Поставка расходных материалов для труборезной машины FEIN" href="registerform?h=biznesurfo.ru&amp;id=35584306" />
+              <tender id="35872325" header="Поставка инструмента" href="registerform?h=biznesurfo.ru&amp;id=35872325" />
+            </tenders>
+          </subotr>
+          <subotr header="Испытательное и контрольно-поверочное оборудование" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=593&amp;per_page=10" tender_count="33">
+            <tenders>
+              <tender id="35690210" header="Право заключения договора на поставку стенда для измерения уровня люминесценции" href="registerform?h=biznesurfo.ru&amp;id=35690210" />
+              <tender id="35878251" header="Поставка комплекта универсального прибора ИТ 5010-01М" href="registerform?h=biznesurfo.ru&amp;id=35878251" />
+              <tender id="35802590" header="Поставка расходомера" href="registerform?h=biznesurfo.ru&amp;id=35802590" />
+            </tenders>
+          </subotr>
+          <subotr header="Коммунальное машиностроение" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=164&amp;per_page=10" tender_count="12">
+            <tenders>
+              <tender id="35906307" header="Приобретение машина коммунальная МК 01 или аналог" href="registerform?h=biznesurfo.ru&amp;id=35906307" />
+              <tender id="35805549" header="Приобретение мусоровоза, в соответствии со спецификацией Приложение № 1 ." href="registerform?h=biznesurfo.ru&amp;id=35805549" />
+              <tender id="35711400" header="Оборудование промышленного коммунального водогазоснабжения" href="registerform?h=biznesurfo.ru&amp;id=35711400" />
+            </tenders>
+          </subotr>
+          <subotr header="Котлостроение/ теплообменное оборудование" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=152&amp;per_page=10" tender_count="22">
+            <tenders>
+              <tender id="35826980" header="Поставка, монтаж и пусконаладочные работы двух водогрейных котлов в котельную" href="registerform?h=biznesurfo.ru&amp;id=35826980" />
+              <tender id="35885904" header="Организация проводит открытый запрос цен на поставку 496 Поставка теплотехнического оборудованаия" href="registerform?h=biznesurfo.ru&amp;id=35885904" />
+              <tender id="35902589" header="Поставка пеногенератора." href="registerform?h=biznesurfo.ru&amp;id=35902589" />
+            </tenders>
+          </subotr>
+          <subotr header="Кузнечно-штамповочное производство" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=174&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35765147" header="Поставка оборудования для горячей штамповки деталей" href="registerform?h=biznesurfo.ru&amp;id=35765147" />
+            </tenders>
+          </subotr>
+          <subotr header="Лифтовое оборудование" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=606&amp;per_page=10" tender_count="5">
+            <tenders>
+              <tender id="35782398" header="Выполнение работ по установке лифтового оборудования в здании администрации района." href="registerform?h=biznesurfo.ru&amp;id=35782398" />
+              <tender id="35800872" header="Поставка больничных лифтов с демонтажом лифтов выработавших нормативный срок эксплуатации и монтажом новых лифтов в блоках АГ, Г, В, в здании лечебного корпуса литер А" href="registerform?h=biznesurfo.ru&amp;id=35800872" />
+              <tender id="35849489" header="АЭ-0596 15 Поставка запасных частей для лифтов и подъемных платформ" href="registerform?h=biznesurfo.ru&amp;id=35849489" />
+            </tenders>
+          </subotr>
+          <subotr header="Локомотивостроение и вагоностроение" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=156&amp;per_page=10" tender_count="14">
+            <tenders>
+              <tender id="35831873" header="Поставка устройств локомотивной безопасности" href="registerform?h=biznesurfo.ru&amp;id=35831873" />
+              <tender id="35893273" header="Апарат поглощающий" href="registerform?h=biznesurfo.ru&amp;id=35893273" />
+              <tender id="35720849" header="Проведении конкурса № 2211 КПОЭ-РЖДС 15 проводимого среди поставщиков, прошедших квалификационный отбор № 232 ПО-РЖДС 14 второй этап конкурса с предварительным квалификационным отбором с целью выбора организации на право заключения договора поставки запас" href="registerform?h=biznesurfo.ru&amp;id=35720849" />
+            </tenders>
+          </subotr>
+          <subotr header="Машиностроение бытовых машин и приборов" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=170&amp;per_page=10" tender_count="9">
+            <tenders>
+              <tender id="35889674" header="Поставка оборудования прачечной для детского сада" href="registerform?h=biznesurfo.ru&amp;id=35889674" />
+              <tender id="35826015" header="Поставка оборудования для прачечной" href="registerform?h=biznesurfo.ru&amp;id=35826015" />
+              <tender id="35712228" header="Поставка морозильной камеры" href="registerform?h=biznesurfo.ru&amp;id=35712228" />
+            </tenders>
+          </subotr>
+          <subotr header="Машиностроение для пищевой промышленности" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=168&amp;per_page=10" tender_count="3">
+            <tenders>
+              <tender id="35462979" header="Поставка стационарного оборудования для системы пенной мойки оборудования, полов и стен с низким давлением воды для пищевой и мясоперерабатывающей промышленности" href="registerform?h=biznesurfo.ru&amp;id=35462979" />
+              <tender id="35906159" header="Поставка камеры шоковой заморозки" href="registerform?h=biznesurfo.ru&amp;id=35906159" />
+              <tender id="35792952" header="Оборудование для столовой" href="registerform?h=biznesurfo.ru&amp;id=35792952" />
+            </tenders>
+          </subotr>
+          <subotr header="Машиностроение для торговли и общественного питания" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=169&amp;per_page=10" tender_count="13">
+            <tenders>
+              <tender id="35813390" header="Поставка контрольно-кассовой техники" href="registerform?h=biznesurfo.ru&amp;id=35813390" />
+              <tender id="35827614" header="Поставка оборудования для пищеблока" href="registerform?h=biznesurfo.ru&amp;id=35827614" />
+              <tender id="35817003" header="Организация проводит открытый запрос цен на поставку ТЕНДЕР НА ПОСТАВКУ И МОНТАЖ ХОЛОДИЛЬНОГО ОБОРУДОВАНИЯ А ТАК ЖЕ ХОЛОДИЛЬНЫХ КАМЕР В ЗОНУ ЭКСПЕДИЦИИ СРЕДНЕГО ХОЛОДА" href="registerform?h=biznesurfo.ru&amp;id=35817003" />
+            </tenders>
+          </subotr>
+          <subotr header="Металлургическое машиностроение" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=151&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35813429" header="Поставка плавильной печи лот 736" href="registerform?h=biznesurfo.ru&amp;id=35813429" />
+              <tender id="35743686" header="Объявляется открытый запрос предложений. Предмет запроса поставку пресса кривошипного" href="registerform?h=biznesurfo.ru&amp;id=35743686" />
+            </tenders>
+          </subotr>
+          <subotr header="Нестандартное и специальное оборудование" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=555&amp;per_page=10" tender_count="32">
+            <tenders>
+              <tender id="35869270" header="Поставка вибромельницы Оборудование для тонкого измельчения мельницы" href="registerform?h=biznesurfo.ru&amp;id=35869270" />
+              <tender id="35841915" header="Открытый запрос цен в электронной форме на Право заключения договора на поставку гальванической линии лабораторного типа" href="registerform?h=biznesurfo.ru&amp;id=35841915" />
+              <tender id="35706619" header="Приобретение снегогенераторов по объекту Организация склонов под трассы хаф-пайпа и ски кросса" href="registerform?h=biznesurfo.ru&amp;id=35706619" />
+            </tenders>
+          </subotr>
+          <subotr header="Отделка поверхностей и нанесение покрытий" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=179&amp;per_page=10" tender_count="7">
+            <tenders>
+              <tender id="35831102" header="Оказание услуг по восстановлению запчастей ОАО Ролик центратора головки черт.№ 3.6 дет.4 Полиуретановое покрытие в кол-ве 12 шт." href="registerform?h=biznesurfo.ru&amp;id=35831102" />
+              <tender id="35669974" header="Открытый аукцион в электронной форме на право заключения договора на поставку электроэрозионных установок." href="registerform?h=biznesurfo.ru&amp;id=35669974" />
+              <tender id="35795806" header="Выполнение работ по восстановлению защитного покрытия газопровода высокого давления" href="registerform?h=biznesurfo.ru&amp;id=35795806" />
+            </tenders>
+          </subotr>
+          <subotr header="Подъемно-транспортное машиностроение" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=162&amp;per_page=10" tender_count="29">
+            <tenders>
+              <tender id="32548230" header="Поставка Оборудование подьемно транспортное Стропа" href="registerform?h=biznesurfo.ru&amp;id=32548230" />
+              <tender id="35905874" header="Стропы грузоподъемные" href="registerform?h=biznesurfo.ru&amp;id=35905874" />
+              <tender id="35898783" header="Приобретение мини-погрузчика" href="registerform?h=biznesurfo.ru&amp;id=35898783" />
+            </tenders>
+          </subotr>
+          <subotr header="Производство неметаллических изделий" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=181&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35825976" header="Поставка подложек СТ 50-1-1-0,6 2000 шт." href="registerform?h=biznesurfo.ru&amp;id=35825976" />
+              <tender id="33861583" header="Поставка силиконовых пластин" href="registerform?h=biznesurfo.ru&amp;id=33861583" />
+            </tenders>
+          </subotr>
+          <subotr header="Пуско-наладочные работы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=623&amp;per_page=10" tender_count="21">
+            <tenders>
+              <tender id="35834317" header="Оказание услуг по режимно-наладочным работам АСУ и КИП дизельных электростанций" href="registerform?h=biznesurfo.ru&amp;id=35834317" />
+              <tender id="35741585" header="Установка блочных станций подготовки питьевой воды" href="registerform?h=biznesurfo.ru&amp;id=35741585" />
+              <tender id="35767739" header="Объявляется открытый запрос предложений. Предмет запроса 0035 15 2.1 0036761 ТГЕкатеринб ЗП ГОС Э 23.07.2015 Выполнение пуско-наладочных работ" href="registerform?h=biznesurfo.ru&amp;id=35767739" />
+            </tenders>
+          </subotr>
+          <subotr header="Ремонт, обслуживание оборудования/ приборов" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=528&amp;per_page=10" tender_count="132">
+            <tenders>
+              <tender id="35738306" header="Выполнение работ по текущему ремонту средств измерений определения качества газа, воды, экологического мониторинга ООО Газпром" href="registerform?h=biznesurfo.ru&amp;id=35738306" />
+              <tender id="35815630" header="Объявляется открытый запрос предложений. Предмет запроса Модернизации ОРУ-110 220 кВ с заменой 1-го воздушного выключателя 110 кВ на элегазовый и 2-х разъединителей 220кВ" href="registerform?h=biznesurfo.ru&amp;id=35815630" />
+              <tender id="35762742" header="РЕМОНТ ВОДООХЛАЖДАЕМЫХ РОЛИКОВ ПОДОГРЕВАТЕЛЬНОЙ ПЕЧИ." href="registerform?h=biznesurfo.ru&amp;id=35762742" />
+            </tenders>
+          </subotr>
+          <subotr header="Робототехника/ автоматизация/ приборостроение" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=148&amp;per_page=10" tender_count="24">
+            <tenders>
+              <tender id="35691824" header="Поставка Настольного оптико-эмиссионного спектрометра" href="registerform?h=biznesurfo.ru&amp;id=35691824" />
+              <tender id="35464662" header="Поставка образовательной робототехники" href="registerform?h=biznesurfo.ru&amp;id=35464662" />
+              <tender id="35630758" header="Поставка стационарного оборудования ударно-точечной маркировки ес9." href="registerform?h=biznesurfo.ru&amp;id=35630758" />
+            </tenders>
+          </subotr>
+          <subotr header="Сварка и электрическая обработка материалов" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=177&amp;per_page=10" tender_count="7">
+            <tenders>
+              <tender id="35866864" header="Право заключения договора на поставку сварочной машины для стыковой сварки полиэтиленовых труб диаметр 90 -315 мм в комплекте со вставками" href="registerform?h=biznesurfo.ru&amp;id=35866864" />
+              <tender id="35880503" header="Оказание услуг по обслуживанию сварочного оборудования в подразделениях Тобольского УМН в 2015 годуНачальная максимальная цена договора лота указана без учёта НДС. Цена заявки на участие в закупке указывается претендентами также без учёта НДС." href="registerform?h=biznesurfo.ru&amp;id=35880503" />
+              <tender id="35833116" header="Поставка вспомогательного сварочного оборудования и комплектующих к нему" href="registerform?h=biznesurfo.ru&amp;id=35833116" />
+            </tenders>
+          </subotr>
+          <subotr header="Станкостроение" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=147&amp;per_page=10" tender_count="30">
+            <tenders>
+              <tender id="35796870" header="Станок токарный с компьютерной системой ЧПУ" href="registerform?h=biznesurfo.ru&amp;id=35796870" />
+              <tender id="35655831" header="Объявляется открытый запрос предложений. Предмет запроса поставку станков" href="registerform?h=biznesurfo.ru&amp;id=35655831" />
+              <tender id="35799949" header="Поставка токарного комбинированного станка" href="registerform?h=biznesurfo.ru&amp;id=35799949" />
+            </tenders>
+          </subotr>
+          <subotr header="Судостроение, судоремонт, судовое оборудование" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=159&amp;per_page=10" tender_count="7">
+            <tenders>
+              <tender id="35585449" header="Поставка моторной лодки для нужд Администрации Звериноголовского района" href="registerform?h=biznesurfo.ru&amp;id=35585449" />
+              <tender id="35862518" header="Модернизация моторной лодки" href="registerform?h=biznesurfo.ru&amp;id=35862518" />
+              <tender id="35691394" header="Поставка аэролодки" href="registerform?h=biznesurfo.ru&amp;id=35691394" />
+            </tenders>
+          </subotr>
+          <subotr header="Технологическое оборудование" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=566&amp;per_page=10" tender_count="17">
+            <tenders>
+              <tender id="35874748" header="Право заключения договора на поставку вибромельницы" href="registerform?h=biznesurfo.ru&amp;id=35874748" />
+              <tender id="35889438" header="Организация закупает модификаторов" href="registerform?h=biznesurfo.ru&amp;id=35889438" />
+              <tender id="35718566" header="На поставку прессформы" href="registerform?h=biznesurfo.ru&amp;id=35718566" />
+            </tenders>
+          </subotr>
+          <subotr header="Технология и оборудование литейного производства" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=173&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35884981" header="Дуговая сталеплавильная печь ДС-6Н1 №8 Дуговая сталеплавильная печь ДСП-3 №1 Дуговая сталеплавильная печь ДСП-3 №3" href="registerform?h=biznesurfo.ru&amp;id=35884981" />
+              <tender id="35899719" header="Затравка для сляб. С хранения и б у не предлагать ." href="registerform?h=biznesurfo.ru&amp;id=35899719" />
+            </tenders>
+          </subotr>
+          <subotr header="Технология современного машиностроения" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=172&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35881344" header="Поставка инерциальной системы согласно спецификации" href="registerform?h=biznesurfo.ru&amp;id=35881344" />
+            </tenders>
+          </subotr>
+          <subotr header="Тракторное и сельскохозяйственное машиностроение" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=165&amp;per_page=10" tender_count="14">
+            <tenders>
+              <tender id="35830757" header="Организация проводит открытый запрос цен на поставку Поставка запасных частей и комплектующих изделий для сортировально-сушильных зернокомплексов" href="registerform?h=biznesurfo.ru&amp;id=35830757" />
+              <tender id="35829212" header="Поставка запасных частей для зерносушильного комплекса ЗАС-20" href="registerform?h=biznesurfo.ru&amp;id=35829212" />
+              <tender id="35726718" header="Право заключения договора поставки трактора колесного с мульчерным оборудованием для нужд филиала ОАО в 2015 году" href="registerform?h=biznesurfo.ru&amp;id=35726718" />
+            </tenders>
+          </subotr>
+          <subotr header="Химическое и нефтяное машиностроение" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=155&amp;per_page=10" tender_count="9">
+            <tenders>
+              <tender id="35838030" header="Организация проводит открытый запрос цен на поставку Фильеры JSW" href="registerform?h=biznesurfo.ru&amp;id=35838030" />
+              <tender id="35659212" header="Объявляется открытый тендер. Предмет тендера поставку нефтепромыслового оборудования" href="registerform?h=biznesurfo.ru&amp;id=35659212" />
+              <tender id="35711300" header="Оборудование химическое нефтегазоперерабатывающее" href="registerform?h=biznesurfo.ru&amp;id=35711300" />
+            </tenders>
+          </subotr>
+          <subotr header="Электротехническое и энергетическое оборудование" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=154&amp;per_page=10" tender_count="8">
+            <tenders>
+              <tender id="35747212" header="Оборудование" href="registerform?h=biznesurfo.ru&amp;id=35747212" />
+              <tender id="35773359" header="Поставка агрегата топливомасляного для нужд АО" href="registerform?h=biznesurfo.ru&amp;id=35773359" />
+              <tender id="35710678" header="Поставка камеры сушильной КСЭ-1" href="registerform?h=biznesurfo.ru&amp;id=35710678" />
+            </tenders>
+          </subotr>
+        </subotrs>
+      </column>
+    </columns>
+  </otr>
+  <otr header="Металлы/ металлоизделия" href="http://b2bcontext.ru/partner/rubricator.pl?otr=13&amp;h=biznesurfo.ru&amp;per_page=10&amp;rubricator_columns=1" otr_id="13">
+    <columns>
+      <column num="1">
+        <subotrs>
+          <subotr header="Алюминий" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=191&amp;per_page=10" tender_count="5">
+            <tenders>
+              <tender id="35885645" header="Организация закупает алюминий вторичный марок Е-150,Е-160,Е-171" href="registerform?h=biznesurfo.ru&amp;id=35885645" />
+              <tender id="35864174" header="Право заключения договора на поставку кругов и плит из алюминиевого сплава Д20" href="registerform?h=biznesurfo.ru&amp;id=35864174" />
+              <tender id="35862731" header="Поставка алюминия технического очищенного ГОСТ 12966-85 1 сорт" href="registerform?h=biznesurfo.ru&amp;id=35862731" />
+            </tenders>
+          </subotr>
+          <subotr header="Арматура" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=500&amp;per_page=10" tender_count="9">
+            <tenders>
+              <tender id="35859476" header="Организация закупает Арматура А1,А3,А500С строительная 8-40 мм." href="registerform?h=biznesurfo.ru&amp;id=35859476" />
+              <tender id="35731157" header="Поставка арматуры для СИП и металлоконструкций" href="registerform?h=biznesurfo.ru&amp;id=35731157" />
+              <tender id="35888802" header="Организация закупает арматуру" href="registerform?h=biznesurfo.ru&amp;id=35888802" />
+            </tenders>
+          </subotr>
+          <subotr header="Балка/ швеллер/ уголок" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=501&amp;per_page=10" tender_count="6">
+            <tenders>
+              <tender id="31760228" header="Организация на постоянной основе покупает Уголок 25-100, швеллер 10-20 ст3 не б у и не лежалый" href="registerform?h=biznesurfo.ru&amp;id=31760228" />
+              <tender id="35885700" header="Организация закупает уголок, швеллер, балка" href="registerform?h=biznesurfo.ru&amp;id=35885700" />
+              <tender id="35623114" header="Швеллер" href="registerform?h=biznesurfo.ru&amp;id=35623114" />
+            </tenders>
+          </subotr>
+          <subotr header="Бронза" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=193&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35896028" header="Стружка бронзовая" href="registerform?h=biznesurfo.ru&amp;id=35896028" />
+              <tender id="35622104" header="Организация закупает бронзу" href="registerform?h=biznesurfo.ru&amp;id=35622104" />
+            </tenders>
+          </subotr>
+          <subotr header="Двери/ фурнитура (покупка, установка)" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=579&amp;per_page=10" tender_count="6">
+            <tenders>
+              <tender id="35799689" header="Установка противопожарных дверей" href="registerform?h=biznesurfo.ru&amp;id=35799689" />
+              <tender id="35670010" header="Изготовление и монтаж противопожарных дверей с требуемым пределом огнестойкости" href="registerform?h=biznesurfo.ru&amp;id=35670010" />
+              <tender id="35865003" header="Оказание услуг по ревизии и регулировке фурнитуры и запорных механизмов стеклянных противопожарных дверей" href="registerform?h=biznesurfo.ru&amp;id=35865003" />
+            </tenders>
+          </subotr>
+          <subotr header="Круг/ лист/ квадрат/ шестигранник" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=582&amp;per_page=10" tender_count="32">
+            <tenders>
+              <tender id="35885751" header="Организация проводит открытый запрос цен на поставку лист нерж.3 1250 2500 Ст Х18Н10Т поставка июль15 г.. №1102394" href="registerform?h=biznesurfo.ru&amp;id=35885751" />
+              <tender id="35877617" header="Лист ст.45" href="registerform?h=biznesurfo.ru&amp;id=35877617" />
+              <tender id="31848951" header="Организация на постоянной основе покупает Лист 09г2с-12, ст3сп-5, размер 1,5 х 6 м" href="registerform?h=biznesurfo.ru&amp;id=31848951" />
+            </tenders>
+          </subotr>
+          <subotr header="Латунь" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=192&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35622086" header="Организация закупает Латунь" href="registerform?h=biznesurfo.ru&amp;id=35622086" />
+            </tenders>
+          </subotr>
+          <subotr header="Медь" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=194&amp;per_page=10" tender_count="5">
+            <tenders>
+              <tender id="35770198" header="Организация закупает медную гранулу фракцией от 5 мм до 25 мм" href="registerform?h=biznesurfo.ru&amp;id=35770198" />
+              <tender id="35885780" header="Организация проводит открытый запрос цен на поставку Пруток медный. №1107333" href="registerform?h=biznesurfo.ru&amp;id=35885780" />
+              <tender id="35819365" header="Право заключения договора на Поставка шины медной твердой 10х80х4000 М1 ГОСТ434-78" href="registerform?h=biznesurfo.ru&amp;id=35819365" />
+            </tenders>
+          </subotr>
+          <subotr header="Металлоизделия" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=203&amp;per_page=10" tender_count="46">
+            <tenders>
+              <tender id="35841601" header="Приобретение поковок" href="registerform?h=biznesurfo.ru&amp;id=35841601" />
+              <tender id="32463932" header="Объявляется открытый тендер. Предмет тендера Заготовки крышки" href="registerform?h=biznesurfo.ru&amp;id=32463932" />
+              <tender id="35614872" header="Закупка металлорукавов для нужд ООО Газпром переработка" href="registerform?h=biznesurfo.ru&amp;id=35614872" />
+            </tenders>
+          </subotr>
+          <subotr header="Металлоконструкции" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=596&amp;per_page=10" tender_count="18">
+            <tenders>
+              <tender id="35904897" header="Изготовление металлоконструкций карманов для хранения трубной заготовки" href="registerform?h=biznesurfo.ru&amp;id=35904897" />
+              <tender id="35830365" header="Поставка металлических стеллажей." href="registerform?h=biznesurfo.ru&amp;id=35830365" />
+              <tender id="35773658" header="Изготовление металлоконструкций углеводородного факела" href="registerform?h=biznesurfo.ru&amp;id=35773658" />
+            </tenders>
+          </subotr>
+          <subotr header="Металлолом" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=509&amp;per_page=10" tender_count="56">
+            <tenders>
+              <tender id="35860342" header="Организация закупает лом никельсодержащих материалов, нержавеющих, жаропрочных, спец сталей. Любые сплавы на основе Ni Никеля и W Вольфрама, с включениями других элементов Mo, Co, Cr, Cu, V" href="registerform?h=biznesurfo.ru&amp;id=35860342" />
+              <tender id="35770201" header="Организация закупает Лом черных металлов" href="registerform?h=biznesurfo.ru&amp;id=35770201" />
+              <tender id="35859419" header="Организация закупает AL банка пакетированная 500х500х500" href="registerform?h=biznesurfo.ru&amp;id=35859419" />
+            </tenders>
+          </subotr>
+          <subotr header="Металлообработка" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=548&amp;per_page=10" tender_count="10">
+            <tenders>
+              <tender id="35720671" header="Механообработка заготовки" href="registerform?h=biznesurfo.ru&amp;id=35720671" />
+              <tender id="35720673" header="Механообработка заготовки ОАО ПНТЗ" href="registerform?h=biznesurfo.ru&amp;id=35720673" />
+              <tender id="35761422" header="Услуги механообработки деталей." href="registerform?h=biznesurfo.ru&amp;id=35761422" />
+            </tenders>
+          </subotr>
+          <subotr header="Металлопрокат" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=502&amp;per_page=10" tender_count="42">
+            <tenders>
+              <tender id="35554588" header="Организация закупает хн50вмтюб-ви ЭП648-ви от ф32" href="registerform?h=biznesurfo.ru&amp;id=35554588" />
+              <tender id="35868336" header="Цветной металлопрокат" href="registerform?h=biznesurfo.ru&amp;id=35868336" />
+              <tender id="35805858" header="Организация закупает металлопрокат" href="registerform?h=biznesurfo.ru&amp;id=35805858" />
+            </tenders>
+          </subotr>
+          <subotr header="Метизы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=204&amp;per_page=10" tender_count="17">
+            <tenders>
+              <tender id="35810301" header="Поставка материалов для герметизации Болты путевые стыковые с гайками для рельсовых скреплений" href="registerform?h=biznesurfo.ru&amp;id=35810301" />
+              <tender id="35785237" header="Крепежная продукция" href="registerform?h=biznesurfo.ru&amp;id=35785237" />
+              <tender id="35826007" header="Поставка шайб КМЮР.741314.021, КМЮР.741314.023 - 200 шт." href="registerform?h=biznesurfo.ru&amp;id=35826007" />
+            </tenders>
+          </subotr>
+          <subotr header="Проволока/ катанка/ трос" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=503&amp;per_page=10" tender_count="17">
+            <tenders>
+              <tender id="35808555" header="Проволока 9 Х20Н80-Н" href="registerform?h=biznesurfo.ru&amp;id=35808555" />
+              <tender id="35808554" header="Проволока 6 Х20Н80-Н" href="registerform?h=biznesurfo.ru&amp;id=35808554" />
+              <tender id="35808553" header="Проволока 1,4 Х20Н80-Н" href="registerform?h=biznesurfo.ru&amp;id=35808553" />
+            </tenders>
+          </subotr>
+          <subotr header="Редкоземельные металлы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=197&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35859908" header="Организация закупает Лантан металлический" href="registerform?h=biznesurfo.ru&amp;id=35859908" />
+            </tenders>
+          </subotr>
+          <subotr header="Рельcы/материалы верхнего строения путей" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=581&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35837372" header="Объявляется открытый тендер. Предмет тендера Рельс КР-100" href="registerform?h=biznesurfo.ru&amp;id=35837372" />
+            </tenders>
+          </subotr>
+          <subotr header="Сантехника/водозапорное оборудование" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=206&amp;per_page=10" tender_count="36">
+            <tenders>
+              <tender id="35888265" header="Поставка продукции сантехнического назначения" href="registerform?h=biznesurfo.ru&amp;id=35888265" />
+              <tender id="35883944" header="Приобретение сантехнических изделий для нужд АО Научно-производственная корпорация Уралвагонзавод Лот №3" href="registerform?h=biznesurfo.ru&amp;id=35883944" />
+              <tender id="35857340" header="Смеситель планетарно-шнековый СПШ-20Вз или эквивалент" href="registerform?h=biznesurfo.ru&amp;id=35857340" />
+            </tenders>
+          </subotr>
+          <subotr header="Сплавы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=559&amp;per_page=10" tender_count="16">
+            <tenders>
+              <tender id="35869289" header="Поставка сурьмянистого сплава Свинец, включая вторичный, сплавы свинца" href="registerform?h=biznesurfo.ru&amp;id=35869289" />
+              <tender id="35800993" header="Организация на постоянной основе покупает на постоянной основе следующий материал - Олово О1 - Баббит Б16, Б83 - ПОС 30-90 проволока, пруток, чушка, самоплав - Свинец оболочка, переплав ." href="registerform?h=biznesurfo.ru&amp;id=35800993" />
+              <tender id="35816241" header="Организация закупает висмут ВИ1 ВИО, кадмии КДО, сплав РОЗЕ, сплав ВУДА, Селен СТ-1, СТ-О , Тилур Т-У, Т-сТ, Т-сЧ, Т-сТ" href="registerform?h=biznesurfo.ru&amp;id=35816241" />
+            </tenders>
+          </subotr>
+          <subotr header="Сталь" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=199&amp;per_page=10" tender_count="13">
+            <tenders>
+              <tender id="35827515" header="Поставка стали 45-ТВ-З-МЗ-ТО" href="registerform?h=biznesurfo.ru&amp;id=35827515" />
+              <tender id="31546442" header="Организация на постоянной основе покупает Сталь электротехническая 0,5 мм ширина 1000 мм П-ТО-Т-А-2212 21427-83" href="registerform?h=biznesurfo.ru&amp;id=31546442" />
+              <tender id="35826872" header="Поставка стали листовой 390-10ХСНД-св-12" href="registerform?h=biznesurfo.ru&amp;id=35826872" />
+            </tenders>
+          </subotr>
+          <subotr header="Трубопроводная арматура" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=640&amp;per_page=10" tender_count="49">
+            <tenders>
+              <tender id="35885730" header="Организация закупает Отводы 159-219-273-325-426-530-630-720-820-1020-1220-1420. Тройники 159-219-273-325-426-530-630-720-820-1020-1220-1420." href="registerform?h=biznesurfo.ru&amp;id=35885730" />
+              <tender id="35804858" header="Поставка запорной арматуры для нужд АО Регионгаз-инвест" href="registerform?h=biznesurfo.ru&amp;id=35804858" />
+              <tender id="35844846" header="Организация проводит открытый запрос цен на поставку трубопроводную арматуру.516.310. №1106293" href="registerform?h=biznesurfo.ru&amp;id=35844846" />
+            </tenders>
+          </subotr>
+          <subotr header="Трубы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=205&amp;per_page=10" tender_count="81">
+            <tenders>
+              <tender id="35881474" header="Организация закупает трубы 273х8, 426,325,42" href="registerform?h=biznesurfo.ru&amp;id=35881474" />
+              <tender id="35901729" header="Закупка нержавеющих труб" href="registerform?h=biznesurfo.ru&amp;id=35901729" />
+              <tender id="35882797" header="Организация закупает трубу 1420 1020 вост" href="registerform?h=biznesurfo.ru&amp;id=35882797" />
+            </tenders>
+          </subotr>
+          <subotr header="Ферросплавы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=195&amp;per_page=10" tender_count="18">
+            <tenders>
+              <tender id="35848963" header="Феррохром ФХ025А пятого класса крупности" href="registerform?h=biznesurfo.ru&amp;id=35848963" />
+              <tender id="35885223" header="Организация закупает Ферромарганец ФМн78,ФМн80,ФМн88" href="registerform?h=biznesurfo.ru&amp;id=35885223" />
+              <tender id="35885874" header="Организация закупает Ферромарганец" href="registerform?h=biznesurfo.ru&amp;id=35885874" />
+            </tenders>
+          </subotr>
+          <subotr header="Цветные металлы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=504&amp;per_page=10" tender_count="15">
+            <tenders>
+              <tender id="35859747" header="Организация закупает Припой, Олово, Баббит Б83, Сурьма." href="registerform?h=biznesurfo.ru&amp;id=35859747" />
+              <tender id="35863073" header="Кобальт металлический марки К1АУ К1А слитки - 800кг" href="registerform?h=biznesurfo.ru&amp;id=35863073" />
+              <tender id="35822049" header="Организация закупает олово, баббит, припой" href="registerform?h=biznesurfo.ru&amp;id=35822049" />
+            </tenders>
+          </subotr>
+          <subotr header="Цинк" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=196&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35837269" header="Организация закупает цинк марки SHG-99, 995" href="registerform?h=biznesurfo.ru&amp;id=35837269" />
+            </tenders>
+          </subotr>
+          <subotr header="Чугун" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=198&amp;per_page=10" tender_count="3">
+            <tenders>
+              <tender id="35885967" header="Организация закупает Чугун передельный пл1, пл2" href="registerform?h=biznesurfo.ru&amp;id=35885967" />
+              <tender id="35889447" header="Организация закупает Чугун" href="registerform?h=biznesurfo.ru&amp;id=35889447" />
+              <tender id="35776093" header="Люки чугунные канализационные тип Т С250 -1.60 ГОСТ 3634-99 С250 1-60 для смотровых колодцев производство Россия с 4-мя ушками . Для установки на городских автодорогах с интенсивным движением." href="registerform?h=biznesurfo.ru&amp;id=35776093" />
+            </tenders>
+          </subotr>
+        </subotrs>
+      </column>
+    </columns>
+  </otr>
+  <otr header="Офис/ дом" href="http://b2bcontext.ru/partner/rubricator.pl?otr=30&amp;h=biznesurfo.ru&amp;per_page=10&amp;rubricator_columns=1" otr_id="30">
+    <columns>
+      <column num="1">
+        <subotrs>
+          <subotr header="Мебель разная" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=530&amp;per_page=10" tender_count="69">
+            <tenders>
+              <tender id="35794449" header="Шкаф для хранения" href="registerform?h=biznesurfo.ru&amp;id=35794449" />
+              <tender id="35902435" header="Поставка мебели для внедрения фирменного стиля" href="registerform?h=biznesurfo.ru&amp;id=35902435" />
+              <tender id="35901418" header="Изготовление и поставка мебели наименования, требования к характеристикам, количеству товара в соответствии с прикрепленным извещением о проведении запроса котировок в электронной форме с приложениями" href="registerform?h=biznesurfo.ru&amp;id=35901418" />
+            </tenders>
+          </subotr>
+          <subotr header="Офисная мебель" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=428&amp;per_page=10" tender_count="23">
+            <tenders>
+              <tender id="35894666" header="Приобретение офисной мебели" href="registerform?h=biznesurfo.ru&amp;id=35894666" />
+              <tender id="35756789" header="Поставка офисной мебели для администрации города Лангепаса 132ЭА 15 ." href="registerform?h=biznesurfo.ru&amp;id=35756789" />
+              <tender id="35867361" header="Поставка офисной мебели" href="registerform?h=biznesurfo.ru&amp;id=35867361" />
+            </tenders>
+          </subotr>
+          <subotr header="Расходные материалы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=432&amp;per_page=10" tender_count="107">
+            <tenders>
+              <tender id="35640416" header="Покупка совместимых картриджей для лазерных устройств" href="registerform?h=biznesurfo.ru&amp;id=35640416" />
+              <tender id="35879768" header="Поставка картриджей к организационной технике" href="registerform?h=biznesurfo.ru&amp;id=35879768" />
+              <tender id="35891824" header="Поставка расходных материалов для оргтехники" href="registerform?h=biznesurfo.ru&amp;id=35891824" />
+            </tenders>
+          </subotr>
+        </subotrs>
+      </column>
+    </columns>
+  </otr>
+  <otr header="Перевозки/ логистика/ таможня" href="http://b2bcontext.ru/partner/rubricator.pl?otr=17&amp;h=biznesurfo.ru&amp;per_page=10&amp;rubricator_columns=1" otr_id="17">
+    <columns>
+      <column num="1">
+        <subotrs>
+          <subotr header="Склад – оборудование" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=246&amp;per_page=10" tender_count="5">
+            <tenders>
+              <tender id="35807950" header="Поставка штабелера ручного гидравлического" href="registerform?h=biznesurfo.ru&amp;id=35807950" />
+              <tender id="32463884" header="Объявляется открытый тендер. Предмет тендера Автопогрузчик вилочный дизельный HELI CPCD35hj" href="registerform?h=biznesurfo.ru&amp;id=32463884" />
+              <tender id="32373785" header="Объявляется открытый тендер. Предмет тендера Автопогрузчик вилочный дизельный HELI CPCD35hj" href="registerform?h=biznesurfo.ru&amp;id=32373785" />
+            </tenders>
+          </subotr>
+        </subotrs>
+      </column>
+    </columns>
+  </otr>
+  <otr header="Продовольствие/ пищевая промышленность" href="http://b2bcontext.ru/partner/rubricator.pl?otr=18&amp;h=biznesurfo.ru&amp;per_page=10&amp;rubricator_columns=1" otr_id="18">
+    <columns>
+      <column num="1">
+        <subotrs>
+          <subotr header="Оборудование для производства в пищевой промышленности" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=262&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35900514" header="Машина кухонная универсальная овощерезка УКМ-11-01" href="registerform?h=biznesurfo.ru&amp;id=35900514" />
+            </tenders>
+          </subotr>
+        </subotrs>
+      </column>
+    </columns>
+  </otr>
+  <otr header="Сырье, полуфабрикаты" href="http://b2bcontext.ru/partner/rubricator.pl?otr=22&amp;h=biznesurfo.ru&amp;per_page=10&amp;rubricator_columns=1" otr_id="22">
+    <columns>
+      <column num="1">
+        <subotrs>
+          <subotr header="Добыча полезных ископаемых" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=322&amp;per_page=10" tender_count="5">
+            <tenders>
+              <tender id="35843493" header="Объявляется открытый запрос предложений. Предмет запроса 0001 15 2.1 0041499 ДНоябрьск ЗП ГОС Э 29.07.2015 Выполнение работ по добыче общераспространенных полезных ископаемых в карьерах и приготовление щебня" href="registerform?h=biznesurfo.ru&amp;id=35843493" />
+              <tender id="35828198" header="Выполнение работ по добыче общераспространенных полезных ископаемых в карьерах №3-1, №5-1, №7, №10 и приготовление щебня в карьере №8" href="registerform?h=biznesurfo.ru&amp;id=35828198" />
+              <tender id="32416266" header="Услуга на выполнение взрывных работ на карьерах" href="registerform?h=biznesurfo.ru&amp;id=32416266" />
+            </tenders>
+          </subotr>
+          <subotr header="Другое" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=325&amp;per_page=10" tender_count="7">
+            <tenders>
+              <tender id="35778671" header="Окатыши железорудные" href="registerform?h=biznesurfo.ru&amp;id=35778671" />
+              <tender id="32403915" header="Объявляется открытый тендер. Предмет тендера Расфасованный графит" href="registerform?h=biznesurfo.ru&amp;id=32403915" />
+              <tender id="35884082" header="КВАРЦИТ КРИСТАЛЛИЧЕСКИЙ ПКК-97 КЛАСС 6" href="registerform?h=biznesurfo.ru&amp;id=35884082" />
+            </tenders>
+          </subotr>
+          <subotr header="Минералы/ горные породы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=515&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35878264" header="Поставка концентрата минерального -галита соли технической" href="registerform?h=biznesurfo.ru&amp;id=35878264" />
+              <tender id="35605803" header="Концентрат минеральный - ГАЛИТ. Сорт высший Марка C , три полувагона по 69т 207 тонн , МКР-1,0" href="registerform?h=biznesurfo.ru&amp;id=35605803" />
+            </tenders>
+          </subotr>
+          <subotr header="Отходы производства/ вторсырье" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=324&amp;per_page=10" tender_count="21">
+            <tenders>
+              <tender id="32749839" header="Организация закупает отходы цинка , съемы, изгарь, гарт, спрудина, съемы, зола, порошки, скрап, возгоны, пыль, штампы" href="registerform?h=biznesurfo.ru&amp;id=32749839" />
+              <tender id="34480923" header="Организация закупает Вторсырье макулатура, пленка, стекло, пластмассы и т.д." href="registerform?h=biznesurfo.ru&amp;id=34480923" />
+              <tender id="35837244" header="Организация закупает бой графита, обожженку, угольный бой, огарки графитированных электродов" href="registerform?h=biznesurfo.ru&amp;id=35837244" />
+            </tenders>
+          </subotr>
+          <subotr header="Уголь" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=319&amp;per_page=10" tender_count="17">
+            <tenders>
+              <tender id="35828177" header="Поставка угля" href="registerform?h=biznesurfo.ru&amp;id=35828177" />
+              <tender id="35839382" header="Покупка каменного угля" href="registerform?h=biznesurfo.ru&amp;id=35839382" />
+              <tender id="35892163" header="Поставка каменного угля марки ДГР ДР" href="registerform?h=biznesurfo.ru&amp;id=35892163" />
+            </tenders>
+          </subotr>
+        </subotrs>
+      </column>
+    </columns>
+  </otr>
+  <otr header="Топливо и энергетика" href="http://b2bcontext.ru/partner/rubricator.pl?otr=24&amp;h=biznesurfo.ru&amp;per_page=10&amp;rubricator_columns=1" otr_id="24">
+    <columns>
+      <column num="1">
+        <subotrs>
+          <subotr header="Авиационное топливо" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=338&amp;per_page=10" tender_count="5">
+            <tenders>
+              <tender id="35845853" header="ОАО Российские железные дороги в лице Челябинской дирекции материально-технического обеспечения структурного подразделения Росжелдорснаба - филиала ОАО РЖД сообщает о проведении конкурса № 2293 КПОЭ-РЖДС 15 проводимого среди поставщиков, прошедших квалифи" href="registerform?h=biznesurfo.ru&amp;id=35845853" />
+              <tender id="35804855" header="Авиационное топливо марки ТС-1" href="registerform?h=biznesurfo.ru&amp;id=35804855" />
+              <tender id="35784684" header="Право заключения договора на поставку керосина КО 25." href="registerform?h=biznesurfo.ru&amp;id=35784684" />
+            </tenders>
+          </subotr>
+          <subotr header="Авиационные масла" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=597&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35868960" header="Поставка авиационного масла Турбоникойл 98." href="registerform?h=biznesurfo.ru&amp;id=35868960" />
+            </tenders>
+          </subotr>
+          <subotr header="Бензин АИ-98/ 95/ 92/ 93/ 76/ 80" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=337&amp;per_page=10" tender_count="29">
+            <tenders>
+              <tender id="35797374" header="Поставка бензина автомобильного через АЗС" href="registerform?h=biznesurfo.ru&amp;id=35797374" />
+              <tender id="35818356" header="Поставка и хранение бензина автомобильного марки Аи-95" href="registerform?h=biznesurfo.ru&amp;id=35818356" />
+              <tender id="35796879" header="Поставка бензина автомобильного через АЗС" href="registerform?h=biznesurfo.ru&amp;id=35796879" />
+            </tenders>
+          </subotr>
+          <subotr header="Битумы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=343&amp;per_page=10" tender_count="6">
+            <tenders>
+              <tender id="35863812" header="Приобретение товара Битум БНД 90 130 ГОСТ 22245-90 в количестве 32 тонны, поставка автотранспортом поставщика наливными цистернами ." href="registerform?h=biznesurfo.ru&amp;id=35863812" />
+              <tender id="35791262" header="Битум БНД 90 130" href="registerform?h=biznesurfo.ru&amp;id=35791262" />
+              <tender id="35875885" header="Поставка битума МГО 70 130" href="registerform?h=biznesurfo.ru&amp;id=35875885" />
+            </tenders>
+          </subotr>
+          <subotr header="Газ/ Газовый конденсат" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=355&amp;per_page=10" tender_count="5">
+            <tenders>
+              <tender id="35638960" header="Поставка технических газов для нужд ЗПКТ Новый Уренгой" href="registerform?h=biznesurfo.ru&amp;id=35638960" />
+              <tender id="35638961" header="Поставка технических газов для нужд Сосногорского Ухта" href="registerform?h=biznesurfo.ru&amp;id=35638961" />
+              <tender id="35796574" header="Поставка попутного нефтяного газа" href="registerform?h=biznesurfo.ru&amp;id=35796574" />
+            </tenders>
+          </subotr>
+          <subotr header="Горюче-смазочные материалы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=497&amp;per_page=10" tender_count="54">
+            <tenders>
+              <tender id="35900630" header="Поставка смазочных материалов" href="registerform?h=biznesurfo.ru&amp;id=35900630" />
+              <tender id="35839191" header="Поставка бензина автомобильного и топлива дизельного через сеть АЗС" href="registerform?h=biznesurfo.ru&amp;id=35839191" />
+              <tender id="35825795" header="Поставка горюче-смазочных материалов в течение второго полугодия 2015 года для нужд Муниципального бюджетного общеобразовательного учреждения Коелгинской средней общеобразовательной школы имени дважды Героя Советского Союза С.В.Хохрякова" href="registerform?h=biznesurfo.ru&amp;id=35825795" />
+            </tenders>
+          </subotr>
+          <subotr header="Дизельное топливо летнее/ зимнее/ арктическое" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=340&amp;per_page=10" tender_count="14">
+            <tenders>
+              <tender id="35870495" header="На поставку Дизельного топлива" href="registerform?h=biznesurfo.ru&amp;id=35870495" />
+              <tender id="35822982" header="Поставка дизельного топлива для автомобилей" href="registerform?h=biznesurfo.ru&amp;id=35822982" />
+              <tender id="35719500" header="СДТ" href="registerform?h=biznesurfo.ru&amp;id=35719500" />
+            </tenders>
+          </subotr>
+          <subotr header="Другое" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=360&amp;per_page=10" tender_count="3">
+            <tenders>
+              <tender id="35818470" header="Поставка специальных жидкостей" href="registerform?h=biznesurfo.ru&amp;id=35818470" />
+              <tender id="35908298" header="Фильтрация трансформаторного масла" href="registerform?h=biznesurfo.ru&amp;id=35908298" />
+              <tender id="35881030" header="Оказание услуг по энергетическому обследованию здания ФГБУ" href="registerform?h=biznesurfo.ru&amp;id=35881030" />
+            </tenders>
+          </subotr>
+          <subotr header="Мазуты" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=341&amp;per_page=10" tender_count="5">
+            <tenders>
+              <tender id="35841750" header="Мазут" href="registerform?h=biznesurfo.ru&amp;id=35841750" />
+              <tender id="35849085" header="Мазут топочный кроме мазута для мартеновских печей" href="registerform?h=biznesurfo.ru&amp;id=35849085" />
+              <tender id="35833049" header="№ 2277 КПОЭ-РЖДС 15 проводимого среди поставщиков, прошедших квалификационный отбор № 231 ПО-РЖДС 14 второй этап конкурса с предварительным квалификационным отбором с целью выбора организации на право заключения договора поставки топочного мазута марки М-" href="registerform?h=biznesurfo.ru&amp;id=35833049" />
+            </tenders>
+          </subotr>
+          <subotr header="Масла гидравлические" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=344&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35848570" header="Поставка гидравлического масла Газпромнефть HVLP-32" href="registerform?h=biznesurfo.ru&amp;id=35848570" />
+            </tenders>
+          </subotr>
+          <subotr header="Масла индустриальные" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=345&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35779085" header="Поставка масла для проведения ТО для станков с ЧПУ" href="registerform?h=biznesurfo.ru&amp;id=35779085" />
+              <tender id="35798344" header="Право заключения договора на поставку масел промышленных" href="registerform?h=biznesurfo.ru&amp;id=35798344" />
+            </tenders>
+          </subotr>
+          <subotr header="Масла моторные для бензиновых двигателей" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=347&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35870809" header="Таблица из технического задания к закупочной процедуре 64780" href="registerform?h=biznesurfo.ru&amp;id=35870809" />
+            </tenders>
+          </subotr>
+          <subotr header="Масла разные и СОЖ" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=352&amp;per_page=10" tender_count="29">
+            <tenders>
+              <tender id="35668296" header="Открытый аукцион в электронной форме на право заключения договора на поставку смазки." href="registerform?h=biznesurfo.ru&amp;id=35668296" />
+              <tender id="35868329" header="Поставка смазочных материалов для транспортных средств" href="registerform?h=biznesurfo.ru&amp;id=35868329" />
+              <tender id="35576646" header="Поставка масел, смазок и специальных жидкостей" href="registerform?h=biznesurfo.ru&amp;id=35576646" />
+            </tenders>
+          </subotr>
+          <subotr header="Масла трансформаторные" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=350&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35773633" header="Право заключения Договора на поставку масла трансформаторного на пополнение аварийного резерва 2015 года" href="registerform?h=biznesurfo.ru&amp;id=35773633" />
+              <tender id="35840117" header="Право заключения договора на поставку трансформаторного масла ГК для пополнения аварийного резерва филиала Челябэнерго в 2015 г. Закупка № 15307 лот №430" href="registerform?h=biznesurfo.ru&amp;id=35840117" />
+            </tenders>
+          </subotr>
+          <subotr header="Масла турбинные" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=351&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35646054" header="Масло для газовых турбин" href="registerform?h=biznesurfo.ru&amp;id=35646054" />
+            </tenders>
+          </subotr>
+          <subotr header="Нефтепродукты" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=521&amp;per_page=10" tender_count="22">
+            <tenders>
+              <tender id="35784440" header="Поставка нефтепродуктов в п. Уренгой" href="registerform?h=biznesurfo.ru&amp;id=35784440" />
+              <tender id="35860267" header="Организация закупает конденсат темный, светлый. нефрас некондицию" href="registerform?h=biznesurfo.ru&amp;id=35860267" />
+              <tender id="35714191" header="Поставка нефтепродуктов" href="registerform?h=biznesurfo.ru&amp;id=35714191" />
+            </tenders>
+          </subotr>
+          <subotr header="Нефть" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=356&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35798285" header="Нефть" href="registerform?h=biznesurfo.ru&amp;id=35798285" />
+            </tenders>
+          </subotr>
+          <subotr header="Оборудование для АЗС и нефтебаз" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=580&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35856331" header="Оборудование для АЗС" href="registerform?h=biznesurfo.ru&amp;id=35856331" />
+              <tender id="35742584" header="Объявляется открытый запрос предложений. Предмет запроса Технологическое оборудование СУГ" href="registerform?h=biznesurfo.ru&amp;id=35742584" />
+            </tenders>
+          </subotr>
+          <subotr header="Реактивное топливо" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=339&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35832956" header="№ 2278 КПОЭ-РЖДС 15 № 231 ПО-РЖДС 14 второй этап конкурса с предварительным квалификационным отбором с целью выбора организации на право заключения договора поставки топлива для реактивных двигателей ТС-1 в 2015 г." href="registerform?h=biznesurfo.ru&amp;id=35832956" />
+            </tenders>
+          </subotr>
+          <subotr header="Твердое топливо" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=550&amp;per_page=10" tender_count="16">
+            <tenders>
+              <tender id="35738807" header="Поставка угля каменного" href="registerform?h=biznesurfo.ru&amp;id=35738807" />
+              <tender id="35528576" header="Поставка угля марки Д для нужд МУП Электротепловые сети г. Троицк на отопительный сезон 2015-2016 г." href="registerform?h=biznesurfo.ru&amp;id=35528576" />
+              <tender id="35819646" header="Поставка дров" href="registerform?h=biznesurfo.ru&amp;id=35819646" />
+            </tenders>
+          </subotr>
+          <subotr header="Топливо печное/ судовое/ технологическое" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=342&amp;per_page=10" tender_count="5">
+            <tenders>
+              <tender id="35609198" header="Поставка топлива" href="registerform?h=biznesurfo.ru&amp;id=35609198" />
+              <tender id="35832590" header="Поставка нефтепродуктов ГСМ Топливо печное осветленное - ФУДГ с температурой застывания до -35 С" href="registerform?h=biznesurfo.ru&amp;id=35832590" />
+              <tender id="35828126" header="Организация закупает Приобретем топливо печное бытовое,судовое, 60 т" href="registerform?h=biznesurfo.ru&amp;id=35828126" />
+            </tenders>
+          </subotr>
+          <subotr header="Торф, кокс, сланцы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=498&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35846356" header="Кокс нефтяной" href="registerform?h=biznesurfo.ru&amp;id=35846356" />
+              <tender id="35813393" header="Поставка МТР ТОРФ" href="registerform?h=biznesurfo.ru&amp;id=35813393" />
+            </tenders>
+          </subotr>
+          <subotr header="Электроэнергия" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=578&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35837749" header="Организация закупает ПКО по услуге 10823 Выработка электроэнергии сторонним производителем для Филиала" href="registerform?h=biznesurfo.ru&amp;id=35837749" />
+              <tender id="35870192" header="Квартал усадебной застройки пос. Чащавита. Электроснабжение." href="registerform?h=biznesurfo.ru&amp;id=35870192" />
+            </tenders>
+          </subotr>
+        </subotrs>
+      </column>
+    </columns>
+  </otr>
+  <otr header="Транспорт" href="http://b2bcontext.ru/partner/rubricator.pl?otr=25&amp;h=biznesurfo.ru&amp;per_page=10&amp;rubricator_columns=1" otr_id="25">
+    <columns>
+      <column num="1">
+        <subotrs>
+          <subotr header="Авто запчасти" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=364&amp;per_page=10" tender_count="51">
+            <tenders>
+              <tender id="35823521" header="Поставка запасных частей к трактору Четра Т-11.02.КБР-1" href="registerform?h=biznesurfo.ru&amp;id=35823521" />
+              <tender id="35687438" header="Поставка запасной части для оснащения автомобиля скорой помощи сигнальная громкоговорящая установка в комплекте" href="registerform?h=biznesurfo.ru&amp;id=35687438" />
+              <tender id="35801286" header="Поставка запасных частей к автомобилям" href="registerform?h=biznesurfo.ru&amp;id=35801286" />
+            </tenders>
+          </subotr>
+          <subotr header="Авто химия" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=592&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35832635" header="Поставка шампуней автомобильных для нужд ООО Газпром переработка ." href="registerform?h=biznesurfo.ru&amp;id=35832635" />
+            </tenders>
+          </subotr>
+          <subotr header="Автомобили прочие" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=362&amp;per_page=10" tender_count="22">
+            <tenders>
+              <tender id="35839078" header="Поставка легкового, грузопассажирского автомобиля" href="registerform?h=biznesurfo.ru&amp;id=35839078" />
+              <tender id="35755900" header="Право заключения договора на поставку автотранспорта в 2015 году." href="registerform?h=biznesurfo.ru&amp;id=35755900" />
+              <tender id="35781410" header="Услуги по торговле автомобилями" href="registerform?h=biznesurfo.ru&amp;id=35781410" />
+            </tenders>
+          </subotr>
+          <subotr header="Автомобильные шины" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=626&amp;per_page=10" tender_count="28">
+            <tenders>
+              <tender id="35795829" header="Поставка товара Шины автомобильные" href="registerform?h=biznesurfo.ru&amp;id=35795829" />
+              <tender id="35861684" header="Шины автомобильные" href="registerform?h=biznesurfo.ru&amp;id=35861684" />
+              <tender id="35897463" header="Поставка автомобильных шин и дисков" href="registerform?h=biznesurfo.ru&amp;id=35897463" />
+            </tenders>
+          </subotr>
+          <subotr header="Грузовой автотранспорт/прицепы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=365&amp;per_page=10" tender_count="9">
+            <tenders>
+              <tender id="35864997" header="Поставка прицепа автомобильного для нужд бюджетного учреждения Ханты-Мансийского автономного округа - Югры Ветеринарный центр" href="registerform?h=biznesurfo.ru&amp;id=35864997" />
+              <tender id="35631187" header="Право заключения договора на поставку автомобиля самосвала КАМАЗ-65115-6058-23 А4 ." href="registerform?h=biznesurfo.ru&amp;id=35631187" />
+              <tender id="35631198" header="Право заключения договора на поставку автомобиля КАМАЗ-65117-6010-23." href="registerform?h=biznesurfo.ru&amp;id=35631198" />
+            </tenders>
+          </subotr>
+          <subotr header="Дорожная техника" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=368&amp;per_page=10" tender_count="4">
+            <tenders>
+              <tender id="35860056" header="Организация закупает автогрейдеры ДЗ-98" href="registerform?h=biznesurfo.ru&amp;id=35860056" />
+              <tender id="35748664" header="Право заключения договора на поставку специальных дорожных машин" href="registerform?h=biznesurfo.ru&amp;id=35748664" />
+              <tender id="35845627" header="Поставка Экскаватора с оборудованием ." href="registerform?h=biznesurfo.ru&amp;id=35845627" />
+            </tenders>
+          </subotr>
+          <subotr header="Дорожная техника – запчасти" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=371&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35889213" header="Открытый конкурс в электронной форме №92к 15 по отбору поставщика для заключения договора на поставку расходных материалов для снегоуборочной техники щетки кассетные, ворс на щетки" href="registerform?h=biznesurfo.ru&amp;id=35889213" />
+            </tenders>
+          </subotr>
+          <subotr header="Дорожная техника – лизинг" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=370&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35760223" header="Аренда транспортного средства с экипажем ПРМ для цеха водоотведения" href="registerform?h=biznesurfo.ru&amp;id=35760223" />
+              <tender id="35757866" header="Аренда транспортного средства с экипажем для службы РТС-4" href="registerform?h=biznesurfo.ru&amp;id=35757866" />
+            </tenders>
+          </subotr>
+          <subotr header="Другое" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=376&amp;per_page=10" tender_count="7">
+            <tenders>
+              <tender id="35648772" header="Право заключения договора на Оказание услуг по оценке уязвимости транспортных средств" href="registerform?h=biznesurfo.ru&amp;id=35648772" />
+              <tender id="35870855" header="Поставка расходных материалов для снегоуборочной техники ножи вулколановые" href="registerform?h=biznesurfo.ru&amp;id=35870855" />
+              <tender id="35734236" header="Покупка снегохода Буран 4ТД" href="registerform?h=biznesurfo.ru&amp;id=35734236" />
+            </tenders>
+          </subotr>
+          <subotr header="Контейнеры – покупка" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=372&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35857477" header="Открытый аукцион на право заключения договора поставки контейнеров для твердых бытовых отходов и ртутьсодержащих отходов." href="registerform?h=biznesurfo.ru&amp;id=35857477" />
+              <tender id="35828204" header="Поставка контейнеров для сбора биоматериала на 2-е полугодие 2015 г. для МАУ ДГБ №15" href="registerform?h=biznesurfo.ru&amp;id=35828204" />
+            </tenders>
+          </subotr>
+          <subotr header="Легковой автотранспорт" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=361&amp;per_page=10" tender_count="19">
+            <tenders>
+              <tender id="35754393" header="Поставка легковых автомобилей" href="registerform?h=biznesurfo.ru&amp;id=35754393" />
+              <tender id="35631182" header="Право заключения договора на поставку автомобиля hyundai HD-78 STD ABS" href="registerform?h=biznesurfo.ru&amp;id=35631182" />
+              <tender id="35827286" header="На поставку автомобилей" href="registerform?h=biznesurfo.ru&amp;id=35827286" />
+            </tenders>
+          </subotr>
+          <subotr header="Оборудование для автомобилей" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=374&amp;per_page=10" tender_count="8">
+            <tenders>
+              <tender id="35846350" header="Поставка, установка, калибровка тахографического оборудования" href="registerform?h=biznesurfo.ru&amp;id=35846350" />
+              <tender id="34824294" header="Приобретение по договору поставки автономного дизельного обогревателя салона самолета" href="registerform?h=biznesurfo.ru&amp;id=34824294" />
+              <tender id="35806215" header="Поставка тахографов с установкой и услугами связи" href="registerform?h=biznesurfo.ru&amp;id=35806215" />
+            </tenders>
+          </subotr>
+          <subotr header="Оборудование для автосервиса" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=375&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35864515" header="Приобретение парко-гаражного оборудования" href="registerform?h=biznesurfo.ru&amp;id=35864515" />
+              <tender id="35900499" header="Поставка домкрата SJ200 C350" href="registerform?h=biznesurfo.ru&amp;id=35900499" />
+            </tenders>
+          </subotr>
+          <subotr header="Прочие автоуслуги" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=369&amp;per_page=10" tender_count="5">
+            <tenders>
+              <tender id="35802861" header="Оказание транспортных услуг с использованием тракторной, специализированной техники и ППУ ОП Бузулук" href="registerform?h=biznesurfo.ru&amp;id=35802861" />
+              <tender id="35865019" header="Выполнение работ по принудительной эвакуации брошенных и разукомплектованных транспортных средств" href="registerform?h=biznesurfo.ru&amp;id=35865019" />
+              <tender id="35802867" header="Оказание транспортных услуг с использованием специализированной техники НВ" href="registerform?h=biznesurfo.ru&amp;id=35802867" />
+            </tenders>
+          </subotr>
+          <subotr header="Спецтранспорт" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=549&amp;per_page=10" tender_count="11">
+            <tenders>
+              <tender id="35523862" header="Оснащение подразделений МЧС России автомобилем быстрого реагирования для ликвидации последствий дорожно-транспортных происшествий" href="registerform?h=biznesurfo.ru&amp;id=35523862" />
+              <tender id="35781492" header="Поставка снегохода STELS S800 Росомаха" href="registerform?h=biznesurfo.ru&amp;id=35781492" />
+              <tender id="35813188" header="Снегоходы Буран" href="registerform?h=biznesurfo.ru&amp;id=35813188" />
+            </tenders>
+          </subotr>
+          <subotr header="Транспортные услуги" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=563&amp;per_page=10" tender_count="69">
+            <tenders>
+              <tender id="35847403" header="Оказание транспортных услуг по предоставлению транспортного средства с экипажем для перевозки людей" href="registerform?h=biznesurfo.ru&amp;id=35847403" />
+              <tender id="35801381" header="Оказание транспортных услуг с использованием вахтового транспорта автобусы 45мест НВ" href="registerform?h=biznesurfo.ru&amp;id=35801381" />
+              <tender id="35761273" header="Оказание автотранспортных услуг" href="registerform?h=biznesurfo.ru&amp;id=35761273" />
+            </tenders>
+          </subotr>
+          <subotr header="Услуги автосервиса" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=366&amp;per_page=10" tender_count="71">
+            <tenders>
+              <tender id="35805006" header="№16965-2015-ЗК Оказание услуг по техническому обслуживанию и ремонту легковых автомобилей согласно техническому заданию, проекту контракта Приложение №1,4 к Извещению" href="registerform?h=biznesurfo.ru&amp;id=35805006" />
+              <tender id="35905463" header="Техническое обслуживание автотранспорта" href="registerform?h=biznesurfo.ru&amp;id=35905463" />
+              <tender id="35905464" header="Техническое обслуживание автотранспорта" href="registerform?h=biznesurfo.ru&amp;id=35905464" />
+            </tenders>
+          </subotr>
+        </subotrs>
+      </column>
+    </columns>
+  </otr>
+  <otr header="Химия" href="http://b2bcontext.ru/partner/rubricator.pl?otr=27&amp;h=biznesurfo.ru&amp;per_page=10&amp;rubricator_columns=1" otr_id="27">
+    <columns>
+      <column num="1">
+        <subotrs>
+          <subotr header="Бытовая химия" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=398&amp;per_page=10" tender_count="47">
+            <tenders>
+              <tender id="35840383" header="Поставка бытовой химии" href="registerform?h=biznesurfo.ru&amp;id=35840383" />
+              <tender id="35886072" header="Организация проводит открытый запрос цен на поставку БЫТОВОЙ ТЕХНИКИ. №1095351" href="registerform?h=biznesurfo.ru&amp;id=35886072" />
+              <tender id="35856995" header="Хозтовары и бытовая химия 2015г." href="registerform?h=biznesurfo.ru&amp;id=35856995" />
+            </tenders>
+          </subotr>
+          <subotr header="Взрывчатые вещества" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=506&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35802953" header="Имитаторы наркотических веществ" href="registerform?h=biznesurfo.ru&amp;id=35802953" />
+            </tenders>
+          </subotr>
+          <subotr header="Другое" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=399&amp;per_page=10" tender_count="29">
+            <tenders>
+              <tender id="35827752" header="Поставка средств для дезинфекции" href="registerform?h=biznesurfo.ru&amp;id=35827752" />
+              <tender id="35797818" header="Поставка химической посуды и химических реактивов аналитического и общелабораторного назначения" href="registerform?h=biznesurfo.ru&amp;id=35797818" />
+              <tender id="35825994" header="Поставка материала КМКС 100 м." href="registerform?h=biznesurfo.ru&amp;id=35825994" />
+            </tenders>
+          </subotr>
+          <subotr header="Кислоты/ соли/ спирты/ эфиры" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=388&amp;per_page=10" tender_count="14">
+            <tenders>
+              <tender id="35811363" header="Поставка азотной кислоты 65% ХЧ в оборотной таре" href="registerform?h=biznesurfo.ru&amp;id=35811363" />
+              <tender id="35853855" header="Закупка каслоты" href="registerform?h=biznesurfo.ru&amp;id=35853855" />
+              <tender id="35822809" header="Организация проводит открытый запрос цен на поставку на поставку соли технической" href="registerform?h=biznesurfo.ru&amp;id=35822809" />
+            </tenders>
+          </subotr>
+          <subotr header="Обработка химических материалов" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=386&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35814833" header="Поставка плавильной печи" href="registerform?h=biznesurfo.ru&amp;id=35814833" />
+            </tenders>
+          </subotr>
+          <subotr header="Окиси" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=542&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35884967" header="Организация закупает окись цинка" href="registerform?h=biznesurfo.ru&amp;id=35884967" />
+            </tenders>
+          </subotr>
+          <subotr header="Оксиды и гидроксиды" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=558&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35861483" header="Микроэлемент. Магния оксид." href="registerform?h=biznesurfo.ru&amp;id=35861483" />
+            </tenders>
+          </subotr>
+          <subotr header="Охлаждающие жидкости, тосол" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=598&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35828881" header="Антифриз" href="registerform?h=biznesurfo.ru&amp;id=35828881" />
+            </tenders>
+          </subotr>
+          <subotr header="Полипропилен/ полимеры /смолы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=393&amp;per_page=10" tender_count="20">
+            <tenders>
+              <tender id="35843872" header="Поставка полимерных материалов" href="registerform?h=biznesurfo.ru&amp;id=35843872" />
+              <tender id="35848960" header="Поставка фенолформальдегидной смолы марок Prefere 15J620 или Резолам-1 или СФЖ-3014 ГОСТ 20907-75." href="registerform?h=biznesurfo.ru&amp;id=35848960" />
+              <tender id="35873308" header="Право заключения договора на поставку пластиковых комплектующих изделий" href="registerform?h=biznesurfo.ru&amp;id=35873308" />
+            </tenders>
+          </subotr>
+          <subotr header="Резинотехнические изделия" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=394&amp;per_page=10" tender_count="24">
+            <tenders>
+              <tender id="35875672" header="Рукава всасывающие и напорные, оплеточные, ленты конвейерные, ремни, ткани прорезиненные и изделия из них, эбонит и изделия из него РЕМЕНЬ ЗУБЧАТЫЙ POWERGRIP HTD 500 5М 30 2 шт РЕМЕНЬ ВАРИАТОРНЫЙ VX 28 8 1120LI 2 шт РЕМЕНЬ КЛИНОВЫЙ 3826 SPA 2240LW 20 VENT" href="registerform?h=biznesurfo.ru&amp;id=35875672" />
+              <tender id="35675995" header="Закупка РТИ манжеты" href="registerform?h=biznesurfo.ru&amp;id=35675995" />
+              <tender id="32401878" header="Объявляется открытый тендер. Предмет тендера уплотнения из полиуретана" href="registerform?h=biznesurfo.ru&amp;id=32401878" />
+            </tenders>
+          </subotr>
+          <subotr header="Сульфаты/ сульфиты" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=397&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35804271" header="Поставка магния сульфат" href="registerform?h=biznesurfo.ru&amp;id=35804271" />
+            </tenders>
+          </subotr>
+          <subotr header="Химические концентраты" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=529&amp;per_page=10" tender_count="3">
+            <tenders>
+              <tender id="35840874" header="Поставка концентрата минерального ГАЛИТ Тип С" href="registerform?h=biznesurfo.ru&amp;id=35840874" />
+              <tender id="35849523" header="Заключение договора поставки соли технической Концентрат минеральный Галит" href="registerform?h=biznesurfo.ru&amp;id=35849523" />
+              <tender id="35904841" header="Поставка концентрата минерального-галит" href="registerform?h=biznesurfo.ru&amp;id=35904841" />
+            </tenders>
+          </subotr>
+          <subotr header="Химические материалы/ сырье" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=383&amp;per_page=10" tender_count="14">
+            <tenders>
+              <tender id="35873105" header="Поставка реагентов и расходных материалов для закрытой части биохимического анализатора HUMASTAR 600" href="registerform?h=biznesurfo.ru&amp;id=35873105" />
+              <tender id="35773630" header="Право заключения договора на поставку графита" href="registerform?h=biznesurfo.ru&amp;id=35773630" />
+              <tender id="35780191" header="Право заключения договора на поставку графита" href="registerform?h=biznesurfo.ru&amp;id=35780191" />
+            </tenders>
+          </subotr>
+          <subotr header="Химические реактивы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=537&amp;per_page=10" tender_count="29">
+            <tenders>
+              <tender id="35803273" header="Поставка реагентов для проведения исследований ПЦР-диагностики" href="registerform?h=biznesurfo.ru&amp;id=35803273" />
+              <tender id="32463833" header="Объявляется открытый тендер. Предмет тендера Хим. реактивы и ГСО" href="registerform?h=biznesurfo.ru&amp;id=32463833" />
+              <tender id="35892986" header="Поставка реактивов для клинико-диагностической лаборатории" href="registerform?h=biznesurfo.ru&amp;id=35892986" />
+            </tenders>
+          </subotr>
+        </subotrs>
+      </column>
+    </columns>
+  </otr>
+  <otr header="Экология" href="http://b2bcontext.ru/partner/rubricator.pl?otr=34&amp;h=biznesurfo.ru&amp;per_page=10&amp;rubricator_columns=1" otr_id="34">
+    <columns>
+      <column num="1">
+        <subotrs>
+          <subotr header="Благоустройство территории" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=486&amp;per_page=10" tender_count="55">
+            <tenders>
+              <tender id="35870337" header="Выполнение работ по благоустройству дворовых территорий многоквартирных домов," href="registerform?h=biznesurfo.ru&amp;id=35870337" />
+              <tender id="35902284" header="15-17729Э на выполнение работ по омолаживающей обрезке деревьев" href="registerform?h=biznesurfo.ru&amp;id=35902284" />
+              <tender id="35877598" header="15-17513Э На выполнение работ по благоустройству территории Калининского района города в 2015 году восстановление покрытий межквартальных проездов, въездов, тротуаров и лестничного марша" href="registerform?h=biznesurfo.ru&amp;id=35877598" />
+            </tenders>
+          </subotr>
+          <subotr header="Другое" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=492&amp;per_page=10" tender_count="35">
+            <tenders>
+              <tender id="35775149" header="Определение фактических объемов образования ТКО твердых коммунальных отходов на контейнерных площадках для раздельного сбора ТКО от населения и расчет норматива накопления ТКО на этих контейнерных площадках, фактическому определению норматива накопления Т" href="registerform?h=biznesurfo.ru&amp;id=35775149" />
+              <tender id="35813120" header="5021-РН-15 41-А Комплекс работ услуг по устранению нефтезагрязнений с последующей рекультивацией земель, образованных до 01.10.2006г. Майский регион" href="registerform?h=biznesurfo.ru&amp;id=35813120" />
+              <tender id="35756174" header="Выполнение работ по осуществлению отлова, транспортировки, учету, содержанию, умерщвлению, утилизации безнадзорных и бродячих животных" href="registerform?h=biznesurfo.ru&amp;id=35756174" />
+            </tenders>
+          </subotr>
+          <subotr header="Оборудование очистное, фильтры" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=487&amp;per_page=10" tender_count="14">
+            <tenders>
+              <tender id="35827632" header="Электронный аукцион № ЭА 120-15 на устройство блочной станции подготовки питьевой воды" href="registerform?h=biznesurfo.ru&amp;id=35827632" />
+              <tender id="35848296" header="Закупка осушителя воздуха id213397" href="registerform?h=biznesurfo.ru&amp;id=35848296" />
+              <tender id="35868077" header="Поставка фильтров" href="registerform?h=biznesurfo.ru&amp;id=35868077" />
+            </tenders>
+          </subotr>
+          <subotr header="Озеленение/ландшафтные работы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=641&amp;per_page=10" tender_count="9">
+            <tenders>
+              <tender id="35784493" header="На выполнение работ по кошению газонной травы" href="registerform?h=biznesurfo.ru&amp;id=35784493" />
+              <tender id="35905244" header="Выполнение работ по благоустройству территории благоустройство парковой зоны" href="registerform?h=biznesurfo.ru&amp;id=35905244" />
+              <tender id="35772597" header="Оказание услуг по озеленению территории" href="registerform?h=biznesurfo.ru&amp;id=35772597" />
+            </tenders>
+          </subotr>
+          <subotr header="Очистка сточных вод" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=488&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35802929" header="Открытый запрос предложений №07 99 240715-ОЗП на право заключения договора на изготовление и поставку очистных сооружений ОС" href="registerform?h=biznesurfo.ru&amp;id=35802929" />
+              <tender id="35880526" header="Поставка донной насадки" href="registerform?h=biznesurfo.ru&amp;id=35880526" />
+            </tenders>
+          </subotr>
+          <subotr header="Переработка вторсырья/ отходов" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=489&amp;per_page=10" tender_count="18">
+            <tenders>
+              <tender id="35797928" header="Объявляется открытый тендер. Предмет тендера Переработка и утилизация нефтесодержащих отходов" href="registerform?h=biznesurfo.ru&amp;id=35797928" />
+              <tender id="35807191" header="Оказание услуг по утилизации списанного оборудования." href="registerform?h=biznesurfo.ru&amp;id=35807191" />
+              <tender id="35756654" header="Открытый запрос котировок цен в электронной форме на право заключения договора на оказание услуг по сбору, использованию, обезвреживанию, транспортировке и утилизации отходов 3-4 класса опасности." href="registerform?h=biznesurfo.ru&amp;id=35756654" />
+            </tenders>
+          </subotr>
+          <subotr header="Системы водоочистки" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=490&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35782042" header="АНОНС о предстоящей закупке Блок-бокса станции водоподготовки" href="registerform?h=biznesurfo.ru&amp;id=35782042" />
+              <tender id="35755121" header="Поставка запасных частей и расходных материалов для очистки воды" href="registerform?h=biznesurfo.ru&amp;id=35755121" />
+            </tenders>
+          </subotr>
+          <subotr header="Системы воздухоочистки" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=491&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35753965" header="Установка очистки воздуха" href="registerform?h=biznesurfo.ru&amp;id=35753965" />
+            </tenders>
+          </subotr>
+        </subotrs>
+      </column>
+    </columns>
+  </otr>
+  <otr header="Электротехника&lt;script type=&quot;text/javascript&quot; id=&quot;ww6eQs&quot;&gt;/*&lt;![CDATA[*/document.write ('&lt;scr' + 'ipt type=&quot;text/javascript&quot; src=&quot;http://b2bcontext.ru/analytics/catch?&amp;' + Math.random() + '&quot;&gt;&lt;/scr' + 'ipt&gt;');/*]]]]&gt;&lt;![CDATA[&gt;*/&lt;/script&gt;" href="http://b2bcontext.ru/partner/rubricator.pl?otr=29&amp;h=biznesurfo.ru&amp;per_page=10&amp;rubricator_columns=1" otr_id="29">
+    <columns>
+      <column num="1">
+        <subotrs>
+          <subotr header="Аккумуляторы, батареи, первичные гальванические элементы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=450&amp;per_page=10" tender_count="29">
+            <tenders>
+              <tender id="35834442" header="Аккумуляторы 6СТ-190" href="registerform?h=biznesurfo.ru&amp;id=35834442" />
+              <tender id="35861022" header="Закупка аккумуляторных батарей 40х5В350 350Ач 80В" href="registerform?h=biznesurfo.ru&amp;id=35861022" />
+              <tender id="35634963" header="Открытый конкурс 5 на право заключения договора поставки аккумуляторов" href="registerform?h=biznesurfo.ru&amp;id=35634963" />
+            </tenders>
+          </subotr>
+          <subotr header="Вентиляторы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=587&amp;per_page=10" tender_count="10">
+            <tenders>
+              <tender id="35825890" header="Капитальный ремонт вентиляторов 2ВГ-70 и металлоконструкций на 3-хсекционной вентиляторной градирне 6 ед" href="registerform?h=biznesurfo.ru&amp;id=35825890" />
+              <tender id="35845464" header="Аукцион № 7606 ВЕНТИЛЯТОР AXC1600-8 28-6 C ЭЛЕКТРОДВИГАТЕЛЕМ" href="registerform?h=biznesurfo.ru&amp;id=35845464" />
+              <tender id="35840088" header="ОАО ЭНЕРГОПРОМ-ЧЭЗ объявляет открытый запрос предложений на право заключения Договора на поставку" href="registerform?h=biznesurfo.ru&amp;id=35840088" />
+            </tenders>
+          </subotr>
+          <subotr header="Высоковольтная аппаратура" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=451&amp;per_page=10" tender_count="3">
+            <tenders>
+              <tender id="35845910" header="Организация проводит открытый запрос цен на поставку УСТРОЙСТВО РАСПРЕДЕЛИТЕЛЬНОЕ КВПП. №1106289" href="registerform?h=biznesurfo.ru&amp;id=35845910" />
+              <tender id="35898749" header="Подрядчик обязуется выполнить собственными силами из своих материалов и оборудования, комплекс работ по замене 4 масляных выключателей яч. 12,13,14,15 на вакуумные выключатели, включая реконструкцию камер КСО-266з и устройств РЗА, в действующем распредели" href="registerform?h=biznesurfo.ru&amp;id=35898749" />
+              <tender id="35875969" header="Право заключения договора подряда на выполнение демонтажных, строительно-монтажных и пусконаладочных работ по объектам технологического присоединения 1. Реконструкция РП 56 электроснабжение 10 этажного жилого дома со встроенными помещениями на 1 эт. в г. " href="registerform?h=biznesurfo.ru&amp;id=35875969" />
+            </tenders>
+          </subotr>
+          <subotr header="Другое" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=427&amp;per_page=10" tender_count="13">
+            <tenders>
+              <tender id="35802871" header="Редуктор" href="registerform?h=biznesurfo.ru&amp;id=35802871" />
+              <tender id="35886035" header="Организация проводит открытый запрос цен на поставку Изделия ГЭМ см. описание . №1106297" href="registerform?h=biznesurfo.ru&amp;id=35886035" />
+              <tender id="35706209" header="Право заключения договора на поставку устройств пускорегулирующих для газоразрядных ламп" href="registerform?h=biznesurfo.ru&amp;id=35706209" />
+            </tenders>
+          </subotr>
+          <subotr header="Измерительная техника" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=420&amp;per_page=10" tender_count="21">
+            <tenders>
+              <tender id="35872410" header="Поставка гигрометров, термометров" href="registerform?h=biznesurfo.ru&amp;id=35872410" />
+              <tender id="35788356" header="Право заключения договора на поставку измерительного оборудования" href="registerform?h=biznesurfo.ru&amp;id=35788356" />
+              <tender id="35900508" header="Право заключения договора на поставку приборов учета электроэнергии для обеспечения технологического присоединения филиала во II пг. 2015 г. Закупка №15307 Лот №436 - Поставка приборов учёта электроэнергии для установки в систему типа КТС" href="registerform?h=biznesurfo.ru&amp;id=35900508" />
+            </tenders>
+          </subotr>
+          <subotr header="Источники питания" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=422&amp;per_page=10" tender_count="7">
+            <tenders>
+              <tender id="35891697" header="Поставка,обеспечение монтажа и ввод в эксплуатацию источника бесперебойного питания Системы гарантированного энергоснабжения" href="registerform?h=biznesurfo.ru&amp;id=35891697" />
+              <tender id="35691871" header="Поставка источника бесперебойного питания технологии двойного преобразования электроэнергии" href="registerform?h=biznesurfo.ru&amp;id=35691871" />
+              <tender id="35768818" header="Организация закупает провод" href="registerform?h=biznesurfo.ru&amp;id=35768818" />
+            </tenders>
+          </subotr>
+          <subotr header="Кабельно-проводниковая продукция" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=452&amp;per_page=10" tender_count="50">
+            <tenders>
+              <tender id="35898155" header="Поставка кабельной продукции" href="registerform?h=biznesurfo.ru&amp;id=35898155" />
+              <tender id="35860099" header="Организация закупает кабель провод различных сечений" href="registerform?h=biznesurfo.ru&amp;id=35860099" />
+              <tender id="35905885" header="Закуп кабельно-проводниковой продукции" href="registerform?h=biznesurfo.ru&amp;id=35905885" />
+            </tenders>
+          </subotr>
+          <subotr header="Коммутационные изделия" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=561&amp;per_page=10" tender_count="10">
+            <tenders>
+              <tender id="35885548" header="Организация закупает Выключатель КУ-91,КУ-92, КУ-93" href="registerform?h=biznesurfo.ru&amp;id=35885548" />
+              <tender id="35892887" header="Право заключения договора на поставку коммутатора Supermicro или аналог" href="registerform?h=biznesurfo.ru&amp;id=35892887" />
+              <tender id="35840327" header="Поставка приобретение коммутатора." href="registerform?h=biznesurfo.ru&amp;id=35840327" />
+            </tenders>
+          </subotr>
+          <subotr header="Контакторы, пускатели" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=423&amp;per_page=10" tender_count="4">
+            <tenders>
+              <tender id="35885471" header="Организация закупает Контакторы КТ-6022 КТ-6023" href="registerform?h=biznesurfo.ru&amp;id=35885471" />
+              <tender id="35699740" header="Разъемы MD-CM" href="registerform?h=biznesurfo.ru&amp;id=35699740" />
+              <tender id="35885795" header="Организация проводит открытый запрос цен на поставку Контактор. №1107330" href="registerform?h=biznesurfo.ru&amp;id=35885795" />
+            </tenders>
+          </subotr>
+          <subotr header="Контроллеры" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=424&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35875230" header="Командоконтроллеры. Предоставление всех документов, указанных в закупочных документах! ВНИМАТЕЛЬНО ЧИТАЙТЕ ЗАКУПОЧНУЮ ДОКУМЕНТАЦИЮ!!!" href="registerform?h=biznesurfo.ru&amp;id=35875230" />
+            </tenders>
+          </subotr>
+          <subotr header="Контрольно-измерительные приборы (КИП)" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=453&amp;per_page=10" tender_count="69">
+            <tenders>
+              <tender id="35866680" header="Поставка контрольно-измерительных и оптических приборов спектрофотометра для МУ Карабашская городская больница" href="registerform?h=biznesurfo.ru&amp;id=35866680" />
+              <tender id="35768296" header="Организация проводит открытый запрос цен на поставку на поставку контрольно-измерительных приборов и средств автоматизации" href="registerform?h=biznesurfo.ru&amp;id=35768296" />
+              <tender id="35855009" header="Счетчики тепловой энергии 5 комплектов" href="registerform?h=biznesurfo.ru&amp;id=35855009" />
+            </tenders>
+          </subotr>
+          <subotr header="Нагревательное оборудование" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=418&amp;per_page=10" tender_count="6">
+            <tenders>
+              <tender id="35840374" header="Приобретение водонагревателей" href="registerform?h=biznesurfo.ru&amp;id=35840374" />
+              <tender id="35827257" header="Поставка водонагревателя накопительного." href="registerform?h=biznesurfo.ru&amp;id=35827257" />
+              <tender id="35837288" header="Объявляется открытый запрос предложений. Предмет запроса Номер 15-М-6940 Наименование приобретение нагревателя" href="registerform?h=biznesurfo.ru&amp;id=35837288" />
+            </tenders>
+          </subotr>
+          <subotr header="Насосы, компрессоры и их комплектующие" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=462&amp;per_page=10" tender_count="70">
+            <tenders>
+              <tender id="35772411" header="Поставка консольного насоса." href="registerform?h=biznesurfo.ru&amp;id=35772411" />
+              <tender id="35769336" header="Организация проводит открытый запрос цен на поставку 484 Поставка насосов" href="registerform?h=biznesurfo.ru&amp;id=35769336" />
+              <tender id="35886006" header="Объявляется открытый тендер. Предмет тендера Закупка насосного агрегата ЦНСГ 2 80" href="registerform?h=biznesurfo.ru&amp;id=35886006" />
+            </tenders>
+          </subotr>
+          <subotr header="Низковольтная аппаратура (НВА)" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=454&amp;per_page=10" tender_count="4">
+            <tenders>
+              <tender id="35856526" header="Низковольтные изделия" href="registerform?h=biznesurfo.ru&amp;id=35856526" />
+              <tender id="35883815" header="Низковольтное электрооборудование." href="registerform?h=biznesurfo.ru&amp;id=35883815" />
+              <tender id="35776081" header="Право заключения договора на Поставка КВН контакт втычной наборный ТУ6313-016-61929916-2013" href="registerform?h=biznesurfo.ru&amp;id=35776081" />
+            </tenders>
+          </subotr>
+          <subotr header="Оборудование б/у" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=426&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="21624213" header="Организация на постоянной основе покупает Трансформаторы б у, различных марок трансформаторы, горелые трансформаторы, нерабочие трансформаторы, некомплектные трансформаторы, неликвидные трансформаторы, списанные трансформаторы, вышедшие из строя трансформ" href="registerform?h=biznesurfo.ru&amp;id=21624213" />
+            </tenders>
+          </subotr>
+          <subotr header="Осветительное оборудование" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=419&amp;per_page=10" tender_count="25">
+            <tenders>
+              <tender id="35798359" header="Поставка оборудования для нужд АО в 2015 году Электрические лампы накаливания и газоразрядные лампы оборудование светотехническое изделия электроустановочные детали и запасные части ламп и светотехнического оборудования" href="registerform?h=biznesurfo.ru&amp;id=35798359" />
+              <tender id="35797053" header="Поставка энергосберегающих ламп." href="registerform?h=biznesurfo.ru&amp;id=35797053" />
+              <tender id="35843544" header="Право заключения договора на поставку ламп." href="registerform?h=biznesurfo.ru&amp;id=35843544" />
+            </tenders>
+          </subotr>
+          <subotr header="Паяльное оборудование" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=564&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35691912" header="Право заключения договора на Поставка паяльного оборудования в соответствии со спецификацией" href="registerform?h=biznesurfo.ru&amp;id=35691912" />
+            </tenders>
+          </subotr>
+          <subotr header="Приборы полупроводниковые" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=570&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35840031" header="Поставка осциллографа" href="registerform?h=biznesurfo.ru&amp;id=35840031" />
+              <tender id="35902340" header="Модуль транзисторный Infineon" href="registerform?h=biznesurfo.ru&amp;id=35902340" />
+            </tenders>
+          </subotr>
+          <subotr header="Разное оборудование, комплектующие, cырье и материалы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=455&amp;per_page=10" tender_count="171">
+            <tenders>
+              <tender id="35725356" header="Объявляется открытый тендер. Предмет тендера поставку конденсатора ALFA LAVAL model CDEW 400T." href="registerform?h=biznesurfo.ru&amp;id=35725356" />
+              <tender id="35840281" header="Закупка шкафа" href="registerform?h=biznesurfo.ru&amp;id=35840281" />
+              <tender id="35626213" header="Открытый аукцион в электронной форме №6149 ОАЭ-ЭЭ 15 на право заключения договора поставки комплектов для монтажа узла учета электрической энергии." href="registerform?h=biznesurfo.ru&amp;id=35626213" />
+            </tenders>
+          </subotr>
+          <subotr header="Регуляторы давления" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=565&amp;per_page=10" tender_count="3">
+            <tenders>
+              <tender id="35803659" header="Поставка регуляторов давления топливного газа" href="registerform?h=biznesurfo.ru&amp;id=35803659" />
+              <tender id="35853062" header="Регуляторы давления" href="registerform?h=biznesurfo.ru&amp;id=35853062" />
+              <tender id="35834534" header="Аренда устройств компенсации реактивной мощности на базе синхронных электродвигателей СДБМ" href="registerform?h=biznesurfo.ru&amp;id=35834534" />
+            </tenders>
+          </subotr>
+          <subotr header="Ремонт/монтаж/  профилактические работы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=421&amp;per_page=10" tender_count="93">
+            <tenders>
+              <tender id="35881317" header="Услуги по ремонту электрозвуковых срен в сельских населенных пунктах городског округа" href="registerform?h=biznesurfo.ru&amp;id=35881317" />
+              <tender id="35872806" header="93-15-М. Установка дополнительной опоры уличного освещения на объекте Уличное освещение от РП-Аэропорт в районе въезда на территорию Аэропорта г. Ноябрьска." href="registerform?h=biznesurfo.ru&amp;id=35872806" />
+              <tender id="35741077" header="Открытый аукцион № 6438 ОАЭ-ЦДТВ 15 на право заключения договора на выполнение работ по замене средств измерений со шкалой не соответствующей международной системе измерений на объектах" href="registerform?h=biznesurfo.ru&amp;id=35741077" />
+            </tenders>
+          </subotr>
+          <subotr header="Светотехническая продукция" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=456&amp;per_page=10" tender_count="24">
+            <tenders>
+              <tender id="35743881" header="Поставка светотехнической продукции." href="registerform?h=biznesurfo.ru&amp;id=35743881" />
+              <tender id="35742204" header="Поставка светотехнической продукции" href="registerform?h=biznesurfo.ru&amp;id=35742204" />
+              <tender id="35772357" header="Поставка расходных материалов для системы освещения госпиталя" href="registerform?h=biznesurfo.ru&amp;id=35772357" />
+            </tenders>
+          </subotr>
+          <subotr header="Связь и телекоммуникации" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=457&amp;per_page=10" tender_count="3">
+            <tenders>
+              <tender id="35802369" header="Поставка инструментов для монтажа волоконно-оптических линий связи" href="registerform?h=biznesurfo.ru&amp;id=35802369" />
+              <tender id="35814511" header="Объявляется открытый тендер. Предмет тендера 31502609391 Наименование закупки Поставка оборудования производства Juniper" href="registerform?h=biznesurfo.ru&amp;id=35814511" />
+              <tender id="35905403" header="Сеть связи и радиофикации" href="registerform?h=biznesurfo.ru&amp;id=35905403" />
+            </tenders>
+          </subotr>
+          <subotr header="Силовые конденсаторы и конденсаторные установки" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=458&amp;per_page=10" tender_count="2">
+            <tenders>
+              <tender id="35701056" header="Закупка на поставку конденсатора ALFA LAVAL model CDEW 400T." href="registerform?h=biznesurfo.ru&amp;id=35701056" />
+              <tender id="35826862" header="Конденсаторы Vishay id213292" href="registerform?h=biznesurfo.ru&amp;id=35826862" />
+            </tenders>
+          </subotr>
+          <subotr header="Трансформаторы, трансформаторные подстанции и реакторы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=459&amp;per_page=10" tender_count="31">
+            <tenders>
+              <tender id="35637101" header="Организация закупает Б у трансформаторы" href="registerform?h=biznesurfo.ru&amp;id=35637101" />
+              <tender id="35835431" header="Организация закупает Трансформаторы тм" href="registerform?h=biznesurfo.ru&amp;id=35835431" />
+              <tender id="35782721" header="Ремонт комплектной трансформаторной подстанции КТП КК-250-10 4 УХЛ инв.№САМ1010414894, участка линии электропередач 10кВт." href="registerform?h=biznesurfo.ru&amp;id=35782721" />
+            </tenders>
+          </subotr>
+          <subotr header="Электрические машины и оборудование" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=461&amp;per_page=10" tender_count="12">
+            <tenders>
+              <tender id="35872450" header="Электрооборудование" href="registerform?h=biznesurfo.ru&amp;id=35872450" />
+              <tender id="35867316" header="Поставка сушильного шкафа для нужд ЭКЦ УМВД России" href="registerform?h=biznesurfo.ru&amp;id=35867316" />
+              <tender id="35885835" header="Объявляется открытый запрос предложений. Предмет запроса Номер 15-М-6951 Наименование Устройство компенсации реактивной мощности" href="registerform?h=biznesurfo.ru&amp;id=35885835" />
+            </tenders>
+          </subotr>
+          <subotr header="Электродвигатели" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=417&amp;per_page=10" tender_count="21">
+            <tenders>
+              <tender id="35766962" header="Организация закупает КРАНОВЫЕ ЭЛЕКТРОДВИГАТЕЛИ" href="registerform?h=biznesurfo.ru&amp;id=35766962" />
+              <tender id="32313661" header="Объявляется открытый запрос предложений. Предмет запроса Приобретение электродвигателя двухстороннего WEM MOTORS" href="registerform?h=biznesurfo.ru&amp;id=32313661" />
+              <tender id="35736268" header="Электродвигатель ВАО7А по ОТТ АК ТН" href="registerform?h=biznesurfo.ru&amp;id=35736268" />
+            </tenders>
+          </subotr>
+          <subotr header="Электроды" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=507&amp;per_page=10" tender_count="16">
+            <tenders>
+              <tender id="35795337" header="Поставка электродов" href="registerform?h=biznesurfo.ru&amp;id=35795337" />
+              <tender id="35881307" header="Приобретение электродов для ручной электродуговой сварки ГОСТ 9466-75" href="registerform?h=biznesurfo.ru&amp;id=35881307" />
+              <tender id="35872794" header="15-17407Э поставка электродов" href="registerform?h=biznesurfo.ru&amp;id=35872794" />
+            </tenders>
+          </subotr>
+          <subotr header="Электроизоляционные материалы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=463&amp;per_page=10" tender_count="4">
+            <tenders>
+              <tender id="35645120" header="Поставка Электроизолирующих полимерных материалов" href="registerform?h=biznesurfo.ru&amp;id=35645120" />
+              <tender id="35654969" header="Организация закупает ПДО 327 ТК 2015 Закупка электроизолирующих полимерных материалов" href="registerform?h=biznesurfo.ru&amp;id=35654969" />
+              <tender id="35659209" header="Объявляется открытый тендер. Предмет тендера поставка Электроизолирующих полимерных материалов" href="registerform?h=biznesurfo.ru&amp;id=35659209" />
+            </tenders>
+          </subotr>
+          <subotr header="Электроинструмент и оборудование" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=464&amp;per_page=10" tender_count="4">
+            <tenders>
+              <tender id="35508568" header="Объявляется открытый тендер. Предмет тендера Электрооборудование" href="registerform?h=biznesurfo.ru&amp;id=35508568" />
+              <tender id="35773687" header="Поставка приборов и инструментов" href="registerform?h=biznesurfo.ru&amp;id=35773687" />
+              <tender id="35784032" header="Поставка электроинструмента" href="registerform?h=biznesurfo.ru&amp;id=35784032" />
+            </tenders>
+          </subotr>
+          <subotr header="Электроинструменты - промышленные" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=415&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35784140" header="Поставка механизированного инструмента п.Тазовский" href="registerform?h=biznesurfo.ru&amp;id=35784140" />
+            </tenders>
+          </subotr>
+          <subotr header="Электроинструменты бытовые" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=416&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35564153" header="Поставка бытовых электротоваров" href="registerform?h=biznesurfo.ru&amp;id=35564153" />
+            </tenders>
+          </subotr>
+          <subotr header="Электрокерамические изделия. Изоляторы" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=465&amp;per_page=10" tender_count="4">
+            <tenders>
+              <tender id="35683087" header="Право заключения Договора на поставку прочих изоляторов покрышки к выключателям 110кВ для пополнения аварийного резерва в 3 квартале 2015 года" href="registerform?h=biznesurfo.ru&amp;id=35683087" />
+              <tender id="35840113" header="Поставка фторопластовых изоляторов ИПФ-25 П. 7.4 ПЗ" href="registerform?h=biznesurfo.ru&amp;id=35840113" />
+              <tender id="35868952" header="Право заключения договора на поставку линейных изоляторов фарфор для пополнения аварийного резерва и для выполнения работ по технологическому присоединению для обеспечения потребности филиала ОАО МРСК Урала - Пермэнерго в 3-4 кварталах 2015 года Закупка №" href="registerform?h=biznesurfo.ru&amp;id=35868952" />
+            </tenders>
+          </subotr>
+          <subotr header="Электромонтажная арматура и инструмент" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=466&amp;per_page=10" tender_count="3">
+            <tenders>
+              <tender id="35625490" header="Арматура электрическая прочая" href="registerform?h=biznesurfo.ru&amp;id=35625490" />
+              <tender id="35819361" header="Право заключения договора на поставку арматуры к самонесущему изолированному проводу СИП на напряжение до 1000 В" href="registerform?h=biznesurfo.ru&amp;id=35819361" />
+              <tender id="35818248" header="Право заключения договора на поставку кабельных муфт" href="registerform?h=biznesurfo.ru&amp;id=35818248" />
+            </tenders>
+          </subotr>
+          <subotr header="Электромонтажные работы и услуги" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=467&amp;per_page=10" tender_count="19">
+            <tenders>
+              <tender id="35826000" header="Право заключения договора подряда на выполнение строительно-монтажных и пусконаладочных работ по объекту 6 шесть объектов технологического присоединения" href="registerform?h=biznesurfo.ru&amp;id=35826000" />
+              <tender id="35809486" header="На замену светильников" href="registerform?h=biznesurfo.ru&amp;id=35809486" />
+              <tender id="35837903" header="Организация проводит открытый запрос цен на поставку Электроизмерительные работы в отделениях" href="registerform?h=biznesurfo.ru&amp;id=35837903" />
+            </tenders>
+          </subotr>
+          <subotr header="Электронные компоненты. Электроника" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=468&amp;per_page=10" tender_count="29">
+            <tenders>
+              <tender id="35826005" header="Поставка ЭРИ микросхемы в соответствии с техническим заданием и спецификацией." href="registerform?h=biznesurfo.ru&amp;id=35826005" />
+              <tender id="35837110" header="Объявляется открытый тендер. Предмет тендера конденсаторы Vishay" href="registerform?h=biznesurfo.ru&amp;id=35837110" />
+              <tender id="35882832" header="Объявляется открытый тендер. Предмет тендера Радиодетали-КиП-перетендеровка" href="registerform?h=biznesurfo.ru&amp;id=35882832" />
+            </tenders>
+          </subotr>
+          <subotr header="Электросварочное оборудование" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=470&amp;per_page=10" tender_count="3">
+            <tenders>
+              <tender id="35815291" header="Объявляется открытый запрос предложений. Предмет запроса Номер 15-М-6933 Наименование Поставка сварочного оборудования на 4 квартал 15 года" href="registerform?h=biznesurfo.ru&amp;id=35815291" />
+              <tender id="35879605" header="Право заключения договора на поставку сварочной машины для стыковой сварки полиэтиленовых труб диаметр 90 -315 мм в комплекте со вставками" href="registerform?h=biznesurfo.ru&amp;id=35879605" />
+              <tender id="35815612" header="Объявляется открытый тендер. Предмет тендера сварочное оборудование" href="registerform?h=biznesurfo.ru&amp;id=35815612" />
+            </tenders>
+          </subotr>
+          <subotr header="Электроснабжение. Генераторные установки. Электростанции" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=471&amp;per_page=10" tender_count="7">
+            <tenders>
+              <tender id="35782649" header="Право заключения договора на поставку дизельных генераторов для обеспечения инвестиционной программы в 2015 г." href="registerform?h=biznesurfo.ru&amp;id=35782649" />
+              <tender id="35791804" header="Выполнение работ по монтажу приборов измерения уровня аммиачной воды в баках и пуско-наладочные работы в цехе 850" href="registerform?h=biznesurfo.ru&amp;id=35791804" />
+              <tender id="35746839" header="Поставка резервного источника электроснабжения в целях обеспечения резервным электроснабжением котельной" href="registerform?h=biznesurfo.ru&amp;id=35746839" />
+            </tenders>
+          </subotr>
+          <subotr header="Электротермическое, нагревательное и отопительное оборудование" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=472&amp;per_page=10" tender_count="10">
+            <tenders>
+              <tender id="35885985" header="Организация проводит открытый запрос цен на поставку Поставка водяного отопительного-вентиляционного аппарата VOLCANO VR1" href="registerform?h=biznesurfo.ru&amp;id=35885985" />
+              <tender id="35804881" header="Водоподогреватели ПВВУ, согласно спецификации" href="registerform?h=biznesurfo.ru&amp;id=35804881" />
+              <tender id="35799942" header="Водо-водяной подогреватель ВВП 20-426х4000 в комплекте с болтами и гайками" href="registerform?h=biznesurfo.ru&amp;id=35799942" />
+            </tenders>
+          </subotr>
+          <subotr header="Электротехника – кабели" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=425&amp;per_page=10" tender_count="1">
+            <tenders>
+              <tender id="35826012" header="Поставка кабеля КВСФМ-75, кабеля РК-50 в соответствии с техническим заданием и спецификацией" href="registerform?h=biznesurfo.ru&amp;id=35826012" />
+            </tenders>
+          </subotr>
+          <subotr header="Электроустановочные изделия и инструменты" href="http://b2bcontext.ru/partner/gettenderlist?h=biznesurfo.ru&amp;id=560&amp;per_page=10" tender_count="3">
+            <tenders>
+              <tender id="35742205" header="Поставка электроустановочных изделий" href="registerform?h=biznesurfo.ru&amp;id=35742205" />
+              <tender id="35845369" header="Поставка электроустановочного оборудования General Electric" href="registerform?h=biznesurfo.ru&amp;id=35845369" />
+              <tender id="35743887" header="Поставка электроустановочных изделий" href="registerform?h=biznesurfo.ru&amp;id=35743887" />
+            </tenders>
+          </subotr>
+        </subotrs>
+      </column>
+    </columns>
+  </otr>
+  <title>Рубрикатор тендеров</title>
+</otrs>

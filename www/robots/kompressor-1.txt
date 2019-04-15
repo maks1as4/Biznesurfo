@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: kompressor-1.biznesurfo.ru
+Sitemap: http://kompressor-1.biznesurfo.ru/sitemap.xml

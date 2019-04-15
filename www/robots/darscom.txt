@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: darscom.biznesurfo.ru
+Sitemap: http://darscom.biznesurfo.ru/sitemap.xml

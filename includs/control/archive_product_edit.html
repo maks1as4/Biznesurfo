@@ -1,0 +1,133 @@
+<?php require_once "../../includs/control/head.html"; ?>
+
+<div class="box-header">
+	<div class="pull-left box-header-home"><a href="/kabinet"><i class="icon-home"></i></a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point"><a href="/kabinet/archive">Архив</a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point">Изменить товар</div>
+	<div class="pull-left box-header-separator"></div>
+</div>
+<div class="box-content">
+	<div class="box-inner-main">
+		<div class="title-page">
+			<h2 class="inline">Изменить товар</h2>
+			<p class="pull-right"><a href="/kabinet/archive" class="btn btn-link">&larr; вернуться назад</a></p>
+		</div>
+<?php if ($err != ''){ ?>
+		<div class="alert alert-error">
+			<p><strong>Исправьте, пожалуйста, следующие ошибки:</strong></p>
+			<?php echo $err; ?>
+		</div>
+<?php } ?>
+		<form id="forms" class="form-horizontal" method="post" action="/kabinet/archive/product-edit/<?php echo $tovar_id; ?>" enctype="multipart/form-data">
+			<div class="control-group">
+				<label class="control-label control-label-190"><i class="icon-require icon-tab-left"></i>Рубрика товара</label>
+				<div class="controls controls-190 rub-top4">
+					<span id="rubric-name"><?php echo $val_rub_name; ?></span>
+					<a href="javascript://" id="rubric-add" class="dashed">изменить рубрику</a>
+					<input type="hidden" id="urubric-id" name="urubric-id" value='<?php echo $val_rub_id; ?>' />
+					<input type="hidden" id="urubric-name" name="urubric-name" value='<?php echo $val_rub_name; ?>' />
+					<span id="err-urubric" class="error"></span>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label control-label-190"><i class="icon-require icon-tab-left"></i>Наименование товара</label>
+				<div class="controls controls-190">
+					<input type="text" id="uname" class="input-xxlarge" name="uname" value='<?php echo $val_name; ?>' maxlength="250" autocomplete="off" />
+					<span id="err-uname" class="error"></span>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label control-label-190">Описание товара</label>
+				<div class="controls controls-190">
+					<textarea id="text" class="big" name="text"><?php echo $val_text; ?></textarea>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label control-label-190">Цена</label>
+				<div class="controls controls-190">
+					<input type="text" id="uprice" class="input-medium price-right10" name="uprice" value='<?php echo $val_price; ?>' maxlength="15" autocomplete="off" />
+					<label class="checkbox inline">
+						<input type="checkbox" name="uprice_ot" value='ot'<?php echo ($val_price_ot == 'ot') ? ' checked' : ''; ?>> "от"
+					</label>
+					<span id="err-uprice" class="error"></span>
+					<p class="muted">можно не заполнять, цена будет автоматически определена как «договорная»</p>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label control-label-190"><span id="picture-hint" class="abbr"><?php echo ($Tovar[7] != '') ? 'Изменить' : 'Добавить' ; ?> картинку <i class="icon-question-sign"></i></span></label>
+				<div class="controls controls-190">
+					<img src="<?php echo $val_img_src; ?>" id="img-product" class="img-polaroid img-right10" />
+					<input type="file" id="upicture" class="input-medium" name="upicture" /><br />
+<?php if ($Tovar[7] != ''){ ?>
+					<a href="/kabinet/archive/product-delete-image/<?php echo $Tovar[9]; ?>" id="id<?php echo $Tovar[9]; ?>" class="dashed delete-product-image img-action">удалить картинку</a>
+<?php } ?>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls controls-190">
+					<i class="icon-require icon-tab-left"></i>- поля обязательные для заполнения
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls controls-190">
+					<button type="submit" class="btn btn-primary" name="btmes"><i class="icon-ok-sign icon-white icon-tab-left"></i>Сохранить</button>
+				</div>
+			</div>
+		</form>
+	</div><!-- /box-inner-main -->
+</div><!-- /box-content -->
+
+<!-- rubric modal -->
+<div id="rubric-modal" class="modal-wrapper">
+	<div class="modal-head">
+		<a href="javascript://" class="modal-close close-x" title="закрыть"></a>
+	</div>
+	<h4>Выберите рубрику товара</h4>
+	<div class="rubrics">
+		<div class="accordion">
+<?php foreach ($Rubrics_top as $key=>$r_top){ ?>
+			<h5><?php echo $r_top[1]; ?></h5>
+			<ul>
+<?php foreach ($Rubrics_low[$key] as $r_low){ ?>
+				<li>
+					<label class="radio">
+						<input type="radio" name="rubrics[]" value="<?php echo $r_low[0]; ?>">
+						<span><?php echo $r_low[1]; ?></span>
+					</label>
+				</li>
+<?php } ?>
+			</ul>
+<?php } ?>
+		</div>
+	</div>
+	<div class="modal-foot">
+		<a href="javascript://" class="save btn btn-primary"><i class="icon-ok-sign icon-white icon-tab-left"></i>сохранить</a>&nbsp;&nbsp;&nbsp;
+		<a href="javascript://" class="modal-close btn"><i class="icon-refresh icon-tab-left"></i>отмена</a>
+	</div>
+</div>
+<!-- /rubric modal -->
+
+<!-- delete modal -->
+<div id="delete-modal" class="modal-wrapper">
+	<div class="modal-head">
+		<a href="javascript://" class="modal-close close-x" title="закрыть"></a>
+	</div>
+	<div class="question"></div>
+	<div class="modal-foot">
+		<a href="javascript://" class="yes btn btn-primary"><i class="icon-trash icon-white icon-tab-left"></i>удалить</a>&nbsp;&nbsp;&nbsp;
+		<a href="javascript://" class="modal-close btn"><i class="icon-refresh icon-tab-left"></i>отмена</a>
+	</div>
+</div>
+<!-- /delete modal -->
+
+<!-- preload imgs -->
+<div class="preload">
+	<img src="/i/kabinet/modal-close.png" />
+	<img src="/i/kabinet/accordion-arr-right.png" />
+	<img src="/i/kabinet/accordion-arr-down.png" />
+</div>
+<!-- /preload imgs -->
+
+<?php require_once "../../includs/control/foot.html"; ?>

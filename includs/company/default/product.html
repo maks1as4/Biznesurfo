@@ -1,0 +1,127 @@
+<?php require_once "../../includs/company/default/head.html"; ?>
+
+<div class="row">
+	<div id="main" class="span12">
+
+		<div class="row">
+
+<?php require_once "../../includs/company/default/sidebar.html"; ?>
+
+			<div id="content" class="span9">
+				<div class="content-wrap">
+					<ul class="breadcrumb">
+						<li><a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/">Главная</a> <span class="divider">/</span></li>
+						<li><a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/products">Товары</a> <span class="divider">/</span></li>
+						<li><a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/products/<?php echo getDataFromDB($Product[9]); ?>"><?php echo getDataFromDB($Product[8]); ?></a> <span class="divider">/</span></li>
+						<li class="active"><?php echo $product_krsh; ?></li>
+					</ul>
+					<div class="page-name">
+						<h1><?php echo getDataFromDB($Product[0]); ?></h1>
+					</div>
+<?php if ($isOwner && $Product[6]!=0): ?>
+					<div class="status2"><span class="label-verification" title="Товар находится на проверке и виден только вам."><i class="icon-time"></i>&nbsp;товар на проверке и виден только вам</span></div>
+<?php endif; ?>
+					<div id="product">
+<?php if ($Product[10] !== null): ?>
+						<img src="../i/products/<?php echo $Product[10]; ?>_medium.<?php echo $Product[11]; ?>" class="img-polaroid img-tovar pull-left" alt='<?php echo getDataFromDB($Product[0]); ?>' />
+<?php else: ?>
+						<img src="../i/company/default/no-image-big.png" class="img-polaroid img-tovar pull-left" />
+<?php endif; ?>
+						<div class="product-description pull-left">
+							<div class="clearfix">
+								<div class="pull-left">
+									<h2>цена:</h2>
+<?php if ($Product[3] == '0'): ?>
+									<span class="price price-red"><?php echo ($Product[1] == '1') ? 'от ' : ''; ?><?php echo priceParser($Product[2]); ?> руб.</span>
+<?php else: ?>
+									<span class="price muted">договорная</span>
+<?php endif; ?>
+								</div>
+								<div class="pull-right buy">
+									<a href="javascript://" class="btn btn-primary order" product="id<?php echo $id_product; ?>" supplier="id<?php echo $id_company; ?>" code="h<?php echo md5($id_product.md5($id_company).$secret_salt); ?>"><i class="icon-shopping-cart icon-white"></i> заказать</a>
+								</div>
+							</div>
+							<div class="contact-info">Контактная информация:</div>
+							<table class="table table-condensed">
+								<tr>
+									<td colspan="2"><?php echo $full_name; ?></td>
+								</tr>
+								<tr>
+									<td colspan="2"><?php echo getDataFromDB($Client[1]); ?></td>
+								</tr>
+								<tr>
+									<td class="mark">Телефон<?php echo (!empty($Client_phones)) ? 'ы' : ''; ?>:</td>
+									<td>
+										<?php echo ($Client[11]!='') ? $Client[11].'&nbsp;' : ''; ?><?php echo getDataFromDB($Client[5]); ?><br />
+<?php if (!empty($Client_phones)): ?>
+<?php foreach ($Client_phones as $phones): ?>
+										<?php echo ($phones[1]) ? $phones[1].'&nbsp;' : ''; ?><?php echo $phones[0]; ?><br />
+<?php endforeach; ?>
+<?php endif; ?>
+									</td>
+								</tr>
+							</table>
+						</div><!-- /product-description -->
+						<div class="clearfix"></div>
+<?php if ($Product[4] != ''): ?>
+						<h4>Описание товара</h4>
+						<div class="product-text">
+							<?php echo $Product[4]; ?>
+						</div><!-- /product-text -->
+<?php endif; ?>
+						<div class="well well-small muted">
+<?php if ($Product[12] !== null): ?>
+							Товар добавлен: <?php echo DataParser($Product[12]); ?>&nbsp;&nbsp;&nbsp;
+<?php endif; ?>
+<?php if ($Product[13] !== null): ?>
+							Товар обновлен: <?php echo DataParser($Product[13]); ?>
+<?php endif; ?>
+						</div>
+<?php if (!empty($Goods)): ?>
+						<h5>Похожие товары:</h5>
+						<div class="similar-products">
+<?php foreach ($Goods as $good): ?>
+<?php if ($odd): ?>
+							<div class="row range">
+<?php endif; ?>
+								<div class="span4 cell">
+									<div class="img-box pull-left">
+										<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/product/<?php echo getDataFromDB($good[2]); ?>.html">
+<?php if ($good[6] != null): ?>
+											<img src="../i/products/<?php echo $good[6]; ?>_small.<?php echo $good[7]; ?>" class="img-polaroid" alt='<?php echo getDataFromDB($good[1]); ?>' />
+<?php else: ?>
+											<img src="../i/company/default/no-image.png" class="img-polaroid" />
+<?php endif; ?>
+										</a>
+									</div>
+									<div class="info">
+										<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/product/<?php echo getDataFromDB($good[2]); ?>.html"><?php echo getDataFromDB($good[1]); ?></a>
+										<div>
+<?php if ($good[5] == '0'): ?>
+											<span class="label label-important"><?php echo ($good[3] == '1') ? 'от ' : ''; ?><?php echo priceParser($good[4]); ?> руб.</span>
+<?php else: ?>
+											<span class="label">цена договорная</span>
+<?php endif; ?>
+										</div>
+									</div>
+								</div>
+<?php if (!$odd): ?>
+							</div>
+<?php endif; ?>
+<?php if ($odd && ($count == $count_goods)): ?>
+							</div>
+<?php endif; ?>
+<?php $odd = !$odd; $count++; ?>
+<?php endforeach; ?>
+							<div class="clearfix"></div>
+						</div><!-- /similar-products -->
+<?php endif; ?>
+					</div><!-- /product -->
+				</div>
+			</div><!-- /content -->
+		</div>
+		
+	</div><!-- /main -->
+</div>
+
+<?php require_once "../../includs/company/default/foot.html"; ?>

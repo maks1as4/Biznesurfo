@@ -1,0 +1,40 @@
+<?php require_once "../../includs/company/default/head.html"; ?>
+
+<div class="row">
+	<div id="main" class="span12">
+
+		<div class="row">
+
+<?php require_once "../../includs/company/default/sidebar.html"; ?>
+
+			<div id="content" class="span9">
+				<div class="content-wrap">
+					<ul class="breadcrumb">
+						<li><a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/">√лавна€</a> <span class="divider">/</span></li>
+						<li><a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/news">Ќовости</a> <span class="divider">/</span></li>
+						<li class="active"><?php echo $news_krsh; ?></li>
+					</ul>
+					<div class="page-name">
+						<h1><?php echo getDataFromDB($News[2]); ?></h1>
+					</div>
+<?php if ($isOwner && $News[7]!=0): ?>
+					<div class="status2"><span class="label-verification" title="Ќовость находитс€ на проверке и видена только вам."><i class="icon-time"></i>&nbsp;новость на проверке и видена только вам</span></div>
+<?php endif; ?>
+					<div id="news-detail">
+<?php if ($News[4] != ''): ?>
+						<img src="../i/news/<?php echo $News[4]; ?>.<?php echo $News[5]; ?>" class="img-polaroid news-picture pull-left" alt='<?php echo getDataFromDB($News[2]); ?>' />
+<?php endif; ?>
+						<div class="news-detail-inner"><?php echo getDataFromDB($News[3]); ?></div>
+					</div><!-- /news-detail -->
+					<div class="clearfix"></div>
+					<div class="pull-left"><span class="label label-info">новость от <?php echo DataParser($News[6]); ?></span></div>
+					<div class="pull-right"><a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/news">&larr;&nbsp;все новости</a></div>
+					<div class="clearfix"></div>
+				</div>
+			</div><!-- /content -->
+		</div>
+		
+	</div><!-- /main -->
+</div>
+
+<?php require_once "../../includs/company/default/foot.html"; ?>

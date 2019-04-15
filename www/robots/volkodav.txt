@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: volkodav.biznesurfo.ru
+Sitemap: http://volkodav.biznesurfo.ru/sitemap.xml

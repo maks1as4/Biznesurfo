@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
+	<title>Выбор клиента для просмотра его статистики.</title>
+	<link href="manags.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="main-top"><h1>Выберем клиента</h1></div>
+<?php @require_once "htm/ssmenu.html"; ?>
+<div class="main-center">
+	<div class="order">за <?php echo($Periods[$perSel]['name']); ?></div>
+	<div class="mtotal">Всего клиентов <b><?php echo($numRows); ?></b> по которым есть статистика</div>
+	<div class="mcont">
+		<table cellspacing="0" cellpadding="0"><thead><td>Имя компании</td></thead>
+<?php for ($i=0;$i<$numRows;$i++):?>
+			<tr><td class="mcleft"><a href="/manags/ssclient.php<?php echo ($Periods[$perSel]['param'].'&id='.$Clients[$i][1]);?>"><?php echo ($Clients[$i][0]);?></a></td></tr>
+<?php endfor; ?>
+		</table>
+	</div>
+</div>
+</body>
+</html>

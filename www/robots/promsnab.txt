@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: promsnab.biznesurfo.ru
+Sitemap: http://promsnab.biznesurfo.ru/sitemap.xml

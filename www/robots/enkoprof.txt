@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: enkoprof.biznesurfo.ru
+Sitemap: http://enkoprof.biznesurfo.ru/sitemap.xml

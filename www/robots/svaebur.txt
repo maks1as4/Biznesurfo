@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: svaebur.biznesurfo.ru
+Sitemap: http://svaebur.biznesurfo.ru/sitemap.xml

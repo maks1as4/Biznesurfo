@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: ivshveimash.biznesurfo.ru
+Sitemap: http://ivshveimash.biznesurfo.ru/sitemap.xml

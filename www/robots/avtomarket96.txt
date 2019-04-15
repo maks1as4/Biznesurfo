@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: avtomarket96.biznesurfo.ru
+Sitemap: http://avtomarket96.biznesurfo.ru/sitemap.xml

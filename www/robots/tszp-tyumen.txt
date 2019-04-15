@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: tszp-tyumen.biznesurfo.ru
+Sitemap: http://tszp-tyumen.biznesurfo.ru/sitemap.xml

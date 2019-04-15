@@ -1,0 +1,7 @@
+.btn-gray:hover, .btn-gray:active, .btn-gray.active, .btn-gray.disabled, .btn-gray[disabled] {
+filter:none !important; background-image:none !important; background-color:#b3b3b3 !important; *background-color:#b3b3b3 !important;
+}
+.btn-orange {border-color:#cc7a00;}
+.btn-orange:hover, .btn-orange:active, .btn-orange.active, .btn-orange.disabled, .btn-orange[disabled] {
+filter:none !important; background-image:none !important; background-color:#bb6900 !important; *background-color:#bb6900 !important;
+}

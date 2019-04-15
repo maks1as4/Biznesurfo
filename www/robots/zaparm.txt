@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: zaparm.biznesurfo.ru
+Sitemap: http://zaparm.biznesurfo.ru/sitemap.xml

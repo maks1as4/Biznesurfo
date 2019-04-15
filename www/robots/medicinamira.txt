@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: medicinamira.biznesurfo.ru
+Sitemap: http://medicinamira.biznesurfo.ru/sitemap.xml

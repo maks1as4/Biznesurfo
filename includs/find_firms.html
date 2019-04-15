@@ -1,0 +1,101 @@
+<?php require_once "../includs/head.html"; ?>
+
+				<div class="path">
+<?php for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+				</div><!-- /path -->
+	
+				<h1><?php echo $tagH1;?></h1>
+<?php if ($linQty==0):?>
+				<div class="inform clear">
+<h3>Поиск результатов не дал.</h3>
+Рекомендации:<br />
+<ul>
+<li>Возможно, Вы искали <a href="find?fnd=<?php echo(urlencode($forMeta));?>">товар или услугу</a>;</li>
+<li>Поиск осуществляется только по наименованию предприятия;</li>
+<li>Поиск производится по целому слову. Например, запрос <em>"строй"</em> найдет <em>"Строй-Град"</em> и <em>"Севен-Строй"</em>, но не найдет <em>"Стройлидер"</em>;</li>
+<li>Для поиска предприятий по отраслям или сфере деятельности воспользуйтесь <a href="firms">Рубрикатором</a>;</li>
+<li>Обратите внимание на значение фильтра &laquo;Регион и город&raquo;</li>
+</ul>
+				</div><!-- /info -->
+<?php else:?>
+				<div class="items_table_nav clear">
+					<div class="itn_l sort">
+						<br />
+<?php if ($sortByName):?>
+						Сортировать: <span>по алфавиту</span> <a href="<?php echo $sortLink;?>" rel="nofollow">по позициям</a>
+<?php else:?>
+						Сортировать: <a href="<?php echo $sortLink;?>" rel="nofollow">по алфавиту</a> <span>по позициям</span>
+<?php endif; ?>
+					</div><!-- /itn_l -->
+
+					<div class="itn_r">
+						<span class="f12"><?php echo $qtyRow;?></span><br />
+						<span class="pages_count">Страница <?php echo $curPageNo;?> из <?php echo $maxPageNo;?></span>
+
+<?php if ($pageNavQty>0):?>
+						<span class="pages_nav">
+<?php for($i=0;$i<$pageNavQty;$i++)	echo ($PageNav[$i]."\n"); ?>
+						</span>
+<?php endif; ?>
+					</div><!-- /itn_r -->
+				</div><!-- /items_table_nav -->
+				
+
+				<dl class="spisok">
+<?php for ($i=0;$i<$linQty;$i++):?>
+					<dt class="clear">
+						<div class="spisokL"><a href="<?php echo ($Lins[$i][7]!=''?'http://'.$Lins[$i][7].'.'.$url3Href:'company/'.$Lins[$i][0])?>" target="_blank"><?php echo ($Lins[$i][1]);?></a> (<?php echo ($Lins[$i][4]);?> позици<?php echo (PrintFinLetter($Lins[$i][4], true));?>)</div>
+						<div class="icons">
+<?php if ($Lins[$i][6]!=''):?>
+							<a href="mailto/<?php echo ($Lins[$i][0]);?>" class="mail" title="Написать письмо" rel="nofollow"></a>
+<?php else:?>
+							<div class="mail"></div>
+<?php endif;?>
+<?php if ($Lins[$i][5]!='') { $wws = explode (',', $Lins[$i][5]); ?>
+							<a href="goto/<?php echo ($Lins[$i][0].'?url='.$wws[0]);?>" class="web" title="Перейти на сайт компании" rel="nofollow" target="_blank"></a>
+<?php } else { ?>
+							<div class="web"></div>
+<?php } ?>
+<?php if ($Lins[$i][4]>0):?>
+							<a href="<?php echo ($Lins[$i][7]!=''?'http://'.$Lins[$i][7].'.'.$url3Href.'/products':'price_'.$Lins[$i][0]) ?>" class="price" title="Показать прайс-лист компании" target="_blank"></a>
+<?php else:?>
+							<div class="price"></div>
+<?php endif;?>
+						</div>
+					</dt>
+					<dd>
+						Тел: <?php echo ($Lins[$i][3]);?><br />
+						Адрес: <?php echo ($Lins[$i][2]);?>
+					</dd>
+<?php endfor;?>
+				</dl>
+	
+				<div class="items_table_nav">
+
+					<div class="itn_r">
+						<span class="pages_count">Страница <?php echo $curPageNo;?> из <?php echo $maxPageNo;?></span>
+
+<?php if ($pageNavQty>0):?>
+						<span class="pages_nav">
+<?php for($i=0;$i<$pageNavQty;$i++)	echo ($PageNav[$i]."\n"); ?>
+						</span>
+<?php endif; ?>
+					</div><!-- /itn_r -->
+				</div><!-- /items_table_nav -->
+<?php endif;?>
+				<br /><br /><br /><br /><br />
+
+			</div><!-- /inner -->
+		</div><!-- /content -->
+	
+<?php require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

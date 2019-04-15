@@ -1,0 +1,39 @@
+<div style="width:800px; margin:50px; font-size:16px; font-family:arial, sans-serif;">
+	<a href="/management/adm/products-check">&larr; вернуться</a>
+	<div style="margin-top:20px;">
+<?php if ($err != ''): ?>
+		<div style="margin-bottom:20px; color:red;">
+			<p>Исправьте, пожалуйста, следующие ошибки:</p>
+			<div><?php echo $err; ?></div>
+		</div>
+<?php endif; ?>
+		<strong><?php echo $Tovar[0]; ?></strong><br /><br />
+		<form method="post" action="/management/adm/product-edit/<?php echo $tovar_id; ?>">
+			<div style="margin:10px 0;">
+				<label for="uname" style="font-weight:bold; font-size:14px;">наименование товара: *</label><br />
+				<input type="text" name="uname" value='<?php echo $var_name; ?>' style="padding:3px 5px;" size="50" maxlength="255" autocomplete="off" />
+			</div>
+			<div style="margin:10px 0;">
+				<label for="utranslit" style="font-weight:bold; font-size:14px;">транслит: *</label><br />
+				<input type="text" name="utranslit" value='<?php echo $var_translit; ?>' style="padding:3px 5px;" size="50" maxlength="255" autocomplete="off" />
+			</div>
+			<div style="margin:10px 0;">
+				<label for="uprice" style="font-weight:bold; font-size:14px;">цена:</label><br />
+				<input type="text" name="uprice" value='<?php echo $var_price; ?>' style="padding:3px 5px;" size="50" maxlength="10" autocomplete="off" />
+			</div>
+			<div style="margin:10px 0;">
+				<label for="utext" style="font-weight:bold; font-size:14px;">описание товара:</label><br />
+				<textarea name="utext" style="width:700px; height:300px;"><?php echo $var_text; ?></textarea>
+			</div>
+<?php if ($var_img_name!='' && $var_ing_ext!=''): ?>
+			<div style="margin:10px 0;">
+				<img src="/i/products/<?php echo $var_img_name; ?>_medium.<?php echo $var_ing_ext; ?>" style="width:200px; height:200px;" /><br />
+				<a href="/management/adm/product-delete-picture/<?php echo $var_img_id; ?>">удалить картинку</a>
+			</div>
+<?php endif; ?>
+			<div style="margin:10px 0;">
+				<input type="submit" name="btmes" value="Сохранить" />
+			</div>
+		</form>
+	</div>
+</div>

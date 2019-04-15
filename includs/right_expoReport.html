@@ -1,0 +1,17 @@
+<!--noindex-->
+	<div class="block">
+		<div class="block_top">
+			<h4><a href="expo_reports">Отчеты о выставках</a></h4>
+				<dl class="calendar">
+<?php for ($i=0;$i<$expoReportQty;$i++): ?>
+					<dt><a href="expo/reports/<?php echo($ExpoReps[$i][0])?>.html"><?php echo($ExpoReps[$i][1])?></a></dt>
+					<dd class="clear">
+						<?php echo($ExpoReps[$i][2])?>
+						<a href="expo/reports/<?php echo($ExpoReps[$i][0])?>.html" class="more">подробнее</a>
+					</dd>
+<?php endfor; ?>
+				</dl><!-- /calendar -->
+		</div><!-- /block_top -->
+		<div class="block_bot"></div><!-- /block_bot -->
+	</div><!-- /block -->
+<!--/noindex-->

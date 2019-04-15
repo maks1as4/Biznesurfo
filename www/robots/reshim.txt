@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: reshim.biznesurfo.ru
+Sitemap: http://reshim.biznesurfo.ru/sitemap.xml

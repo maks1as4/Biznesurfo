@@ -1,0 +1,40 @@
+				</div><!-- /box -->
+			</div><!-- /content -->
+		</div>
+	</div>
+	<div id="push"></div>
+</div><!-- /wrap -->
+
+<div id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="span3 mini-logo">
+				<div class="mini-logo-inner"><img src="/i/kabinet/logo-mini.png" /></div>
+			</div>
+			<div class="span9 copyright">
+				<div class="copyright-inner">
+					© Справочник “Индустрия Бизнеса”<br />
+					620075, г. Екатеринбург, ул. Бажова 51, оф.49<br />
+					тел./факс: +7 (343) 270-01-27, e-mail: info@biznesurfo.ru
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- /footer -->
+
+<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/jquery.simplemodal.js"></script>
+<?php if (isset($jFiles) && !empty($jFiles)){ ?>
+<?php echo $jFiles; ?>
+<?php } ?>
+<?php if (isset($jqAdd) && !empty($jqAdd)){ ?>
+<script type="text/javascript">
+<?php echo $jqAdd; ?>
+</script>
+<?php } ?>
+
+<?php if($isShowES) ShowCounterYandex(); ?>
+
+</body>
+</html>

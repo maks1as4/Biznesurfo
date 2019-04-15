@@ -1,0 +1,16 @@
+<div style="width:800px; margin:50px; font-size:16px; font-family:arial, sans-serif;">
+	<a href="/management/adm">&larr; вернуться</a>
+<?php if (count($Uncheck_logos) > 0): ?>
+<?php foreach($Uncheck_logos as $u_logo): ?>
+	<div style="border-bottom:1px solid #ababab; padding-bottom:15px; margin-top:15px;">
+		<span style="color:#bcbcbc; font-size:14px;">#<?php echo $u_logo[0]; ?></span> <strong><?php echo $u_logo[1]; ?></strong>
+		<div style="margin:10px 0;">
+			<img src="/logo/<?php echo $u_logo[2]; ?>" />
+		</div>
+		<a href="/management/adm/logo-checked/<?php echo $u_logo[0]; ?>" style="color:#3333aa;">проверенно</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/management/adm/logo-delete/<?php echo $u_logo[0]; ?>" style="color:#3333aa;">удалить</a>
+	</div>
+<?php endforeach; ?>
+<?php else: ?>
+	<p>Нет непроверенных логотипов.</p>
+<?php endif; ?>
+</div>

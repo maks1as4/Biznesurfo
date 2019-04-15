@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: remlit.biznesurfo.ru
+Sitemap: http://remlit.biznesurfo.ru/sitemap.xml

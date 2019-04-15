@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: npo64.biznesurfo.ru
+Sitemap: http://npo64.biznesurfo.ru/sitemap.xml

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: tehsmart.biznesurfo.ru
+Sitemap: http://tehsmart.biznesurfo.ru/sitemap.xml

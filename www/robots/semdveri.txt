@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: semdveri.biznesurfo.ru
+Sitemap: http://semdveri.biznesurfo.ru/sitemap.xml

@@ -1,0 +1,174 @@
+<?php require_once "../../includs/company/public/head.html"; ?>
+
+<div id="conteiner">
+	<div id="path" class="clear">
+<?php
+for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+	</div><!-- /path -->
+	<div id="logo-name" class="clear">
+		<div class="imagebox imagebox-logo"><div class="innerbox text-center">
+<?php if ($Client[2] != '' && $Client[10] == 0): ?>
+<?php if (isset($first_site)): ?>
+			<a href="goto/<?php echo $id_company; ?>?url=<?php echo ($first_site);?>" rel="nofollow" target="_blank"><img <?php echo $Client[2]; ?> class="noborder" alt='<?php echo $Client[0]; ?>' /></a>
+<?php else: ?>
+			<img <?php echo $Client[2]; ?> class="noborder" alt='<?php echo $Client[0]; ?>' />
+<?php endif; ?>
+<?php endif; ?>
+		</div></div>		
+		<div class="imagebox imagebox-name"><div class="innerbox text-left">
+<?php if (isset($first_site)): ?>
+			<a href="goto/<?php echo $id_company; ?>?url=<?php echo ($first_site);?>" rel="nofollow" target="_blank"><h1><?php echo $tagH1; ?></h1></a>
+<?php else: ?>
+			<h1><?php echo $tagH1; ?></h1>
+<?php endif; ?>
+		</div></div>
+	</div>
+	<div id="content">
+		<div id="text">
+			<div class="tabs clear">
+				<h3>
+					<span><a href="<?php echo ($translit_company == '') ? 'company/'.$id_company : 'http://'.$translit_company.'.'.$url3Href; ?>">О компании</a></span>
+					<span class="active"><i>Новости компании</i></span>
+					<span><a href="javascript://">Спецпредложения</a></span>
+				</h3>
+				<div class="tabs-content">
+<?php if (count($tabsContent)>0): ?>
+<?php foreach ($tabsContent as $news): ?>
+<?php
+$text = strip_tags($news[2]);
+$text = (strlen($text)>150) ? substr($text, 0, 150).'...' : $text;
+$data_news = DataParser($news[5]);
+?>
+<div class="pane company-block">
+<?php if ($news[3]!='' && $news[3]!=''): ?>
+	<div class="picture">
+		<img src="/i/news/<?php echo $news[3]; ?>_small.<?php echo $news[4]; ?>" width="80" height="60" />
+	</div>
+<?php endif; ?>
+	<div class="text-link">
+		<a href="<?php echo ($translit_company == '') ? 'company/'.$id_company.'/news/'.$news[6].'.html' : 'http://'.$translit_company.'.'.$url3Href.'/news/'.$news[6].'.html'; ?>"><?php echo getDataFromDB($news[1]); ?></a>
+		<p><?php echo getDataFromDB($text); ?></p>
+		<div class="left"><a href="<?php echo ($translit_company == '') ? 'company/'.$id_company.'/news/'.$news[6].'.html' : 'http://'.$translit_company.'.'.$url3Href.'/news/'.$news[6].'.html'; ?>">подробнее&rarr;</a></div>
+		<div class="rigth"><span class="date"><?php echo $data_news; ?></span></div>
+		<div class="clear"></div>
+	</div><!-- /text-link -->
+	<div class="clear"></div>
+</div><!-- /pane -->
+<?php endforeach; ?>
+					<div class="itn_r">
+<?php if ($pageNavQty>0):?>
+						<span class="pages_nav">
+<?php for($i=0;$i<$pageNavQty;$i++)	echo ($PageNav[$i]."\n"); ?>
+						</span>
+<?php endif; ?>
+					</div><!-- /itn_r -->
+<?php endif; ?>
+				</div><!-- /tabs-content -->
+			</div><!-- /tabs -->
+		</div><!-- /text -->
+	</div><!-- /content -->
+	<div id="left">
+
+		<div class="comp_cart_address"><strong>Адрес:</strong> <?php echo $Client[1]; ?></div>
+		<div class="comp_cart_phones">
+			<strong>Тел:</strong> <?php echo $first_phone; ?>
+<?php if ($count_phones > 1): ?>
+			<div class="comp_cart_pm">
+				<?php echo $all_phones; ?>
+			</div>
+<?php endif; ?>
+		</div>
+<?php if ($count_sites > 0): ?>
+		<div class="comp_card_web">
+			Сайт: 
+			<?php echo $all_sites; ?>
+		</div>
+<?php endif; ?>
+<?php if ($count_emails > 0): ?>
+		<div class="comp_card_mail">
+			E-mail: 
+			<?php echo $all_emails; ?>
+		</div>
+<?php endif; ?>
+
+<?php if ($isShowES): ?>
+<?php if (($Client[6]!='') && ($Client[7]!=0)): ?>
+		<div class="yandex_map">
+			<div id="YSmallBox">
+				<a href="javascript://" class="show-map"><?php echo $YandexStatImg; ?></a>
+			</div><!-- /YSmallBox -->
+<?php if (($Client[6]!='') && ($Client[7]!='')): ?>
+			<div class="comp_cart_watсhmap"><img src="/i/watchMap.png" align="absmiddle" />&nbsp;&nbsp;<a href="javascript://" class="show-map">смотреть на большой карте</a></div>
+<?php endif; ?>
+<!-- time -->
+<?php if (($translit_company != '') && ($translit_company == 'klingspor')): ?>
+			<div style="margin:10px 0 0 60px;">
+				<a href="i/scheme/sheme_klingspor.jpg" target="_blank">посмотреть схему проезда</a>
+			</div>
+<?php endif; ?>
+<!-- /time -->
+		</div><!-- /yandex_map -->
+<?php echo $addScripts; ?>
+<?php echo $jsFuncs; ?>
+		<div id="YBigBox">
+			<div id="YBigShow"></div>
+			<div id="YName"><?php echo $tagH1; ?></div>
+			<div id="YClose"><a href="#" title="Закрыть" class="modal-close">ЗАКРЫТЬ</a></div>
+			<div class="clear"></div>
+		</div><!-- /YBigBox -->
+<?php endif; ?>
+<?php endif; ?>
+	</div><!-- /left -->
+	<div id="right">
+		<div id="rubrics-box">
+<!-- time -->
+<?php if (($translit_company != '') && ($translit_company == 'klingspor')): ?>
+			<div class="comp_card_getprice">
+				<a href="price/price-KL-MOSCOW-08-10-2012.xls" rel="nofollow" title="Скачать весь прайс-лист"><strong>Прайс лист (полная версия)</strong></a>
+			</div>
+<?php endif; ?>
+<!-- /time -->
+<?php if ($Client[8] > 0): ?>
+			<div class="comp_card_getprice">
+				<a href="getprice/<?php echo $id_company; ?>" rel="nofollow" title="Скачать весь прайс-лист">Скачать прайс лист</a>
+			</div>
+<?php endif; ?>
+<?php if ($Client[8] > 0): ?>
+			<div class="comp_card_gotoPrice"><a href="price_<?php echo $id_company; ?>">Просмотреть прайс-лист (<?php echo $Client[8]; ?>)</a></div>
+<?php endif;?>
+			<div class="comp_card_rubric">Рубрики(<?php echo $rubsQty; ?>):</div>
+<?php if ($rubsQty > 0): ?>
+			<div class="rubrics">
+<?php for ($i=0; $i<$rubsQty; $i++): ?>
+<?php if ($Rubs[$i][0]=='q'): ?>
+				<?php echo $Rubs[$i][1]; ?><br />
+<?php else: ?>
+				<a href="prices/<?php echo $Rubs[$i][0]; ?>/"><?php echo $Rubs[$i][1]; ?><?php if (!empty($Rubs[$i][4])): ?> (<?php echo $Rubs[$i][4]; ?>)<?php endif; ?></a><br />
+<?php endif; ?>
+<?php endfor; ?>
+			</div>
+<?php else: ?>
+			<p>нет размещенных товаров</p>
+<?php endif; ?>
+			<div class="cornerTL"></div>
+			<div class="cornerTR"></div>
+			<div class="cornerBR"></div>
+			<div class="cornerBL"></div>
+		</div><!-- /rubrics-box -->
+	</div><!-- /right -->
+	<div class="clear"></div>
+</div><!-- /conteiner -->
+
+<div id="box-content">
+	<div class="header"></div>
+	<div class="message"></div>
+</div><!-- /box-content -->
+
+<!-- preload the images -->
+<div style="display:none">
+	<img src="/i/modal/header.gif" alt="" />
+</div>
+
+<?php require_once "../../includs/company/public/foot.html"; ?>

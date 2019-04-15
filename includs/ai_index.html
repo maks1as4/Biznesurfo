@@ -1,0 +1,96 @@
+<?php require_once "../includs/head.html"; ?>
+
+				<div class="path">
+<?php for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+				</div><!-- /path -->
+
+				<h1><?php echo $tagH1;?></h1>
+				<div class="items_table_nav clear">
+					<div class="itn_l">
+						<noindex><br />
+						Выбранные:
+						<a href="javascript://" class="excel" rel="nofollow">в Excel</a>
+						<!--
+						<a href="#" class="print">Печать</a>
+						-->
+						</noindex>
+					</div><!-- /itn_l -->
+
+					<div class="itn_r">
+						<?php echo $qtyRow;?><br />
+						<span class="pages_count">Страница <?php echo $curPageNo;?> из <?php echo $maxPageNo;?></span>
+
+<?php if ($pageNavQty>0):?>
+						<span class="pages_nav">
+<?php for($i=0;$i<$pageNavQty;$i++)	echo ($PageNav[$i]."\n"); ?>
+						</span>
+<?php endif; ?>
+					</div><!-- /itn_r -->
+				</div><!-- /items_table_nav -->
+				
+				<form id="items_table_form" name="tabform" method="post" action="">
+				<table class="items_table">
+					<thead>
+					<tr>
+						<td class="td_check"><input type="checkbox" name="cball" id="cball" /></td>
+<?php for ($i=0;$i<$HeadersQty;$i++) echo ($Headers[$i]); ?>
+					</tr>
+					</thead>
+<?php for ($i=0;$i<$linsQty;$i++): ?>
+<?php if($b2bcontext && ($i>2) && ($i%$modI==0)): ?>
+					<tr>
+						<td colspan="6" class="adv">
+<?php include "../includs/hor_b2b_context.html"; ?>
+						</td>
+					</tr>
+<?php endif; ?>
+					<tr<?php echo($Lins[$i][9]==1?' class="bold"':'');?>>
+						<td class="td_check"><input type="checkbox" name="cb<?php echo($Lins[$i][0])?>" id="cb<?php echo($Lins[$i][0])?>" /></td>
+						<td><a class="article" href="product/<?php echo($Lins[$i][10])?>.html"><?php echo($Lins[$i][1])?></a></td>
+						<td><?php echo($Lins[$i][2])?></td>
+						<td><a href="company/<?php echo($Lins[$i][3])?>.html" title="Карточка предприятия <?php echo($Lins[$i][4])?>" target="_blank"><?php echo($Lins[$i][4])?></a><br /><?php echo($Lins[$i][5])?>
+						</td>
+						<td><strong><?php echo($Lins[$i][6])?></strong></td>
+						<td><a href="prices/<?php echo($Lins[$i][7])?>" title="Все товары (услуги) в рубрике"><?php echo($Lins[$i][8])?></a>
+						</td>
+					</tr>
+<?php endfor; ?>
+				</table>
+				</form>
+				
+				<div class="items_table_nav">
+					<div class="itn_l">
+						<noindex>Выбранные:
+						<a href="javascript://" class="excel" rel="nofollow">в Excel</a>
+						<!--
+						<a href="#" class="print">Печать</a>
+						-->
+						</noindex>
+					</div><!-- /itn_l -->
+					
+					<div class="itn_r">
+						<span class="pages_count">Страница <?php echo $curPageNo;?> из <?php echo $maxPageNo;?></span>
+<?php if ($pageNavQty>0):?>
+						<span class="pages_nav">
+<?php for($i=0;$i<$pageNavQty;$i++)	echo ($PageNav[$i]."\n"); ?>
+						</span>
+<?php endif; ?>
+					</div><!-- /itn_r -->
+				</div><!-- /items_table_nav -->
+				
+				<br /><br /><br />
+				
+			</div><!-- /inner -->
+		</div><!-- /content -->
+	
+<?php require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

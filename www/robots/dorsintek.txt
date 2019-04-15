@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: dorsintek.biznesurfo.ru
+Sitemap: http://dorsintek.biznesurfo.ru/sitemap.xml

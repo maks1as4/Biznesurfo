@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: nataliart.biznesurfo.ru
+Sitemap: http://nataliart.biznesurfo.ru/sitemap.xml

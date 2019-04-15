@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: b2blogger.biznesurfo.ru
+Sitemap: http://b2blogger.biznesurfo.ru/sitemap.xml

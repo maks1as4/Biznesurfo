@@ -1,0 +1,151 @@
+<?php require_once "../includs/head.html"; ?>
+
+				<div class="path">
+<?php for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+				</div><!-- /path -->
+	
+				<div class="priceh1 clear">
+					<h1><?php echo $tagH1;?></h1>
+					<div style="float: right; text-align: right; padding-top: 5px;"><?php echo $qtyRow;?></div>
+				</div><!-- /priceh1 -->
+<?php if ($linsQty==0):?>
+				<div class="inform clear">
+<h3>Прайс-лист предприятия пуст.</h3>
+Рекомендации:<br />
+<ul><li>Обратите внимание на значение фильтра &laquo;Регион и город&raquo;;</li>
+<li>Возможно позиции прайс-листа утратили актуальность и были удалены;</li>
+<li>Возможно Вы перешли по устаревшей ссылке.</li>
+</ul>
+				</div><!-- /info -->
+<?php else:?>
+				<dl class="pl_info">
+					<dt class="clear">
+						<div class="pl_infoL"><a href="company/<?php echo ($Info[0]);?>.html" target="_blank"><?php echo ($Info[1]);?></a></div>
+						<div class="icons">
+<?php if ($Info[4]!=''):?>
+							<a href="mailto/<?php echo ($Info[0]);?>" class="mail" title="Написать письмо" rel="nofollow"></a>
+<?php else:?>
+							<div class="mail"></div>
+<?php endif;?>
+<?php if ($Info[5]!='') { $wws = explode (',', $Info[5]); ?>
+							<a href="goto/<?php echo ($Info[0].'?url='.$wws[0]);?>" class="web" title="Перейти на сайт компании" rel="nofollow" target="_blank"></a>
+<?php } else { ?>
+							<div class="web"></div>
+<?php } ?>
+						</div>
+					</dt>
+					<dd>
+						Тел: <?php echo ($Info[3]);?><br />
+						Адрес: <?php echo ($Info[2]);?><br />
+						Рубрики: 
+<?php for ($i=0;$i<$rubsQty;$i++) {?>
+	<a href="prices/<?php echo ($Rubs[$i][0]);?>/"><?php echo ($Rubs[$i][1]);?></a><?php echo (($i+1)<$rubsQty?', ':''); } ?>
+					</dd>
+				</dl>
+				
+				<div class="items_table_nav clear">
+					<div class="itn_l">
+						<!--noindex-->Выбранные:
+						<a href="javascript://" class="excel" rel="nofollow">в Excel</a>
+						<!--
+						<a href="#" class="print">Печать</a>
+						-->
+						<!--/noindex-->
+					</div><!-- /itn_l -->
+
+					<div class="itn_r">
+						<span class="pages_count">Страница <?php echo $curPageNo;?> из <?php echo $maxPageNo;?></span>
+
+<?php if ($pageNavQty>0):?>
+						<span class="pages_nav">
+<?php for($i=0;$i<$pageNavQty;$i++)	echo ($PageNav[$i]."\n"); ?>
+						</span>
+<?php endif; ?>
+					</div><!-- /itn_r -->
+				</div><!-- /items_table_nav -->
+				
+				<form id="items_table_form" name="tabform" method="post" action="">
+				<table class="items_table">
+					<thead>
+					<tr>
+						<td class="td_check"><input type="checkbox" name="cball" id="cball" /></td>
+<?php for ($i=0;$i<$HeadersQty;$i++) echo ($Headers[$i]); ?>
+					</tr>
+					</thead>
+<?php for ($i=0;$i<$linsQty;$i++): ?>
+					<tr<?php echo($Lins[$i][5]==1?' class="bold"':'');?>>
+						<td class="td_check"><input type="checkbox" name="cb<?php echo($Lins[$i][0])?>" id="cb<?php echo($Lins[$i][0])?>" /></td>
+						<td>
+<?php if ($Lins[$i][7] != null && $Lins[$i][8] != null): ?>
+							<img src="i/products/<?php echo $Lins[$i][7]; ?>_small.<?php echo $Lins[$i][8]; ?>" class="preview" align="middle" />
+<?php endif; ?>
+							<a class="article" href="product/<?php echo($Lins[$i][6])?>.html" target="_blank"><?php echo($Lins[$i][1])?></a>
+						</td>
+						<td><?php echo($Lins[$i][2])?></td>
+						<td><a href="prices/<?php echo($Lins[$i][3])?>" title="Все товары (услуги) в рубрике <?php echo($Lins[$i][4])?>"><?php echo($Lins[$i][4])?></a></td>
+					</tr>
+<?php endfor; ?>
+				</table>
+				</form>
+				
+				<div class="items_table_nav">
+					<div class="itn_l">
+						<!--noindex-->Выбранные:
+						<a href="javascript://" class="excel" rel="nofollow">в Excel</a>
+						<!--
+						<a href="#" class="print">Печать</a>
+						-->
+						<!--/noindex-->
+					</div><!-- /itn_l -->
+					
+					<div class="itn_r">
+						<span class="pages_count">Страница <?php echo $curPageNo;?> из <?php echo $maxPageNo;?></span>
+<?php if ($pageNavQty>0):?>
+						<span class="pages_nav">
+<?php for($i=0;$i<$pageNavQty;$i++)	echo ($PageNav[$i]."\n"); ?>
+						</span>
+<?php endif; ?>
+					</div><!-- /itn_r -->
+				</div><!-- /items_table_nav -->
+				<br />
+				<dl class="pl_info last">
+					<dt class="clear">
+						<div class="pl_infoL"><a href="company/<?php echo ($Info[0]);?>.html" target="_blank"><?php echo ($Info[1]);?></a></div>
+						<div class="icons">
+<?php if ($Info[4]!=''):?>
+							<a href="mailto/<?php echo ($Info[0]);?>" class="mail" title="Написать письмо" rel="nofollow"></a>
+<?php else:?>
+							<div class="mail"></div>
+<?php endif;?>
+<?php if ($Info[5]!='') { $wws = explode (',', $Info[5]); ?>
+							<a href="goto/<?php echo ($Info[0].'?url='.$wws[0]);?>" class="web" title="Перейти на сайт компании" rel="nofollow" target="_blank"></a>
+<?php } else { ?>
+							<div class="web"></div>
+<?php } ?>
+						</div>
+					</dt>
+					<dd>
+						Тел: <?php echo ($Info[3]);?><br />
+						Адрес: <?php echo ($Info[2]);?><br />
+						Рубрики: 
+<?php for ($i=0;$i<$rubsQty;$i++) {?>
+	<a href="prices/<?php echo ($Rubs[$i][0]);?>/"><?php echo ($Rubs[$i][1]);?></a><?php echo (($i+1)<$rubsQty?', ':''); } ?>
+					</dd>
+				</dl>
+<?php endif; ?>
+				<br /><br /><br />
+				
+			</div><!-- /inner -->
+		</div><!-- /content -->
+	
+<?php require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

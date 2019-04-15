@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: kabzavod.biznesurfo.ru
+Sitemap: http://kabzavod.biznesurfo.ru/sitemap.xml

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: goliafinfo.biznesurfo.ru
+Sitemap: http://goliafinfo.biznesurfo.ru/sitemap.xml

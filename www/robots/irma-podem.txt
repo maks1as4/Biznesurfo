@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: irma-podem.biznesurfo.ru
+Sitemap: http://irma-podem.biznesurfo.ru/sitemap.xml

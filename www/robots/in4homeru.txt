@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: in4homeru.biznesurfo.ru
+Sitemap: http://in4homeru.biznesurfo.ru/sitemap.xml

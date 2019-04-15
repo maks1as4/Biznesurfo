@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: mehzaw.biznesurfo.ru
+Sitemap: http://mehzaw.biznesurfo.ru/sitemap.xml

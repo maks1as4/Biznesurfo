@@ -1,0 +1,83 @@
+<?php require_once "../includs/head.html"; ?>
+
+				<div class="path">
+<?php for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+				</div><!-- /path -->
+
+
+				<div class="calendarWrap">
+					<div class="calendar">
+						<table >
+							<tr>
+								<td class="year" colspan="12"><?php echo $curYear; ?> год</td>
+							</tr>
+							<tr>
+<?php for($i=1;$i<13;$i++):?>
+								<!-- <td class="month<?php echo(($i==1?' first':'').($i==12?' last':'').($i==$actMonth?' active':'').($i==1?' newyear':''));?>"> -->
+								<td class="month<?php echo(($i==1?' first':'').($i==12?' last':'').($i==$actMonth?' active':''));?>">
+									<a href="exhibitions?year=<?php echo $year; ?>&mon=<?php echo($calMonths[$i][1]);?>" class="in<?php echo($i==2?' png':'');?>">
+									<span class="inin">
+										<span class="top"><?php echo($calMonths[$i][0]); ?></span>
+										<span class="bot"><?php echo($calMonths[$i][1]); ?></span>
+									</span>
+									</a>
+								</td>
+<?php endfor;?>
+							</tr>
+						</table>
+						<div class="arrow"></div>
+						
+						
+						<ul id="mycarousel" class="jcarousel-skin-tango">
+<?php for($i=0;$i<$picsQty;$i++):?>
+							<li><a href="<?php echo $Pics[$i][0][2];?>" target="_blank"><img src="i/expo/common/<?php echo $Pics[$i][0][0];?>" alt="<?php echo $Pics[$i][0][1];?>" title="<?php echo $Pics[$i][0][1];?>" height="110" width="<?php echo $Pics[$i][1];?>" /></a></li>
+<?php endfor;?>
+						</ul>
+						
+					</div><!-- /calendar -->
+				</div><!-- /calendarWrap -->
+				<br /><br />
+				
+				<h1><?php echo $tagH1;?></h1>
+<?php if($linsQty>0):?>
+				<br />
+<?php if((1==2)&&(!$lastPeriod)) { ?>	
+				«десь ¬ы найдете информацию по выставочным меропри€ти€м, которые пройдут на таких крупных выставочных площадках, как 
+<?php for($i=0;$i<$spQty;$i++) { echo $Spaces[$i]; if($i<$spQty-1) echo (', '); } ?>
+. Ќа выставках представители справочника &laquo;»ндустри€ бизнеса&raquo; достойно представ€т своих партнеров, работающих на рынке ”ральского федерального округа. 
+				<br /><br /><br />
+<?php } ?> 
+				<table class="expo_table">
+					<thead><tr>
+<?php for ($i=0;$i<$HeadersQty;$i++) echo ($Headers[$i]); ?>
+					</tr></thead>
+<?php for($i=0;$i<$linsQty;$i++):?>
+					<tr>
+						<td><?php echo (PrintRusDate ($Lins[$i][2]));?>&nbsp;-&nbsp;<?php echo (PrintRusDate ($Lins[$i][3]));?></td>
+						<td><?php echo $Lins[$i][4];?></td>
+						<td><a href="expo/<?php echo $Lins[$i][0];?>.html"><?php echo $Lins[$i][1];?></a>
+						</td>
+					</tr>
+<?php endfor;?>
+				</table>
+<?php else:?>
+				<div class="inform clear">
+					<h3>»нформаци€ о предсто€щих выставочных меропри€ти€х еще обрабатываетс€.</h3>
+				</div><!-- /inform -->
+<?php endif;?>
+				<br /><br /><br />
+				
+			</div><!-- /inner -->
+		</div><!-- /content -->
+	
+<?php require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

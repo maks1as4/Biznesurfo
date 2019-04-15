@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: penetron66.biznesurfo.ru
+Sitemap: http://penetron66.biznesurfo.ru/sitemap.xml

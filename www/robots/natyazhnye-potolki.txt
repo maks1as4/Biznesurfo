@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: natyazhnye-potolki.biznesurfo.ru
+Sitemap: http://natyazhnye-potolki.biznesurfo.ru/sitemap.xml

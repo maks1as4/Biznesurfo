@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: ucomplekt.biznesurfo.ru
+Sitemap: http://ucomplekt.biznesurfo.ru/sitemap.xml

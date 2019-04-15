@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: shir11.biznesurfo.ru
+Sitemap: http://shir11.biznesurfo.ru/sitemap.xml

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: 100gigabit.biznesurfo.ru
+Sitemap: http://100gigabit.biznesurfo.ru/sitemap.xml

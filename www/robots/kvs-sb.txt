@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: kvs-sb.biznesurfo.ru
+Sitemap: http://kvs-sb.biznesurfo.ru/sitemap.xml

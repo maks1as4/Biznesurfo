@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: sovtest.biznesurfo.ru
+Sitemap: http://sovtest.biznesurfo.ru/sitemap.xml

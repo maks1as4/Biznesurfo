@@ -1,0 +1,27 @@
+<div style="width:800px; margin:50px; font-size:16px; font-family:arial, sans-serif;">
+	<a href="/management/adm/maps-check">&larr; вернуться</a>
+	<div style="margin-top:20px;">
+<?php if ($err != ''): ?>
+		<div style="margin-bottom:20px; color:red;">
+			<p>Исправьте, пожалуйста, следующие ошибки:</p>
+			<div><?php echo $err; ?></div>
+		</div>
+<?php endif; ?>
+		<strong><?php echo $Client[1]; ?></strong><br />
+		<?php echo $Client[4]; ?><br /><br />
+		<form method="post" action="/management/adm/map-edit/<?php echo $Client[0]; ?>">
+			<div style="margin:10px 0;">
+				<label for="ucoords" style="font-weight:bold; font-size:14px;">координаты:</label><br />
+				<input type="text" name="ucoords" value="<?php echo $val_coords; ?>" style="padding:3px 5px;" size="30" maxlength="30" autocomplete="off" />
+				&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://dimik.github.io/ymaps/examples/location-tool/">Получить координаты</a>
+			</div>
+			<div style="margin:10px 0;">
+				<label for="uzoom" style="font-weight:bold; font-size:14px;">зум:</label><br />
+				<input type="text" name="uzoom" value="<?php echo $val_zoom; ?>" style="padding:3px 5px;" size="2" maxlength="2" autocomplete="off" />
+			</div>
+			<div style="margin:10px 0;">
+				<input type="submit" name="btmes" value="Сохранить" />
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: ugs8.biznesurfo.ru
+Sitemap: http://ugs8.biznesurfo.ru/sitemap.xml

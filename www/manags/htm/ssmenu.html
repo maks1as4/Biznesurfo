@@ -1,0 +1,8 @@
+<div class="menu">
+	<ul>
+		<li><a href="/manags/menu.php">В меню</a></li>
+<?php for ($i=1;$i<=$perQty;$i++): ?>
+		<li><a href="<?php echo($_SERVER['PHP_SELF'].$Periods[$i]['param']); ?>"><?php echo($Periods[$i]['name']); ?></a></li>
+<?php endfor; ?>
+	</ul>
+</div>

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: mvm.biznesurfo.ru
+Sitemap: http://mvm.biznesurfo.ru/sitemap.xml

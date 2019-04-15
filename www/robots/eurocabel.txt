@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: eurocabel.biznesurfo.ru
+Sitemap: http://eurocabel.biznesurfo.ru/sitemap.xml

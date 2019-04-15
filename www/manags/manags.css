@@ -1,0 +1,96 @@
+/* HTML tags : start */
+html, body, p, h1, h2, h3, a, img, form, table, tr, td {
+        margin: 0;
+        padding: 0;
+        border: 0}
+html {height:100%;background-color:#f2f0eb}
+body{width:985px;margin:10px auto;font-family:Arial, Helvetica, sans-serif;min-height:100%;position:relative;}
+*html body{height:100%}
+/* HTML tags */
+h1{}
+/*
+.main-top{border:2px; border-color: #00FF00;	border-style: solid;
+height:40px;padding:15px 0 0 75px;background-color:#f5f1e6}
+*/
+.main-top{padding:15px 0px 15px 75px;background-color:#f5f1e6}
+.main-bot{height:45px;color:#fff;font-size:11px;padding:80px 0 0 30px;background-color:#e5b900}
+
+.main-center{height:1200px; overflow: auto;background-color:#eae1cc;float:left; width:840px;}
+
+/* Menu */
+.menu{border:1px; border-color: #eae1cc; border-style: solid; padding:15px 0px; float:left;}
+.menu ul{margin:0;padding:0px;list-style-type:none}
+.menu ul li{margin:0px 10px;padding:5px 0px;}
+.menu ul li a{color:#3b220f;font-size:14px;font-family:Arial;font-weight:bold;text-decoration:none;display:block;padding:3px 10px}
+.menu ul li a span{font-size:16px; text-decoration:underline;}
+.menu ul li a:hover{background:#5d4733;color:#bda576}
+/* Menu */
+
+.leftbar{float:left;width:780px;padding:10px 0 0 25px}
+
+/* News */
+.m-box01{width:513px;height:206px;padding:6px 10px 0 10px;margin-bottom:15px;}
+.m-box01 table{margin:0 auto;width:100%}
+.m-box01 table td{padding:10px 0;text-align:center;width:33%}
+.m-box01 table td a{color:#f7e0a9;font-size:12px;}
+.m-box01 table td a:hover{text-decoration:none}
+.m-box01 table td p{padding-top:9px}
+/* News */
+
+/*  Main content */
+.mcont {width:85%; padding:6px 10px 0px 10px;margin-bottom:15px; margin-left: 25px; color:#009900;}
+.mcont table {margin:0 auto; width:100%; color:#7f7061; font-family: Tahoma;}
+.mcont table thead  td {border-bottom: 1px solid black; font-size:14px; padding: 10px 0px; text-align: center;}
+.mcont table td {border-bottom: 1px solid #f5f1e6; font-size:12px;}
+.mcont table td a {color:#7f7061; text-decoration:none}
+.mcont table td a:hover {text-decoration:underline}
+.mcont table td.mcleft {padding: 0px 0px 0px 10px;}
+.mcont table td.mccenter {padding: 0px; text-align: center;}
+/*  Main content*/
+
+/* Mail TOTAL */
+.mtotal {width:85%; padding:0px 50px 0px 10px; margin-left: 50px; font-size:14px; font-style: italic; color:#7f7061; text-align: right;}
+/* Mail TOTAL */
+
+/* Constructor */
+.item{border:0px; border-bottom:1px; border-color: #d9d0bb;	border-style: solid;
+width:700px;height:35px;padding:6px 10px;background-color:#eae1cc;}
+.item p{color:#1E42A6;font-size:12px;padding:0px;font-family:Tahoma}
+.desc{border:1px; border-color: #00FFFF;	border-style: solid;
+float:right;width:300px;height:35px;padding:0px;margin-top:-5px;background-color:#EEEEEE;}
+.desc p{color:#1E42A6;font-size:10px;padding:2px 10px;font-family:Tahoma}
+/* Constructor */
+.ssitem{border:0px; border-bottom:1px; border-color: #d9d0bb; border-style: solid; float:left;
+width:700px;height:auto;padding:6px 10px;background-color:#eae1cc; color:#5d4228;font-size:16px;}
+.ssitem p, .ssitem p a {color:#7f7061;font-size:14px;padding:0px;font-family:Tahoma; text-indent: 2em;}
+.ssitem span{font-size:20px;padding-left:20px;font-family:Tahoma;}
+
+.order{padding:15px;font-size:12px;}
+.order a{color:#eedbb0;font-size:21px;font-family:Tahoma;}
+.order a:hover{text-decoration:none}
+.order img{margin:0 5px 6px 5px;vertical-align:middle}
+
+.model{border:2px; border-color: #FF0000;	border-style: solid;
+position:absolute;top:280px;left:480px;color:#312019;font-size:13px}
+.model a{color:#312019;font-size:14px}
+.model a:hover{text-decoration:none}
+.model span{display:block;color:#7b6c5e}
+.model span b{font-size:14px;font-weight:normal}
+
+.rightbar{float:right;width:150px;padding-top:10px}
+.rightbar p{color:#7f7061;font-size:13px;font-weight:bold;padding-bottom:10px}
+.rightbar ul{margin:0;padding:0;list-style-type:none;font-size:13px}
+.rightbar ul li{padding:2px 0;float:left;width:100%}
+.rightbar ul li a{background:url(../images/link_sep.gif) bottom repeat-x;text-decoration:none;font-weight:bold;color:#2e4ca7;display:block;float:left;padding:2px 0;position:relative}
+.rightbar ul li a:hover{background:#2e4ca7;color:#fff;padding:2px 5px;margin-left:-5px}
+
+
+
+/* Content */
+
+/* Footer */
+#footer{padding:20px 0px 0px 0px;float:right}
+#footer a{color:#797876;font-size:11px;margin:0 2px}
+#footer a:hover{text-decoration:none}
+/* Footer */
+.clear{clear:both;font-size:1px;height:1px;}

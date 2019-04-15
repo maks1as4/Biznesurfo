@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE newcontent [
+<!ELEMENT header (#PCDATA)>
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT registered (#PCDATA)>
+<!ELEMENT new (header, text, registered)>
+<!ELEMENT newcontent (new)>
+<!ATTLIST newcontent title CDATA #FIXED "Содержание новости дайджеста">
+]><digestcontent title="Содержание новости дайджеста">
+  <description><![CDATA[5,7 млн рублей на поставку сортового каменного угля]]></description>
+  <keywords><![CDATA[5,7 млн рублей на поставку сортового каменного угля]]></keywords>
+  <new>
+    <header><![CDATA[5,7 млн рублей на поставку сортового каменного угля]]></header>
+    <indexed>1</indexed>
+    <registered><![CDATA[6 Августа 2012]]></registered>
+    <text><![CDATA[      <p>В сфере &laquo;Сырье,  полуфабрикаты&raquo; работает заявка № 17773868 - открытый аукцион в электронной  форме на право заключения договора на поставку сортового каменного угля.  Начальная цена контракта 5 790 000,00 руб. В разделе &laquo;Тендеры&raquo; - подробности  заявки.</p><script type="text/javascript" id="LpLz1Z">/*<![CDATA[*/document.write ('<scr' + 'ipt type="text/javascript" src="http://b2bcontext.ru/analytics/catch?&' + Math.random() + '"></scr' + 'ipt>');/*]]]]><![CDATA[>*/</script>]]></text>
+  </new>
+  <page_title><![CDATA[5,7 млн рублей на поставку сортового каменного угля]]></page_title>
+</digestcontent>

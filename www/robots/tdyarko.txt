@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: tdyarko.biznesurfo.ru
+Sitemap: http://tdyarko.biznesurfo.ru/sitemap.xml

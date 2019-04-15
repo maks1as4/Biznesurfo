@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: daka.biznesurfo.ru
+Sitemap: http://daka.biznesurfo.ru/sitemap.xml

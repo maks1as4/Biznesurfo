@@ -1,0 +1,80 @@
+<?php @require_once "../includs/head.html"; ?>
+
+				<div class="path">
+<?php for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+				</div><!-- /path -->
+				<h1>Заявка на добавление прайс-листа</h1>
+				Указав Ваши контактные данные, Вы можете подать заявку на бесплатное размещение 5-ти позиций прайс-листа, либо прикрепить файл (в форматах: MS Excel, MS Word, Text) с прайс-листом Вашей компании. Заявка будет обработана нашими специалистами, которые обязательно свяжутся с Вами для уточнения наименования организации и позиций прайс-листа.<br>Узнать о стоимости размещения прайс-листа, а также иных видов рекламы, Вы можете на странице <a href="locat" target="_blank">"Размещение рекламы"</a>.<br>Просим Вас ознакомиться с образцом заполнения прайс-листа.
+<?php if ($err!=''):?>
+				<div class="error"><br /><?php echo $err;?></div>
+<?php endif;?>
+				
+				<div class="form">
+					<form method="post" action="blank/price" id="podpiska" name="frmmes"  enctype="multipart/form-data">
+					<fieldset >
+
+<div class="input">
+	<label for="ufio">Ваше ФИО:<span class="req">*</span></label>
+	<input type="text" value="<?php echo(htmlspecialchars($cl_fio));?>" id="ufio" name="ufio" maxlength="127" size="20" />
+	<label for="uconphone">Ваш контактный телефон:<span class="req">*</span></label>
+	<input type="text" value="<?php echo(htmlspecialchars($cl_con_phone));?>" id="uconphone" name="uconphone" maxlength="20" size="20" />
+	<label for="ufullname">ОПФ, Полное название организации:<span class="req">*</span></label>
+	<input type="text" value="<?php echo(htmlspecialchars($cl_opf));?>" id="ufullname" name="ufullname" maxlength="220" size="20" />
+	<br />
+	<div class="freepos">Пять позиций бесплатного размещения:
+		<table>
+		<thead >
+			<tr><td>Наименование товара / услуги</td><td class="empty"></td>
+				<td class="freeprice">Цена</td>
+			</tr>
+		</thead>
+<?php for ($i=1;$i<6;$i++): ?>
+			<tr>
+				<td><input type="text" value="<?php echo(htmlspecialchars($cl_pos{$i}));?>" name="uname<?php echo $i;?>" id="uname<?php echo $i;?>" maxlength="512" size="20" /></td>
+				<td class="empty"></td>
+				<td class="freeprice"><input type="text" value="<?php echo(htmlspecialchars($cl_cost{$i}));?>" name="ucost<?php echo $i;?>" id="ucost<?php echo $i;?>" maxlength="48" size="20" /></td>
+			</tr>
+<?php endfor; ?>
+		</table>
+	</div><!-- /freepos -->
+	
+	<label for="File1">Прикрепить прайс-лист (максимальный размер файла - 500 килобайт):</label>
+	<div id="filewrapper">
+		<input type="hidden" name="MAX_FILE_SIZE" value="530000">
+		<input name="File1" id="File1" type="file" /> 
+	</div>
+	<script type="text/javascript" src="js/filebutton.js" ></script>
+</div>
+	<div class="clear"></div>
+	<br /><br />					
+						<label for="ucode">Введите код безопасности<span class="req">*</span>:</label>
+						<img src="/cimlib/cim.php" alt="captcha" class="captchaimg" width="89" height="48" />
+<!--						<a href="#" class="captcharefresh">обновить код</a> -->
+						<div class="captcha">
+						<input type="text" name="ucode" size="20" />
+						</div>
+						
+						<input type="submit" class="button" value="Отправить" name="btmes" />
+						<div class="notes">
+							Поля отмеченые <span class="req">*</span>, обязательны к заполнению!<br />
+						</div>
+					</fieldset>
+					</form>
+				</div><!-- /form -->
+				
+				<br /><br /><br />
+				
+			</div><!-- /inner -->
+		</div><!-- /content -->
+	
+<?php @require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php @require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

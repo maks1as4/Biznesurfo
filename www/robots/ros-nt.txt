@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: ros-nt.biznesurfo.ru
+Sitemap: http://ros-nt.biznesurfo.ru/sitemap.xml

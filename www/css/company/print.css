@@ -1,0 +1,24 @@
+html, body {margin:0; padding:0; height:100%; font:12px Arial, Helvetica, sans-serif;}
+
+div.print-box {width:650px; margin:0 auto; padding:60px 80px 20px;}
+div.top-left {float:left; width:250px;}
+div.top-left img.logo {margin-bottom:50px;}
+div.top-left p.info {font-size:14px; margin-bottom:0;}
+div.top-left span {font-size:15px; padding:5px 0 5px 30px; font-weight:bold;}
+div.top-left span.site {background:transparent url(../../i/company/print/inet_pr.png) no-repeat center left;}
+div.top-left span.mail {background:transparent url(../../i/company/print/mail_pr.png) no-repeat center left;}
+div.top-right {float:right; width:370px; text-align:right;}
+div.top-right div.biz-text {width:100%; text-align:left; font-weight:bold; line-height:16px; letter-spacing:1px; text-transform:uppercase;}
+div.top-right div.time {margin-bottom:50px; padding:0 5px; background:#000000; color:#ffffff;}
+div.middle {width:646px; height:396px; margin:2px 0 20px; border:2px solid #000000;}
+div.bottom-left {float:left; width:240px;}
+div.bottom-left a {color:#000000;}
+div.bottom-right {float:right; width:360px;}
+
+h1 {font-weight:normal; text-decoration:underline; margin:0; padding:0;}
+h2 {font-weight:bold; font-size:16px; margin:0; margin-bottom:10px; padding:0;}
+
+.clear {clear: both;}
+.left {float:left;}
+.right {float:right;}
+.text-spase {line-height:16px;}

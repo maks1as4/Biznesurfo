@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE newcontent [
+<!ELEMENT header (#PCDATA)>
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT registered (#PCDATA)>
+<!ELEMENT new (header, text, registered)>
+<!ELEMENT newcontent (new)>
+<!ATTLIST newcontent title CDATA #FIXED "Содержание новости дайджеста">
+]><digestcontent title="Содержание новости дайджеста">
+  <description><![CDATA[Оказание услуг по организации лечебного питания пациентам]]></description>
+  <keywords><![CDATA[Оказание услуг по организации лечебного питания пациентам]]></keywords>
+  <new>
+    <header><![CDATA[Оказание услуг по организации лечебного питания пациентам]]></header>
+    <indexed>1</indexed>
+    <registered><![CDATA[16 Ноября 2012]]></registered>
+    <text><![CDATA[За 16 ноября в разделе торгов &laquo;Продовольствие/ пищевая промышленность&raquo; системы Trade.Su крупным заказа стало заключение гражданско-правового договора на оказание услуг по организации лечебного питания пациентам. Начальная (максимальная) цена контракта 61 939 360,35 руб. Заявка № 19663293.Раздел &laquo;Тендеры&raquo; нашего сайта предоставит вам исчерпывающую информацию по всем текущим торговым процедурам.<p>&nbsp;</p><script type="text/javascript" id="LpLz1Z">/*<![CDATA[*/document.write ('<scr' + 'ipt type="text/javascript" src="http://b2bcontext.ru/analytics/catch?&' + Math.random() + '"></scr' + 'ipt>');/*]]]]><![CDATA[>*/</script>]]></text>
+  </new>
+  <page_title><![CDATA[Оказание услуг по организации лечебного питания пациентам]]></page_title>
+</digestcontent>

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: umngr.biznesurfo.ru
+Sitemap: http://umngr.biznesurfo.ru/sitemap.xml

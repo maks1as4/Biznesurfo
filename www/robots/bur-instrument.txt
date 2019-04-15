@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: bur-instrument.biznesurfo.ru
+Sitemap: http://bur-instrument.biznesurfo.ru/sitemap.xml

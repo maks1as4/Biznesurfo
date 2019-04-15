@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: uns2000.biznesurfo.ru
+Sitemap: http://uns2000.biznesurfo.ru/sitemap.xml

@@ -1,0 +1,42 @@
+<?php require_once "../includs/head.html"; ?>
+
+				<div class="path">
+<?php for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+				</div><!-- /path -->
+	
+				<h1><?php echo $tagH1;?></h1>
+				<div class="comtext clear">
+				<br />
+<?php if($picsQty>0):?>
+			<div class="highslide-gallery">
+				<div class="expoReportWrap">
+					<div class="expoReport">
+						<ul id="mycarousel" class="jcarousel-skin-tango">
+<?php for($i=0;$i<$picsQty;$i++):?>
+							<li><a href="i/expo/reports/<?php echo $Pics[$i][0][1];?>" rel="nofollow" class="highslide" onclick="return hs.expand(this)"><img src="i/expo/reports/<?php echo $Pics[$i][0][0];?>" alt="<?php echo $Pics[$i][0][2];?>" title="Нажмите для увеличения" height="110" width="<?php echo $Pics[$i][1];?>" /></a><div class="highslide-caption"><?php echo $Pics[$i][0][2];?></div></li>
+<?php endfor;?>
+						</ul>
+					</div><!-- /calendar -->
+				</div><!-- /calendarWrap -->
+			</div><!-- /highslide-gallery -->
+				<br />
+<?php endif;?>
+				<span class="anonce"><?php echo $Lins[4];?></span><br /><br />
+				<?php echo $Lins[2];?>
+				</div><!-- /comtext -->
+				<br /><br /><br />
+
+			</div><!-- /inner -->
+		</div><!-- /content -->
+	
+<?php require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

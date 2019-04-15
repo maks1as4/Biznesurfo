@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: ural-metall.biznesurfo.ru
+Sitemap: http://ural-metall.biznesurfo.ru/sitemap.xml

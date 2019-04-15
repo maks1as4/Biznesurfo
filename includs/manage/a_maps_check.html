@@ -1,0 +1,16 @@
+<div style="width:800px; margin:50px; font-size:16px; font-family:arial, sans-serif;">
+	<a href="/management/adm">&larr; вернутьс€</a>
+<?php if (count($Uncheck_maps) > 0): ?>
+<?php foreach($Uncheck_maps as $u_map): ?>
+	<div style="border-bottom:1px solid #ababab; padding-bottom:15px; margin-top:15px;">
+		<span style="color:#bcbcbc; font-size:14px;">#<?php echo $u_map[0]; ?></span> <strong><?php echo $u_map[1]; ?></strong>
+		<div>
+			<?php echo $u_map[2]; ?> <span style="color:#bcbcbc; font-size:14px;">( <?php echo ($u_map[3] != '') ? $u_map[3] : '\'\''; ?> | <?php echo $u_map[4]; ?> )</span>
+		</div>
+		<a href="/management/adm/map-edit/<?php echo $u_map[0]; ?>" style="color:#3333aa;">изменить</a>
+	</div>
+<?php endforeach; ?>
+<?php else: ?>
+	<p>Ќет неопределенных координат.</p>
+<?php endif; ?>
+</div>

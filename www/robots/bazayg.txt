@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: bazayg.biznesurfo.ru
+Sitemap: http://bazayg.biznesurfo.ru/sitemap.xml

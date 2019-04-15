@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: avtc-seo.biznesurfo.ru
+Sitemap: http://avtc-seo.biznesurfo.ru/sitemap.xml

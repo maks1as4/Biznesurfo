@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: koper.biznesurfo.ru
+Sitemap: http://koper.biznesurfo.ru/sitemap.xml

@@ -1,0 +1,213 @@
+<?php require_once "../../includs/control/head.html"; ?>
+
+<div class="box-header">
+	<div class="pull-left box-header-home"><a href="/kabinet"><i class="icon-home"></i></a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point">“овары</div>
+	<div class="pull-left box-header-separator"></div>
+</div>
+<div class="box-content">
+	<div class="box-inner-main">
+		<div class="title-page">
+			<h2>“овары</h2>
+		</div>
+<?php if ($show_add_warning){ ?>
+		<!-- Warning Message -->
+		<div class="alert alert-error">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<p><strong>¬нимание!</strong></p>
+			"<?php echo $client_info['t_name']; ?>" нельз€ добовл€ть более <?php echo $client_info['t_product_limit']; ?> товаров.
+		</div>
+		<!-- /Warning Message -->
+<?php } ?>
+		<div class="add-wrapper">
+			<p>
+				<i class="icon-info-sign icon-tab-left"></i>¬сего добавлено товаров: <?php echo $client_info['count_price']; ?> из <?php echo $client_info['t_product_limit']; ?>, <?php echo ($client_info['t_product_add']) ? 'вы можете добавить еще '.$client_info['t_product_left'].'.' : 'вы не можете больше добавл€ть товары.'; ?>
+			</p>
+			<?php echo ($client_info['t_product_add']) ? '<a href="/kabinet/product-add" class="btn btn-primary">' : '<a href="javascript://" class="btn btn-primary disabled">'; ?><i class="icon-plus-sign icon-white icon-tab-left"></i>ƒобавить товар</a>&nbsp;&nbsp;&nbsp;
+			<a href="/kabinet/price-info" class="btn btn-primary"><i class="icon-file icon-white icon-tab-left"></i>«агрузить товары через Excel</a>
+		</div>
+<?php if ($count_products > 0){ ?>
+		<div class="actions-panel1-wrapper">
+			<div class="pull-left">
+				<div class="btn-group">
+					<button id="change-checked" class="btn"><i class="icon-chekbox icon-chekbox-none"></i></button>
+					<button class="btn dropdown-toggle" data-toggle="dropdown">
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li><a id="all-checked" href="javascript://">выделить все товары</a></li>
+						<li><a id="all-unchecked" href="javascript://">отменить выделеное</a></li>
+						<li class="divider"></li>
+						<li><a id="check-checked" href="javascript://">выделить проверенное</a></li>
+						<li><a id="review-checked" href="javascript://">выделить непроверенное</a></li>
+					</ul>
+				</div>
+				<div id="actions" class="btn-group">
+					<button id="multi-archive" class="btn disabled"><i class="icon-share icon-tab-left"></i>в архив</button>
+					<button id="multi-delete" class="btn disabled"><i class="icon-trash icon-tab-left"></i>удалить</button>
+				</div>
+			</div>
+			<div class="pull-right sort-inner">
+				<div class="sort">
+					—ортировать по:&nbsp;
+<?php if (!empty($arr_rubric)){ ?>
+					<span class="label"><a href="<?php echo $link_rubric; ?>" class="white underlined">рубрикам</a> <i class="icon-arr-white <?php echo ($arr_rubric == 'asc') ? 'icon-arr-white-down' : 'icon-arr-white-up'; ?>"></i></span>&nbsp;&nbsp;
+<?php }else{ ?>
+					<span class="label"><a href="<?php echo $link_rubric; ?>" class="white underlined">рубрикам</a> <i class="icon-arr-white icon-arr-white-up-down"></i></span>&nbsp;&nbsp;
+<?php } ?>
+<?php if (!empty($arr_name)){ ?>
+					<span class="label"><a href="<?php echo $link_name; ?>" class="white underlined">наименованию</a> <i class="icon-arr-white <?php echo ($arr_name == 'asc') ? 'icon-arr-white-down' : 'icon-arr-white-up'; ?>"></i></span>&nbsp;&nbsp;
+<?php }else{ ?>
+					<span class="label"><a href="<?php echo $link_name; ?>" class="white underlined">наименованию</a> <i class="icon-arr-white icon-arr-white-up-down"></i></span>&nbsp;&nbsp;
+<?php } ?>
+<?php if (!empty($arr_price)){ ?>
+					<span class="label"><a href="<?php echo $link_price; ?>" class="white underlined">цене</a> <i class="icon-arr-white <?php echo ($arr_price == 'asc') ? 'icon-arr-white-down' : 'icon-arr-white-up'; ?>"></i></span>
+<?php }else{ ?>
+					<span class="label"><a href="<?php echo $link_price; ?>" class="white underlined">цене</a> <i class="icon-arr-white icon-arr-white-up-down"></i></span>
+<?php } ?>
+				</div>
+			</div>
+		</div>
+		<form id="multi-form" method="post" action="/kabinet/product/multi-actions">
+			<table class="table table-kabinet">
+				<tbody>
+<?php if ($split){ ?>
+<?php for ($i=0; $i<$count_products; $i++){ ?>
+<?php $name = getDataFromDB($Products[$i][1]); ?>
+<?php if ($rubric_id != $Products[$i][9]){ ?>
+<?php $rubric_id =  $Products[$i][9]; ?>
+					<tr class="rubric">
+						<td colspan="4"><a href="javascript://"><?php echo getDataFromDB($Products[$i][4]); ?></a></td>
+					</tr>
+<?php } ?>
+					<tr class="tr-hover<?php echo ($Products[$i][8] != 0) ? ' error' : ''; ?>">
+						<td class="checkbox">
+							<label class="checkbox inline"><input type="checkbox" name="multi_items[]"<?php echo ($Products[$i][8] != 0) ? ' class="review"' : ''; ?> value="<?php echo $Products[$i][0]; ?>" /></label>
+						</td>
+<?php if ($Products[$i][5] != NULL){ ?>
+						<td class="picture"><img src="/i/products/<?php echo $Products[$i][5]; ?>_small.<?php echo $Products[$i][6]; ?>" class="img-polaroid" /></td>
+<?php }else{ ?>
+						<td class="picture"><img src="/i/kabinet/no-image.png" class="img-polaroid" /></td>
+<?php } ?>
+						<td>
+<?php if ($Products[$i][8] != 0){ ?>
+							<div class="review"><i class="icon-time icon-tab-left"></i>товар находитс€ на проверке</div>
+<?php } ?>
+							<a href="/kabinet/product-edit/<?php echo $Products[$i][0]; ?>"><?php echo $name; ?></a>
+							<div class="actions-links">
+								<i class="icon-edit icon-tab-left"></i><a href="/kabinet/product-edit/<?php echo $Products[$i][0]; ?>" class="gray underlined">изменить</a>
+								<i class="icon-share icon-tab-left"></i><a href="/kabinet/product-archive/<?php echo $Products[$i][0]; ?>" class="gray underlined">в архив</a>
+								<i class="icon-zoom-in icon-tab-left"></i><a href="<?php echo ($translit_company == '') ? 'product/'.$Products[$i][7].'.html' : 'http://'.$translit_company.'.'.$url3Href.'/product/'.$Products[$i][7].'.html'; ?>" class="gray underlined" target="_blank">просмотр</a>
+								<i class="icon-remove-sign icon-tab-left"></i><a href="/kabinet/product-delete/<?php echo $Products[$i][0]; ?>" id="id<?php echo $Products[$i][0]; ?>" class="delete-product gray underlined set-red">удалить</a>
+							</div>
+						</td>
+						<td class="price">
+<?php if ($Products[$i][2] == 2){ ?>
+							<span class="muted">цена договорна€</span>
+<?php }else{ ?>
+							<?php echo ($Products[$i][2] == 1) ? 'от ' : ''; ?><?php echo $Products[$i][3]; ?> <i class="icon-rub"></i>
+<?php } ?>
+						</td>
+					</tr>
+<?php } ?>
+<?php }else{ ?>
+<?php foreach ($Products as $product){ ?>
+<?php $name = getDataFromDB($product[1]); ?>
+					<tr class="tr-hover<?php echo ($product[8] != 0) ? ' error' : ''; ?>">
+						<td class="checkbox">
+							<label class="checkbox inline"><input type="checkbox" name="multi_items[]"<?php echo ($product[8] != 0) ? ' class="review"' : ''; ?> value="<?php echo $product[0]; ?>" /></label>
+						</td>
+<?php if ($product[5] != NULL){ ?>
+						<td class="picture"><img src="/i/products/<?php echo $product[5]; ?>_small.<?php echo $product[6]; ?>" class="img-polaroid" /></td>
+<?php }else{ ?>
+						<td class="picture"><img src="/i/kabinet/no-image.png" class="img-polaroid" /></td>
+<?php } ?>
+						<td>
+<?php if ($product[8] != 0){ ?>
+							<div class="review"><i class="icon-time icon-tab-left"></i>товар находитс€ на проверке</div>
+<?php } ?>
+							<a href="/kabinet/product-edit/<?php echo $product[0]; ?>"><?php echo $name; ?></a>
+							<div class="actions-links">
+								<i class="icon-edit icon-tab-left"></i><a href="/kabinet/product-edit/<?php echo $product[0]; ?>" class="gray underlined">изменить</a>
+								<i class="icon-share icon-tab-left"></i><a href="/kabinet/product-archive/<?php echo $product[0]; ?>" class="gray underlined">в архив</a>
+								<i class="icon-zoom-in icon-tab-left"></i><a href="<?php echo ($translit_company == '') ? 'product/'.$product[7].'.html' : 'http://'.$translit_company.'.'.$url3Href.'/product/'.$product[7].'.html'; ?>" class="gray underlined" target="_blank">просмотр</a>
+								<i class="icon-remove-sign icon-tab-left"></i><a href="/kabinet/product-delete/<?php echo $product[0]; ?>" id="id<?php echo $product[0]; ?>" class="delete-product gray underlined set-red">удалить</a>
+							</div>
+						</td>
+						<td class="price">
+<?php if ($product[2] == 2){ ?>
+							<span class="muted">цена договорна€</span>
+<?php }else{ ?>
+							<?php echo ($product[2] == 1) ? 'от ' : ''; ?><?php echo $product[3]; ?> <i class="icon-rub"></i>
+<?php } ?>
+						</td>
+					</tr>
+<?php } ?>
+<?php } ?>
+				</tbody>
+			</table>
+			<input id="multi-action" type="hidden" name="multi_action" value="" />
+		</form>
+		<div class="clearfix">
+<?php if (isset($maxPageNo) && (!empty($maxPageNo)) && $maxPageNo > 1){ ?>
+			<div class="pull-left">
+				<div class="pagination pagination-centered">
+					<ul>
+<?php
+if ($pageNavQty>0)
+	 for ($i=0; $i<$pageNavQty; $i++)
+		echo $PageNav[$i];
+?>
+					</ul>
+				</div>
+			</div>
+<?php } ?>
+			<div class="actions-panel2-wrapper pull-right">
+				<form id="set-count-pages" class="form-horizontal" method="post" action="/kabinet">
+					<div class="control-group">
+						<label class="control-label">“оваров на странице:</label>
+						<div class="controls">
+							<select id="page-selector" class="span1" name="count">
+								<option value="10"<?php echo ($conut_pages == 10) ? ' selected' : ''; ?>>10</option>
+								<option value="20"<?php echo ($conut_pages == 20) ? ' selected' : ''; ?>>20</option>
+								<option value="40"<?php echo ($conut_pages == 40) ? ' selected' : ''; ?>>40</option>
+								<option value="60"<?php echo ($conut_pages == 60) ? ' selected' : ''; ?>>60</option>
+								<option value="100"<?php echo ($conut_pages == 100) ? ' selected' : ''; ?>>100</option>
+								<option value="999999"<?php echo ($conut_pages == 999999) ? ' selected' : ''; ?>>все</option>
+							</select>
+							<span class="help-inline">
+								<span class="label label-lazurin"><a href="javascript://" id="show-all" class="white underlined">показать все товары</a></span>
+							</span>
+						</div>
+					</div>
+					<input type="hidden" name="action" value="count_pages" />
+				</form>
+			</div>
+		</div>
+<?php }else{ ?>
+		Ќет активных товаров.
+<?php } ?>
+	</div><!-- /box-inner-main -->
+</div><!-- /box-content -->
+
+<!-- delete modal -->
+<div id="delete-modal" class="modal-wrapper">
+	<div class="modal-head">
+		<a href="javascript://" class="modal-close close-x" title="закрыть"></a>
+	</div>
+	<div class="question"></div>
+	<div class="modal-foot">
+		<a href="javascript://" class="yes btn btn-primary"><i class="icon-trash icon-white icon-tab-left"></i>удалить</a>&nbsp;&nbsp;&nbsp;
+		<a href="javascript://" class="modal-close btn"><i class="icon-refresh icon-tab-left"></i>отмена</a>
+	</div>
+</div>
+<!-- /delete modal -->
+
+<!-- preload imgs -->
+<div class="preload">
+	<img src="/i/kabinet/modal-close.png" />
+</div>
+<!-- /preload imgs -->
+
+<?php require_once "../../includs/control/foot.html"; ?>

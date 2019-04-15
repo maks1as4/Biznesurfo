@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: semokna.biznesurfo.ru
+Sitemap: http://semokna.biznesurfo.ru/sitemap.xml

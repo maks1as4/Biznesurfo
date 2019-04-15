@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
+	<title>Статистика по прайс-листам.</title>
+	<link href="manags.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="main-top"><h1>Просмотр статистики по прайс-листам</h1></div>
+<?php @require_once "htm/ssmenu.html"; ?>
+<div class="main-center">
+	<div class="order">за <?php echo($Periods[$perSel]['name']); ?></div>
+	<div class="mtotal">Итого на прайс-листы <b><?php echo($totals); ?></b> визитов</div>
+	<div class="mcont">
+		<table cellspacing="0" cellpadding="0"><col width="55%" /><col width="15%" /><col width="15%" /><col width="15%" />
+			<thead><td>Наименование рубрики</td><td>Всего визитов</td><td>На подстраницы</td><td>От общего</td></thead>
+<?php for ($i=0;$i<$numRows;$i++):?>
+			<tr><td class="mcleft"><a href="/manags/ssclient.php<?php echo ($Periods[$perSel]['param'].'&id='.$Prices[$i][2]);?>"><?php echo ($Prices[$i][0]);?></a></td><td class="mccenter"><?php echo ($Prices[$i][1]);?></td><td class="mccenter"><?php echo ($Prices[$i][3]);?></td><td class="mccenter"><?php echo ($Prices[$i][4]);?></td></tr>
+<?php endfor; ?>
+		</table>
+	</div>
+</div>
+</body>
+</html>

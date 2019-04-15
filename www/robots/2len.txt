@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: 2len.biznesurfo.ru
+Sitemap: http://2len.biznesurfo.ru/sitemap.xml

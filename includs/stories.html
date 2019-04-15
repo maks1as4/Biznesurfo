@@ -1,0 +1,35 @@
+<?php require_once "../includs/head.html"; ?>
+
+				<div class="path">
+<?php for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+				</div><!-- /path -->
+	
+				<h1><?php echo $tagH1;?></h1>
+				<div class="comtext clear">
+				<?php echo $stBody;?>
+				</div><!-- /comtext -->	
+
+				<br />
+				<div class="offerarticles">
+					Не секрет, что сегодня обмен статьями является одним из эффективных способов продвижения сайта. 
+					Как показывает практика, тематические  статьи привлекают максимальное количество целевых пользователей. 
+					Поэтому мы предлагаем обмен статьями с нашим сайтом.
+					Пишите нам: <a href="mailto:info@biznesurfo.ru">info@biznesurfo.ru</a>
+				</div>
+				
+				<br /><br /><br />
+				
+			</div><!-- /inner -->
+		</div><!-- /content -->
+	
+<?php require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

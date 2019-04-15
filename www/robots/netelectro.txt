@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: netelectro.biznesurfo.ru
+Sitemap: http://netelectro.biznesurfo.ru/sitemap.xml

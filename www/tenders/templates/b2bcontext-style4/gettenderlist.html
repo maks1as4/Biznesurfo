@@ -1,0 +1,78 @@
+<script type="text/javascript">
+function b2b_sort(name)
+{
+    var sort_pointer = 'desc';
+    if(name == '<?php echo $sort_field;?>')
+    {
+        if('<?php echo $sort_pointer;?>' == 'desc') sort_pointer = 'asc';
+    }
+    
+    location.href = '<?php echo $page_sort_href;?>&sort_field='+name+'&sort_pointer='+sort_pointer;
+}
+</script>
+
+<div class="b2b84109_non_wrapper">
+    <div class="b2b84109_content b2b84109_ph-16">
+        <!--[if IE 6]><table class="b2b84109_fix b2b84109_c-100"><tr><td class="b2b84109_fix"><![endif]-->
+        <div class="b2b84109_h3 b2b84109_white b2b84109_bg-red" style="padding:6px;"><a href="<?php echo $script_name;?>" style="color: #FFF;">Рубрикатор</a> :: <?php echo $header;?></div>
+        <p class=" b2b84109_f-13">Всего найдено тендеров:<span class="b2b84109_lt-gray"> <?php echo $full_count;?></span></p>
+        
+				<?php if($pages_present):?>
+        <div class="b2b84109_pages">
+            <?php foreach($pages as $page):?>
+            <?php if($page['page_href'] != ''):?>
+                <a href ="<?php echo $page['page_href'];?>" class="b2b84109_<?php echo ($page['cur_page']==1)?'cur_page':'other_page';?>" ><?php echo $page['page_title'];?></a>&nbsp;								
+            <?php else:?>
+                <span class="b2b84109_no_href"><?php echo $page['page_title'];?></span>&nbsp;
+            <?php endif;?>
+            <?php endforeach;?>
+        </div>      
+        <?php endif;?>      
+
+        <!-- Формирует таблицу с иследованиями -->
+        <table class="b2b84109_spec b2b84109_rs-table b2b84109_f-12" id="b2b_st1_sort_fr">
+        <tr>
+            <th style="cursor:pointer; width: 80%;" 
+                onclick="b2b_sort('header');">Наименование тендера
+                <span><?php echo ($sort_field == 'header')?$sort_pointer_symb:'';?></span></th>
+            <th style="cursor:pointer; width: 10%;" 
+                onclick="b2b_sort('startdate');">Время<br>действия
+                <span><?php echo ($sort_field == 'startdate')?$sort_pointer_symb:'';?></span></th>
+            <th style="cursor:pointer; width: 10%;" 
+                onclick="b2b_sort('cena_contrakta');">Цена контракта,<br> руб.
+                <span><?php echo ($sort_field == 'cena_contrakta')?$sort_pointer_symb:'';?></span></th>
+        </tr>
+
+        <!-- Выводит тендерами на страницу -->
+       <?php foreach($tenders as $tender):?>
+        <tr>
+                <td class="b2b84109_n-u b2b84109_f-14">
+                    <div style="padding-top:5px!important;padding-bottom:5px!important;">
+                    <b><a class="b2b84109_tender_header" href="<?php echo $tender['href'];?>"><?php echo $tender['header'];?></a></b></div><br>
+                    <span class="b2b84109_price"><?php echo $tender['anons'];?></span>                
+                </td>
+                <td class="b2b84109_price"><?php echo $tender['startdate'];?> - <?php echo $tender['stopdate'];?></td>
+                <td><b class="b2b84109_price"><?php echo $tender['cena_contrakta'];?></b></td>
+        </tr>        
+       <?php endforeach;?>
+
+        </table>
+
+        <?php if($pages_present):?>
+        <div class="b2b84109_pages">
+            <?php foreach($pages as $page):?>
+            <?php if($page['page_href'] != ''):?>
+                <a href ="<?php echo $page['page_href'];?>" class="b2b84109_<?php echo ($page['cur_page']==1)?'cur_page':'other_page';?>" ><?php echo $page['page_title'];?></a>&nbsp;								
+            <?php else:?>
+                <span class="b2b84109_no_href"><?php echo $page['page_title'];?></span>&nbsp;
+						<?php endif;?>
+            <?php endforeach;?>
+        </div>      
+        <?php endif;?>       
+        
+        <br>
+        Не нашли подходящего тендера? Бесплатно <a href="<?php echo $registerform_link;?>">зарегистрируйтесь</a> в крупнейшей системе по тендерам и закупкам и получите помощь персонального менеджера
+        
+    <!--[if IE 6]></td></tr></table><![endif]-->
+    </div>
+</div>

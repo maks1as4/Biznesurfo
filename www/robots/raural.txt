@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: raural.biznesurfo.ru
+Sitemap: http://raural.biznesurfo.ru/sitemap.xml

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: ngsgroup.biznesurfo.ru
+Sitemap: http://ngsgroup.biznesurfo.ru/sitemap.xml

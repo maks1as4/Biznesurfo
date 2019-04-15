@@ -1,0 +1,25 @@
+<?php require_once "../../includs/control/head.html"; ?>
+
+<div class="box-header">
+	<div class="pull-left box-header-home"><a href="/kabinet"><i class="icon-home"></i></a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point"><a href="/kabinet">Товары</a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point">Удалить картинку товара</div>
+	<div class="pull-left box-header-separator"></div>
+</div>
+<div class="box-content">
+	<div class="box-inner-main">
+		<div class="title-page">
+			<h2>Удалить картинку товара</h2>
+			<p class="pull-right"><a href="/kabinet/product-edit/<?php echo $tovar_id; ?>" class="btn btn-link">&larr; вернуться назад</a></p>
+		</div>
+		<div class="delete-confirm">
+			<h5>Вы уверенны, что хотите удалить картинку?</h5>
+			<a href="/kabinet/product-delete-image/<?php echo $image_id; ?>?confirm" class="btn btn-primary"><i class="icon-trash icon-white icon-tab-left"></i>удалить</a>&nbsp;&nbsp;&nbsp;
+			<a href="/kabinet/product-edit/<?php echo $tovar_id; ?>" class="btn"><i class="icon-refresh icon-tab-left"></i>отмена</a>
+		</div>
+	</div><!-- /box-inner-main -->
+</div><!-- /box-content -->
+
+<?php require_once "../../includs/control/foot.html"; ?>

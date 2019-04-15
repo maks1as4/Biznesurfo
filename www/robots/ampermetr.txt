@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: ampermetr.biznesurfo.ru
+Sitemap: http://ampermetr.biznesurfo.ru/sitemap.xml

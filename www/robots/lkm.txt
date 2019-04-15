@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: lkm.biznesurfo.ru
+Sitemap: http://lkm.biznesurfo.ru/sitemap.xml

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: drsuekb.biznesurfo.ru
+Sitemap: http://drsuekb.biznesurfo.ru/sitemap.xml

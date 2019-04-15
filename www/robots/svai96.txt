@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: svai96.biznesurfo.ru
+Sitemap: http://svai96.biznesurfo.ru/sitemap.xml

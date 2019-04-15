@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title><?php echo $title;?></title>
+<base href="http://<?php echo $baseHref;?>" /> 
+<meta name="keywords" content="<?php echo $keyws;?>" />
+<meta name="Description" content="<?php echo $descr;?>" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="/css/company/print.css" media="screen,print" />
+</head>
+<body onLoad="window.print();">
+<div class="print-box">
+	<div>
+		<div class="top-left">
+			<img src="/i/company/print/logo_pr.png" class="logo" width="229" height="48" alt="ООО &laquo;Индустрия бизнеса&raquo;" /><br />
+			<h1><?php echo $tagH1; ?></h1>
+			<p class="info">
+				<?php echo $Client[1]; ?><br />
+				<?php echo $all_phones; ?><br />
+				<div style="height:10px;"></div>
+<?php if ($count_sites > 0): ?>
+				<span class="site">
+					<?php echo $all_sites; ?>
+				</span><!-- /site -->
+				<div style="height:10px;"></div>
+<?php endif; ?>
+<?php if ($count_emails > 0): ?>
+				<span class="mail">
+					<?php echo $all_emails; ?>
+				</span><!-- /mail -->
+				<div style="height:10px;"></div>
+<?php endif; ?>
+			</p><!-- /info -->
+		</div><!-- /top-left -->
+		<div class="top-right">
+			<div class="biz-text">Рекламно-информационный <nobr>бизнес-справочник</nobr> уральского федерального округа</div>
+			<div class="time">
+				<div class="left"><?php echo $baseHref; ?></div>
+				<div class="right"><?php echo $time; ?></div>
+				<div class="clear"></div>
+			</div><!-- /time -->
+<?php if ($Client[2]!=''): ?>
+			<img <?php echo $Client[2]; ?> />
+<?php endif; ?>
+		</div><!-- /top-right -->
+		<div class="clear"></div>
+	</div>
+<?php if (($Client[3]!='') && ($Client[4]!='0')): ?>
+	<div class="middle">
+		<?php echo $YandexStatImg; ?>
+	</div>
+<?php endif; ?>
+	<div>
+		<div class="bottom-left">
+			<h2>Рубрики:</h2>
+			<div class="text-spase">
+<?php for ($i=0; $i<$rubsQty; $i++): ?>
+<?php if ($Rubs[$i][0]=='q'): ?>
+				<?php echo $Rubs[$i][1]; ?><br />
+<?php else: ?>
+				<u><?php echo $Rubs[$i][1]; ?></u><br />
+<?php endif; ?>
+<?php endfor; ?>
+			</div>
+		</div><!-- /bottom-left -->
+		<div class="bottom-right">
+<?php if ($Client[5] != ''): ?>
+			<h2>О компании:</h2>
+			<div class="text-spase">
+				<?php echo $Client[5]; ?>
+			</div>
+<?php endif; ?>
+		</div><!-- /bottom-right -->
+		<div class="clear"></div>
+	</div>
+</div>
+</body>
+</html>

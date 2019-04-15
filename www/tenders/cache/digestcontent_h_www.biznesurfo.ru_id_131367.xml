@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE newcontent [
+<!ELEMENT header (#PCDATA)>
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT registered (#PCDATA)>
+<!ELEMENT new (header, text, registered)>
+<!ELEMENT newcontent (new)>
+<!ATTLIST newcontent title CDATA #FIXED "Содержание новости дайджеста">
+]><digestcontent title="Содержание новости дайджеста">
+  <description><![CDATA[Поставка плодородного грунта]]></description>
+  <keywords><![CDATA[Поставка плодородного грунта]]></keywords>
+  <new>
+    <header><![CDATA[Поставка плодородного грунта]]></header>
+    <indexed>1</indexed>
+    <registered><![CDATA[13 Января 2013]]></registered>
+    <text><![CDATA[По данным информационной системы Trade.su, для крупных поставщиков каменного угля 11 января  в раздел &quot;Сырье, полуфабрикаты&quot; поступил очередной объемный заказ. Организация проводит открытый запрос цен на поставку плодородного грунта. №612134. Начальная максимальная стоимость 1 878 060,00 руб. в том числе НДС. Заявка № 20739075 доступна в базе. Более подробная информация по торгам представлена в разделе &laquo;Тендеры&raquo;.  <script type="text/javascript" id="LpLz1Z">/*<![CDATA[*/document.write ('<scr' + 'ipt type="text/javascript" src="http://b2bcontext.ru/analytics/catch?&' + Math.random() + '"></scr' + 'ipt>');/*]]]]><![CDATA[>*/</script>]]></text>
+  </new>
+  <page_title><![CDATA[Поставка плодородного грунта]]></page_title>
+</digestcontent>

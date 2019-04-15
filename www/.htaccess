@@ -1,0 +1,227 @@
+Options +FollowSymLinks -Indexes
+DirectoryIndex index.php
+ErrorDocument 404 /page404.php
+RewriteEngine on
+RewriteBase /
+
+<IfModule mod_expires.c>
+  <FilesMatch ".(css|js|png|ico)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 year"
+  </FilesMatch>
+  <FilesMatch ".(swf|gif|jpg)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 day"
+  </FilesMatch>
+</IfModule>
+
+<Files "mysql/*">
+order allow,deny
+deny from all
+</Files>
+
+#Закрываем сайт на время обновления
+#RewriteCond %{REMOTE_ADDR} !=79.172.27.132
+#RewriteRule ^.*$ page503.php [L]
+#RewriteRule ^(.*)$ $1?SiteClosed [QSA,DPI]
+
+# Блокируем вторичный обход правил
+RewriteCond %{ENV:REDIRECT_FINISH} !^$
+RewriteRule .* - [L,E=FINISH:1]
+RewriteRule .* - [E=FINISH:1]
+
+# 301-редирект с biznesurfo.ru на www.biznesurfo.ru
+RewriteCond %{HTTP_HOST} ^biznesurfo\.ru$ [NC]
+RewriteRule ^(.*)$ http://www.biznesurfo.ru/$1 [R=301,L]
+
+# 301-редирект с www.xxx.biznesurfo.ru на xxx.biznesurfo.ru
+RewriteCond %{HTTP_HOST} ^www\.([a-z0-9-]{1,20})\.biznesurfo\.ru$ [NC]
+RewriteRule ^(.*)$ http://%1.biznesurfo.ru/$1 [R=301,L]
+
+# Простые файлы отдаем напрямую
+RewriteRule \.(js|css|gif|jpg|png|swf|jpeg|doc|xls)$ - [L,NC]
+
+# Каталоги отдаем напрямую
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule .+ - [L]
+
+# Убираем слэши на конце урлов
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# Некоторые файлы нужно отдавать ДО обработки виртуальных поддоменов
+RewriteRule ^page404.php - [L]
+RewriteRule ^favicon\.ico$ - [L]
+
+# Поддержка виртуальных поддоменов 3-го уровня
+RewriteCond %{HTTP_HOST} !^www\.biznesurfo\.ru [NC]
+RewriteCond %{HTTP_HOST} ^([a-z0-9-]{1,20})\.biznesurfo\.ru [NC]
+RewriteCond %{REQUEST_URI} !^/ajax/
+RewriteRule ^(.*)$ company/_%1/$1 [DPI]
+RewriteRule ^(.+)/$ $1
+
+# Отдельные странички
+RewriteRule ^diploms$ diploms.php [L]
+RewriteRule ^foto$ foto.php [L]
+RewriteRule ^info$ info.php [L]
+RewriteRule ^contacts$ contacts.php [L]
+RewriteRule ^partners$ partners.php [L]
+RewriteRule ^jobs$ jobs.php [L]
+RewriteRule ^locat$ locat.php [L]
+RewriteRule ^message$ message.php [L]
+RewriteRule ^choose-region$ choose_region.php [L]
+RewriteRule ^agreement$ agreement.php [L]
+
+# Календарь выставок
+RewriteRule ^expo/([0-9]+).html$ expo.php?eid=$1 [L,QSA]
+RewriteRule ^expo/([\w-]+).html$ expo.php?eurl=$1 [L,QSA]
+RewriteRule ^expo$ expo.php [L]
+RewriteRule ^exhibitions/([0-9]+)(?:\.html)?$ expotype.php?pno=$1 [L,QSA]
+RewriteRule ^exhibitions$ expotype.php [L]
+
+# Отчет по выставкам
+RewriteRule ^expo_reports/([0-9]+)(?:\.html)?$ expo_reports_type.php?pno=$1 [L,QSA]
+RewriteRule ^expo_reports$ expo_reports_type.php?knk [L,QSA]
+RewriteRule ^expo/reports/([0-9]+).html$ exporeport.php?eid=$1 [L,QSA]
+RewriteRule ^expo/reports/([\w-]+).html$ exporeport.php?eurl=$1 [L,QSA]
+RewriteRule ^expo/reports$ exporeport.php [L]
+RewriteRule ^expo/preview/innoprom-2011.html$ innoprom2011.php [L]
+
+RewriteRule ^genexcel$ genexcel.php [L]
+RewriteRule ^getprice/([0-9]+)$ getprice.php?fid=$1 [L]
+
+# Новости
+RewriteRule ^newstype/([0-9]+)(?:\.html)?$ newstype.php?pno=$1 [L,QSA]
+RewriteRule ^newstype$ newstype.php?knk [L,QSA]
+RewriteRule ^news/([0-9]+).html$ news.php?nid=$1 [L,QSA]
+
+# Авторизация - регистрация - востановление пароля
+RewriteRule ^subscribe$ order_blank.php [L]
+RewriteRule ^add-company$ registration.php [L]
+RewriteRule ^add-company/thanks$ registration_send.php [L]
+RewriteRule ^confirm/([a-z0-9]{32})$ registration_confirm.php?hash=$1 [L,QSA]
+RewriteRule ^enter$ authorization.php [L,QSA]
+RewriteRule ^exit$ authorization.php?logout [L,QSA]
+RewriteRule ^forgot-password$ forgot_password.php [L]
+RewriteRule ^forgot-password/send$ forgot_password_send.php [L]
+RewriteRule ^change-password/([a-z0-9]{32})$ change_password.php?hash=$1 [L,QSA]
+RewriteRule ^add-exists$ registration_exists.php [L]
+RewriteRule ^add-choice/([\w-]+)/([0-9]+)$ registration_choice.php?action=$1&client=$2 [L,QSA]
+RewriteRule ^add-choice/([\w-]+)$ registration_choice.php?action=$1 [L,QSA]
+RewriteRule ^access-confirm$ registration_get_access.php [L]
+
+# Кабинет
+RewriteRule ^kabinet$ control/index.php [L]
+RewriteRule ^kabinet/product-add$ control/product_add.php [L]
+RewriteRule ^kabinet/product-edit/([0-9]+)$ control/product_edit.php?tid=$1 [L,QSA]
+RewriteRule ^kabinet/product-archive/([0-9]+)$ control/product_archive.php?tid=$1 [L,QSA]
+RewriteRule ^kabinet/product-delete/([0-9]+)$ control/product_delete.php?tid=$1 [L,QSA]
+RewriteRule ^kabinet/product-delete-image/([0-9]+)$ control/product_delete_image.php?pid=$1 [L,QSA]
+RewriteRule ^kabinet/product/multi-actions$ control/product_multi_actions.php [L]
+RewriteRule ^kabinet/archive$ control/archive.php [L]
+RewriteRule ^kabinet/archive/product-edit/([0-9]+)$ control/archive_product_edit.php?tid=$1 [L,QSA]
+RewriteRule ^kabinet/archive/product-publish/([0-9]+)$ control/archive_product_publish.php?tid=$1 [L,QSA]
+RewriteRule ^kabinet/archive/product-delete/([0-9]+)$ control/archive_product_delete.php?tid=$1 [L,QSA]
+RewriteRule ^kabinet/archive/product-delete-image/([0-9]+)$ control/archive_product_delete_image.php?pid=$1 [L,QSA]
+RewriteRule ^kabinet/archive/multi-actions$ control/archive_multi_actions.php [L]
+RewriteRule ^kabinet/about$ control/about.php [L]
+RewriteRule ^kabinet/activities-change$ control/activities_change.php [L]
+RewriteRule ^kabinet/address-change$ control/address_change.php [L]
+RewriteRule ^kabinet/contacts-add$ control/contacts_add.php [L]
+RewriteRule ^kabinet/contacts-change$ control/contacts_change.php [L]
+RewriteRule ^kabinet/([\w-]+)-add$ control/contacts_add_row.php?type=$1 [L,QSA]
+RewriteRule ^kabinet/([\w-]+)-edit/([0-9]+)$ control/contacts_edit_row.php?type=$1&idrow=$2 [L,QSA]
+RewriteRule ^kabinet/([\w-]+)-delete/([0-9]+)$ control/contacts_delete_row.php?type=$1&idrow=$2 [L,QSA]
+RewriteRule ^kabinet/logo-change$ control/logo_change.php [L]
+RewriteRule ^kabinet/logo-delete$ control/logo_delete.php [L]
+RewriteRule ^kabinet/about-company-change$ control/about_company_change.php [L]
+RewriteRule ^kabinet/news$ control/news.php [L]
+RewriteRule ^kabinet/add-news$ control/news_add.php [L]
+RewriteRule ^kabinet/edit-news/([0-9]+)$ control/news_edit.php?nid=$1 [L,QSA]
+RewriteRule ^kabinet/delete-news/([0-9]+)$ control/news_delete.php?nid=$1 [L,QSA]
+RewriteRule ^kabinet/news-delete-image/([0-9]+)$ control/news_delete_image.php?nid=$1 [L,QSA]
+RewriteRule ^kabinet/display-news/([0-9]+)$ control/news_display.php?nid=$1 [L,QSA]
+RewriteRule ^kabinet/news/multi-actions$ control/news_multi_actions.php [L]
+RewriteRule ^kabinet/options$ control/options.php [L]
+RewriteRule ^kabinet/price-info$ control/price_info.php [L]
+RewriteRule ^kabinet/price-upload$ control/price_upload.php [L]
+RewriteRule ^kabinet/price-download$ control/price_download.php [L]
+RewriteRule ^kabinet/end$ control/end.php [L]
+
+# Админка
+RewriteRule ^management/adm$ manage/a_index.php [L]
+RewriteRule ^management/adm/unknown-city$ manage/a_city_unknown.php [L]
+RewriteRule ^management/adm/products-check$ manage/a_products_check.php [L]
+RewriteRule ^management/adm/product-checked/([0-9]+)$ manage/a_product_checked.php?tid=$1 [L,QSA]
+RewriteRule ^management/adm/product-edit/([0-9]+)$ manage/a_product_edit.php?tid=$1 [L,QSA]
+RewriteRule ^management/adm/product-delete-picture/([0-9]+)$ manage/a_product_delete_picture.php?picid=$1 [L,QSA]
+RewriteRule ^management/adm/news-check$ manage/a_news_check.php [L]
+RewriteRule ^management/adm/news-checked/([0-9]+)$ manage/a_news_checked.php?nid=$1 [L,QSA]
+RewriteRule ^management/adm/news-edit/([0-9]+)$ manage/a_news_edit.php?nid=$1 [L,QSA]
+RewriteRule ^management/adm/news-delete-picture/([0-9]+)$ manage/a_news_delete_picture.php?nid=$1 [L,QSA]
+RewriteRule ^management/adm/clients-check$ manage/a_clients_check.php [L]
+RewriteRule ^management/adm/client-checked/([0-9]+)$ manage/a_client_checked.php?cid=$1 [L,QSA]
+RewriteRule ^management/adm/client-edit/([0-9]+)$ manage/a_client_edit.php?cid=$1 [L,QSA]
+RewriteRule ^management/adm/logos-check$ manage/a_logos_check.php [L]
+RewriteRule ^management/adm/logo-checked/([0-9]+)$ manage/a_logo_checked.php?cid=$1 [L,QSA]
+RewriteRule ^management/adm/logo-delete/([0-9]+)$ manage/a_logo_delete.php?cid=$1 [L,QSA]
+RewriteRule ^management/adm/maps-check$ manage/a_maps_check.php [L]
+RewriteRule ^management/adm/map-edit/([0-9]+)$ manage/a_map_edit.php?cid=$1 [L,QSA]
+RewriteRule ^management/adm/company-get-access$ manage/a_company_get_access.php [L]
+RewriteRule ^management/adm/company-set-access/([0-9]+)$ manage/a_company_set_access.php?cid=$1 [L,QSA]
+RewriteRule ^management/adm/refresh-counts$ manage/a_refresh_counts.php [L]
+
+# Статьи
+RewriteRule ^stories/([0-9]+).html$ stories.php?sid=$1 [L,QSA]
+RewriteRule ^stories/([\w-]+).html$ stories.php?surl=$1 [L,QSA]
+
+RewriteRule ^click/(banners|tmodule)/([a-z0-9\.-_]+)$ click_count.php?obj=$1&myccid=$2 [L,QSA]
+RewriteRule ^goto/([0-9]+)$ relink.php?id=$1 [L,QSA]
+RewriteRule ^error_report/([0-9]+)$ error_report.php?fid=$1 [L,QSA]
+RewriteRule ^error_report$ error_report.php [L]
+RewriteRule ^mailto/([0-9]+)$ firmmail.php?fid=$1 [L]
+
+RewriteRule ^tenders/main$ tenders/page.php [L,QSA]
+
+# Рубрикатор фирм
+RewriteRule ^firms/(.+)/([0-9]+)(?:\.html)?$ firms.php?trnsl=$1&pno=$2 [L,QSA]
+RewriteRule ^firms/(.+)$ firms.php?trnsl=$1 [L,QSA]
+RewriteRule ^firms$ index.php?fid [L,QSA]
+
+# Рубрикатор товаров
+RewriteRule ^prices/(.+?)(?:/([0-9]+)(?:\.html)?)?$ materials.php?trnsl=$1&pno=$2 [L,QSA]		# (?:\.html)? Убрать в августе 2013 года
+RewriteRule ^prices$ / [R=301,L]
+
+# Карточка товара
+RewriteRule ^product/(.+-(\d+)).html$ article.php?id=$2&translit=$1 [L,QSA]
+
+# Карточка компании
+RewriteRule ^company/(_?[a-z0-9-]{1,20})(?:\.html)?$ company/index.php?sfid=$1 [L,QSA]
+RewriteRule ^company/(_?[a-z0-9-]{1,20})/products$ company/products.php?sfid=$1 [L,QSA]
+RewriteRule ^company/(_?[a-z0-9-]{1,20})/products/(.+)$ company/rubric.php?sfid=$1&trnsl=$2 [L,QSA]
+RewriteRule ^company/(_?[a-z0-9-]{1,20})/product/(.+-(\d+))\.html$ company/product.php?sfid=$1&translit=$2&pid=$3 [L,QSA]
+RewriteRule ^company/(_?[a-z0-9-]{1,20})/news(?:/([0-9])+)?$ company/news.php?sfid=$1&pno=$2 [L,QSA]
+RewriteRule ^company/(_?[a-z0-9-]{1,20})/news/(.+-(\d+))\.html$ company/news_details.php?sfid=$1&translit=$2&nid=$3 [L,QSA]
+RewriteRule ^company/(_?[a-z0-9-]{1,20})/contacts$ company/contacts.php?sfid=$1 [L,QSA]
+RewriteRule ^company/(_?[a-z0-9-]{1,20})/about$ company/about.php?sfid=$1 [L,QSA]
+RewriteRule ^company/(_?[a-z0-9-]{1,20})/video$ company/video.php?sfid=$1 [L,QSA]
+RewriteRule ^company/(_?[a-z0-9-]{1,20})/print$ company/print.php?sfid=$1 [L,QSA]
+# robots.txt и sitemap.xml для доменов 3-го уровня
+RewriteRule ^company/_([a-z0-9-]{1,20})/robots\.txt$ robots/$1.txt [L]
+RewriteRule ^company/_([a-z0-9-]{1,20})/sitemap\.xml$ sitemaps/$1.xml [L]
+# 404 страница для домена 3-го уровня
+RewriteRule ^company/(_[a-z0-9-]{1,20})/.+$ company/page404.php?sfid=$1 [L]
+
+RewriteRule ^price_([0-9]+)$ firmats.php?fid=$1 [L,QSA]
+RewriteRule ^price_([0-9]+)/([0-9]+)(?:\.html)?$ firmats.php?fid=$1&pno=$2 [L,QSA]
+
+RewriteRule ^find$ find.php [L]
+RewriteRule ^find_firms$ find_firms.php [L]
+
+RewriteRule ^index/([\w-]+)/([0-9]+)(?:\.html)?$ ai_index.php?wrd=$1&pno=$2 [L,QSA]
+RewriteRule ^index/([\w-]+).html$ ai_index.php?wrd=$1 [L,QSA]
+RewriteRule ^index/([\w-]+)$ ai_index.php?wrd=$1 [L,QSA]
+
+RewriteRule ^map/(.+)$ map.php?id=$1 [L,QSA]
+
+# Попытка отшить некоторых товарищей
+RewriteRule ^(11|14)\.htm$ return503.php [L]

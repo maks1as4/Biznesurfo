@@ -1,0 +1,27 @@
+<!--noindex-->
+	<div class="block b_blue">
+		<div class="block_top">
+			<div class="right_adv">
+<?php for ($i=0; $i<$rbansQty; $i++): ?>
+<?php if ($RightBanners[$i][1] == ''): ?>
+				<div class="ra_item<?php echo(($i==($rbansQty-1))?' last':'');?>">
+					<object type="application/x-shockwave-flash" data="fswf/<?php echo($RightBanners[$i][0])?>" width="<?php echo($RightBanners[$i][3])?>" height="<?php echo($RightBanners[$i][4])?>">
+						<param name="movie" value="fswf/<?php echo($RightBanners[$i][0])?>" />
+						<param name="play" value="true" />
+						<param name="loop" value="true" />
+						<param name="quality" value="high" />
+						<param name="wmode" value="opaque" />
+						<param name="flashvars" value="id_banner=<?php echo($RightBanners[$i][2])?>&" />
+					</object>
+				</div><!-- /ra_item -->
+<?php else: ?>
+				<div class="ra_item<?php echo(($i==($rbansQty-1))?' last':'');?>">
+					<a href="relink.php?url=<?php echo $RightBanners[$i][1]; ?>" rel="nofollow" target="_blank"><img src="fswf/<?php echo($RightBanners[$i][0])?>" alt="" style="border:1px solid #444444;" /></a>
+				</div><!-- /ra_item -->
+<?php endif; ?>
+<?php endfor; ?>
+			</div><!-- /right_adv -->
+		</div><!-- /block_top -->
+		<div class="block_bot"></div><!-- /block_bot -->
+	</div><!-- /block -->
+<!--/noindex-->

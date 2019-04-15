@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: verdiktum-nt.biznesurfo.ru
+Sitemap: http://verdiktum-nt.biznesurfo.ru/sitemap.xml

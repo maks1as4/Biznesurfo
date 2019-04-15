@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: yni-treid.biznesurfo.ru
+Sitemap: http://yni-treid.biznesurfo.ru/sitemap.xml

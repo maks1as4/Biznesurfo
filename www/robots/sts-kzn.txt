@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: sts-kzn.biznesurfo.ru
+Sitemap: http://sts-kzn.biznesurfo.ru/sitemap.xml

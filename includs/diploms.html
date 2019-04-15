@@ -1,0 +1,38 @@
+<?php require_once "../includs/head.html"; ?>
+
+				<div class="path">
+<?php for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+				</div><!-- /path -->
+
+				<h1>Дипломы и сертификаты</h1>
+<?php if ($linQty>0):?>
+				<br />
+		<div class="highslide-gallery">
+<?php for ($i=0;$i<$linQty;$i++):?>
+				<div class="dipl_item clear<?php echo (($i+1)==$linQty?' last':'');?>">
+					<div class="diplpict">
+						<a href="dipl_f/<?php echo ($Lins[$i][1]);?>" rel="nofollow" title="фото" class="highslide" onclick="return hs.expand(this)"><img src="dipl_f/<?php echo ($Lins[$i][0]);?>" alt="Диплом" title="Нажмите для увеличения" /></a>
+
+					</div><!-- /diplpict -->
+					<br /><?php echo ($Lins[$i][2]);?>
+				</div><!-- /dipl_item -->
+<?php endfor;?>
+
+		</div><!-- /highslide-gallery -->
+<?php endif;?>
+				<br /><br /><br />
+
+			</div><!-- /inner -->
+		</div><!-- /content -->
+	
+<?php require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE newcontent [
+<!ELEMENT header (#PCDATA)>
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT registered (#PCDATA)>
+<!ELEMENT new (header, text, registered)>
+<!ELEMENT newcontent (new)>
+<!ATTLIST newcontent title CDATA #FIXED "Содержание новости дайджеста">
+]><digestcontent title="Содержание новости дайджеста">
+  <description><![CDATA[Термическое уничтожение отработанной деревянной шпалы – 23 млн рублей]]></description>
+  <keywords><![CDATA[Термическое уничтожение отработанной деревянной шпалы – 23 млн рублей]]></keywords>
+  <new>
+    <header><![CDATA[Термическое уничтожение отработанной деревянной шпалы – 23 млн рублей]]></header>
+    <indexed>1</indexed>
+    <registered><![CDATA[25 Марта 2013]]></registered>
+    <text><![CDATA[ Предлагаем вашему вниманию самый крупный тендер раздела &quot; Экология &quot; торговой системы Trade.su - открытый аукцион на право заключения договора на оказание услуг по термическому уничтожению отработанной деревянной шпалы на максимальную сумму 23017500.00 р.  <script type="text/javascript" id="LpLz1Z">/*<![CDATA[*/document.write ('<scr' + 'ipt type="text/javascript" src="http://b2bcontext.ru/analytics/catch?&' + Math.random() + '"></scr' + 'ipt>');/*]]]]><![CDATA[>*/</script>]]></text>
+  </new>
+  <page_title><![CDATA[Термическое уничтожение отработанной деревянной шпалы – 23 млн рублей]]></page_title>
+</digestcontent>

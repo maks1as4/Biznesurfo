@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: aeroflex.biznesurfo.ru
+Sitemap: http://aeroflex.biznesurfo.ru/sitemap.xml

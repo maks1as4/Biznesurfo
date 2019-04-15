@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title><?php echo $title;?></title>
+<base href="http://<?php echo $baseHref; ?>" /> 
+<meta name="keywords" content="<?php echo $keyws;?>" />
+<meta name="Description" content="<?php echo $descr;?>" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" rel="stylesheet" href="/css/company/public.css?24042013" />
+<link type="text/css" rel="stylesheet" href="/css/dropmenu.css?24042013" />
+<!--[if lt IE 8]><link type="text/css" rel="stylesheet" href="/css/company/public-ie.css?24042013"/><![endif]-->
+<!--[if IE 6]><script src="/js/DD_belatedPNG.js"></script><![endif]-->
+<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.simplemodal.js?24042013"></script>
+<script type="text/javascript" src="/js/bootstrap-dropdown.js?24042013"></script>
+<script type="text/javascript" src="/js/jquery.md5.js?24042013"></script>
+<script language="javascript" type="text/javascript">
+$(document).ready(function() {
+
+	$('a.enter').click(function() {
+		$('#window-enter').modal({
+			overlayClose: false,
+			opacity: 50,
+			overlayCss: {backgroundColor:'#d3d3d3'},
+			onShow: function (dialog) {
+				var Email_obj = $('#w-email');
+				var Password_obj = $('#w-password');
+				
+				$('a.close', dialog.data).click(function() {
+					$.modal.close();
+					return false;
+				});
+				
+				$('#ok').click(function() {
+					var email = Email_obj.val();
+					var pass  = Password_obj.val();
+					var remembeMe = ($('#w-agree').attr('checked') == 'checked') ? 'checked' : '';
+					$.ajax({
+						type: 'POST',
+						url: 'http://<?php echo $_SERVER['HTTP_HOST']; ?>/ajax/authorization.php',
+						data: {'email':jQuery.trim(email), 'pass':$.md5(jQuery.trim(pass)), 'remembeMe':remembeMe},
+						dataType: 'json',
+						success: function(data) {
+							if (data != null) {
+								if (data.ok) {
+									window.location = data.goLink;
+								} else {
+									if (data.err100) {
+										Email_obj.addClass('error').parent().children('span.error').show();
+										Password_obj.val('');
+									}
+									if (data.err200) Password_obj.val('').addClass('error').parent().children('span.error').show();
+								}
+							} else {
+								alert('Ошибка передачи данных');
+								$.modal.close();
+							}
+						},
+						error: function() {
+							alert('Ошибка запроса к базе данных');
+							$.modal.close();
+						},
+						timeout: 5000
+					});
+					return false;
+				});
+				
+				$('#window-enter input.edit').bind('focus', function() {
+					$(this).removeClass('error').parent().children('span.error').hide();
+				});
+				
+				$('#forget').click(function() {
+					window.location = '/forgot-password';
+					return false;
+				});
+				
+			},
+			onOpen: function(dialog) {
+				dialog.overlay.fadeIn(100, function() {
+					dialog.container.fadeIn(100);
+					dialog.data.show();
+					$('#w-email').focus();
+				});
+			},
+			onClose: function(dialog) {
+				dialog.container.fadeOut(100, function() {
+					dialog.overlay.fadeOut(100);
+					dialog.data.hide();
+					$.modal.close();
+				});
+			}
+		});
+		return false;
+	});
+	
+<?php if ($isDeveloper&&isset($hasError)): ?>
+	$('body').css({'background-color':'#fa8072'});
+<?php endif; ?>
+
+});
+<?php if ($isDeveloper): ?>
+$(document).keyup(function(event) {
+	if (event.keyCode == 192) {
+		$('#ib_console').slideToggle(100);
+	}
+});
+<?php endif; ?>
+</script>
+
+<?php if($isShowES) ShowCounterGoogle(); ?>
+
+</head>
+<body>
+<div id="wrap">
+<div id="header">
+	<div id="header-company-logo">
+		<a href="/"><img src="/i/company/public/logo.png" class="noborder" /></a>
+	</div><!-- /header-company-logo -->
+	<div id="company-add">
+		<span class="link1"><a href="/add-company"><img src="/i/company/public/plus_btn.png" class="noborder" /></a></span>
+		<span class="link2"><a href="/add-company">Добавить фирму или товар</a></span>
+	</div><!-- /company-add -->
+	
+	<div id="auth">
+		<div class="mt25">
+<?php if (isset($user_id)): ?>
+			<div class="dropmenu">
+				<div class="dropdown">
+					<a class="dropdown-toggle dashed" data-toggle="dropdown" href="javascript://"><span><?php echo $user_email; ?></span><b class="caret"></b></a>
+					<ul class="dropdown-menu">
+<?php if (($user_role == 'com') || ($user_role == 'user')): ?>
+						<li><a href="/kabinet">Личный кабинет</a></li>
+						<li><a href="/company/<?php echo $user_client_id; ?>.html" target="_blank">Страница компании</a></li>
+<?php else: ?>
+						<li><a href="<?php echo ($user_role == 'adm') ? '/management/adm' : '/management/mdr' ;?>" target="_blank">Панель управления</a></li>
+<?php endif; ?>
+						<li class="divider"></li>
+						<li><a href="/exit">Выход</a></li>
+					</ul>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+<?php else: ?>
+			<a href="/enter" class="enter"><span>войти в кабинет</span></a>&nbsp;&nbsp;&nbsp;<a href="/add-company">зарегистрироваться</a>
+<?php endif; ?>
+		</div>
+		<div class="mt25"><a href="/firms">Все предприятия</a></div>
+	</div><!-- /auth -->
+	
+</div><!-- /header -->
+<noscript><div align="center" class="no-java">Для наилучшей работы сайта, включите JavaScript.</div></noscript>
+<div id="window-enter">
+	<div class="header-enter">
+		<div class="title-enter">Вход в кабинет</div>
+		<a href="javascript://" class="close close-enter-x" title="закрыть"></a>
+	</div>
+	<div class="body-enter">
+		<div class="row">
+			<label for="w-email">Email:</label><span class="error">неверный email</span><br />
+			<input type="text" id="w-email" class="edit" name="w-email" maxlength="100" />
+		</div>
+		<div class="row">
+			<label for="w-password">Пароль:</label><span class="error">неверный пароль</span><br />
+			<input type="password" id="w-password" class="edit" name="w-password" maxlength="10" />
+		</div>
+		<div class="row-agree">
+			<div class="f-left"><input type="checkbox" id="w-agree" name="w-agree" value="yes" checked="checked" /> Запомнить меня</div>
+			<div class="f-right"><a href="/forgot-password" id="forget">Забыли пароль?</a></div>
+			<div class="clear-white"></div>
+		</div>
+	</div>
+	<div class="footer-enter">
+		<div class="ok-enter"><button id="ok" class="button orange">Войти</button></div>
+		<div class="close-enter"><a href="javascript://" class="close close-enter"><span>отмена</span></a></div>
+	</div>
+</div><!-- /window-enter -->

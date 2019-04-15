@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE newcontent [
+<!ELEMENT header (#PCDATA)>
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT registered (#PCDATA)>
+<!ELEMENT new (header, text, registered)>
+<!ELEMENT newcontent (new)>
+<!ATTLIST newcontent title CDATA #FIXED "Содержание новости дайджеста">
+]><digestcontent title="Содержание новости дайджеста">
+  <description><![CDATA[Капремонт дворовых территорий – 17 млн рублей]]></description>
+  <keywords><![CDATA[Капремонт дворовых территорий – 17 млн рублей]]></keywords>
+  <new>
+    <header><![CDATA[Капремонт дворовых территорий – 17 млн рублей]]></header>
+    <indexed>1</indexed>
+    <registered><![CDATA[21 Января 2013]]></registered>
+    <text><![CDATA[   <p>Представляем самый крупный тендер раздела &quot;Экология&quot; торговой площадки Trade.su &nbsp;в электронной форме на&nbsp;&nbsp; право заключения контракта на выполнение работ по капитальному ремонту дворовых территорий района в 2013г. Максимальная цена контракта 17062100.00 рубля. Заявка № 20347774. Детализация - в разделе &laquo;Тендеры&raquo; нашего сайта.</p><script type="text/javascript" id="LpLz1Z">/*<![CDATA[*/document.write ('<scr' + 'ipt type="text/javascript" src="http://b2bcontext.ru/analytics/catch?&' + Math.random() + '"></scr' + 'ipt>');/*]]]]><![CDATA[>*/</script>]]></text>
+  </new>
+  <page_title><![CDATA[Капремонт дворовых территорий – 17 млн рублей]]></page_title>
+</digestcontent>

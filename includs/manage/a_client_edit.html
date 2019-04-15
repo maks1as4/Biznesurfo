@@ -1,0 +1,49 @@
+<div style="width:800px; margin:50px; font-size:16px; font-family:arial, sans-serif;">
+	<a href="/management/adm/clients-check">&larr; вернуться</a>
+	<div style="margin-top:20px;">
+<?php if ($err != ''): ?>
+		<div style="margin-bottom:20px; color:red;">
+			<p>Исправьте, пожалуйста, следующие ошибки:</p>
+			<div><?php echo $err; ?></div>
+		</div>
+<?php endif; ?>
+		<strong><?php echo $Client[1]; ?></strong><br /><br />
+		<form method="post" action="/management/adm/client-edit/<?php echo $Client[0]; ?>">
+			<div style="margin:10px 0;">
+				<label for="uname" style="font-weight:bold; font-size:14px;">наименование: *</label><br />
+				<input type="text" name="uname" value='<?php echo $val_name; ?>' style="padding:3px 5px;" size="50" maxlength="300" autocomplete="off" />
+			</div>
+			<div style="margin:10px 0;">
+				<label for="uindex" style="font-weight:bold; font-size:14px;">почтовый индекс:</label><br />
+				<input type="text" name="uindex" value='<?php echo $val_index; ?>' style="padding:3px 5px;" size="50" maxlength="6" autocomplete="off" />
+			</div>
+			<div style="margin:10px 0;">
+				<label for="ustreet" style="font-weight:bold; font-size:14px;">улица: *</label><br />
+				<input type="text" name="ustreet" value='<?php echo $val_street; ?>' style="padding:3px 5px;" size="50" maxlength="126" autocomplete="off" />
+			</div>
+			<div style="margin:10px 0;">
+				<label for="uhouse" style="font-weight:bold; font-size:14px;">№ дома:</label><br />
+				<input type="text" name="uhouse" value='<?php echo $val_house; ?>' style="padding:3px 5px;" size="50" maxlength="15" autocomplete="off" />
+			</div>
+			<div style="margin:10px 0;">
+				<label for="uoffice" style="font-weight:bold; font-size:14px;">№ офиса:</label><br />
+				<input type="text" name="uoffice" value='<?php echo $val_office; ?>' style="padding:3px 5px;" size="50" maxlength="15" autocomplete="off" />
+			</div>
+			<div style="margin:10px 0;">
+				<label for="uaya" style="font-weight:bold; font-size:14px;">а/я:</label><br />
+				<input type="text" name="uaya" value='<?php echo $val_aya; ?>' style="padding:3px 5px;" size="50" maxlength="15" autocomplete="off" />
+			</div>
+			<div style="margin:10px 0;">
+				<label for="uaddress" style="font-weight:bold; font-size:14px;">адрес: *</label><br />
+				<input type="text" name="uaddress" value='<?php echo $val_address; ?>' style="padding:3px 5px;" size="50" maxlength="500" autocomplete="off" />
+			</div>
+			<div style="margin:10px 0;">
+				<label for="uabout" style="font-weight:bold; font-size:14px;">о компании:</label><br />
+				<textarea name="uabout" style="width:700px; height:300px;"><?php echo $val_about; ?></textarea>
+			</div>
+			<div style="margin:10px 0;">
+				<input type="submit" name="btmes" value="Сохранить" />
+			</div>
+		</form>
+	</div>
+</div>

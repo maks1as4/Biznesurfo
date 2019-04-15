@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
+	<title>Статистика по клиенту.</title>
+	<link href="manags.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<div class="main-top"><h1>Просмотр статистики по клиенту</h1><h2><?php echo ($name);?></h2></div>
+<?php @require_once "htm/ssmenu.html"; ?>
+<div class="main-center">
+	<div class="order">за <?php echo($Periods[$perSel]['name']); ?></div>
+	<div class="mcont">
+		<div class="ssitem">
+			<div id="footer"><a href="/firms/<?php echo ($clId);?>">Карточка компании</a><a href="/manags/sscarts.php<?php echo($Periods[$perSel]['param']);?>">Общая</a></div>Посещение карточки компании -<span><?php echo ($cart);?></span><p><?php echo (round(100/$cartT*$cart, 2));?>% от общего количества визитов на иные карточки (<?php echo ($cartT);?>)</p>		
+		</div>
+		<div class="ssitem"><div id="footer"><a href="/price_<?php echo ($clId);?>">Прайс-лист компании</a><a href="/manags/ssprices.php<?php echo($Periods[$perSel]['param']);?>">Общая</a></div>Посещение прайс-листа клиента -<span><?php echo ($price);?></span><p><?php echo (round(100/$priceT*$price, 2));?>% от общего количества визитов на иные прайс-листы (<?php echo ($priceT);?>)</p>		
+		</div>
+		<div class="ssitem"><div id="footer"><a href="/getPrice/<?php echo ($clId);?>">Скачаем прайс-лист компании?</a><a href="/manags/ssdowns.php<?php echo($Periods[$perSel]['param']);?>">Общая</a></div>Число скачиваний прайс-листа клиента -<span><?php echo ($down);?></span><p><?php echo (round(100/$downT*$down, 2));?>% от общего количества скачиваний иных прайс-листов (<?php echo ($downT);?>)</p>		
+		</div>
+		<div class="ssitem"><div id="footer"><a href="/print_frm.php?fid=<?php echo ($clId);?>">Распечатать карточку компании</a><a href="/manags/ssprintc.php<?php echo($Periods[$perSel]['param']);?>">Общая</a></div>Печать карточки клиента -<span><?php echo ($prnt);?></span><p><?php echo (round(100/$prntT*$prnt, 2));?>% от общего количества печати карточек иных компаний (<?php echo ($prntT);?>)</p>		
+		</div>
+		<div class="ssitem">
+		<?php if ($site != '') { ?>
+		<div id="footer"><a href="/goto/<?php echo ($clId);?>/?url=<?php echo ($site);?>">Кликнуть по ссылке</a><a href="/manags/sslink.php<?php echo($Periods[$perSel]['param']);?>">Общая</a></div>
+		<?php } ?>
+		Кликов по ссылке на сайт клиента -<span><?php echo ($link);?></span><p><?php echo (round(100/$linkT*$link, 2));?>% от общего количества кликов на ссылки иных компаний (<?php echo ($linkT);?>)</p>
+		<?php if ($site == '') { ?>
+		<p>А вообще-то у этого клиента сайта нет!</p>
+		<?php } ?>
+		</div>
+		<div class="ssitem"><div id="footer"><a href="/manags/ssbanners.php<?php echo($Periods[$perSel]['param']);?>">Общая</a></div>Баннеры клиента -<span><?php echo ($banQty);?></span>
+		<?php for($i=0;$i<$banQty;$i++):?><p><a href="/manags/ssbanner.php<?php echo($Periods[$perSel]['param'].'&bid='.$Bans[$i][2]);?>"><?php echo($Bans[$i][0].' - '.$Bans[$i][1]);?></a></p><?php endfor; ?>
+		</div>
+		<div class="ssitem"><div id="footer"><a href="/manags/sstmoduls.php<?php echo($Periods[$perSel]['param']);?>">Общая</a></div>Текстовые модули клиента -<span><?php echo ($modQty);?></span>
+		<?php for($i=0;$i<$modQty;$i++):?><p><a href="/manags/sstmodule.php<?php echo($Periods[$perSel]['param'].'&tid='.$Mods[$i][1]);?>"><?php echo($Mods[$i][0]);?></a></p><?php endfor; ?>
+		</div>
+		<div id="footer"><a href="/manags/ssclient.php<?php echo($Periods[$perSel]['param']);?>">На страницу выбора клиента</a></div>
+	</div>
+</div>
+</body>
+</html>

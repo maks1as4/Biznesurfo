@@ -1,0 +1,33 @@
+.b-simple-balloon-layout {
+	position: relative;
+	width: 200px;
+	padding: 10px;
+	margin-left: -10px;
+	border: 1px solid #848877;
+	background: #f8ffe0;
+}
+
+.b-simple-balloon-layout .content {
+	float: none;
+}
+
+
+.b-simple-balloon-layout .tail {
+	position: absolute;
+	width: 30px;
+	height: 24px;
+	margin-top: 10px;
+	background: url("http://api.yandex.ru/i/maps/tail.png") no-repeat;
+}
+
+.b-simple-balloon-layout .close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 13px;
+	height: 13px;
+	margin-right: 5px;
+	margin-top: 5px;
+	background: url("http://api-maps.yandex.ru/i/0.3/balloon/close.gif") no-repeat;
+	cursor: pointer;
+}

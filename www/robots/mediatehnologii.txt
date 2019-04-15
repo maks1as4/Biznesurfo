@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: mediatehnologii.biznesurfo.ru
+Sitemap: http://mediatehnologii.biznesurfo.ru/sitemap.xml

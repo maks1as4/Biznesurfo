@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><countries>
+  <country id="1" header="Россия">
+    <district id="3" header="Уральский ФО">
+      <region id="28" header="Курганская обл." />
+      <region id="68" header="Свердловская обл." />
+      <region id="76" header="Тюменская обл." />
+      <region id="81" header="Ханты-Мансийский АО" />
+      <region id="82" header="Челябинская обл." />
+      <region id="88" header="Ямало-Ненецкий АО" />
+    </district>
+  </country>
+</countries>

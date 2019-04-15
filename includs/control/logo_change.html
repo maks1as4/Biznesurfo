@@ -1,0 +1,47 @@
+<?php require_once "../../includs/control/head.html"; ?>
+
+<div class="box-header">
+	<div class="pull-left box-header-home"><a href="/kabinet"><i class="icon-home"></i></a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point"><a href="/kabinet/about">О компании</a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point">Изменить логотип компании</div>
+	<div class="pull-left box-header-separator"></div>
+</div>
+<div class="box-content">
+	<div class="box-inner-main">
+		<div class="title-page">
+			<h2 class="inline">Логотип компании</h2>
+			<p class="pull-right"><a href="/kabinet/about" class="btn btn-link">&larr; вернуться назад</a></p>
+		</div>
+<?php if ($err != ''){ ?>
+		<div class="alert alert-error">
+			<p><strong>Исправьте, пожалуйста, следующие ошибки:</strong></p>
+			<?php echo $err; ?>
+		</div>
+<?php } ?>
+		<p>
+			допустимый формат логотипа: jpg, png, gif, bmp;<br />
+			не более 800 пикселей в ширину, 800 в высоту;<br />
+			загружаемый логотип не более 1 мегабайта.
+		</p>
+		<hr />
+<?php if ($val_logo != ''){ ?>
+		<p>Текущий логотип:</p>
+		<p><img src="logo/<?php echo $val_logo; ?>" /></p>
+		<hr />
+<?php } ?>
+		<form id="forms" method="post" action="/kabinet/logo-change" enctype="multipart/form-data">
+			<fieldset>
+				<label class="control-label"><i class="icon-require icon-tab-left"></i><?php echo ($val_logo != '') ? 'Изменить' : 'Загрузить'; ?> логотип</label>
+				<div style="margin:10px 0 20px;">
+					<input type="file" id="ulogo" class="input-medium" name="ulogo" />
+					<span id="err-ulogo" class="error"></span>
+				</div>
+				<button type="submit" class="btn btn-primary" name="btmes"><i class="icon-ok-sign icon-white icon-tab-left"></i>Сохранить</button>
+			</fieldset>
+		</form>
+	</div><!-- /box-inner-main -->
+</div><!-- /box-content -->
+
+<?php require_once "../../includs/control/foot.html"; ?>

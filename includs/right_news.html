@@ -1,0 +1,21 @@
+<!--noindex-->
+	<div class="block">
+		<div class="block_top">
+			<h4><a href="newstype">Новости</a></h4>
+				<dl class="news">
+<?php for ($i=0;$i<$newsQty;$i++): ?>
+					<dt><a href="<?php echo($News[$i][0])?>"><?php echo($News[$i][2])?></a></dt>
+					<dd class="clear">
+						<p><?php echo($News[$i][3])?>...</p>
+						<span class="news_more">
+							<a href="<?php echo($News[$i][0])?>">подробнее</a>
+						</span>
+						<span class="news_date"><?php echo(HumanDate($News[$i][1]))?>
+						</span>
+					</dd>
+<?php endfor; ?>
+				</dl>
+		</div><!-- /block_top -->
+		<div class="block_bot"></div><!-- /block_bot -->
+	</div><!-- /block -->
+<!--/noindex-->

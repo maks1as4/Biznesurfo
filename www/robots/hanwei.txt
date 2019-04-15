@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: hanwei.biznesurfo.ru
+Sitemap: http://hanwei.biznesurfo.ru/sitemap.xml

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: ftt.biznesurfo.ru
+Sitemap: http://ftt.biznesurfo.ru/sitemap.xml

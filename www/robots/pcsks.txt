@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: pcsks.biznesurfo.ru
+Sitemap: http://pcsks.biznesurfo.ru/sitemap.xml

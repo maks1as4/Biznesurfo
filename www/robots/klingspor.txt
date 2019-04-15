@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: klingspor.biznesurfo.ru
+Sitemap: http://klingspor.biznesurfo.ru/sitemap.xml

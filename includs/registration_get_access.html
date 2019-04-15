@@ -1,0 +1,30 @@
+<?php require_once "../includs/head_forms.html"; ?>
+
+	<div class="body clear">
+	<div class="content">
+	<div class="inner inner-type-forms">
+	
+		<a href="/"><img src="/i/logo.png" class="logo" alt="ООО &laquo;Индустрия бизнеса&raquo;" /></a>
+		<div class="go-home"><a href="/">Вернуться на главную</a></div>
+		
+		<div class="message">
+			<h1>Заявка на получение доступа успешно отправлена.</h1>
+			<p>
+				Обратите внимание, что получение доступа к уже существующей компании не происходит мгновенно, происходит это в максимально ближайшие сроки, не более 3х рабочих дней. После того как вся необходимая информация будет проверенна, для Вас будет создан доступ, с теми реквизитами доступа, что были введены Вами на первом шаге регистрации. Пожалуйста не забывайте Ваши реквизиты доступа на сайт: e-mail - <strong><?php echo $email; ?></strong> и пароль.<br />
+				Так же Вам будет выслано подтверждение на e-mail - <?php echo $email; ?>, когда доступ будет готов.
+			</p>
+			<p>
+				<strong>Вы можете:</strong> <a href="/add-company">зарегистрировать новую компанию</a> или вернуться на <a href="/">главную страницу</a>.
+			</p>
+			<div id="timer" style="display:none;">До автоматического перехода на главную страницу <span style="font-weight:bold;"></span></div>
+		</div><!-- /message -->
+	
+	</div><!-- /inner -->
+	</div><!-- /content -->
+	</div><!-- /body -->
+
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+</body>
+</html>

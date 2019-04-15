@@ -1,0 +1,102 @@
+<?php require_once "../../includs/company/default/head.html"; ?>
+
+<div class="row">
+	<div id="main" class="span12">
+
+		<div class="row">
+
+<?php require_once "../../includs/company/default/sidebar.html"; ?>
+
+			<div id="content" class="span9">
+				<div class="content-wrap">
+					<div class="page-name">
+						<h1><?php echo $full_name; ?></h1>
+					</div>
+<?php if ($about_short!='' && ($about_status==0 || $isOwner)): ?>
+					<div class="about-preview line">
+						<p><?php echo $about_short; ?>...</p>
+<?php if ($isOwner && $about_status!=0): ?>
+						<div class="status1"><span class="label-verification" title="ќписание компании находитс€ на проверке и его можете видеть<br /> только вы."><i class="icon-time"></i>&nbsp;описание компании на проверке</span></div>
+<?php endif; ?>
+						<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/about">подробнее о компании&nbsp;&rarr;</a>
+					</div><!-- /about-preview -->
+<?php endif; ?>
+<?php if (!empty($Products_short)): ?>
+					<div class="products-preview line">
+						<h4>ѕредложени€ товаров и услуг</h4>
+<?php foreach ($Products_short as $product): ?>
+<?php if ($odd): ?>
+						<div class="row range">
+<?php endif; ?>
+							<div class="span4 cell">
+								<div class="img-box pull-left">
+									<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/product/<?php echo getDataFromDB($product[1]); ?>.html">
+<?php if ($product[5] != null): ?>
+										<img src="../i/products/<?php echo $product[5]; ?>_small.<?php echo $product[6]; ?>" class="img-polaroid" alt='<?php echo getDataFromDB($product[0]); ?>' />
+<?php else: ?>
+										<img src="../i/company/default/no-image.png" class="img-polaroid" />
+<?php endif; ?>
+									</a>
+								</div>
+								<div class="info">
+									<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/product/<?php echo getDataFromDB($product[1]); ?>.html"><?php echo getDataFromDB($product[0]); ?></a>
+<?php if ($isOwner && $product[7]!=0): ?>
+									<div class="status1"><span class="label-verification" title="“овар находитс€ на проверке и виден только вам."><i class="icon-time"></i>&nbsp;товар на проверке</span></div>
+<?php endif; ?>
+									<div>
+<?php if ($product[4] == '0'): ?>
+										<span class="label label-important"><?php echo ($product[2] == '1') ? 'от ' : ''; ?><?php echo priceParser($product[3]); ?> руб.</span>
+<?php else: ?>
+										<span class="label">цена договорна€</span>
+<?php endif; ?>
+									</div>
+								</div>
+							</div>
+<?php if (!$odd): ?>
+						</div>
+<?php endif; ?>
+<?php if ($odd && ($count == $count_products_short)): ?>
+						</div>
+<?php endif; ?>
+<?php $odd = !$odd; $count++; ?>
+<?php endforeach; ?>
+						<div class="clearfix"></div>
+						<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/products">все товары и услуги&nbsp;&rarr;</a>
+					</div><!-- /products-preview -->
+<?php endif; ?>
+<?php if (!empty($News_short)): ?>
+					<div class="news-preview line-lust">
+						<h4>Ќовости</h4>
+<?php foreach ($News_short as $news): ?>
+						<div class="media">
+							<div class="img-box pull-left">
+								<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/news/<?php echo getDataFromDB($news[1]); ?>.html">
+<?php if ($news[2] != ''): ?>
+									<img src="../i/news/<?php echo $news[2]; ?>_small.<?php echo $news[3]; ?>" class="media-object img-polaroid" alt='<?php echo getDataFromDB($news[0]); ?>' />
+<?php else: ?>
+									<img src="../i/company/default/no-image.png" class="media-object img-polaroid" />
+<?php endif; ?>
+								</a>
+							</div>
+							<div class="media-body">
+								<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/news/<?php echo getDataFromDB($news[1]); ?>.html" class="media-heading-link"><?php echo getDataFromDB($news[0]); ?></a>
+<?php if ($isOwner && $news[5]!=0): ?>
+								<div class="status1"><span class="label-verification" title="Ќовость находитс€ на проверке и видена только вам."><i class="icon-time"></i>&nbsp;новость на проверке</span></div>
+<?php endif; ?>
+								<div>
+									<?php echo strip_tags(getDataFromDB($news[4])); ?>... <a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/news/<?php echo getDataFromDB($news[1]); ?>.html">подробнее&nbsp;&rarr;</a>
+								</div>
+							</div>
+						</div>
+<?php endforeach; ?>
+						<div class="show-news"><a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/news">все новости&nbsp;&rarr;</a></div>
+					</div><!-- news-preview -->
+<?php endif; ?>
+				</div>
+			</div><!-- /content -->
+		</div>
+		
+	</div><!-- /main -->
+</div>
+
+<?php require_once "../../includs/company/default/foot.html"; ?>

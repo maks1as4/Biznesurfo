@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: promgid.biznesurfo.ru
+Sitemap: http://promgid.biznesurfo.ru/sitemap.xml

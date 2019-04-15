@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE newcontent [
+<!ELEMENT header (#PCDATA)>
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT registered (#PCDATA)>
+<!ELEMENT new (header, text, registered)>
+<!ELEMENT newcontent (new)>
+<!ATTLIST newcontent title CDATA #FIXED "Содержание новости дайджеста">
+]><digestcontent title="Содержание новости дайджеста">
+  <description><![CDATA[Поставка ионообменных смол]]></description>
+  <keywords><![CDATA[Поставка ионообменных смол]]></keywords>
+  <new>
+    <header><![CDATA[Поставка ионообменных смол]]></header>
+    <indexed>1</indexed>
+    <registered><![CDATA[23 Апреля 2013]]></registered>
+    <text><![CDATA[Объявляется тендер, объект которого - право заключения договора на поставку ионообменных смол. Об этом   информирует раздел &quot;Химия&quot; торговой системы Trade.su.  14404360.47 рублей - максимальная цена контракта. Техническая документация для участников торгов доступна в разделе &laquo;Тендеры&raquo; нашего сайта. Заявка №22421673.<script type="text/javascript" id="LpLz1Z">/*<![CDATA[*/document.write ('<scr' + 'ipt type="text/javascript" src="http://b2bcontext.ru/analytics/catch?&' + Math.random() + '"></scr' + 'ipt>');/*]]]]><![CDATA[>*/</script>]]></text>
+  </new>
+  <page_title><![CDATA[Поставка ионообменных смол]]></page_title>
+</digestcontent>

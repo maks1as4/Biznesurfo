@@ -1,0 +1,43 @@
+<?php require_once "../includs/head_forms.html"; ?>
+
+	<div class="body clear">
+	<div class="content">
+	<div class="inner inner-type-forms">
+
+		<a href="/"><img src="/i/logo.png" class="logo" alt="ООО &laquo;Индустрия бизнеса&raquo;" /></a>
+		<div id="reg-exists">
+			<strong class="title">Вы регистрируете компанию:</strong>
+			<div class="company">
+				<?php echo $nice_name; ?><br />
+				тел.: <?php echo $company_tmp[2]; ?>
+			</div>
+			<p><?php echo $string1; ?></p>
+<?php foreach($company_exists as $company): ?>
+			<div class="choice">
+				<div class="cleft">
+					<strong><?php echo $company[1]; ?></strong><br />
+					адрес: <?php echo $company[2]; ?><br />
+					тел.: <?php echo $company[3]; ?><br />
+				</div>
+				<div class="cright">
+					<p class="botton-title">это моя компания</p>
+					<a href="/add-choice/access/<?php echo $company[0]; ?>" class="button orange">получить доступ</a>
+				</div>
+				<div class="clear-white"></div>
+			</div>
+<?php endforeach; ?>
+			<div class="cfoot">
+				<p class="botton-title">моей компании нет в списке</p>
+				<a href="/add-choice/continue" class="button orange">зарегистрировать новую компанию</a>
+			</div>
+		</div><!-- /reg-exists -->
+
+	</div><!-- /inner -->
+	</div><!-- /content -->
+	</div><!-- /body -->
+
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+</body>
+</html>

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: a-xiom.biznesurfo.ru
+Sitemap: http://a-xiom.biznesurfo.ru/sitemap.xml

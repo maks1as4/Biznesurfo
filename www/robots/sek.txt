@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: sek.biznesurfo.ru
+Sitemap: http://sek.biznesurfo.ru/sitemap.xml

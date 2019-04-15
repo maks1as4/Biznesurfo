@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: skdom.biznesurfo.ru
+Sitemap: http://skdom.biznesurfo.ru/sitemap.xml

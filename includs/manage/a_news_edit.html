@@ -1,0 +1,35 @@
+<div style="width:800px; margin:50px; font-size:16px; font-family:arial, sans-serif;">
+	<a href="/management/adm/news-check">&larr; вернуться</a>
+	<div style="margin-top:20px;">
+<?php if ($err != ''): ?>
+		<div style="margin-bottom:20px; color:red;">
+			<p>Исправьте, пожалуйста, следующие ошибки:</p>
+			<div><?php echo $err; ?></div>
+		</div>
+<?php endif; ?>
+		<strong><?php echo $News[0]; ?></strong><br /><br />
+		<form method="post" action="/management/adm/news-edit/<?php echo $news_id; ?>">
+			<div style="margin:10px 0;">
+				<label for="utitle" style="font-weight:bold; font-size:14px;">наименование новости: *</label><br />
+				<input type="text" name="utitle" value='<?php echo $var_title; ?>' style="padding:3px 5px;" size="50" maxlength="250" autocomplete="off" />
+			</div>
+			<div style="margin:10px 0;">
+				<label for="uurl" style="font-weight:bold; font-size:14px;">url новости: *</label><br />
+				<input type="text" name="uurl" value='<?php echo $var_url; ?>' style="padding:3px 5px;" size="50" maxlength="250" autocomplete="off" />
+			</div>
+			<div style="margin:10px 0;">
+				<label for="utext" style="font-weight:bold; font-size:14px;">текст новости:</label><br />
+				<textarea name="utext" style="width:700px; height:300px;"><?php echo $var_text; ?></textarea>
+			</div>
+<?php if ($var_img_name!='' && $var_ing_ext!=''): ?>
+			<div style="margin:10px 0;">
+				<img src="/i/news/<?php echo $var_img_name; ?>.<?php echo $var_ing_ext; ?>" /><br />
+				<a href="/management/adm/news-delete-picture/<?php echo $news_id; ?>">удалить картинку</a>
+			</div>
+<?php endif; ?>
+			<div style="margin:10px 0;">
+				<input type="submit" name="btmes" value="Сохранить" />
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,0 +1,22 @@
+<div style="width:800px; margin:50px; font-size:16px; font-family:arial, sans-serif;">
+	<a href="/management/adm">&larr; вернутьс€</a>
+<?php if (count($Uncheck_news) > 0): ?>
+<?php foreach($Uncheck_news as $u_news): ?>
+	<div style="border-bottom:1px solid #ababab; padding-bottom:15px; margin-top:15px;">
+		<span style="color:#bcbcbc; font-size:14px;">#<?php echo $u_news[0]; ?></span> <strong><?php echo $u_news[1]; ?></strong>
+<?php if ($u_news[3] != '' && $u_news[4] != ''): ?>
+		<div style="margin:5px 0;">
+			<img src="/i/news/<?php echo $u_news[3]; ?>.<?php echo $u_news[4]; ?>" />
+		</div>
+<?php endif; ?>
+		<div>
+			<?php echo $u_news[2]; ?>
+		</div>
+		<div style="margin:5px 0; color:#bcbcbc; font-size:14px;">компани€ - <?php echo $u_news[5]; ?></div>
+		<a href="/management/adm/news-checked/<?php echo $u_news[0]; ?>" style="color:#3333aa;">проверенно</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/management/adm/news-edit/<?php echo $u_news[0]; ?>" style="color:#3333aa;">изменить</a>
+	</div>
+<?php endforeach; ?>
+<?php else: ?>
+	<p>Ќет непроверенных новостей.</p>
+<?php endif; ?>
+</div>

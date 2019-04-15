@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: plastpsk.biznesurfo.ru
+Sitemap: http://plastpsk.biznesurfo.ru/sitemap.xml

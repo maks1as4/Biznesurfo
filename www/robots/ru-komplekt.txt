@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: ru-komplekt.biznesurfo.ru
+Sitemap: http://ru-komplekt.biznesurfo.ru/sitemap.xml

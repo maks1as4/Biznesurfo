@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: trestrestoran.biznesurfo.ru
+Sitemap: http://trestrestoran.biznesurfo.ru/sitemap.xml

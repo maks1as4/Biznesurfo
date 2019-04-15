@@ -1,0 +1,61 @@
+<div id="side-bar" class="span3">
+	<div class="side-bar-wrap">
+		<div class="vertically<?php echo ($action == 'contacts') ? ' lust' : ''; ?>">
+			<p class="side-bar-title">Товары и услуги <span class="badge"><?php echo $products_qty; ?></span></p>
+<?php if (!empty($Rubrics)): ?>
+			<ul class="nav nav-list">
+<?php foreach ($Rubrics as $rubric): ?>
+				<li><a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/products/<?php echo getDataFromDB($rubric[1]); ?>"><?php echo getDataFromDB($rubric[2]); ?>&nbsp;<span class="count"><?php echo $rubric[3]; ?></span></a></li>
+<?php endforeach; ?>
+			</ul>
+			<!--noindex-->
+			<div class="price">
+				<i class="icon-excel"></i> <a href="http://<?php echo $baseHref; ?>/getprice/<?php echo $id_company; ?>" rel="nofollow">скачать прайс-лист</a>
+<!-- time -->
+<?php if ($translit_company == 'klingspor'): ?>
+<div style="margin-top:8px;"><i class="icon-excel"></i> <a href="http://<?php echo $baseHref; ?>/price/price-KLINGSPOR.xls" rel="nofollow" title="Скачать весь прайс-лист">прайс-лист (полная версия)</a></div>
+<?php endif; ?>
+<!-- /time -->
+			</div>
+			<!--/noindex-->
+<?php else: ?>
+			<span class="muted">нет товаров</span>
+<?php endif; ?>
+		</div><!-- /vertically -->
+<?php if ($action != 'contacts'): ?>
+		<div class="contacts">
+			<p class="side-bar-title">Контакты</p>
+<?php if ($translit_company != 'klingspor'): ?>
+			<div><i class="icon-map-marker"></i> <?php echo getDataFromDB($Client[1]); ?></div>
+<?php else: ?>
+			<div><i class="icon-map-marker"></i> Свердловская обл.,<br />г. Екатеринбург,<br />ул.Петрова, д.59 Л</div>
+<?php endif; ?>
+			<div><i class="icon-phone"></i> <?php echo ($Client[11]!='') ? $Client[11].'&nbsp;' : ''; ?><?php echo getDataFromDB($Client[5]); ?></div>
+<?php if ($Client[6] !== null): ?>
+			<div><i class="icon-envelope"></i>&nbsp;<a href="mailto:<?php echo getDataFromDB($Client[6]); ?>" class="underlined contact-us" rel="nofollow" destination="id<?php echo $id_company; ?>"><?php echo getDataFromDB($Client[6]); ?></a></div>
+<?php endif; ?>
+<?php if ($Client[7] !== null): ?>
+			<div><i class="icon-globe"></i>&nbsp;<a href="http://<?php echo $baseHref; ?>/goto/<?php echo $id_company; ?>?url=<?php echo getDataFromDB($Client[7]); ?>" class="underlined" rel="nofollow" target="_blank"><?php echo getDataFromDB($Client[7]); ?></a></div>
+<?php endif; ?>
+			<div class="btn-contact"><a href="javascript://" class="btn btn-mini btn-primary contact-us" destination="id<?php echo $id_company; ?>"><i class="icon-envelope icon-white"></i>&nbsp;&nbsp;Написать нам</a></div>
+			<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/contacts">подробнее&nbsp;&rarr;</a>
+		</div>
+		<div class="maps lust">
+			<p class="side-bar-title">Карта</p>
+<?php if ($Client[3]!='' && $Client[4]!='0'): ?>
+			<a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/contacts"><img xmlns="http://www.w3.org/1999/xhtml" xmlns:lego="https://lego.yandex-team.ru" xmlns:dev="http://dev.yandex.ru/xmlns" alt="" src="http://static-maps.yandex.ru/1.x/?l=map&ll=<?php echo $Client[3]; ?>&pt=<?php echo $Client[3]; ?>,pmors&z=<?php echo ($Client[4] - 1); ?>&size=200,150&key=<?php echo $yandex_key; ?>" class="noborder" /></a>
+			<div><a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/contacts">увеличить карту&nbsp;&rarr;</a></div>
+<?php else: ?>
+			<p class="muted">в обработке</p>
+<?php endif; ?>
+<!-- time -->
+<!--noindex-->
+<?php if ($translit_company == 'klingspor'): ?>
+<div style="margin-top:5px;"><a href="http://<?php echo $baseHref; ?>/i/scheme/sheme_klingspor.jpg" target="_blank" rel="nofollow">посмотреть схему проезда</a></div>
+<?php endif; ?>
+<!--/noindex-->
+<!-- /time -->
+		</div>
+<?php endif; ?>
+	</div>
+</div><!-- /side-bar -->

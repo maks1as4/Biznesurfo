@@ -1,0 +1,56 @@
+<?php require_once "../../includs/control/head.html"; ?>
+
+<div class="box-header">
+	<div class="pull-left box-header-home"><a href="/kabinet"><i class="icon-home"></i></a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point"><a href="/kabinet/about">О компании</a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point"><a href="/kabinet/contacts-change">Изменить контакты компании</a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point">Изменить <?php echo $title_suffix; ?></div>
+	<div class="pull-left box-header-separator"></div>
+</div>
+<div class="box-content">
+	<div class="box-inner-main">
+		<div class="title-page">
+			<h2 class="inline">Изменить телефон компании</h2>
+			<p class="pull-right"><a href="/kabinet/contacts-change" class="btn btn-link">&larr; вернуться назад</a></p>
+		</div>
+<?php if ($err != ''){ ?>
+		<div class="alert alert-error">
+			<p><strong>Исправьте, пожалуйста, следующие ошибки:</strong></p>
+			<?php echo $err; ?>
+		</div>
+<?php } ?>
+		<p>
+			Телефон указывается без каких-либо разделителей.<br />
+			Может быть городским, сотовым либо бесплатным с кодом 8800.
+		</p>
+		<form id="forms" method="post" action="/kabinet/phone-edit/<?php echo $id_row; ?>">
+			<div class="controls controls-row">
+				<div class="pull-left phone-prefix">
+					+7
+				</div>
+				<div class="pull-left phone-part">
+					<label>код</label>
+					<input type="text" id="u1code" class="input-mini" name="u1code" value='<?php echo $val_code; ?>' maxlength="5" autocomplete="off" />
+				</div>
+				<div class="pull-left phone-part">
+					<label>номер</label>
+					<input type="text" id="u1phone" class="input-large" name="u1phone" value="<?php echo $val_phone; ?>" maxlength="7" autocomplete="off" />
+				</div>
+			</div>
+			<div class="phone-errors">
+				<span id="err-u1code" class="error"></span>
+				<span id="err-u1phone" class="error"></span>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" class="btn btn-primary" name="btmes"><i class="icon-ok-sign icon-white icon-tab-left"></i>Сохранить</button>
+				</div>
+			</div>
+		</form>
+	</div><!-- /box-inner-main -->
+</div><!-- /box-content -->
+
+<?php require_once "../../includs/control/foot.html"; ?>

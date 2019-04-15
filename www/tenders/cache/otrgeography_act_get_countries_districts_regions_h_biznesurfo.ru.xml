@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?><countries>
+  <country id="1" header="Россия">
+    <district id="1" header="Центральный ФО">
+      <region id="6" header="Белгородская обл." />
+      <region id="7" header="Брянская обл." />
+      <region id="8" header="Владимирская обл." />
+      <region id="11" header="Воронежская обл." />
+      <region id="13" header="Ивановская обл." />
+      <region id="18" header="Калужская обл." />
+      <region id="25" header="Костромская обл." />
+      <region id="29" header="Курская обл." />
+      <region id="31" header="Липецкая обл." />
+      <region id="33" header="Москва" />
+      <region id="34" header="Московская обл." />
+      <region id="42" header="Орловская обл." />
+      <region id="63" header="Рязанская обл." />
+      <region id="69" header="Смоленская обл." />
+      <region id="72" header="Тамбовская обл." />
+      <region id="73" header="Тверская обл." />
+      <region id="75" header="Тульская обл." />
+      <region id="89" header="Ярославская обл." />
+      <region id="188" header="Байконур" />
+    </district>
+    <district id="2" header="Приволжский  ФО">
+      <region id="22" header="Кировская обл." />
+      <region id="37" header="Нижегородская обл." />
+      <region id="41" header="Оренбургская обл." />
+      <region id="43" header="Пензенская обл." />
+      <region id="44" header="Пермский край" />
+      <region id="50" header="Респ.Башкортостан" />
+      <region id="56" header="Респ.Марий-Эл" />
+      <region id="57" header="Респ.Мордовия" />
+      <region id="59" header="Респ.Татарстан" />
+      <region id="64" header="Самарская обл." />
+      <region id="66" header="Саратовская обл." />
+      <region id="77" header="Удмуртская респ." />
+      <region id="78" header="Ульяновская обл." />
+      <region id="85" header="Чувашская респ." />
+    </district>
+    <district id="3" header="Уральский ФО">
+      <region id="28" header="Курганская обл." />
+      <region id="68" header="Свердловская обл." />
+      <region id="76" header="Тюменская обл." />
+      <region id="81" header="Ханты-Мансийский АО" />
+      <region id="82" header="Челябинская обл." />
+      <region id="88" header="Ямало-Ненецкий АО" />
+    </district>
+    <district id="4" header="Дальневосточный ФО">
+      <region id="3" header="Амурская обл." />
+      <region id="12" header="Еврейская АО" />
+      <region id="19" header="Камчатский край" />
+      <region id="32" header="Магаданская обл." />
+      <region id="45" header="Приморский край" />
+      <region id="58" header="Респ.Саха (Якутия)" />
+      <region id="67" header="Сахалинская обл." />
+      <region id="80" header="Хабаровский край" />
+      <region id="86" header="Чукотский АО" />
+    </district>
+    <district id="5" header="Северо-Западный ФО">
+      <region id="4" header="Архангельская обл." />
+      <region id="10" header="Вологодская обл." />
+      <region id="17" header="Калининградская область" />
+      <region id="23" header="Коми-Пермяцкий АО" />
+      <region id="30" header="Ленинградская обл." />
+      <region id="35" header="Мурманская обл." />
+      <region id="36" header="Ненецкий АО" />
+      <region id="38" header="Новгородская обл." />
+      <region id="46" header="Псковская обл." />
+      <region id="54" header="Респ.Карелия" />
+      <region id="55" header="Респ.Коми" />
+      <region id="65" header="Санкт-Петербург" />
+    </district>
+    <district id="6" header="Сибирский ФО">
+      <region id="1" header="Забайкальский край" />
+      <region id="2" header="Алтайский край" />
+      <region id="15" header="Иркутская обл." />
+      <region id="21" header="Кемеровская обл." />
+      <region id="27" header="Красноярский край" />
+      <region id="39" header="Новосибирская обл." />
+      <region id="40" header="Омская обл." />
+      <region id="49" header="Респ.Алтай" />
+      <region id="51" header="Респ.Бурятия" />
+      <region id="60" header="Респ.Тыва" />
+      <region id="61" header="Респ.Хакасия" />
+      <region id="71" header="Таймырский АО" />
+      <region id="74" header="Томская обл." />
+      <region id="79" header="Бурятский АО" />
+      <region id="87" header="Эвенкийский АО" />
+    </district>
+    <district id="7" header="Южный ФО">
+      <region id="5" header="Астраханская обл." />
+      <region id="9" header="Волгоградская обл." />
+      <region id="26" header="Краснодарский край" />
+      <region id="48" header="Респ.Адыгея" />
+      <region id="53" header="Респ.Калмыкия" />
+      <region id="62" header="Ростовская обл." />
+    </district>
+    <district id="8" header="Северо-Кавказский федеральный округ">
+      <region id="14" header="Ингушская респ." />
+      <region id="16" header="Кабардино-Балкарская респ." />
+      <region id="20" header="Карачаево-Черкесская респ." />
+      <region id="47" header="Респ. Северная Осетия" />
+      <region id="52" header="Респ.Дагестан" />
+      <region id="70" header="Ставропольский край" />
+      <region id="83" header="Чеченская респ." />
+    </district>
+    <district id="9" header="Крымский федеральный округ">
+      <region id="105" header="АР Крым" />
+    </district>
+  </country>
+  <country id="2" header="Белоруссия">
+    <region id="94" header="Брестская область" />
+    <region id="100" header="Витебская обл." />
+    <region id="101" header="Гомельская обл." />
+    <region id="102" header="Гродненская обл." />
+    <region id="103" header="Могилевская обл." />
+    <region id="104" header="Минская обл." />
+  </country>
+  <country id="3" header="Украина">
+    <region id="106" header="Винницкая обл." />
+    <region id="107" header="Волынинская обл." />
+    <region id="108" header="Днепропетровская обл." />
+    <region id="109" header="Донецкая обл." />
+    <region id="110" header="Житомирская обл." />
+    <region id="111" header="Закарпатская обл." />
+    <region id="112" header="Запорожская обл." />
+    <region id="113" header="Ивано-Франковская обл." />
+    <region id="114" header="Киев" />
+    <region id="115" header="Киевская обл." />
+    <region id="116" header="Кировоградская обл." />
+    <region id="117" header="Луганская обл." />
+    <region id="118" header="Львовская обл." />
+    <region id="119" header="Николаевская обл." />
+    <region id="120" header="Одесская обл." />
+    <region id="121" header="Полтавская обл." />
+    <region id="122" header="Ровенская обл." />
+    <region id="123" header="Севастополь" />
+    <region id="124" header="Сумская обл." />
+    <region id="125" header="Тернопольская обл" />
+    <region id="126" header="Харьковская обл." />
+    <region id="127" header="Херсонская обл." />
+    <region id="128" header="Хмельницкая обл." />
+    <region id="129" header="Черкасская обл." />
+    <region id="130" header="Черниговская обл." />
+    <region id="131" header="Черновицкая обл." />
+  </country>
+  <country id="4" header="Казахстан">
+    <region id="132" header="Карагандинская обл." />
+    <region id="133" header="Восточно-казахстанская обл." />
+    <region id="134" header="Алматинская обл." />
+    <region id="135" header="Жамбылская обл." />
+    <region id="136" header="Южно-казахстанская обл." />
+    <region id="137" header="Кызылординская обл." />
+    <region id="138" header="Актюбинская обл." />
+    <region id="139" header="Костанайская обл." />
+    <region id="140" header="Северо-казахстанская обл." />
+    <region id="141" header="Акмолинская обл." />
+    <region id="142" header="Павлодарская обл." />
+    <region id="143" header="Западно-казахстанская обл." />
+    <region id="144" header="Атырауская обл." />
+    <region id="146" header="Мангистауская обл." />
+    <region id="147" header="Астана" />
+  </country>
+  <country id="5" header="Туркменистан">
+    <region id="145" header="Туркменистан" />
+    <region id="166" header="город Ашхабад" />
+    <region id="167" header="Ахалский велаят" />
+    <region id="168" header="Балканский велаят" />
+    <region id="169" header="Дашогузский велаят" />
+    <region id="170" header="Лебапский велаят" />
+    <region id="171" header="Марыйский велаят" />
+  </country>
+  <country id="6" header="Кыргызстан">
+    <region id="148" header="Кыргызстан" />
+    <region id="158" header="Баткенская обл." />
+    <region id="159" header="Жалал-Абадская обл." />
+    <region id="160" header="Нарынская обл." />
+    <region id="161" header="Ошская обл." />
+    <region id="162" header="Таласская обл." />
+    <region id="163" header="Чуйская обл." />
+    <region id="164" header="Ысык-Кёльская обл." />
+    <region id="165" header="Бишкек" />
+  </country>
+  <country id="7" header="Узбекистан">
+    <region id="149" header="Узбекистан" />
+  </country>
+  <country id="8" header="Таджикистан">
+    <region id="150" header="Таджикистан" />
+    <region id="172" header="Районы республиканского подчинения" />
+    <region id="173" header="Хатлонская область" />
+    <region id="174" header="Горно-Бадахшанская автономная область" />
+  </country>
+  <country id="9" header="Азербайджан">
+    <region id="151" header="Азербайджан" />
+  </country>
+  <country id="10" header="Армения">
+    <region id="152" header="Армения" />
+  </country>
+  <country id="11" header="Израиль">
+    <region id="153" header="Израиль" />
+  </country>
+  <country id="12" header="Грузия">
+    <region id="154" header="Грузия" />
+    <region id="157" header="Абхазия" />
+    <region id="175" header="Тбилиси" />
+    <region id="176" header="Батуми" />
+    <region id="185" header="Респу&amp;#769;блика Ю&amp;#769;жная Осе&amp;#769;тия" />
+    <region id="186" header="Грузия" />
+  </country>
+  <country id="14" header="Латвия">
+    <region id="155" header="Согдийская область" />
+    <region id="179" header="Латвия" />
+  </country>
+  <country id="15" header="Литва">
+    <region id="156" header="Талды-Курганская обл" />
+    <region id="180" header="Литва" />
+  </country>
+  <country id="16" header="Эстония">
+    <region id="181" header="Эстония" />
+    <region id="183" header="Таллин" />
+  </country>
+</countries>

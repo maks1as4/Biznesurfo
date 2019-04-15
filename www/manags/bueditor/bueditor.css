@@ -1,0 +1,60 @@
+.editor-container {
+  margin: 1px 0px;
+}
+.editor-text-button {
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #fff;
+  color: #444;
+  cursor: pointer;
+  text-align: center;
+}
+.editor-text-button, .editor-image-button {
+  margin: 2px;
+  border: 1px solid #ccc;
+  padding: 0px;
+  height: 16px;
+  width: 16px;
+}
+.editor-text-button:hover, .editor-image-button:hover {
+  border-color: #ff0000;
+}
+.editor-container .stay-clicked {
+  border-color: #f00;
+}
+.editor-popup {
+  z-index: 10;
+  position: absolute;
+  border: 1px solid #000;
+  font: 12px verdana;
+  width: auto;
+  text-align: left;
+  background-color: #999;
+}
+.editor-popup tr.head {
+  font-weight: bold;
+  border-top: 1px solid #000;
+  cursor: move;
+}
+.editor-popup td.title {
+  font-size: 1.1em;
+  padding-right: 10px;
+}
+.editor-popup td.close {
+  text-align: right;
+  padding-right: 4px;
+}
+.editor-popup td.close a {
+  cursor: pointer;
+  font-size: 1.3em;
+}
+.editor-popup td.close a:hover {
+  text-decoration: none;
+}
+.editor-popup tbody {
+  border: none;
+}
+#editor-help {
+  width: 400px;
+  background-color: #fff;
+}

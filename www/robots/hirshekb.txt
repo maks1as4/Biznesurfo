@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: hirshekb.biznesurfo.ru
+Sitemap: http://hirshekb.biznesurfo.ru/sitemap.xml

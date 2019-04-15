@@ -1,0 +1,60 @@
+<?php require_once "../../includs/company/default/head.html"; ?>
+
+<div class="row">
+	<div id="main" class="span12">
+
+		<div class="row">
+
+<?php require_once "../../includs/company/default/sidebar.html"; ?>
+
+			<div id="content" class="span9">
+				<div class="content-wrap">
+					<ul class="breadcrumb">
+						<li><a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/">Главная</a> <span class="divider">/</span></li>
+						<li class="active">Новости</li>
+					</ul>
+					<div class="page-name">
+						<h1>Новости</h1>
+					</div>
+<?php if (!empty($News)): ?>
+					<div id="news-list">
+<?php foreach ($News as $news): ?>
+						<div class="media news-line">
+<?php if ($news[2] != ''): ?>
+							<a class="pull-left" href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/news/<?php echo getDataFromDB($news[1]); ?>.html">
+								<img src="../i/news/<?php echo $news[2]; ?>_small.<?php echo $news[3]; ?>" class="media-object img-polaroid" alt='<?php echo getDataFromDB($news[0]); ?>' />
+							</a>
+<?php endif; ?>
+							<div class="media-body">
+								<h5><a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/news/<?php echo getDataFromDB($news[1]); ?>.html" class="media-heading-link"><?php echo getDataFromDB($news[0]); ?></a></h5>
+								<div>
+<?php if ($isOwner && $news[6]!=0): ?>
+									<span class="label-verification" title="Новость находится на проверке и видена только вам."><i class="icon-time"></i>&nbsp;новость на проверке</span>
+<?php else: ?>
+									<small class="muted"><?php echo DataParser($news[5]); ?></small>
+<?php endif; ?>
+									<br />
+									<?php echo strip_tags(getDataFromDB($news[4])); ?>... <a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/news/<?php echo getDataFromDB($news[1]); ?>.html">подробнее&nbsp;&rarr;</a>
+								</div>
+							</div>
+						</div>
+<?php endforeach; ?>
+<?php if ($pageNavQty>0):?>
+						<div class="pagination pagination-centered">
+							<ul>
+<?php for($i=0;$i<$pageNavQty;$i++)	echo ($PageNav[$i]."\n"); ?>
+							</ul>
+						</div>
+<?php endif; ?>
+					</div><!-- /news-list -->
+<?php else: ?>
+					<p class="muted">новостей нет</p>
+<?php endif; ?>
+				</div>
+			</div><!-- /content -->
+		</div>
+		
+	</div><!-- /main -->
+</div>
+
+<?php require_once "../../includs/company/default/foot.html"; ?>

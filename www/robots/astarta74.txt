@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: astarta74.biznesurfo.ru
+Sitemap: http://astarta74.biznesurfo.ru/sitemap.xml

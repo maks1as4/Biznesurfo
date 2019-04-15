@@ -1,0 +1,211 @@
+<div class="b2b84109_non_wrapper">
+    <div class="b2b84109_content b2b84109_ph-16">
+        <!--[if IE 6]><table class="b2b84109_fix b2b84109_c-100"><tr><td class="b2b84109_fix"><![endif]-->
+        <div class="b2b84109_h3 b2b84109_white b2b84109_bg-red" style="padding:6px;"><a href="<?php echo $script_name;?>" style="color: #FFFFFF;">Рубрикатор</a> :: 
+                                 <?php if(!empty($header)):?>
+                                 <a href="<?php echo $subotr_page_href;?>"><?php echo $subotr_page_header;?></a> :: 
+                                 <?php echo $header;?>
+                                 <?php else:?>Регистрация<?php endif;?>
+        </div>
+         <?php if(!empty($header)):?>
+        <table class="b2b84109_spec b2b84109_gr-table2">
+            <tr>
+                <th class="b2b84109_w-250">Название: </th>
+                <td><?php echo $header;?></td>
+            </tr>
+            <tr>
+                <th>Кратко: </th>
+                <td><?php echo $anons;?></td>
+            </tr>
+            <tr>
+                <th>Текст: </th>
+                <td><font style="color: red;">Доступно только для зарегистрированных в системе тендеров</font></td>
+            </tr>
+            <tr>
+                <th>Время действия: </th>
+                <td><?php echo $startdate;?> - <?php echo $stopdate;?></td>
+            </tr>
+            <tr>
+                <th>Цена контракта, руб.: </th>
+                <td><?php echo (empty($cena_contrakta))?'Не определена':$cena_contrakta;?></td>
+            </tr>       
+        </table>
+        <?php endif;?>        
+
+        <div class=" b2b84109_gr-rn2">
+            <div class="b2b84109_tl">
+                <div class="b2b84109_tr">
+                    <div class="b2b84109_br">
+                        <div class="b2b84109_bl">
+                        
+                            <a name="<?php echo $prefix;?>b2b_message_anchor"></a>
+                            
+                            <?php if($message == 'OK'):?>
+                            
+														<font style="color: red;"><?php echo $success_text;?></font>
+
+														<?php else:?>
+                            
+                            <noindex>
+                            
+                            Уважаемый посетитель ресурса!<br><br>
+
+                            Вы можете просматривать всю информацию по интересующим Вас заявкам, подключившись к крупнейшей базе по тендерам и закупкам Трейд.Су.<br><br>
+
+                            Для начала работы с системой Трейд.Су Вам достаточно пройти единовременную регистрацию, заполнив форму <a href="<?php echo $_SERVER['REQUEST_URI'];?>#b2b_reg_form_anchor">ниже</a><br><br>
+
+                            Внимание! Доступ к системе возможен только после подтверждения администратором. Поля выделенные <span class="b2b84109_red">*</span> являются обязательными для заполнения.<br><br>
+
+                            Данные об организации, введенные Вами при заполнении регистрационной формы будут размещены в каталоге торговой системы и представлены в открытом доступе.<br><br>
+                            
+                            </noindex>
+                            
+                            <script language="JavaScript">
+                            function b2b_region_select()
+                            {
+                              var region = new Array();
+                                
+                              <?php foreach($countries as $c):?>
+															region[<?php echo $c['id'];?>] = '<?php foreach($c['region'] as $r):?><option value="<?php echo $r['id'];?>" <?php echo ($r['id'] == $region)?'selected':'';?>><?php echo $r['header'];?></option><?php endforeach;?>';
+															<?php endforeach;?>
+                                
+                               var country = document.getElementById('b2b_reg_country').value;
+                               document.getElementById('b2b_reg_region').innerHTML = '<option value="0">--- выберите регион ---</option>' + region[country];
+                            }
+                            </script>
+                            
+                            <a name="<?php echo $prefix;?>b2b_reg_form_anchor"></a>
+                            
+                            <form method="post" name="<?php echo $prefix;?>f_registerform" id="f_registerform" class="b2b84109_ib-fx b2b84109_a-lt b2b84109_ib-lb b2b84109_ph-7" action="<?php echo $_SERVER['REQUEST_URI'];?>#b2b_message_anchor">
+                                <p>
+                                    <label class="b2b84109_w-160 b2b84109_a-rt b2b84109_mr-6" for="b2b_reg_firm">Название организации:<span class="b2b84109_red">*</span></label>
+                                    <input type="text" id="b2b_reg_firm" name="<?php echo $prefix;?>firm" class="b2b84109_w-330" value="<?php echo $firm;?>">
+                                </p>
+                                <p>
+                                    <label class="b2b84109_w-160 b2b84109_a-rt b2b84109_mr-6" for="b2b_reg_country">Страна:</label>
+                                    <select id="b2b_reg_country" name="<?php echo $prefix;?>country" class="b2b84109_w-330" onchange="b2b_region_select()">
+                                    <?php foreach($countries as $c):?>
+																		<option value="<?php echo $c['id'];?>" <?php echo ($c['id'] == $country)?'selected':'';?>><?php echo $c['header'];?></option> 
+																		<?php endforeach;?>
+                                    </select>
+                                </p>
+                                <p>
+                                    <label class="b2b84109_w-160 b2b84109_a-rt b2b84109_mr-6" for="b2b_reg_region">Регион:</label>
+                                    <select id="b2b_reg_region" name="<?php echo $prefix;?>region" class="b2b84109_w-330">
+                                    <script language="JavaScript">b2b_region_select()</script>
+                                    </select>
+                                </p>
+                                <p>
+                                    <label class="b2b84109_w-160 b2b84109_a-rt b2b84109_mr-6" for="b2b_reg_city">Город:</label>
+                                    <input type="text" id="b2b_reg_city" name="<?php echo $prefix;?>city" class="b2b84109_w-330" value="<?php echo $city;?>">
+                                </p>
+                                <p>
+                                    <label class="b2b84109_w-160 b2b84109_a-rt b2b84109_mr-6" for="b2b_reg_phone">Телефон:<span class="b2b84109_red">*</span></label>
+                                    <input type="text" id="b2b_reg_phone" name="<?php echo $prefix;?>phone" class="b2b84109_w-330" value="<?php echo $phone;?>">
+                                </p>
+                                <p>
+                                    <label class="b2b84109_w-160 b2b84109_a-rt b2b84109_mr-6" for="b2b_reg_address">Адрес:</label>
+                                    <textarea id="b2b_reg_address" name="<?php echo $prefix;?>address" cols="10" class="b2b84109_w-330" rows="4"><?php echo $address;?></textarea>
+                                </p>                                
+                                <p>
+                                    <label class="b2b84109_w-160 b2b84109_a-rt b2b84109_mr-6" for="b2b_reg_web">Веб-сайт:</label>
+                                    <input type="text" id="b2b_reg_web" name="<?php echo $prefix;?>web" class="b2b84109_w-330" value="<?php echo $web;?>">
+                                </p>
+                                <p>
+                                    <label class="b2b84109_w-160 b2b84109_a-rt b2b84109_mr-6" for="b2b_reg_email">E-Mail:<span class="b2b84109_red">*</span></label>
+                                    <input type="text" id="b2b_reg_email" name="<?php echo $prefix;?>email" class="b2b84109_w-330" value="<?php echo $email;?>">
+                                </p>
+                                <p>
+                                    <label class="b2b84109_w-160 b2b84109_a-rt b2b84109_mr-6" for="b2b_reg_name_f">Фамилия:<span class="b2b84109_red">*</span></label>
+                                    <input type="text" id="b2b_reg_name_f" name="<?php echo $prefix;?>name_f" class="b2b84109_w-330" value="<?php echo $name_f;?>">
+                                </p>
+                                <p>
+                                    <label class="b2b84109_w-160 b2b84109_a-rt b2b84109_mr-6" for="b2b_reg_name_i">Имя:<span class="b2b84109_red">*</span></label>
+                                    <input type="text" id="b2b_reg_name_i" name="<?php echo $prefix;?>name_i" class="b2b84109_w-330" value="<?php echo $name_i;?>">
+                                </p>
+                                <p>
+                                    <label class="b2b84109_w-160 b2b84109_a-rt b2b84109_mr-6" for="b2b_reg_name_o">Отчество:</label>
+                                    <input type="text" id="b2b_reg_name_o" name="<?php echo $prefix;?>name_o" class="b2b84109_w-330" value="<?php echo $name_o;?>">
+                                </p>
+                                <p>
+                                    <label class="b2b84109_w-160 b2b84109_a-rt b2b84109_mr-6" for="ecodee">Укажите код, изображённый на картинке:<span class="b2b84109_red">*</span></label>
+                                    <script language="JavaScript">
+                                    function b2b_reg_sh()
+                                    {
+                                        var vvv = Math.floor(Math.random()*700000);
+                                        document.getElementById("b2b_reg_icode").value = vvv;
+                                        document.getElementById("b2b_reg_imghash").src = "http://b2bcontext.ru/image?icode="+vvv;
+                                    }
+                                    var vvv = Math.floor(Math.random()*700000);
+                                    document.writeln("<input type='hidden' id='b2b_reg_icode' name='icode' value='"+vvv+"'>");
+                                    document.writeln("<a href='javascript:b2b_reg_sh();'><img id='b2b_reg_imghash' border='0' src='http://b2bcontext.ru/image?icode="+vvv+"' width='150' height='50' border='0' alt=' '></a>");
+                                    </script>
+                                    <input type="text" id="b2b_reg_ecode" name="<?php echo $prefix;?>ecode" value="" style="width: 177px;">
+                                </p>
+                                
+                                <p class="b2b84109_pl-170">
+                                    <input type="hidden" name="<?php echo $prefix;?>act" value="register">
+                                    <input type="hidden" name="<?php echo $prefix;?>h" value="<?php echo $host;?>">
+                                    <input type="hidden" name="<?php echo $prefix;?>other" value="b2bcontext">
+                                    <input type="hidden" name="<?php echo $prefix;?>id" value="<?php echo $id;?>">
+                                    <input type="hidden" name="<?php echo $prefix;?>parent" value="rubricator">
+                                    <input type="hidden" name="<?php echo $prefix;?>child" value="registerform">
+                                    <input type="button" value="Зарегистрироваться" onClick="b2b_form_submit();">
+                                </p>
+                            </form>      
+                            
+                            <script language="JavaScript">
+                                function b2b_form_submit()
+                                {
+                                    var error = [];
+                                    if (! document.getElementById("b2b_reg_firm").value)
+                                        error.push ("- Название организации");
+                                    if (! document.getElementById("b2b_reg_phone").value.match(/[0-9]/))
+                                        error.push ("- Телефон");
+                                    if (! document.getElementById("b2b_reg_email").value.match(/@/))
+                                        error.push ("- E-mail");  
+                                    if (! document.getElementById("b2b_reg_name_f").value)
+                                        error.push ("- Фамилия");
+                                    if (! document.getElementById("b2b_reg_name_i").value)
+                                        error.push ("- Имя");
+                                    if (! document.getElementById("b2b_reg_ecode").value)
+                                        error.push ("- Код, изображённый на картинке");
+                                    if (error.length)
+                                    {
+                                        alert ("Следующие поля не заполнены или заполнены неправильно:\n" + error.join ("\n"));
+                                        b2b_reg_sh();
+                                        return; 
+                                    }
+                                        
+                                    document.f_registerform.submit()
+                                }
+                                
+                                <?php if(!empty($message)):?>
+                                function b2b_reg_message()
+                                {
+                                    alert("<?php echo $message;?>");   
+                                }
+
+                                if (window.addEventListener)
+                                {
+                                    window.addEventListener('load', b2b_reg_message, false);
+                                }
+                                else if (window.attachEvent)
+                                {
+                                    window.attachEvent('onload', b2b_reg_message);
+                                }                                
+                                <?php endif;?>
+
+                            </script>
+                            
+                            <?php endif;?>                      
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--[if IE 6]></td></tr></table><![endif]-->
+    </div>
+    <!--// end content //-->
+</div>

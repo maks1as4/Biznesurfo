@@ -1,0 +1,80 @@
+<?php require_once "../../includs/control/head.html"; ?>
+
+<div class="box-header">
+	<div class="pull-left box-header-home"><a href="/kabinet"><i class="icon-home"></i></a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point"><a href="/kabinet/news">Новости</a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point">Изменить новость</div>
+	<div class="pull-left box-header-separator"></div>
+</div>
+<div class="box-content">
+	<div class="box-inner-main">
+		<div class="title-page">
+			<h2 class="inline">Изменить новость</h2>
+			<p class="pull-right"><a href="/kabinet/news" class="btn btn-link">&larr; вернуться назад</a></p>
+		</div>
+<?php if ($err != ''){ ?>
+		<div class="alert alert-error">
+			<p><strong>Исправьте, пожалуйста, следующие ошибки:</strong></p>
+			<?php echo $err; ?>
+		</div>
+<?php } ?>
+		<form id="forms" class="form-horizontal" method="post" action="/kabinet/edit-news/<?php echo $news_id; ?>" enctype="multipart/form-data">
+			<div class="control-group">
+				<label class="control-label"><i class="icon-require icon-tab-left"></i>Заголовок новости</label>
+				<div class="controls">
+					<input type="text" id="utitle" class="input-xxlarge" name="utitle" value='<?php echo $val_title; ?>' maxlength="250" autocomplete="off" />
+					<span id="err-utitle" class="error"></span>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label"><i class="icon-require icon-tab-left"></i>Текст новости</label>
+				<div class="controls">
+					<textarea id="text" class="big" name="utext"><?php echo $val_text; ?></textarea>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label"><span id="picture-hint" class="abbr"><?php echo (($News[2] != '') && ($News[3] != '')) ? 'Изменить' : 'Добавить' ; ?> картинку <i class="icon-question-sign"></i></span></label>
+				<div class="controls">
+					<img src="<?php echo $val_img_src; ?>" id="img-news" class="img-polaroid img-right10" />
+					<input type="file" id="upicture" class="input-medium" name="upicture" /><br />
+<?php if (($News[2] != '') && ($News[3] != '')){ ?>
+					<a href="/kabinet/news-delete-image/<?php echo $news_id; ?>" id="id<?php echo $news_id; ?>" class="dashed delete-news-image img-action">удалить картинку</a>
+<?php } ?>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<i class="icon-require icon-tab-left"></i>- поля обязательные для заполнения
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" class="btn btn-primary" name="btmes"><i class="icon-ok-sign icon-white icon-tab-left"></i>Сохранить</button>
+				</div>
+			</div>
+		</form>
+	</div><!-- /box-inner-main -->
+</div><!-- /box-content -->
+
+<!-- delete modal -->
+<div id="delete-modal" class="modal-wrapper">
+	<div class="modal-head">
+		<a href="javascript://" class="modal-close close-x" title="закрыть"></a>
+	</div>
+	<div class="question"></div>
+	<div class="modal-foot">
+		<a href="javascript://" class="yes btn btn-primary"><i class="icon-trash icon-white icon-tab-left"></i>удалить</a>&nbsp;&nbsp;&nbsp;
+		<a href="javascript://" class="modal-close btn"><i class="icon-refresh icon-tab-left"></i>отмена</a>
+	</div>
+</div>
+<!-- /delete modal -->
+
+<!-- preload imgs -->
+<div class="preload">
+	<img src="/i/kabinet/modal-close.png" />
+</div>
+<!-- /preload imgs -->
+
+<?php require_once "../../includs/control/foot.html"; ?>

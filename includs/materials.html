@@ -1,0 +1,110 @@
+<?php require_once "../includs/head.html"; ?>
+
+				<div class="path">
+<?php for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+				</div><!-- /path -->
+	
+				<h1><?php echo $tagH1;?></h1>
+	
+<?php if ($linsQty==0):?>
+				<div class="inform clear">
+<h3>В разделе искомая информация отсутствует.</h3>
+Рекомендации:<br />
+<ul><li>Обратите внимание на значение фильтра &laquo;Регион и город&raquo;;</li>
+<li>Возможно Вы перешли по устаревшей ссылке.</li>
+</ul>
+				</div><!-- /info -->
+<?php else:?>
+				<div class="items_table_nav clear">
+					<div class="itn_l">
+						<!--noindex--><br />
+						Выбранные:
+						<a href="javascript://" class="excel" rel="nofollow">в Excel</a>
+						<!--
+						<a href="#" class="print">Печать</a>
+						-->
+						<!--/noindex-->
+					</div><!-- /itn_l -->
+
+					<div class="itn_r">
+						<?php echo $qtyRow;?><br />
+						<span class="pages_count">Страница <?php echo $curPageNo;?> из <?php echo $maxPageNo;?></span>
+
+<?php if ($pageNavQty>0):?>
+						<span class="pages_nav">
+<?php for($i=0;$i<$pageNavQty;$i++)	echo ($PageNav[$i]."\n"); ?>
+						</span>
+<?php endif; ?>
+					</div><!-- /itn_r -->
+				</div><!-- /items_table_nav -->
+				
+				<form id="items_table_form" name="tabform" method="post" action="">
+				<table class="items_table">
+					<thead>
+					<tr>
+						<td class="td_check"><input type="checkbox" name="cball" id="cball" /></td>
+<?php for ($i=0;$i<$HeadersQty;$i++) echo ($Headers[$i]); ?>
+					</tr>
+					</thead>
+<?php for ($i=0;$i<$linsQty;$i++): ?>
+<?php if($b2bcontext && ($i>2) && ($i%$modI==0)): ?>
+					<tr>
+						<td colspan="5" class="adv">
+<?php @include "../includs/hor_b2b_context.html"; ?>
+						</td>
+					</tr>
+<?php endif; ?>
+					<tr<?php echo($Lins[$i][6]==1?' class="bold"':'');?>>
+						<td class="td_check"><input class="row_element" type="checkbox" name="cb<?php echo($Lins[$i][0])?>" id="cb<?php echo($Lins[$i][0])?>" /></td>
+						<td>
+<?php if ($Lins[$i][9] != null && $Lins[$i][10] != null): ?>
+							<img src="i/products/<?php echo $Lins[$i][9]; ?>_small.<?php echo $Lins[$i][10]; ?>" class="preview" align="middle" />
+<?php endif; ?>
+							<a class="article" href="product/<?php echo $Lins[$i][8].'.html'.$findParStr; ?>"><?php echo($Lins[$i][1])?></a>
+						</td>
+						<td><?php echo($Lins[$i][2])?></td>
+						<td>
+							<a href="<?php echo ($Lins[$i][11]!=''?'http://'.$Lins[$i][11].'.'.$url3Href:'company/'.$Lins[$i][3])?>" title="Карточка предприятия <?php echo($Lins[$i][4])?>" target="_blank"><?php echo($Lins[$i][4])?></a><br /><?php echo($Lins[$i][7])?>
+						</td>
+						<td><strong><?php echo($Lins[$i][5])?></strong></td>
+					</tr>
+<?php endfor; ?>
+				</table>
+				</form>
+				
+				<div class="items_table_nav">
+					<div class="itn_l">
+						<!--noindex-->Выбранные:
+						<a href="javascript://" class="excel" rel="nofollow">в Excel</a>
+						<!--
+						<a href="#" class="print">Печать</a>
+						-->
+						<!--/noindex-->
+					</div><!-- /itn_l -->
+					
+					<div class="itn_r">
+						<span class="pages_count">Страница <?php echo $curPageNo;?> из <?php echo $maxPageNo;?></span>
+<?php if ($pageNavQty>0):?>
+						<span class="pages_nav">
+<?php for($i=0;$i<$pageNavQty;$i++)	echo ($PageNav[$i]."\n"); ?>
+						</span>
+<?php endif; ?>
+					</div><!-- /itn_r -->
+				</div><!-- /items_table_nav -->
+<?php endif; ?>
+				<br /><br /><br />
+				
+			</div><!-- /inner -->
+		</div><!-- /content -->
+	
+<?php require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: bear-ural.biznesurfo.ru
+Sitemap: http://bear-ural.biznesurfo.ru/sitemap.xml

@@ -1,0 +1,48 @@
+<?php require_once "../includs/head.html"; ?>
+
+				<div class="path">
+<?php for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+				</div><!-- /path -->
+
+				<div class="alf_letters">
+					По алфавиту:
+<?php for ($i=0;$i<count($Letters);$i++) { 
+if ($Letters[$i][1]==$letter) echo("\n".$Letters[$i][1]."\n"); else { ?>
+					<a href="<?php echo($Letters[$i][0])?>"><?php echo($Letters[$i][1])?></a> 
+<?php } } ?>
+				</div><!-- /alf_letters -->
+<?php if ($WrdsQty==0):?>
+Искомая информация отсутствует.<br />Возможно Вы перешли по устаревшей ссылке.
+<?php else:?>
+				<div class="alf_h1"><h1><?php echo $tagH1;?></h1></div><!-- /alf_h1 -->
+				<div class="alfmap">
+	<ul>
+<?php $j=false; for ($i=0;$i<$m;$i++) { 
+if ($Wrds[$i][4]==1 && !$j) { $j=true; echo("\n".'<ul>'."\n");} ?>
+		<li><a href="index/<?php echo($Wrds[$i][1]);?>.html"><?php echo($Wrds[$i][0].' ('.$Wrds[$i][3]);?>)</a></li>
+<?php if ($j && (((isset($Wrds[$i+1][4])) && ($Wrds[$i+1][4]==0)) || (($i+1)==$m))) { $j=false; echo("\n".'</ul>'."\n");} } ?>
+	</ul>
+				</div><!-- /alfmap-->
+				<div class="alfmap prr">
+					<ul>
+<?php $j=false; for ($i=$m;$i<$WrdsQty;$i++) { 
+if ($Wrds[$i][4]==1 && !$j) { $j=true; echo("\n".'<ul>'."\n");} ?>
+		<li><a href="index/<?php echo($Wrds[$i][1]);?>.html"><?php echo($Wrds[$i][0].' ('.$Wrds[$i][3]);?>)</a></li>
+<?php if ($j && (((isset($Wrds[$i+1][4])) && ($Wrds[$i+1][4]==0)) || (($i+1)==$WrdsQty))) { $j=false; echo("\n".'</ul>'."\n");} } ?>
+					</ul>
+				</div><!-- /alfmap prr -->
+<?endif?>
+			</div><!-- /inner -->
+		</div><!-- /content -->
+		
+<?php require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

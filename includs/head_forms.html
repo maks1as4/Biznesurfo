@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title><?php echo $title; ?></title>
+<base href="http://<?php echo $baseHref; ?>" />
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link type="text/css" rel="stylesheet" href="/css/style.css?23052013" />
+<link type="text/css" rel="stylesheet" href="/css/dropmenu.css?31012013" />
+<!--[if lt IE 8]>
+<link type="text/css" rel="stylesheet" href="/css/ie.css?31012013" />
+<![endif]-->
+<!--[if IE 6]>
+<link type="text/css" rel="stylesheet" href="/css/ie6.css?31012013" />
+<![endif]-->
+<script type="text/javascript" src="/js/jquery-1.7.1.min.js?31012013"></script>
+<script type="text/javascript" src="/js/jquery.simplemodal.js?31012013"></script>
+<script type="text/javascript" src="/js/bootstrap-dropdown.js?31012013"></script>
+<script type="text/javascript" src="/js/jquery.md5.js?31012013"></script>
+<script type="text/javascript" src="/js/windows.js?31012013"></script>
+<script type="text/javascript" src="/js/validate/jquery.validate.min.js?31012013"></script>
+<script type="text/javascript" src="/js/validate/additional-methods.min.js?31012013"></script>
+<!--[if IE]>
+<script type="text/javascript" src="/js/beauty_tips/excanvas.compiled.js?31012013"></script>
+<![endif]-->
+<script type="text/javascript" src="/js/beauty_tips/jquery.bt.min.js?31012013"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+<?php echo $jqAdd; ?>
+
+	$('.dropdown-toggle').dropdown();
+
+});
+<?php if ($isDeveloper): ?>
+$(document).keyup(function(event) {
+	if (event.keyCode == 192) {
+		$('#ib_console').slideToggle(100);
+	}
+});
+<?php endif; ?>
+</script>
+
+<?php if($isShowES) ShowCounterGoogle(); ?>
+
+</head>
+<body>
+<div class="page page-type-forms">
+
+<?php require_once "../includs/windows.html"; ?>
+
+<?php require_once "../includs/topmenu.html"; ?>

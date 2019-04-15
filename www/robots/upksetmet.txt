@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: upksetmet.biznesurfo.ru
+Sitemap: http://upksetmet.biznesurfo.ru/sitemap.xml

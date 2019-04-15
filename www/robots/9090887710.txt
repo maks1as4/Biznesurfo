@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: 9090887710.biznesurfo.ru
+Sitemap: http://9090887710.biznesurfo.ru/sitemap.xml

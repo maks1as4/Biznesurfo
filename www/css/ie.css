@@ -1,0 +1,44 @@
+
+div.search {overflow:hidden;}
+div.search_head a.section b {border:none !important}
+div.search_head a.section {padding:0 6px 0 0;position:relative}
+div.search_head a.section i {padding:9px 7px 10px 13px;}
+* html div.search_head a.section {padding-right:5px}
+* html div.search_head {padd1ing-top:0}
+* html div.search_head a.active {background:url(../i/search_section_r_.png) 100% 0 no-repeat;}
+* html div.search_head a.active i {background:url(../i/search_section_l_.png) 0 0 no-repeat}
+
+* html div.search_input {width:450px!important}
+
+div.prices {padding-right:1% !important}
+
+span.search_example {position:relative;top:-14px}
+
+div.tagscloud {line-height:17px;}
+
+* html   span.region_title {background:url(../i/search_region.png) 0 10px repeat;padding-bottom:1px }
+* html #regionform {left:353px;top:-10px;}
+*+html #regionform {left:355px;top:-10px;}
+
+* html div.search_input, * html input.search_button, * html span.search_example {position:relative;top:-10px}
+* html span.search_example {position:relative;top:-22px}
+
+div.contentBlock h3 span {padding:0 5px 0 0 !important;border:none }
+
+div.form div.ulica {width:60%;float:left;margin-right:1%}
+* html div.form div.region {width:49%}
+* html div.form div.gorod {width:78%;float:right}
+* html div.form div.dom {width:10%;}
+* html div.form div.ofis {width:10%;}
+* html div.form div.aya {width:10%;}
+
+div.page { width:expression(document.body.clientWidth < 990? "990px" : "100%"); }
+div.top_banner object {border:1px solid #c7c8c9; outline:none;}
+div.bot_banner object {border:1px solid #c7c8c9; outline:none;}
+
+.imageholder{overflow:hidden}
+.imageholder,.innerholder{display:block}
+.innerholder {top:50%;left:0;}
+.innerholder img, .innerholder object {top:-50%;position:relative;display:block}
+
+hr.body-top {margin-top:-6px; margin-bottom:-10px;}

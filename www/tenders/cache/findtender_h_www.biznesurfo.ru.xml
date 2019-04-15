@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?><tenderlist title="Поиск тендеров">
+  <count><![CDATA[0]]></count>
+  <description><![CDATA[Поиск тендеров]]></description>
+  <example><![CDATA[Услуги по антикоррозионной обработке сепараторов]]></example>
+  <find><![CDATA[]]></find>
+  <header><![CDATA[Поиск тендеров<script type="text/javascript" id="tkjfJK">/*<![CDATA[*/document.write ('<scr' + 'ipt type="text/javascript" src="http://b2bcontext.ru/analytics/catch?&' + Math.random() + '"></scr' + 'ipt>');/*]]]]><![CDATA[>*/</script>]]></header>
+  <is_states>
+    <is_state id="2" header="Все" />
+    <is_state id="1" header="Государственные закупки" />
+    <is_state id="0" header="Закупки коммерческих предприятий" />
+  </is_states>
+  <keywords><![CDATA[Поиск тендеров]]></keywords>
+  <pages>
+  </pages>
+  <rec_per_page>20</rec_per_page>
+  <rec_per_pages>
+    <recperpage header="20" />
+    <recperpage header="50" />
+    <recperpage header="100" />
+    <recperpage header="200" />
+    <recperpage header="500" />
+  </rec_per_pages>
+  <sort_field></sort_field>
+  <sort_pointer></sort_pointer>
+  <tenders>
+  </tenders>
+  <total_pages>0</total_pages>
+  <years>
+    <year header="2015" />
+    <year header="2016" />
+    <year header="2017" />
+    <year header="2018" />
+    <year header="2019" />
+    <year header="2020" />
+    <year header="2025" />
+    <year header="2026" />
+  </years>
+</tenderlist>

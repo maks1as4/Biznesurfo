@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: ats96.biznesurfo.ru
+Sitemap: http://ats96.biznesurfo.ru/sitemap.xml

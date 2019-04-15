@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: 23217.biznesurfo.ru
+Sitemap: http://23217.biznesurfo.ru/sitemap.xml

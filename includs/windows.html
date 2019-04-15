@@ -1,0 +1,69 @@
+<!--noindex-->
+	<div id="window-enter">
+		<div class="header-enter">
+			<div class="title-enter">Вход в кабинет</div>
+			<a href="javascript://" class="close close-enter-x" title="закрыть"></a>
+		</div>
+		<div class="body-enter">
+			<div class="row">
+				<label for="w-email">E-mail:</label><span class="error">неверный email</span><br />
+				<input type="text" id="w-email" class="edit" name="w-email" maxlength="100" />
+			</div>
+			<div class="row">
+				<label for="w-password">Пароль:</label><span class="error">неверный пароль</span><br />
+				<input type="password" id="w-password" class="edit" name="w-password" maxlength="10" />
+			</div>
+			<div class="row-agree">
+				<div class="f-left"><input type="checkbox" id="w-agree" name="w-agree" value="yes" checked="checked" /> Запомнить меня</div>
+				<div class="f-right"><a href="/forgot-password" id="forget">Забыли пароль?</a></div>
+				<div class="clear-white"></div>
+			</div>
+		</div>
+		<div class="footer-enter">
+			<div class="ok-enter"><button id="ok" class="button orange">Войти</button></div>
+			<div class="close-enter"><a href="javascript://" class="close close-enter"><span>отмена</span></a></div>
+		</div>
+	</div><!-- /window-enter -->
+
+	<div id="location">
+		<div class="header">
+			<div class="title">Выберите город или регион</div>
+			<a href="javascript://" class="close close-x" title="закрыть"></a>
+		</div>
+		<div class="body">
+			<div class="bookmark">
+				<div class="f-left">
+					<ul>
+						<li class="all"><a href="<?php echo $url; ?>" class="all">Все города</a></li>
+						<li><a href="<?php echo $url; ?>?rcid=c1085">Екатеринбург</a></li>
+					</ul>
+				</div>
+				<div class="f-left next">
+					<ul>
+						<li><a href="<?php echo $url; ?>?rcid=c1228">Тюмень</a></li>
+						<li><a href="<?php echo $url; ?>?rcid=c939">Челябинск</a></li>
+					</ul>
+				</div>
+				<div class="f-left next">
+					<ul>
+						<li><a href="<?php echo $url; ?>?rcid=r91">Москва</a></li>
+						<li><a href="<?php echo $url; ?>?rcid=r84">Санкт-Петербург</a></li>
+					</ul>
+				</div>
+				<div class="clear-white"></div>
+			</div>
+			<div class="list">
+				<ul>
+<?php foreach ($Location as $reg): ?>
+					<li class="region"><a href="<?php echo $url; ?>?rcid=r<?php echo $reg[0]; ?>"><?php echo $reg[1]; ?></a></li>
+<?php if (!empty($reg[2])): ?>
+<?php foreach ($reg[2] as $city): ?>
+					<li><a href="<?php echo $url; ?>?rcid=c<?php echo $city[0]; ?>"><?php echo $city[1]; ?></a></li>
+<?php endforeach; ?>
+<?php endif; ?>
+<?php endforeach; ?>
+				</ul>
+			</div>
+		</div>
+	</div><!-- /location -->
+<!--/noindex-->

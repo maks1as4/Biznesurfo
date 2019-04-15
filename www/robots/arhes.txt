@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: arhes.biznesurfo.ru
+Sitemap: http://arhes.biznesurfo.ru/sitemap.xml

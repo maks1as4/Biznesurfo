@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: sidcon.biznesurfo.ru
+Sitemap: http://sidcon.biznesurfo.ru/sitemap.xml

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: dedogor.biznesurfo.ru
+Sitemap: http://dedogor.biznesurfo.ru/sitemap.xml

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: scava.biznesurfo.ru
+Sitemap: http://scava.biznesurfo.ru/sitemap.xml

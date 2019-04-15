@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: kovry96.biznesurfo.ru
+Sitemap: http://kovry96.biznesurfo.ru/sitemap.xml

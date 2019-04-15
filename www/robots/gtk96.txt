@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: gtk96.biznesurfo.ru
+Sitemap: http://gtk96.biznesurfo.ru/sitemap.xml

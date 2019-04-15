@@ -1,0 +1,64 @@
+<?php require_once "../../includs/company/default/head.html"; ?>
+
+<div class="row">
+	<div id="main" class="span12">
+
+		<div class="row">
+
+<?php require_once "../../includs/company/default/sidebar.html"; ?>
+
+			<div id="content" class="span9">
+				<div class="content-wrap">
+					<ul class="breadcrumb">
+						<li><a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/">Главная</a> <span class="divider">/</span></li>
+						<li class="active">О компании</li>
+					</ul>
+					<div class="page-name">
+						<h1>О компании <?php echo $name; ?></h1>
+					</div>
+<?php if ($isOwner && $about_status!=0): ?>
+						<div class="status2"><span class="label-verification" title="Описание компании находится на проверке и его можете видеть<br /> только вы."><i class="icon-time"></i>&nbsp;описание компании на проверке</span></div>
+<?php endif; ?>
+<?php if ($about!='' && ($about_status==0 || $isOwner)): ?>
+					<div id="about">
+<?php if ($Client[2] != ''): ?>
+						<img src="http://<?php echo $baseHref; ?>/logo/<?php echo $Client[2]; ?>" class="pull-left logo-about" alt='<?php echo $name; ?>' style="width:<?php echo $logo_width; ?>px !important; height:<?php echo $logo_height; ?>px !important;" />
+<?php endif; ?>
+						<div class="about-inner"><?php echo $about; ?></div>
+					</div><!-- /about -->
+<?php endif; ?>
+					<div class="clearfix"></div><br />
+					<h4>Общие сведения</h4>
+					<table class="table">
+						<tr>
+							<td colspan="2"><?php echo $full_name; ?></td>
+						</tr>
+						<tr>
+							<td colspan="2"><?php echo getDataFromDB($Client[1]); ?></td>
+						</tr>
+<?php if (!empty($Activities)): ?>
+						<tr>
+							<td width="170">Виды деятельности:</td>
+							<td>
+								<ul>
+<?php foreach ($Activities as $activities): ?>
+									<li><?php echo getDataFromDB($activities[0]); ?>;</li>
+<?php endforeach; ?>
+								</ul>
+							</td>
+						</tr>
+<?php endif; ?>
+					</table>
+					<!--noindex-->
+					<div class="pull-right">
+						<i class="icon-print"></i> <a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/print" rel="nofollow" target="_blank" >Версия для печати</a>
+					</div>
+					<!--/noindex-->
+				</div>
+			</div><!-- /content -->
+		</div>
+		
+	</div><!-- /main -->
+</div>
+
+<?php require_once "../../includs/company/default/foot.html"; ?>

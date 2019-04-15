@@ -1,0 +1,10 @@
+.notifications{position:fixed;}
+.notifications>div{position:relative; z-index:9999; margin:5px 0px;}
+.notifications.notification-top-right{right:10px; top:50px;}
+.notifications.notification-top-left{left:10px; top:50px;}
+.notifications.notification-bottom-left{left:10px; bottom:25px;}
+.notifications.notification-bottom-right{right:10px; bottom:25px;}
+.notifications.notification-center{top:48%; left:0; width:100%;}
+.notifications.notification-center>div{margin:5px auto; width:20%; text-align:center;}
+.notifications.notification-top-center{top:50px; left:0; width:100%;}
+.notifications.notification-top-center>div{margin:5px auto; width:20%; text-align:center;}

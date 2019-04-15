@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: rtgeolog.biznesurfo.ru
+Sitemap: http://rtgeolog.biznesurfo.ru/sitemap.xml

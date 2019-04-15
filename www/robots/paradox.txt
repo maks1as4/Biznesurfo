@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: paradox.biznesurfo.ru
+Sitemap: http://paradox.biznesurfo.ru/sitemap.xml

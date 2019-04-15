@@ -1,0 +1,69 @@
+<?php require_once "../includs/head.html"; ?>
+
+				<div class="path">
+<?php for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+				</div><!-- /path -->
+	
+				<h1><?php echo $tagH1;?></h1>
+<?php if ($promo != ''): ?>
+				<div class="what"><?php echo $promo;?></div>
+<?php endif; ?>
+				<br /><br />
+<?php if ($rubsQty>0):?>
+				<ul class="productlist">
+<?php for($i=0;$i<$rubsQty;$i++):?>
+					<li><a href="<?php echo (($forPred?'firms/':'prices/').$Rubs[$i][3].$parStr);?>"><?php echo $Rubs[$i][1].' ('.$Rubs[$i][2].')';?></a></li>
+<?php if ($Rubs[$i][0] == 4145 && isset($Level4)): ?>
+<?php foreach ($Level4 as $level): ?>
+					<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <a href="/prices/<?php echo $level[3].$parStr; ?>"><?php echo $level[1].' ('.$level[2].')'; ?></a></li>
+<?php endforeach; ?>
+<?php endif; ?>
+<?endfor?>
+				</ul>
+				<br /><br />
+<?endif?>
+<?php if($isShowES) include "../includs/hor_b2b_context.html"; ?>
+<br /><br />
+<?php if (count($Lins) > 0): ?>
+				<h3>Тематические статьи:</h3>
+				<!-- <h3><a href="#">Тематические статьи:</a></h3> -->
+				
+				<ul class="items clear">
+<?php for($i=0;$i<count($Lins);$i++):?>
+					<li class="<?php echo ((($i%2)==0)?'l':'');?>clear">
+						<img src="i/stories/<?php echo $Lins[$i][1];?>" alt="" />
+						<a href="stories/<?php echo $Lins[$i][0];?>.html"><?php echo ($Lins[$i][2]); if ($Lins[$i][3]!='') echo ('<br />'.$Lins[$i][3]);?></a>
+					</li>
+<?endfor?>
+				</ul>
+<?php endif; ?>
+	
+				<!--div class="nav_letters">
+					По алфавиту:
+< for ($i=0;$i<count($Letters);$i++): >
+					<a href="< echo($Letters[$i][0]); >">< echo($Letters[$i][1]); ></a> 
+< endfor; >
+				</div><!-- /nav_letters -->
+<br />
+				<div class="tagscloud">
+<?php for ($i=0;$i<count($Tags);$i++): 
+if (in_array($i, $Tags_str)) echo ('<br />');
+?>
+					<a href="<?php echo($Tags[$i][1])?>" class="<?php echo($Tags[$i][2])?>"><?php echo($Tags[$i][0])?></a>
+<?php endfor; ?>
+				</div><!-- /tagscloud -->
+
+			</div><!-- /inner -->
+		</div><!-- /content -->
+	
+<?php require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

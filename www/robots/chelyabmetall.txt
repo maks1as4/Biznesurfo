@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: chelyabmetall.biznesurfo.ru
+Sitemap: http://chelyabmetall.biznesurfo.ru/sitemap.xml

@@ -1,0 +1,67 @@
+<?php require_once "../includs/head.html"; ?>
+
+				<div class="path">
+<?php for($i=0;$i<$crumbsQty;$i++)
+	echo ((($Crumbs[$i][0]=='')?'':'<a href="'.$Crumbs[$i][0].'">').$Crumbs[$i][1].(($Crumbs[$i][0]=='')?'':'</a>')."\n");
+?>
+				</div><!-- /path -->
+	
+				<div class="newstype_nav clear">
+					<div class="itn_l">
+						<h1>Отчеты о выставках</h1>
+					</div><!-- /itn_l -->
+					
+					<div class="itn_r">
+						<span class="pages_count">Страница <?php echo $curPageNo;?> из <?php echo $maxPageNo;?></span>
+
+<?php if ($pageNavQty>0):?>
+						<span class="pages_nav">
+<?php for($i=0;$i<$pageNavQty;$i++)	echo ($PageNav[$i]."\n"); ?>
+						</span>
+<?php endif; ?>
+					</div><!-- /itn_r -->
+				</div><!-- /newstype_nav -->
+<?php if($linsQty>0):?>
+<?php for($i=0;$i<$linsQty;$i++):?>
+				<div class="newstype_item clear">
+<?php if($Lins[$i][6]!=''):?>
+					<div class="newspict">
+						<a href="expo/reports/<?php echo $Lins[$i][0];?>.html"><img src="i/<?php echo $Lins[$i][6];?>" alt="<?php echo $Lins[$i][2];?>" title="<?php echo $Lins[$i][2];?>" /></a>
+					</div><!-- /newspict -->
+<?php endif;?>
+					<div class="newsanonce">
+						<a href="expo/reports/<?php echo $Lins[$i][0];?>.html"><?php echo $Lins[$i][8];?></a><br />
+						<span>Выставка: </span><?php echo $Lins[$i][7];?><br />
+						<span>Дата проведения: </span><?php echo (PrintRusDate ($Lins[$i][4]));?>&nbsp;-&nbsp;<?php echo (PrintRusDate ($Lins[$i][5]));?><br />
+						<span>Место проведения: </span><?php echo $Lins[$i][3];?>, <?php echo $Lins[$i][2];?>
+					</div><!-- /newsanonce -->
+				</div><!-- /newstype_item -->
+<?php endfor;?>
+
+				<br />
+				<div class="newstype_nav clear">
+					<div class="itn_r">
+						<span class="pages_count">Страница <?php echo $curPageNo;?> из <?php echo $maxPageNo;?></span>
+
+<?php if ($pageNavQty>0):?>
+						<span class="pages_nav">
+<?php for($i=0;$i<$pageNavQty;$i++)	echo ($PageNav[$i]."\n"); ?>
+						</span>
+<?php endif; ?>
+					</div><!-- /itn_r -->
+				</div><!-- /newstype_nav -->
+<?php endif;?>
+				<br /><br /><br />
+				
+			</div><!-- /inner -->
+		</div><!-- /content -->
+	
+<?php require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

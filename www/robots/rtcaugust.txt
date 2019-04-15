@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: rtcaugust.biznesurfo.ru
+Sitemap: http://rtcaugust.biznesurfo.ru/sitemap.xml

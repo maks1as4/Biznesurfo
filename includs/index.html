@@ -1,0 +1,66 @@
+<?php require_once "../includs/head.html"; ?>
+				<h6><?php echo $tagH1;?>:</h6>
+<?php if ($empty): ?>
+				<div id="index-empty">
+					<p>Ќа данный момент на сайте нет товаров дл€ выбранного <?php echo ($isReg) ? 'региона' : 'города'; ?></p>
+					<div class="actions">
+						<div class="title">¬ы можете:</div>
+						<a href="/firms<?php echo $findParStr; ?>">посмотреть все компании дл€ выбранного <?php echo ($isReg) ? 'региона' : 'города'; ?></a>,<br />
+						<a href="/">вернутьс€ на гравную страницу</a><br />
+						или попробуйте поискать товары в других регионах
+					</div>
+				</div>
+<?php else: ?>
+				<div class="prices">
+<?php for ($i=0;$i<$razdQty;$i+=2) { ?>
+					<h3><a href="<?php echo(($forPred?'firms/':'prices/').$Razd[$i][3].$findParStr); ?>"><?php echo($Razd[$i][1].' ('.$Razd[$i][2])?>)</a></h3>
+<?php
+for ($j=0;$j<$Razd[$i][4];$j++):
+if ($j==$Razd[$i][4]-1)	$s=''; else $s=',';
+?>
+					<a href="<?php echo($Rubs[$i][$j][3].$Rubs[$i][$j][2].$findParStr); ?>"><?php echo($Rubs[$i][$j][1])?></a><?php echo($s)?> 
+<?php endfor; ?>
+					<br /><br />
+<?php } ?>
+				</div><!-- /prices -->
+				<div class="prices prr">
+<?php for ($i=1;$i<$razdQty;$i+=2) { ?>
+					<h3><a href="<?php echo(($forPred?'firms/':'prices/').$Razd[$i][3].$findParStr); ?>"><?php echo($Razd[$i][1].' ('.$Razd[$i][2])?>)</a></h3>
+<?php
+for ($j=0;$j<$Razd[$i][4];$j++):
+if ($j==$Razd[$i][4]-1)	$s=''; else $s=',';
+?>
+					<a href="<?php echo($Rubs[$i][$j][3].$Rubs[$i][$j][2].$findParStr); ?>"><?php echo($Rubs[$i][$j][1])?></a><?php echo($s)?> 
+<?php endfor; ?>
+					<br /><br />
+<?php } ?>
+				</div><!-- /prices prr -->
+<?php endif; ?>
+
+				<div class="nav_letters">
+					<!--span>ѕо алфавиту:</span>
+< for ($i=0;$i<count($Letters);$i++): >
+					<a href="< echo($Letters[$i][0]); >">< echo($Letters[$i][1]); ></a> 
+< endfor; ><span></span-->
+				</div><!-- /nav_letters -->
+<br />
+				<div class="tagscloud">
+<?php for ($i=0;$i<count($Tags);$i++): 
+if (in_array($i, $Tags_str)) echo ('<br />');
+?>
+					<a href="<?php echo($Tags[$i][1])?>" class="<?php echo($Tags[$i][2])?>"><?php echo($Tags[$i][0])?></a>
+<?php endfor; ?>
+				</div><!-- /tagscloud -->
+				
+			</div><!-- /inner -->
+		</div><!-- /content -->
+		
+<?php require_once "../includs/right.html"; ?>
+
+	</div><!-- /body -->
+<?php require_once "../includs/foot.html"; ?>
+
+</div><!-- /page -->
+
+</body>
+</html>

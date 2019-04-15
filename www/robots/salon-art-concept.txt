@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: salon-art-concept.biznesurfo.ru
+Sitemap: http://salon-art-concept.biznesurfo.ru/sitemap.xml

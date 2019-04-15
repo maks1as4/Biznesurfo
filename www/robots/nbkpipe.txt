@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: nbkpipe.biznesurfo.ru
+Sitemap: http://nbkpipe.biznesurfo.ru/sitemap.xml

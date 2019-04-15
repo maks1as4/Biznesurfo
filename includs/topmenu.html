@@ -1,0 +1,42 @@
+	<div id="toolbar">
+<?php if (isset($user_id)): ?>
+<?php $translit_company = getTranslitFromId($user_client_id); ?>
+		<div class="auth-user-open">
+			<span class="logged-in">Вы авторизовались:</span>
+		</div>
+		<div class="dropmenu">
+			<div class="dropdown">
+				 <a class="dropdown-toggle dashed" data-toggle="dropdown" href="javascript://"><span><?php echo $user_email; ?></span><b class="caret"></b></a>
+				<ul class="dropdown-menu">
+<?php if (($user_role == 'com') || ($user_role == 'user')): ?>
+					<li><a href="/kabinet">Личный кабинет</a></li>
+					<li><a href="<?php echo ($translit_company == '') ? '/company/'.$user_client_id : 'http://'.$translit_company.'.'.$url3Href; ?>" target="_blank">Страница компании</a></li>
+<?php else: ?>
+					<li><a href="<?php echo ($user_role == 'adm') ? '/management/adm' : '/management/mdr' ;?>" target="_blank">Панель управления</a></li>
+<?php endif; ?>
+					<li class="divider"></li>
+					<li><a href="/exit">Выход</a></li>
+				</ul>
+				<noscript>
+<?php if (($user_role == 'com') || ($user_role == 'user')): ?>
+				<a href="/kabinet">кабинет</a>
+<?php else: ?>
+				<a href="<?php echo ($user_role == 'adm') ? '/management/adm' : '/management/mdr' ;?>" target="_blank">админка</a>
+<?php endif; ?>
+				&nbsp;|&nbsp;<a href="/exit">выход</a>
+				</noscript>
+			</div><!-- /dropdown -->
+		</div><!-- /dropmenu -->
+		<div class="auth-user-close"></div>
+<?php else: ?>
+		<div class="no-auth-enter">
+			<a href="/enter" class="enter"><span>Войти в кабинет</span></a>
+		</div>
+		<div class="no-auth-sing-up">
+			<a href="/add-company" class="registration"><span>Зарегистрироваться</span></a>
+		</div>
+<?php endif; ?>
+		<div class="links">
+			<a href="/info">о проекте</a>&nbsp;&nbsp;&nbsp;<a href="/locat">размещение рекламы</a>
+		</div>
+	</div><!-- /toolbar -->

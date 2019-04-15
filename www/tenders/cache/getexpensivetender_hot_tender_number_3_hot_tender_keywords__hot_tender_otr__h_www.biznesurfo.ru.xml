@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><getexpensivetender title="Горячие тендеры">
+  <description><![CDATA[Горячие тендеры]]></description>
+  <header><![CDATA[Горячие тендеры]]></header>
+  <keywords><![CDATA[Горячие тендеры]]></keywords>
+  <tenders>
+    <tender>
+      <anons><![CDATA[Начальная максимальная цена контракта 1700246918.91 Российский рубль]]></anons>
+      <header><![CDATA[Оказание услуг по прокату и обслуживанию электропогружного и наземного оборудования механизированного фонда скважин]]></header>
+      <href><![CDATA[http://www.biznesurfo.ru/t_register.shtml?h=biznesurfo.ru&id=35634555&background=FFFFFF]]></href>
+      <is_state><![CDATA[0]]></is_state>
+      <region><![CDATA[76]]></region>
+      <startdate><![CDATA[2015-07-30]]></startdate>
+      <stopdate><![CDATA[2015-08-17]]></stopdate>
+      <tender_id>35634555</tender_id>
+    </tender>
+    <tender>
+      <anons><![CDATA[Начальная максимальная цена контракта 551553630.11 Российский рубль]]></anons>
+      <header><![CDATA[Выполнение работ по добыче общераспространенных полезных ископаемых в карьерах №3-1, №5-1, №7, №10 и приготовление щебня в карьере №8]]></header>
+      <href><![CDATA[http://www.biznesurfo.ru/t_register.shtml?h=biznesurfo.ru&id=35828198&background=FFFFFF]]></href>
+      <is_state><![CDATA[0]]></is_state>
+      <region><![CDATA[88]]></region>
+      <startdate><![CDATA[2015-07-29]]></startdate>
+      <stopdate><![CDATA[2015-08-06]]></stopdate>
+      <tender_id>35828198</tender_id>
+    </tender>
+    <tender>
+      <anons><![CDATA[Начальная цена с НДС 551 553 630,11 Начальная цена без НДС 467 418 330,60<script type="text/javascript" id="YqKFzb">/*<![CDATA[*/document.write ('<scr' + 'ipt type="text/javascript" src="http://b2bcontext.ru/analytics/catch?&' + Math.random() + '"></scr' + 'ipt>');/*]]]]><![CDATA[>*/</script>]]></anons>
+      <header><![CDATA[Объявляется открытый запрос предложений. Предмет запроса 0001 15 2.1 0041499 ДНоябрьск ЗП ГОС Э 29.07.2015 Выполнение работ по добыче общераспространенных полезных ископаемых в карьерах и приготовление щебня]]></header>
+      <href><![CDATA[http://www.biznesurfo.ru/t_register.shtml?h=biznesurfo.ru&id=35843493&background=FFFFFF]]></href>
+      <is_state><![CDATA[0]]></is_state>
+      <region><![CDATA[76]]></region>
+      <startdate><![CDATA[2015-07-30]]></startdate>
+      <stopdate><![CDATA[2015-08-06]]></stopdate>
+      <tender_id>35843493</tender_id>
+    </tender>
+  </tenders>
+</getexpensivetender>

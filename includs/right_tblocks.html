@@ -1,0 +1,17 @@
+<!--noindex-->
+	<div class="block b_blue">
+		<div class="block_top">
+<?php for ($i=0;$i<$rTblocksQty;$i++): ?>
+			<p class="items<?php echo(($i==0)?' first':'');?>">
+<?php if ($RightTextMods[$i][3]!='') { ?>
+				<a href="/click/tmodule/<?php echo($RightTextMods[$i][4]);?>?url=<?php echo($RightTextMods[$i][3]);?>" target="_blank"><?php echo($RightTextMods[$i][0]);?></a><br />
+<?php } 
+echo($RightTextMods[$i][1]);
+if ($RightTextMods[$i][2]!='') echo('<br />'.$RightTextMods[$i][2]."\n");?>
+			</p>
+<?php endfor; ?>
+		</div><!-- /block_top -->
+		<div class="block_bot"></div><!-- /block_bot -->
+	</div><!-- /block -->
+<!--/noindex-->
+	

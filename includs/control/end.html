@@ -1,0 +1,103 @@
+<?php require_once "../../includs/control/head.html"; ?>
+
+<div class="box-header">
+	<div class="pull-left box-header-home"><a href="/kabinet"><i class="icon-home"></i></a></div>
+	<div class="pull-left box-header-separator"></div>
+	<div class="pull-left box-header-point">Завершение регистрации</div>
+	<div class="pull-left box-header-separator"></div>
+</div>
+<div class="box-content">
+	<div class="box-inner-main">
+		<div class="title-page">
+			<h2>Завершение регистрации</h2>
+		</div>
+<?php if ($err != ''){ ?>
+		<div class="alert alert-error">
+			<p><strong>Исправьте, пожалуйста, следующие ошибки:</strong></p>
+			<?php echo $err; ?>
+		</div>
+<?php } ?>
+		<form id="forms" class="form-horizontal" method="post" action="/kabinet/end">
+			<fieldset>
+				<legend>Укажите почтовый адрес вашей компании</legend>
+				<div class="control-group">
+					<label class="control-label"><i class="icon-require icon-tab-left"></i>Регион</label>
+					<div class="controls">
+						<select id="uregion" class="input-xxlarge" name="uregion">
+							<option selected>-- Выберите регион --</option>
+<?php foreach ($Regions as $region){ ?>
+							<option value='<?php echo $region[0]; ?>'<?php echo ($region[0] == $val_region) ? ' selected' : '' ; ?>><?php echo $region[2]; ?> <?php echo $region[1]; ?></option>
+<?php } ?>
+						</select>
+						<span id="err-uregion" class="error"></span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label"><i class="icon-require icon-tab-left"></i>Город</label>
+					<div class="controls">
+						<input type="text" id="ucity" class="input-xxlarge" name="ucity" value='<?php echo $val_city; ?>' maxlength="200" placeholder="например: Екатеринбург" />
+						<span id="err-ucity" class="error"></span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Почтовый индекс</label>
+					<div class="controls">
+						<input type="text" id="uindex" class="input-xxlarge" name="uindex" value='<?php echo $val_index; ?>' maxlength="6" placeholder="например: 641700" />
+						<span id="err-uindex" class="error"></span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label"><i class="icon-require icon-tab-left"></i>Улица</label>
+					<div class="controls">
+						<input type="text" id="ustreet" class="input-xxlarge" name="ustreet" value='<?php echo $val_street; ?>' maxlength="126" placeholder="например: Ленина" />
+						<span id="err-ustreet" class="error"></span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Номер дома</label>
+					<div class="controls">
+						<input type="text" id="uhouse" class="input-medium" name="uhouse" value='<?php echo $val_house; ?>' maxlength="30" />
+						<span id="err-uhouse" class="error"></span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Офис</label>
+					<div class="controls">
+						<input type="text" id="uoffice" class="input-medium" name="uoffice" value='<?php echo $val_office; ?>' maxlength="15" />
+						<span id="err-uoffice" class="error"></span>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">а/я</label>
+					<div class="controls">
+						<input type="text" id="uaya" class="input-medium" name="uaya" value='<?php echo $val_aya; ?>' maxlength="15" />
+						<span id="err-uaya" class="error"></span>
+					</div>
+				</div>
+			</fieldset>
+			<fieldset>
+				<legend>Адрес сайта в сети интернет</legend>
+				<p>
+					Создайте адрес вашего сайта, например: <strong>my-company</strong>.biznesurfo.ru<br />
+					Это поможет нам продвигать ваш товар в сети интернет, а так же вместе с адресом, вы получаете мини-сайт вашей компании.<br />
+					Адрес может состоять только из строчных букв английского алфавита, цифр и знака тире (-). Не менее 2 и не более 20 символов.
+				</p>
+				<br />
+				<div class="control-group">
+					<label class="control-label"><i class="icon-require icon-tab-left"></i>Адрес вашего сайта</label>
+					<div class="controls">
+						<input type="text" id="url3" class="input-medium" name="url3" value='<?php echo $val_url3; ?>' maxlength="20" /> .biznesurfo.ru
+						<span id="err-url3" class="error"></span>
+					</div>
+				</div>
+			</fieldset>
+			<div style="margin:40px 0 0 270px;">
+				<div class="control-group">
+					<button type="submit" class="btn btn-primary" name="btmes"><i class="icon-ok-sign icon-white icon-tab-left"></i>Завершить регистрацию</button>
+				</div>
+			</div>
+		</form>
+	</div><!-- /box-inner-main -->
+</div><!-- /box-content -->
+
+<?php require_once "../../includs/control/foot.html"; ?>

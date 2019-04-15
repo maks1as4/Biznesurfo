@@ -1,0 +1,87 @@
+<?php require_once "../../includs/company/default/head.html"; ?>
+
+<div class="row">
+	<div id="main" class="span12">
+
+		<div class="row">
+
+<?php require_once "../../includs/company/default/sidebar.html"; ?>
+
+			<div id="content" class="span9">
+				<div class="content-wrap">
+					<ul class="breadcrumb">
+						<li><a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/">Главная</a> <span class="divider">/</span></li>
+						<li class="active">Контакты</li>
+					</ul>
+					<div class="page-name">
+						<h1>Контакты</h1>
+					</div>
+					<table class="table">
+						<tr>
+							<td>Название:</td>
+							<td><?php echo $full_name; ?></td>
+						</tr>
+<?php if ($fio != ''): ?>
+						<tr>
+							<td>Контактное лицо:</td>
+							<td><?php echo $fio; ?></td>
+						</tr>
+<?php endif; ?>
+						<tr>
+							<td>Адрес:</td>
+							<td><?php echo getDataFromDB($Client[1]); ?></td>
+						</tr>
+						<tr>
+							<td>Телефон<?php echo (!empty($Client_phones)) ? 'ы' : ''; ?>:</td>
+							<td>
+								<?php echo ($Client[11]!='') ? $Client[11].'&nbsp;' : ''; ?><?php echo getDataFromDB($Client[5]); ?><br />
+<?php if (!empty($Client_phones)): ?>
+<?php foreach ($Client_phones as $phones): ?>
+								<?php echo ($phones[1]) ? $phones[1].'&nbsp;' : ''; ?><?php echo $phones[0]; ?><br />
+<?php endforeach; ?>
+<?php endif; ?>
+							</td>
+						</tr>
+<?php if ($count_emails > 0): ?>
+						<tr>
+							<td>E-mail:</td>
+							<td>
+<?php foreach ($Emails as $email): ?>
+								<?php echo getDataFromDB($email[0]); ?><br />
+<?php endforeach; ?>
+							</td>
+						</tr>
+<?php endif; ?>
+<?php if ($count_sites > 0): ?>
+						<tr>
+							<td>Сайт<?php echo ($count_sites > 1) ? 'ы' : ''; ?>:</td>
+							<td>
+<?php foreach ($Sites as $site): ?>
+								<a href="http://<?php echo $baseHref; ?>/goto/<?php echo $id_company; ?>?url=<?php echo getDataFromDB($site[0]); ?>" class="underlined" rel="nofollow" target="_blank"><?php echo getDataFromDB($site[0]); ?></a><br />
+<?php endforeach; ?>
+							</td>
+						</tr>
+<?php endif; ?>
+					</table>
+					<div class="contact-us-inner">
+						<a href="javascript://" class="btn btn-block btn-primary contact-us" destination="id<?php echo $id_company; ?>"><i class="icon-envelope icon-white"></i>&nbsp;&nbsp;написать нам</a>
+					</div>
+<?php if ($Client[3]!='' && $Client[4]!='0'): ?>
+					<div id="YmapBig-inner">
+						<h4>Расположение на карте</h4>
+						<div id="YmapBig"></div>
+					</div><!-- /Ymap-big -->
+<?php endif; ?>
+					<!--noindex-->
+					<div class="pull-right">
+						<i class="icon-print"></i> <a href="http://<?php echo $translit_company; ?>.<?php echo $url3Href; ?>/print" rel="nofollow" target="_blank">Версия для печати</a>
+					</div>
+					<!--/noindex-->
+				</div>
+			</div><!-- /content -->
+		</div>
+		
+	</div><!-- /main -->
+</div>
+
+<?php require_once "../../includs/company/default/foot.html"; ?>

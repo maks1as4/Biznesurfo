@@ -1,0 +1,20 @@
+User-agent: *
+Disallow: /genexcel
+Disallow: /getprice
+Disallow: /click
+Disallow: /goto
+Disallow: /error_report
+Disallow: /print
+Disallow: /company/*/print
+Disallow: /mailto
+Disallow: /find
+Disallow: /find_firms
+Disallow: /message
+Disallow: /enter
+Disallow: /kabinet
+
+Clean-param: rcid /product/
+Clean-param: rcid /company/
+Clean-param: rcid /index/
+Host: www.biznesurfo.ru
+Sitemap: http://www.biznesurfo.ru/sitemap.xml

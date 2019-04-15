@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: mycomp.biznesurfo.ru
+Sitemap: http://mycomp.biznesurfo.ru/sitemap.xml

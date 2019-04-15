@@ -1,0 +1,40 @@
+	<div class="footer">
+		<div class="inner clear">
+			<div class="about_company">Индустрия Бизнеса - каталог компаний Уральского федерального округа. Цены на металлопрокат, оборудование, строительные и отделочные материалы. Тендеры и производители.</div>
+			<div class="stat">На <?php echo(HumanDate($TotalInfo[0]));?> в каталоге: <?php echo($TotalInfo[2]);?> предприяти<?php echo(PrintFinLetter($TotalInfo[2], false));?>, <?php echo($TotalInfo[1]);?> позици<?php echo(PrintFinLetter($TotalInfo[1], true)); ?></div>
+			<div class="footmenu">
+				<div class="footmenu_in">
+					<ul class="footmenu1">
+						<li><a href="/info">О проекте</a></li>
+						<li><a href="/partners">Партнеры</a></li>
+						<li><a href="/exhibitions">Выставки</a></li>
+						<li><a href="/tenders/main">Тендеры</a></li>
+					</ul>
+					<ul class="footmenu2">
+						<li><a href="/add-company">Добавить предприятие</a></li>
+						<li><a href="/subscribe">Оформить подписку</a></li>
+					</ul>
+					<ul class="footmenu3">
+						<li><a href="/diploms">Дипломы, сертификаты</a></li>
+						<li><a href="/locat">Размещение рекламы</a></li>
+						<li><a href="/message">Сообщить об ошибке</a></li>
+						<li><a href="/expo_reports">Отчеты о выставках</a></li>
+					</ul>
+				</div><!-- /footmenu_in -->
+			</div><!-- /footmenu -->
+
+			<div class="contacts">
+				&copy; Справочник “Индустрия Бизнеса”<br />
+				620075, г. Екатеринбург, ул. Бажова 51, оф.49<br />
+				тел./факс: +7 (343) 270-01-27, e-mail: info@biznesurfo.ru<br />
+
+				<div class="counters">
+				</div><!-- /counters -->
+
+			</div><!-- /contacts -->
+		</div><!-- /inner -->
+	</div><!-- /footer -->
+
+<?php if ($isDeveloper) GetConsole(); ?>
+
+<?php if($isShowES) ShowCounterYandex(); ?>

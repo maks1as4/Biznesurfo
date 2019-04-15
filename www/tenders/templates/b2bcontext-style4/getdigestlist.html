@@ -1,0 +1,57 @@
+<div class="b2b84109_non_wrapper">
+    <div class="b2b84109_content b2b84109_ph-16">
+        <!--[if IE 6]><table class="b2b84109_fix b2b84109_c-100"><tr><td class="b2b84109_fix"><![endif]-->
+        <div class="b2b84109_h3 b2b84109_white b2b84109_bg-red" style="padding:6px;"><?php echo $header;?></div>
+        <div class=" b2b84109_gr-rn2">
+            <div class="b2b84109_tl">
+                <div class="b2b84109_tr">
+                    <div class="b2b84109_br">
+                        <div class="b2b84109_bl">
+        
+                            <dl id="pol2" class="b2b84109_pol2 b2b84109_n-u">
+                                <?php foreach($news as $key=>$new):?>
+                                    <dt><a id="b2b_digestlist_link_<?php echo $key;?>" <?php echo ($new['indexed'])?'':'rel="nofollow"';?> class="b2b84109_drop" href="<?php echo $new['href'];?>"><?php echo $new['header'];?></a></dt>
+                                    <dd class="b2b84109_hide" id="b2b_digestlist_anons_<?php echo $key;?>"><?php echo $new['body'];?></dd>
+                               <?php endforeach;?>
+                            </dl>                       
+                        
+                            <script type="text/javascript">
+                            function getX(e) {
+                                var x = 0; 
+                                while(e) { 
+                                x += e.offsetLeft; 
+                                e = e.offsetParent; 
+                                }
+                                return x; 
+                            }                            
+                            var a = document.getElementById('pol2').getElementsByTagName('A');
+                            for(var i=0,l=a.length;i<l;i++ ){
+                                if(a[i].className.indexOf('b2b84109_drop')>-1){
+                                    a[i].onclick = function(event){
+                                     var x = parseInt(getX(this));
+                                        var e = event||window.event;
+                                        var clX = parseInt(e.clientX);
+                                        if(clX-x<19){
+                                            var block_id = this['id'];
+                                                block_id = block_id.replace (/b2b_digestlist_link_/, 'b2b_digestlist_anons_');
+                                            var obj = document.getElementById(block_id);
+                                            (obj.className.indexOf('hide')>-1)? (this.className ='b2b84109_drop-up', obj.className=obj.className.replace('hide','')):(obj.className+='hide', this.className='b2b84109_drop');
+                                            return false;
+                                        }
+                                    }
+                                }
+                            }
+                            </script>                       
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--[if IE 6]></td></tr></table><![endif]-->
+    </div>
+    <!--// end content //-->
+
+</div>
+

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /print
+Disallow: /find
+
+Host: parttek.biznesurfo.ru
+Sitemap: http://parttek.biznesurfo.ru/sitemap.xml
