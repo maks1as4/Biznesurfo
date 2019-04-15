@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: tmkki.biznesurfo.ru
-Sitemap: http://tmkki.biznesurfo.ru/sitemap.xml

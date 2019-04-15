@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: mebel.biznesurfo.ru
-Sitemap: http://mebel.biznesurfo.ru/sitemap.xml

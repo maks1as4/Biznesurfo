@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: auto-dimex.biznesurfo.ru
-Sitemap: http://auto-dimex.biznesurfo.ru/sitemap.xml

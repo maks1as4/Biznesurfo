@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: bsg-ural.biznesurfo.ru
-Sitemap: http://bsg-ural.biznesurfo.ru/sitemap.xml

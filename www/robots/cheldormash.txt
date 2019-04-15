@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: cheldormash.biznesurfo.ru
-Sitemap: http://cheldormash.biznesurfo.ru/sitemap.xml

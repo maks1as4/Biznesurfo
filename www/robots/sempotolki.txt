@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: sempotolki.biznesurfo.ru
-Sitemap: http://sempotolki.biznesurfo.ru/sitemap.xml

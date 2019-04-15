@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: pmv100.biznesurfo.ru
-Sitemap: http://pmv100.biznesurfo.ru/sitemap.xml

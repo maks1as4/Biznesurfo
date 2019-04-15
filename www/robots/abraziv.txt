@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: abraziv.biznesurfo.ru
-Sitemap: http://abraziv.biznesurfo.ru/sitemap.xml

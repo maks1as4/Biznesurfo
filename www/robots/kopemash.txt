@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: kopemash.biznesurfo.ru
-Sitemap: http://kopemash.biznesurfo.ru/sitemap.xml

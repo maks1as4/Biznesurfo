@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: centresm.biznesurfo.ru
-Sitemap: http://centresm.biznesurfo.ru/sitemap.xml

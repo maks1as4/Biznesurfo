@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: taiga900.biznesurfo.ru
-Sitemap: http://taiga900.biznesurfo.ru/sitemap.xml

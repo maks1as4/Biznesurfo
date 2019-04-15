@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: uralspecstroi.biznesurfo.ru
-Sitemap: http://uralspecstroi.biznesurfo.ru/sitemap.xml

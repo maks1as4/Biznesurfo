@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: toolshop.biznesurfo.ru
-Sitemap: http://toolshop.biznesurfo.ru/sitemap.xml

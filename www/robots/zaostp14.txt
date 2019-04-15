@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: zaostp14.biznesurfo.ru
-Sitemap: http://zaostp14.biznesurfo.ru/sitemap.xml

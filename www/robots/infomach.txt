@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: infomach.biznesurfo.ru
-Sitemap: http://infomach.biznesurfo.ru/sitemap.xml

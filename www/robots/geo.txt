@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: geo.biznesurfo.ru
-Sitemap: http://geo.biznesurfo.ru/sitemap.xml

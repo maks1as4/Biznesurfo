@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: mangals72.biznesurfo.ru
-Sitemap: http://mangals72.biznesurfo.ru/sitemap.xml

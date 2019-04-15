@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: energobvk.biznesurfo.ru
-Sitemap: http://energobvk.biznesurfo.ru/sitemap.xml

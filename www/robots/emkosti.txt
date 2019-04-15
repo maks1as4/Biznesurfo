@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: emkosti.biznesurfo.ru
-Sitemap: http://emkosti.biznesurfo.ru/sitemap.xml

@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: metallresurs.biznesurfo.ru
-Sitemap: http://metallresurs.biznesurfo.ru/sitemap.xml

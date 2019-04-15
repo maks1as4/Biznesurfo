@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: shattlenergo.biznesurfo.ru
-Sitemap: http://shattlenergo.biznesurfo.ru/sitemap.xml

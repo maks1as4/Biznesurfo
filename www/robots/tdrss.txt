@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: tdrss.biznesurfo.ru
-Sitemap: http://tdrss.biznesurfo.ru/sitemap.xml

@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: esm.biznesurfo.ru
-Sitemap: http://esm.biznesurfo.ru/sitemap.xml

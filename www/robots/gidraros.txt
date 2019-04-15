@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: gidraros.biznesurfo.ru
-Sitemap: http://gidraros.biznesurfo.ru/sitemap.xml

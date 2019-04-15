@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: dollssouvenirs.biznesurfo.ru
-Sitemap: http://dollssouvenirs.biznesurfo.ru/sitemap.xml

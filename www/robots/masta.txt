@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: masta.biznesurfo.ru
-Sitemap: http://masta.biznesurfo.ru/sitemap.xml

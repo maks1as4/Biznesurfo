@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: finconsul2013.biznesurfo.ru
-Sitemap: http://finconsul2013.biznesurfo.ru/sitemap.xml

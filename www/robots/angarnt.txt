@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: angarnt.biznesurfo.ru
-Sitemap: http://angarnt.biznesurfo.ru/sitemap.xml

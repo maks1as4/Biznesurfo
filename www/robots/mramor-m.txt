@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: mramor-m.biznesurfo.ru
-Sitemap: http://mramor-m.biznesurfo.ru/sitemap.xml

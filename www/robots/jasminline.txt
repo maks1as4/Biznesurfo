@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: jasminline.biznesurfo.ru
-Sitemap: http://jasminline.biznesurfo.ru/sitemap.xml

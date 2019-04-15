@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: artok.biznesurfo.ru
-Sitemap: http://artok.biznesurfo.ru/sitemap.xml

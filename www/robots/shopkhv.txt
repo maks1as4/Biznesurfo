@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: shopkhv.biznesurfo.ru
-Sitemap: http://shopkhv.biznesurfo.ru/sitemap.xml

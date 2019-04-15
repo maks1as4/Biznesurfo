@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: uraltp66.biznesurfo.ru
-Sitemap: http://uraltp66.biznesurfo.ru/sitemap.xml

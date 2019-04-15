@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: plana.biznesurfo.ru
-Sitemap: http://plana.biznesurfo.ru/sitemap.xml

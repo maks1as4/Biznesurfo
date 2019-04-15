@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: tholod.biznesurfo.ru
-Sitemap: http://tholod.biznesurfo.ru/sitemap.xml

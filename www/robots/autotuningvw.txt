@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: autotuningvw.biznesurfo.ru
-Sitemap: http://autotuningvw.biznesurfo.ru/sitemap.xml

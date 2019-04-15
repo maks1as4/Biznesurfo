@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: electrostart.biznesurfo.ru
-Sitemap: http://electrostart.biznesurfo.ru/sitemap.xml

@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: eta-zzu.biznesurfo.ru
-Sitemap: http://eta-zzu.biznesurfo.ru/sitemap.xml

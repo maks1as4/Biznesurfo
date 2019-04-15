@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: patentuem.biznesurfo.ru
-Sitemap: http://patentuem.biznesurfo.ru/sitemap.xml

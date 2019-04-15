@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: ekotrac.biznesurfo.ru
-Sitemap: http://ekotrac.biznesurfo.ru/sitemap.xml

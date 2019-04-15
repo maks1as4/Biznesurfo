@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: shoprosnt.biznesurfo.ru
-Sitemap: http://shoprosnt.biznesurfo.ru/sitemap.xml

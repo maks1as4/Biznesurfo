@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: profekb.biznesurfo.ru
-Sitemap: http://profekb.biznesurfo.ru/sitemap.xml

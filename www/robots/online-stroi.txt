@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: online-stroi.biznesurfo.ru
-Sitemap: http://online-stroi.biznesurfo.ru/sitemap.xml

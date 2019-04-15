@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: rohdeschwarz.biznesurfo.ru
-Sitemap: http://rohdeschwarz.biznesurfo.ru/sitemap.xml

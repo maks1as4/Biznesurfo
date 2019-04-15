@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: elp2002.biznesurfo.ru
-Sitemap: http://elp2002.biznesurfo.ru/sitemap.xml

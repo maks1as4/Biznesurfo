@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: thquartz.biznesurfo.ru
-Sitemap: http://thquartz.biznesurfo.ru/sitemap.xml

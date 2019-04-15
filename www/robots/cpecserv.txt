@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: cpecserv.biznesurfo.ru
-Sitemap: http://cpecserv.biznesurfo.ru/sitemap.xml

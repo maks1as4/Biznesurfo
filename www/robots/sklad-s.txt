@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: sklad-s.biznesurfo.ru
-Sitemap: http://sklad-s.biznesurfo.ru/sitemap.xml

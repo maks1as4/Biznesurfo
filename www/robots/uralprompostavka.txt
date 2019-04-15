@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: uralprompostavka.biznesurfo.ru
-Sitemap: http://uralprompostavka.biznesurfo.ru/sitemap.xml

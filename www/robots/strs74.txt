@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: strs74.biznesurfo.ru
-Sitemap: http://strs74.biznesurfo.ru/sitemap.xml

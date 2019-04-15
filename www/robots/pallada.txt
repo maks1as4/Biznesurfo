@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: pallada.biznesurfo.ru
-Sitemap: http://pallada.biznesurfo.ru/sitemap.xml

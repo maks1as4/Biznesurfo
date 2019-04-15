@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: arctic-energy.biznesurfo.ru
-Sitemap: http://arctic-energy.biznesurfo.ru/sitemap.xml

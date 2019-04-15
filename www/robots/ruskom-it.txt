@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: ruskom-it.biznesurfo.ru
-Sitemap: http://ruskom-it.biznesurfo.ru/sitemap.xml

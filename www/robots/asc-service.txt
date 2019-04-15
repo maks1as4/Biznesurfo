@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: asc-service.biznesurfo.ru
-Sitemap: http://asc-service.biznesurfo.ru/sitemap.xml

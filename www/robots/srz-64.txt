@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: srz-64.biznesurfo.ru
-Sitemap: http://srz-64.biznesurfo.ru/sitemap.xml

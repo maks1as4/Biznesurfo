@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: cylinder96.biznesurfo.ru
-Sitemap: http://cylinder96.biznesurfo.ru/sitemap.xml

@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: rss.biznesurfo.ru
-Sitemap: http://rss.biznesurfo.ru/sitemap.xml

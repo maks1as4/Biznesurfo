@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: uzeu.biznesurfo.ru
-Sitemap: http://uzeu.biznesurfo.ru/sitemap.xml

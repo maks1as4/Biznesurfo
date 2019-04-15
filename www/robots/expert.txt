@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: expert.biznesurfo.ru
-Sitemap: http://expert.biznesurfo.ru/sitemap.xml

@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: luxkraft.biznesurfo.ru
-Sitemap: http://luxkraft.biznesurfo.ru/sitemap.xml

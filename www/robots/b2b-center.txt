@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: b2b-center.biznesurfo.ru
-Sitemap: http://b2b-center.biznesurfo.ru/sitemap.xml

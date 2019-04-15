@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: alkor.biznesurfo.ru
-Sitemap: http://alkor.biznesurfo.ru/sitemap.xml

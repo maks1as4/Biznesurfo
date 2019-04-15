@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: nmkural.biznesurfo.ru
-Sitemap: http://nmkural.biznesurfo.ru/sitemap.xml

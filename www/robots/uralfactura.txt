@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: uralfactura.biznesurfo.ru
-Sitemap: http://uralfactura.biznesurfo.ru/sitemap.xml

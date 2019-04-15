@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: gpsatlas.biznesurfo.ru
-Sitemap: http://gpsatlas.biznesurfo.ru/sitemap.xml

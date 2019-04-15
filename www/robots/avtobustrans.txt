@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: avtobustrans.biznesurfo.ru
-Sitemap: http://avtobustrans.biznesurfo.ru/sitemap.xml

@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: erkerwerk.biznesurfo.ru
-Sitemap: http://erkerwerk.biznesurfo.ru/sitemap.xml

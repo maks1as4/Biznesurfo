@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: electronica7.biznesurfo.ru
-Sitemap: http://electronica7.biznesurfo.ru/sitemap.xml

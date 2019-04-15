@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: gks.biznesurfo.ru
-Sitemap: http://gks.biznesurfo.ru/sitemap.xml

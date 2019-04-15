@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: trubpromural.biznesurfo.ru
-Sitemap: http://trubpromural.biznesurfo.ru/sitemap.xml

@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: reforma.biznesurfo.ru
-Sitemap: http://reforma.biznesurfo.ru/sitemap.xml

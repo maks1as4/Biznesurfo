@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: uptc.biznesurfo.ru
-Sitemap: http://uptc.biznesurfo.ru/sitemap.xml

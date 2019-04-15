@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: rosavtoteh.biznesurfo.ru
-Sitemap: http://rosavtoteh.biznesurfo.ru/sitemap.xml

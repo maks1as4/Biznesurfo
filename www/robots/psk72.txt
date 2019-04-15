@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: psk72.biznesurfo.ru
-Sitemap: http://psk72.biznesurfo.ru/sitemap.xml

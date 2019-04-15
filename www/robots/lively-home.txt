@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: lively-home.biznesurfo.ru
-Sitemap: http://lively-home.biznesurfo.ru/sitemap.xml

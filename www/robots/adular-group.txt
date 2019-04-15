@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: adular-group.biznesurfo.ru
-Sitemap: http://adular-group.biznesurfo.ru/sitemap.xml

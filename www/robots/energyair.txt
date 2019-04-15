@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: energyair.biznesurfo.ru
-Sitemap: http://energyair.biznesurfo.ru/sitemap.xml

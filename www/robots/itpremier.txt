@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: itpremier.biznesurfo.ru
-Sitemap: http://itpremier.biznesurfo.ru/sitemap.xml

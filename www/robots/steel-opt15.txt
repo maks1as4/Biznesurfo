@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: steel-opt15.biznesurfo.ru
-Sitemap: http://steel-opt15.biznesurfo.ru/sitemap.xml

@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: lestrak.biznesurfo.ru
-Sitemap: http://lestrak.biznesurfo.ru/sitemap.xml

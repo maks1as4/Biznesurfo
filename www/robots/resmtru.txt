@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: resmtru.biznesurfo.ru
-Sitemap: http://resmtru.biznesurfo.ru/sitemap.xml

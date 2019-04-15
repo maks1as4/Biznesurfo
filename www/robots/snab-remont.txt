@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: snab-remont.biznesurfo.ru
-Sitemap: http://snab-remont.biznesurfo.ru/sitemap.xml

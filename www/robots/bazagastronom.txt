@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: bazagastronom.biznesurfo.ru
-Sitemap: http://bazagastronom.biznesurfo.ru/sitemap.xml

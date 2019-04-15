@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: ccmufa.biznesurfo.ru
-Sitemap: http://ccmufa.biznesurfo.ru/sitemap.xml

@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: fareasttrans.biznesurfo.ru
-Sitemap: http://fareasttrans.biznesurfo.ru/sitemap.xml

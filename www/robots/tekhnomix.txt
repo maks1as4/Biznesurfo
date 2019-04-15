@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: tekhnomix.biznesurfo.ru
-Sitemap: http://tekhnomix.biznesurfo.ru/sitemap.xml

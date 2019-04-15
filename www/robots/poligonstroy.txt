@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: poligonstroy.biznesurfo.ru
-Sitemap: http://poligonstroy.biznesurfo.ru/sitemap.xml

@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: artelokon.biznesurfo.ru
-Sitemap: http://artelokon.biznesurfo.ru/sitemap.xml

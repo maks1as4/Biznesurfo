@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: abrazivekb.biznesurfo.ru
-Sitemap: http://abrazivekb.biznesurfo.ru/sitemap.xml

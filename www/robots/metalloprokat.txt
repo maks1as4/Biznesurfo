@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: metalloprokat.biznesurfo.ru
-Sitemap: http://metalloprokat.biznesurfo.ru/sitemap.xml

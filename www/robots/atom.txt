@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: atom.biznesurfo.ru
-Sitemap: http://atom.biznesurfo.ru/sitemap.xml

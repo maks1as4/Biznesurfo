@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: webtoyou.biznesurfo.ru
-Sitemap: http://webtoyou.biznesurfo.ru/sitemap.xml

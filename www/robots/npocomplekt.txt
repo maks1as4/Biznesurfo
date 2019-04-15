@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: npocomplekt.biznesurfo.ru
-Sitemap: http://npocomplekt.biznesurfo.ru/sitemap.xml

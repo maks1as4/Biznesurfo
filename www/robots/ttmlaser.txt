@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /print
-Disallow: /find
-
-Host: ttmlaser.biznesurfo.ru
-Sitemap: http://ttmlaser.biznesurfo.ru/sitemap.xml
